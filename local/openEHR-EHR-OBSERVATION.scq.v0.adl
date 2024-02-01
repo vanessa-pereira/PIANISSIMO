@@ -1,0 +1,969 @@
+archetype (adl_version=1.4; uid=d2ee9a85-2bd0-4c9d-a7e5-4aa1c6ee9ebf)
+	openEHR-EHR-OBSERVATION.scq.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2024-01-22">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Patients to self-report their comorbidities.">
+			keywords = <"Self-Admistered Comorbidity Questionnaire, SCQ, Comorbidity, Comorbidities", ...>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"*Patients to self-report their comorbidities. (en)">
+			keywords = <"*Self-Admistered Comorbidity Questionnaire, SCQ, Comorbidity, Comorbidities (en)", ...>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Sangha, O., Stucki, G., Liang, M.H., Fossel, A.H. and Katz, J.N. (2003), The self-administered comorbidity questionnaire: A new method to assess comorbidity for clinical and health services research. Arthritis & Rheumatism, 49: 156-163. https://doi.org/10.1002/art.10993">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"45957be87c9eed1f3ff147254730017e">
+		["build_uid"] = <"e6d31467-423f-391a-8880-05f65558d752">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Self-Admistered Comorbidity Questionnaire (SCQ)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Heart disease
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0010] occurrences matches {0..1} matches {    -- High blood pressure
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0011] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0012] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0013] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0014] occurrences matches {0..1} matches {    -- Lung disease
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0015] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0018] occurrences matches {0..1} matches {    -- Diabetes
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0019] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0022] occurrences matches {0..1} matches {    -- Ulcer or stomach disease
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0023] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0024] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0025] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0026] occurrences matches {0..1} matches {    -- Kidney disease
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0027] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0029] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0056] occurrences matches {0..1} matches {    -- Liver disease
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0057] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0060] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0061],
+													1|[local::at0062]
+												}
+											}
+											ELEMENT[at0063] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0064],
+													1|[local::at0065]
+												}
+											}
+										}
+									}
+									CLUSTER[at0030] occurrences matches {0..1} matches {    -- Anemia or other blood disease
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0031] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0032] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0033] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0034] occurrences matches {0..1} matches {    -- Cancer
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0035] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0036] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0037] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0038] occurrences matches {0..1} matches {    -- Depression
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0039] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0041] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0042] occurrences matches {0..1} matches {    -- Osteoarthritis, degenerative arthritis
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0043] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0044] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0045] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0046] occurrences matches {0..1} matches {    -- Back pain
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0047] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0048] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0049] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0066] occurrences matches {0..1} matches {    -- Rheumathoid arthritis
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0067] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0070] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									CLUSTER[at0050] occurrences matches {0..3} matches {    -- Other medical problems
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0054] matches {    -- Problem name
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0051] matches {    -- Do you have the problem?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0052] occurrences matches {0..1} matches {    -- Do you received treatment for it?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+											ELEMENT[at0053] occurrences matches {0..1} matches {    -- Does it limit your activities?
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007]
+												}
+											}
+										}
+									}
+									ELEMENT[at0055] matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..48|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0076] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0077] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Self-Admistered Comorbidity Questionnaire (SCQ)">
+					description = <"The Self-Administered Comorbidity Questionnaire (SCQ) is a tool used by hospitalized patients to self-report their comorbidities. It can help to explain the effectiveness of hip or knee arthroplasty, its complications, the length of hospital stay and perioperative resource utilization.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Heart disease">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"High blood pressure">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Lung disease">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Diabetes">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Ulcer or stomach disease">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Kidney disease">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Anemia or other blood disease">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Cancer">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Depression">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Osteoarthritis, degenerative arthritis">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Back pain">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Other medical problems">
+					description = <"Additionally subjects have the option of adding 3 additional conditions in an open-ended fashion.">
+				>
+				["at0051"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Problem name">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Total score">
+					description = <"A maximum of 3 points can be awarded for each medical problem: one point for the presence of the problem, one point if the person is being treated for it and a third point if the problem limits the person's activities. and a third point if the problem limits the person's activities. As the table lists 13 medical problems, with the possibility of adding 3 others to choose from, the total points will be a maximum of 48 if the person answers the open-ended question, and 39 if he or she answers only the closed-ended questions.">
+				>
+				["at0056"] = <
+					text = <"Liver disease">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Rheumathoid arthritis">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Do you have the problem?">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Do you received treatment for it?">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Does it limit your activities?">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0077"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Questionnaire autoadministré sur la comorbidité (SCQ)">
+					description = <"Le questionnaire de comorbidité auto-administré (SCQ) est un outil utilisé par les patients hospitalisés pour déclarer leurs comorbidités. Il peut aider à expliquer l'efficacité de l'arthroplastie de la hanche ou du genou, ses complications, la durée du séjour à l'hôpital et l'utilisation des ressources périopératoires. ">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Maladie du cœur">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Hypertension">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Maladie pulmonaire">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Diabète">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Ulcère ou maladie de l’estomac">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Maladie du rein">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Anémie ou autre maladie du sang">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Cancer">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Dépression">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Arthrose, ostéoarthrite dégénérative">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Maux de dos">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Autres problèmes médicaux">
+					description = <"*Additionally subjects have the option of adding 3 additional conditions in an open-ended fashion. (en)">
+				>
+				["at0051"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Nom du problème de santé">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Score total">
+					description = <"Un maximum de 3 points peut être attribué pour chaque problème médical: un point pour la présence du problème, un point si la personne est traitée pour ce problème et un troisième point si le problème limite la personne dans ses activités. Comme le tableau énumère 13 problèmes médicaux, avec possibilité d’en ajouter 3 autres au choix, le total des points sera au maximum de 48 si la personne répond à la question ouverte, et de 39 si elle ne répond qu’aux questions fermées.">
+				>
+				["at0056"] = <
+					text = <"Maladie du foie">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Arthrite rhumatoïde">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Avez-vous ce problème?">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Suivez-vous un traitement pour ce problème?">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Ce problème vous limite-t-il dans vos activités?">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0077"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
+				>
+			>
+		>
+	>
