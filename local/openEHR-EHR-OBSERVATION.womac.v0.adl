@@ -33,7 +33,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
-		["MD5-CAM-1.0.1"] = <"d369e4e64c44f73f4dd76bb2636ccab8">
+		["MD5-CAM-1.0.1"] = <"cf8023a2b3f649fb46a520b6e495633f">
 	>
 
 definition
@@ -47,7 +47,7 @@ definition
 								items cardinality matches {0..*; unordered} matches {
 									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Pain
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0007] occurrences matches {0..1} matches {    -- Walking on a flat surface
+											ELEMENT[at0007] matches {    -- Walking on a flat surface
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -56,7 +56,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0013] occurrences matches {0..1} matches {    -- Going up or down stairs
+											ELEMENT[at0013] matches {    -- Going up or down stairs
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -65,7 +65,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0014] occurrences matches {0..1} matches {    -- At night while in bed
+											ELEMENT[at0014] matches {    -- At night while in bed
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -74,7 +74,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Sitting or lying
+											ELEMENT[at0015] matches {    -- Sitting or lying
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -83,7 +83,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Standing upright
+											ELEMENT[at0016] matches {    -- Standing upright
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -96,7 +96,7 @@ definition
 									}
 									CLUSTER[at0005] occurrences matches {0..1} matches {    -- Stiffness
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Morning stiffness
+											ELEMENT[at0017] matches {    -- Morning stiffness
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -105,7 +105,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Stiffness occurring later in the day
+											ELEMENT[at0018] matches {    -- Stiffness occurring later in the day
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -118,7 +118,7 @@ definition
 									}
 									CLUSTER[at0006] occurrences matches {0..1} matches {    -- Physical function
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0019] occurrences matches {0..1} matches {    -- Descending stairs
+											ELEMENT[at0019] matches {    -- Descending stairs
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -127,7 +127,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0020] occurrences matches {0..1} matches {    -- Ascending stairs
+											ELEMENT[at0020] matches {    -- Ascending stairs
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -136,7 +136,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0021] occurrences matches {0..1} matches {    -- Rising from sitting
+											ELEMENT[at0021] matches {    -- Rising from sitting
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -145,7 +145,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0022] occurrences matches {0..1} matches {    -- Standing
+											ELEMENT[at0022] matches {    -- Standing
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -154,7 +154,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0023] occurrences matches {0..1} matches {    -- Bending to floor
+											ELEMENT[at0023] matches {    -- Bending to floor
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -163,7 +163,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0024] occurrences matches {0..1} matches {    -- Walking on flat surface
+											ELEMENT[at0024] matches {    -- Walking on flat surface
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -172,7 +172,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0025] occurrences matches {0..1} matches {    -- Getting in or out of the car
+											ELEMENT[at0025] matches {    -- Getting in or out of the car
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -181,7 +181,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0026] occurrences matches {0..1} matches {    -- Going shopping
+											ELEMENT[at0026] matches {    -- Going shopping
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -190,7 +190,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0027] occurrences matches {0..1} matches {    -- Putting on socks
+											ELEMENT[at0027] matches {    -- Putting on socks
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -199,7 +199,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Lying in bed
+											ELEMENT[at0028] matches {    -- Lying in bed
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -208,7 +208,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0029] occurrences matches {0..1} matches {    -- Taking off socks
+											ELEMENT[at0029] matches {    -- Taking off socks
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -217,7 +217,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0030] occurrences matches {0..1} matches {    -- Rising from bed
+											ELEMENT[at0030] matches {    -- Rising from bed
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -226,7 +226,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0031] occurrences matches {0..1} matches {    -- Getting in or out of bed
+											ELEMENT[at0031] matches {    -- Getting in or out of bed
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -235,7 +235,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0032] occurrences matches {0..1} matches {    -- Sitting
+											ELEMENT[at0032] matches {    -- Sitting
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -244,7 +244,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0033] occurrences matches {0..1} matches {    -- Getting in or out of toilet
+											ELEMENT[at0033] matches {    -- Getting in or out of toilet
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -253,7 +253,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0034] occurrences matches {0..1} matches {    -- Heavy domestic duties
+											ELEMENT[at0034] matches {    -- Heavy domestic duties
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -262,7 +262,7 @@ definition
 													4|[local::at0012]
 												}
 											}
-											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Light domestic duties
+											ELEMENT[at0035] matches {    -- Light domestic duties
 												value matches {
 													0|[local::at0008],
 													1|[local::at0009],
@@ -273,7 +273,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Total score
+									ELEMENT[at0036] matches {    -- Total score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..96|}
