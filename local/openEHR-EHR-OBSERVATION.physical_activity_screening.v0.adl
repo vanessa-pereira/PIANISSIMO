@@ -1,4 +1,4 @@
-archetype (adl_version=1.4; uid=76fb4671-985b-44ae-8feb-d47689ae6213)
+archetype (adl_version=1.4; uid=775b5c35-b7f4-4fff-9bad-c8cdafb913e3)
 	openEHR-EHR-OBSERVATION.physical_activity_screening.v0
 
 concept
@@ -6,65 +6,36 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			author = <
-				["name"] = <"Silje Ljosland Bakke, Marit Alice Venheim, John Tore Valand">
-				["organisation"] = <"Helse Vest IKT AS, Helse Bergen">
-				["email"] = <"silje.ljosland.bakke@helse-vest-ikt.no, marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no">
-			>
-		>
-	>
 
 description
 	original_author = <
-		["date"] = <"2020-03-13">
-		["name"] = <"Heather Leslie">
-		["organisation"] = <"Atomica Informatics">
-		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2024-02-02">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Astrid Askeland, Dips AS, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (Nasjonal IKT redaktør)","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Yexuan Cheng, 浙江大学, China","Are Edvardsen, SKDE, Helse Nord RHF, Norway","Alexander Eikrem-Lüthi, Lovisenberg Diakonale Sykehus, Norway","Kåre Flø, DIPS ASA, Norway","Grant Forrest, Lunaria Ltd, United Kingdom","Heather Grain, Llewelyn Grain Informatics, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)","Anca Heyd, DIPS ASA, Norway","Joost Holslag, Nedap, Netherlands","Evelyn Hovenga, EJSH Consulting, Australia","Gunnar Jårvik, Helse Vest IKT AS, Norway","Øygunn Leite Kallevik, Helse Bergen, Norway","Anjali Kulkarni, Karkinos, India","Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Per Meinich, Helse Sør-Øst RHF, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway","Natalia Strauch, Medizinische Hochschule Hannover, Germany","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)","Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Ina Wille, Helse-Vest RHF, Norway">
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Cheng Yexuan, ZJU (3160100913@zju.edu.cn)", ...>
 	details = <
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			purpose = <"*To create a framework for recording answers to pre-defined screening questions about the broad range of physical activites. (en)">
-			keywords = <"*treatment, screening, intervention, questionnaire, care, support, therapy (en)", ...>
-			use = <"*Use to create a framework for recording answers to pre-defined screening questions about the broad range of physical activies.
-
-Common use cases include, but are not limited to:
-- Systematic questioning in any consultation, for example:
---- Have you ever been physically active? 
---- Are you active in organised sports? 
-
-The semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.
-
-The EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about management that has been performed at any time in the past and information about management performed within a specified time interval - for example the difference between \"Have you ever trained regularily?\" compared to \"Have you been training  the past 4 weeks.
-
-The source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.
-
-This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of physical activity, it is recommended that clinical system record and persist the specific details about the physical activity using archetypes specific for the clinical purpose. (en)">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To create a framework for recording answers to pre-defined screening questions about the broad range of physical activites.">
-			keywords = <"treatment, screening, intervention, questionnaire, care, support, therapy", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"Use to create a framework for recording answers to pre-defined screening questions about the broad range of physical activies.
+			purpose = <"To create a framework for recording answers to pre-defined screening questions about physical activity.">
+			keywords = <"screening, questionnaire, physical activity", ...>
+			use = <"Use to create a framework for recording answers to pre-defined screening questions about physical activity.
 
 Common use cases include, but are not limited to:
-- Systematic questioning in any consultation, for example:
---- Have you ever been physically active? 
---- Are you active in organised sports? 
+- Systematic inquiry in any consultation, for example:
+--- Do you have any physical activity? Yes, No, Unknown.
+--- Have you practiced cycling in the past four weeks? Yes, No, Unknown.
+- Specific questioning related to overall physical activity.
 
 The semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.
 
-The EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about management that has been performed at any time in the past and information about management performed within a specified time interval - for example the difference between \"Have you ever trained regularily?\" compared to \"Have you been training  the past 4 weeks.
+The EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you practicing martial arts now?\" compared to \"Have you practiced martial arts in the past 4 weeks?
 
 The source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.
 
-This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of physical activity, it is recommended that clinical system record and persist the specific details about the physical activity using archetypes specific for the clinical purpose.">
+This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a physical activity it is recommended that clinical system record and persist the specific details about the physical activity using the EVALUATION.physical_activity_summary archetype nested within the Additional details SLOT in this archetype.">
 		>
 	>
 	other_details = <
@@ -73,14 +44,12 @@ This archetype has been designed to be used as a screening tool or to record sim
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d0fe5247a58e9b9c4acd747a42fa9804">
-		["build_uid"] = <"36e7e2a6-fb93-4b02-bfbb-0df6bb6a115d">
-		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"d1a19c10-97d1-30f2-a8b5-762a02401c52">
+		["MD5-CAM-1.0.1"] = <"7e42f1126accb25405ebfce823d720c6">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Physical activity screening questionnaire
+	OBSERVATION[at0000] matches {    -- Physical activity screening
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {0..*; unordered} matches {
@@ -93,33 +62,33 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0039] occurrences matches {0..*} matches {    -- Any physical activity?
+									ELEMENT[at0028] occurrences matches {0..*} matches {    -- Any physical activity?
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0040,    -- Yes
-													at0041,    -- No
-													at0042]    -- Unknown
+													at0031,    -- Yes
+													at0032,    -- No
+													at0033]    -- Unknown
 												}
 											}
 											DV_TEXT matches {*}
 											DV_BOOLEAN matches {*}
 										}
 									}
-									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Description
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Description
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									CLUSTER[at0022] occurrences matches {0..*} matches {    -- Physical activity
+									CLUSTER[at0022] occurrences matches {0..*} matches {    -- Specific physical activity
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0004] matches {    -- Physical activity name
 												value matches {
 													DV_TEXT matches {*}
 												}
 											}
-											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Specific physical activity?
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Currently practicing?
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -133,27 +102,29 @@ definition
 													DV_BOOLEAN matches {*}
 												}
 											}
-											ELEMENT[at0037] occurrences matches {0..*} matches {    -- Start
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- Activity level category
 												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0041,    -- Leisure
+															at0042,    -- Regular
+															at0043]    -- Competition
+														}
+													}
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0037] occurrences matches {0..*} matches {    -- Timing
+												value matches {
+													DV_DURATION matches {*}
+													DV_INTERVAL<DV_DURATION> matches {*}
 													DV_DATE_TIME matches {*}
 													DV_INTERVAL<DV_DATE_TIME> matches {*}
 													DV_TEXT matches {*}
-													DV_DURATION matches {*}
-													DV_INTERVAL<DV_DURATION> matches {*}
 												}
 											}
-											ELEMENT[at0038] occurrences matches {0..*} matches {    -- Stopped
-												value matches {
-													DV_DATE_TIME matches {*}
-													DV_INTERVAL<DV_DATE_TIME> matches {*}
-													DV_TEXT matches {*}
-													DV_DURATION matches {*}
-													DV_INTERVAL<DV_DURATION> matches {*}
-												}
-											}
-											allow_archetype CLUSTER[at0036] occurrences matches {0..*} matches {    -- Additional details
-												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
+											allow_archetype CLUSTER[at0026] occurrences matches {0..*} matches {    -- Additional details
 											}
 											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Comment
 												value matches {
@@ -162,7 +133,7 @@ definition
 											}
 										}
 									}
-									allow_archetype CLUSTER[at0043] occurrences matches {0..*} matches {    -- Additional details
+									allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Additional details
 										include
 											archetype_id/value matches {/.*/}
 									}
@@ -186,12 +157,11 @@ definition
 	}
 
 ontology
-	terminologies_available = <"SNOMED-CT", ...>
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Physical activity screening questionnaire">
+					text = <"Physical activity screening">
 					description = <"Series of questions and associated answers used to screen for physical activity.">
 					comment = <"The answers may be self-reported.">
 				>
@@ -209,14 +179,12 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Physical activity name">
-					description = <"Name of a specific physical activity or grouping of physical activites activities.">
-					comment = <"For example: 
-Active football player, mall walker.
-Coding of the 'Management name' with a terminology is preferred, where possible.">
+					description = <"Identification of a specific physical activity, by name.">
+					comment = <"Coding of the 'physical activity' with a terminology is preferred, where possible.">
 				>
 				["at0005"] = <
-					text = <"Specific physical activity?">
-					description = <"Is there a history of the physical activity?">
+					text = <"Currently practicing?">
+					description = <"The specific physical activity is still being practiced?">
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0007"] = <
@@ -229,8 +197,8 @@ Coding of the 'Management name' with a terminology is preferred, where possible.
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 				["at0022"] = <
-					text = <"Physical activity">
-					description = <"Details about a specific physical activity or grouping of physical activities relevant for the screening purpose.">
+					text = <"Specific physical activity">
+					description = <"Details about a specific physical activity or grouping of physical activity relevant for the screening purpose.">
 				>
 				["at0023"] = <
 					text = <"Yes">
@@ -240,7 +208,28 @@ Coding of the 'Management name' with a terminology is preferred, where possible.
 					text = <"No">
 					description = <"">
 				>
+				["at0026"] = <
+					text = <"Additional details">
+					description = <"Structured details or questions about the specific physical activity.">
+				>
 				["at0027"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Any physical activity?">
+					description = <"Is there a history of any physical activity for the screening purpose?">
+					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
+				>
+				["at0031"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0033"] = <
 					text = <"Unknown">
 					description = <"">
 				>
@@ -248,169 +237,41 @@ Coding of the 'Management name' with a terminology is preferred, where possible.
 					text = <"Screening purpose">
 					description = <"The context or reason for screening.">
 					comment = <"This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.
-For example: pre-admission screening or the name of the actual questionnaire.">
+For example: 'pre-admission screening' or the name of the actual questionnaire.">
 				>
 				["at0035"] = <
 					text = <"Comment">
-					description = <"Additional narrative about a specific physical activity question, not captured in other fields.">
+					description = <"Additional narrative about the specific physical activity question, not captured in other fields.">
 				>
 				["at0036"] = <
-					text = <"Additional details">
-					description = <"Structured details or questions about the specific physical activity.">
-				>
-				["at0037"] = <
-					text = <"Start">
-					description = <"When the physical activity started.">
-					comment = <"The 'Start' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the physical activity started. The specific and intended semantics can be further clarified in a template. For example: Date/time for the date when the treatment started. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset of duration OR the length of time during which the individual has been under treatment. Interval of Duration for the approximate age of the individual at the time of onset.">
-				>
-				["at0038"] = <
-					text = <"Stopped">
-					description = <"When the physical activity ceased.">
-					comment = <"The 'Stopped' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the physical activity ceased. The specific and intended semantics can be further clarified in a template. For example: Date/time for the date when the treatment stopped. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset of duration OR the length of time during which the individual was under treatment. Interval of Duration for the approximate age of the individual at when the management stopped.">
-				>
-				["at0039"] = <
-					text = <"Any physical activity?">
-					description = <"Is there a history of physical activity relevant for the screening purpose?">
-					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
-				>
-				["at0040"] = <
-					text = <"Yes">
-					description = <"">
-				>
-				["at0041"] = <
-					text = <"No">
-					description = <"">
-				>
-				["at0042"] = <
-					text = <"Unknown">
-					description = <"">
-				>
-				["at0043"] = <
-					text = <"Additional details">
-					description = <"Structured details or questions about screening for physical activity.">
-				>
-				["at0044"] = <
 					text = <"Description">
-					description = <"Narrative description about the history of any physical activities relevant for the screening purpose.">
-				>
-			>
-		>
-		["nb"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Physical activity screening questionnaire (en)">
-					description = <"*Series of questions and associated answers used to screen for physical activity. (en)">
-					comment = <"Svarene kan være selvrapporterte.">
-				>
-				["at0001"] = <
-					text = <"History">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Uspesifisert hendelse">
-					description = <"Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon.">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*Physical activity name (en)">
-					description = <"*Name of a specific physical activity or grouping of physical activites activities. (en)">
-					comment = <"*For example: 
-Active football player, mall walker.
-Coding of the 'Management name' with a terminology is preferred, where possible. (en)">
-				>
-				["at0005"] = <
-					text = <"*Specific physical activity? (en)">
-					description = <"*Is there a history of the physical activity? (en)">
-					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
-				>
-				["at0007"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0021"] = <
-					text = <"Tilleggsinformasjon">
-					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
-					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
-				>
-				["at0022"] = <
-					text = <"*Physical activity (en)">
-					description = <"*Details about a specific physical activity or grouping of physical activities relevant for the screening purpose. (en)">
-				>
-				["at0023"] = <
-					text = <"Ja">
-					description = <"">
-				>
-				["at0024"] = <
-					text = <"Nei">
-					description = <"">
-				>
-				["at0027"] = <
-					text = <"Usikker">
-					description = <"">
-				>
-				["at0034"] = <
-					text = <"Kartleggingsformål">
-					description = <"Konteksten eller årsaken for kartleggingen.">
-					comment = <"Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: \"Preoperativ screening\" eller navnet på det faktiske spørreskjemaet.">
-				>
-				["at0035"] = <
-					text = <"Kommentar">
-					description = <"*Additional narrative about a specific physical activity question, not captured in other fields. (en)">
-				>
-				["at0036"] = <
-					text = <"Ytterligere detaljer">
-					description = <"*Structured details or questions about the specific physical activity. (en)">
+					description = <"Narrative description about the history of any symptoms or signs relevant for the screening purpose.">
 				>
 				["at0037"] = <
-					text = <"Start">
-					description = <"*When the physical activity started. (en)">
-					comment = <"*The 'Start' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the physical activity started. The specific and intended semantics can be further clarified in a template. For example: Date/time for the date when the treatment started. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset of duration OR the length of time during which the individual has been under treatment. Interval of Duration for the approximate age of the individual at the time of onset. (en)">
-				>
-				["at0038"] = <
-					text = <"Stoppet">
-					description = <"*When the physical activity ceased. (en)">
-					comment = <"*The 'Stopped' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the physical activity ceased. The specific and intended semantics can be further clarified in a template. For example: Date/time for the date when the treatment stopped. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset of duration OR the length of time during which the individual was under treatment. Interval of Duration for the approximate age of the individual at when the management stopped. (en)">
+					text = <"Timing">
+					description = <"Indication of timing related to the specific physical activity.">
+					comment = <"The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year.">
 				>
 				["at0039"] = <
-					text = <"*Any physical activity? (en)">
-					description = <"*Is there a history of physical activity relevant for the screening purpose? (en)">
-					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
+					text = <"Additional details">
+					description = <"Structured details or questions about screening for physical activity">
 				>
 				["at0040"] = <
-					text = <"Ja">
-					description = <"">
+					text = <"Activity level category">
+					description = <"The level of activity for the specific physical activity name. Not to be confused with the physical activity level (PAL) assessment.">
 				>
 				["at0041"] = <
-					text = <"Nei">
+					text = <"Leisure">
 					description = <"">
 				>
 				["at0042"] = <
-					text = <"Usikker">
+					text = <"Regular">
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"Ytterligere detaljer">
-					description = <"*Structured details or questions about screening for physical activity. (en)">
+					text = <"Competition">
+					description = <"">
 				>
-				["at0044"] = <
-					text = <"Beskrivelse">
-					description = <"*Narrative description about the history of any physical activities relevant for the screening purpose. (en)">
-				>
-			>
-		>
-	>
-	term_binding = <
-		["SNOMED-CT"] = <
-			items = <
-				["at0027"] = <[SNOMED-CT::261665006]>
-				["at0023"] = <[SNOMED-CT::373066001]>
-				["at0024"] = <[SNOMED-CT::373067005]>
-				["at0040"] = <[SNOMED-CT::373066001]>
-				["at0041"] = <[SNOMED-CT::373067005]>
-				["at0042"] = <[SNOMED-CT::261665006]>
 			>
 		>
 	>
