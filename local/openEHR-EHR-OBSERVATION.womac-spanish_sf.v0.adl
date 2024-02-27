@@ -1,0 +1,800 @@
+archetype (adl_version=1.4; uid=d0e7812c-bcc6-43e5-81c4-1ee1d089936c)
+	openEHR-EHR-OBSERVATION.womac-spanish_sf.v0
+specialize
+	openEHR-EHR-OBSERVATION.womac.v0
+
+concept
+	[at0000.1]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2024-02-01">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			keywords = <"*Spanish WOMAC short-form, Western Ontario and McMaster Universities Arthritis Index, Arthritis, Knee, hip, Osteoarthritis, PROM, short-form, spanish, Bilbao, Spain (en)", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"*The spanish WOMAC short-form can be taken on paper, over the telephone or computer. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-12 for Pain, and 0-32 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-44), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.
+ (en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To assess osteoarthritis-related disability in the hip and/or knee based on patients' and experts' opinions">
+			keywords = <"Spanish WOMAC short-form, Western Ontario and McMaster Universities Arthritis Index, Arthritis, Knee, hip, Osteoarthritis, PROM, short-form, spanish, Bilbao, Spain", ...>
+			use = <"The spanish WOMAC short-form can be taken on paper, over the telephone or computer. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-12 for Pain, and 0-32 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-44), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.
+">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"- Bilbao et al.: Validation of a proposed WOMAC short form for patients with hip osteoarthritis. Health and Quality of Life Outcomes 2011 9:75 (doi:10.1186/1477-7525-9-75)
+- Tubach F, Baron G, Falissard B, et al. Using patients' and rheumatologists' opinions to specify a short form of the WOMAC function subscale. Ann Rheum Dis. 2005 Jan;64(1):75-9 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1755192/)
+- Baron G, Tubach F, Ravaud P, et al. Validation of a short form of the Western Ontario and McMaster Universities Osteoarthritis Index function subscale in hip and knee osteoarthritis. Arthritis Rheum. 2007 May 15;57(4):633-8 (https://onlinelibrary.wiley.com/doi/epdf/10.1002/art.22685)">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"963916515c9d8f558d2827aca60e6ea4">
+		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
+	>
+
+definition
+	OBSERVATION[at0000.1] matches {    -- Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- During the last 48 hours
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Pain
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0007] occurrences matches {0..1} matches {    -- Walking on a flat surface
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0013] occurrences matches {0..1} matches {    -- Going up or down stairs
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0014.1] occurrences matches {0..0} matches {    -- At night while in bed
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Sitting or lying
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0016.1] occurrences matches {0..0} matches {    -- Standing upright
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+										}
+									}
+									CLUSTER[at0005.1] occurrences matches {0..0} matches {    -- Stiffness
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0017.1] occurrences matches {0..0} matches {    -- Morning stiffness
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0018.1] occurrences matches {0..0} matches {    -- Stiffness occurring later in the day
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+										}
+									}
+									CLUSTER[at0006] occurrences matches {0..1} matches {    -- Physical function
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0019] occurrences matches {0..1} matches {    -- Descending stairs
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {    -- Ascending stairs
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..1} matches {    -- Rising from sitting
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0022.1] occurrences matches {0..0} matches {    -- Standing
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0023.1] occurrences matches {0..0} matches {    -- Bending to floor
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0024] occurrences matches {0..1} matches {    -- Walking on flat surface
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0025] occurrences matches {0..1} matches {    -- Getting in or out of the car
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0026] occurrences matches {0..1} matches {    -- Going shopping
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0027] occurrences matches {0..1} matches {    -- Putting on socks
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0028.1] occurrences matches {0..0} matches {    -- Lying in bed
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0029.1] occurrences matches {0..0} matches {    -- Taking off socks
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0030.1] occurrences matches {0..0} matches {    -- Rising from bed
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0031.1] occurrences matches {0..0} matches {    -- Getting in or out of bath
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0032.1] occurrences matches {0..0} matches {    -- Sitting
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0033] occurrences matches {0..1} matches {    -- Getting in or out of toilet
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0034.1] occurrences matches {0..0} matches {    -- Heavy domestic duties
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+											ELEMENT[at0035.1] occurrences matches {0..0} matches {    -- Light domestic duties
+												value matches {
+													0|[local::at0008],
+													1|[local::at0009],
+													2|[local::at0010],
+													3|[local::at0011],
+													4|[local::at0012]
+												}
+											}
+										}
+									}
+									ELEMENT[at0036.1] matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..44|}
+											}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {PT48H}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0037] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0038] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Pain">
+					description = <"This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"How much pain do you have?\"">
+				>
+				["at0005"] = <
+					text = <"Stiffness">
+					description = <"This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
+				>
+				["at0006"] = <
+					text = <"Physical function">
+					description = <"This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
+
+For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"What degree of difficulty do you have with?\"">
+				>
+				["at0007"] = <
+					text = <"Walking on a flat surface">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Slight">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Extreme">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Going up or down stairs">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"At night while in bed">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Sitting or lying">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Standing upright">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Morning stiffness">
+					description = <"Original question: How severe is your stiffness after first wakening in the morning?">
+				>
+				["at0018"] = <
+					text = <"Stiffness occurring later in the day">
+					description = <"">
+					comment = <"Original question: How severe is your stiffness after sitting, lying, or resting later in the day?">
+				>
+				["at0019"] = <
+					text = <"Descending stairs">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Ascending stairs">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Rising from sitting">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Standing">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Bending to floor">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Walking on flat surface">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Getting in or out of the car">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Going shopping">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Putting on socks">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Lying in bed">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Taking off socks">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Rising from bed">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Getting in or out of bath">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Sitting">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Getting in or out of toilet">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Heavy domestic duties">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Light domestic duties">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0000.1"] = <
+					text = <"Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)">
+					description = <"The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
+It is used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 11 items divided into 2 subscales:
+- Pain (3 items): during walking, using stairs, sitting or lying.
+- Physical Function (8 items): using stairs, rising from sitting, walking, getting in / out of a car, shopping, putting on socks, getting on / off toilet.
+The spanish WOMAC short form Index was developed in 2011.">
+				>
+				["at0014.1"] = <
+					text = <"At night while in bed">
+					description = <"">
+				>
+				["at0016.1"] = <
+					text = <"Standing upright">
+					description = <"">
+				>
+				["at0005.1"] = <
+					text = <"Stiffness">
+					description = <"This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
+				>
+				["at0017.1"] = <
+					text = <"Morning stiffness">
+					description = <"Original question: How severe is your stiffness after first wakening in the morning?">
+				>
+				["at0018.1"] = <
+					text = <"Stiffness occurring later in the day">
+					description = <"">
+					comment = <"Original question: How severe is your stiffness after sitting, lying, or resting later in the day?">
+				>
+				["at0022.1"] = <
+					text = <"Standing">
+					description = <"">
+				>
+				["at0023.1"] = <
+					text = <"Bending to floor">
+					description = <"">
+				>
+				["at0028.1"] = <
+					text = <"Lying in bed">
+					description = <"">
+				>
+				["at0029.1"] = <
+					text = <"Taking off socks">
+					description = <"">
+				>
+				["at0030.1"] = <
+					text = <"Rising from bed">
+					description = <"">
+				>
+				["at0031.1"] = <
+					text = <"Getting in or out of bath">
+					description = <"">
+				>
+				["at0032.1"] = <
+					text = <"Sitting">
+					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"Heavy domestic duties">
+					description = <"">
+				>
+				["at0035.1"] = <
+					text = <"Light domestic duties">
+					description = <"">
+				>
+				["at0036.1"] = <
+					text = <"Total score">
+					description = <"">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Pain (en)">
+					description = <"*This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"How much pain do you have?\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Stiffness (en)">
+					description = <"*This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints. (en)">
+				>
+				["at0006"] = <
+					text = <"*Physical function (en)">
+					description = <"*This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
+
+For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"What degree of difficulty do you have with?\" (en)">
+				>
+				["at0007"] = <
+					text = <"*Walking on a flat surface (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Slight (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Moderate (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Severe (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Extreme (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Going up or down stairs (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*At night while in bed (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Sitting or lying (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Standing upright (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Morning stiffness (en)">
+					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
+				>
+				["at0018"] = <
+					text = <"*Stiffness occurring later in the day (en)">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0019"] = <
+					text = <"*Descending stairs (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Ascending stairs (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Rising from sitting (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Standing (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Bending to floor (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Walking on flat surface (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Getting in or out of the car (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Going shopping (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Putting on socks (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Lying in bed (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Taking off socks (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Rising from bed (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Getting in or out of bath (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Sitting (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Getting in or out of toilet (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Heavy domestic duties (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Light domestic duties (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+				["at0000.1"] = <
+					text = <"*Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) (en)">
+					description = <"*The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
+It is used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 11 items divided into 2 subscales:
+- Pain (3 items): during walking, using stairs, sitting or lying.
+- Physical Function (8 items): using stairs, rising from sitting, walking, getting in / out of a car, shopping, putting on socks, getting on / off toilet.
+The spanish WOMAC short form Index was developed in 2011. (en)">
+				>
+				["at0014.1"] = <
+					text = <"*At night while in bed (en)">
+					description = <"">
+				>
+				["at0016.1"] = <
+					text = <"*Standing upright (en)">
+					description = <"">
+				>
+				["at0005.1"] = <
+					text = <"*Stiffness (en)">
+					description = <"*This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints. (en)">
+				>
+				["at0017.1"] = <
+					text = <"*Morning stiffness (en)">
+					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
+				>
+				["at0018.1"] = <
+					text = <"*Stiffness occurring later in the day (en)">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0022.1"] = <
+					text = <"*Standing (en)">
+					description = <"">
+				>
+				["at0023.1"] = <
+					text = <"*Bending to floor (en)">
+					description = <"">
+				>
+				["at0028.1"] = <
+					text = <"*Lying in bed (en)">
+					description = <"">
+				>
+				["at0029.1"] = <
+					text = <"*Taking off socks (en)">
+					description = <"">
+				>
+				["at0030.1"] = <
+					text = <"*Rising from bed (en)">
+					description = <"">
+				>
+				["at0031.1"] = <
+					text = <"*Getting in or out of bath (en)">
+					description = <"">
+				>
+				["at0032.1"] = <
+					text = <"*Sitting (en)">
+					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"*Heavy domestic duties (en)">
+					description = <"">
+				>
+				["at0035.1"] = <
+					text = <"*Light domestic duties (en)">
+					description = <"">
+				>
+				["at0036.1"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+			>
+		>
+	>
