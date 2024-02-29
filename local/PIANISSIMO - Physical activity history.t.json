@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.3",
+      "sem_ver" : "0.1.4",
       "build_uid" : "8ff07ecd-3328-456b-8589-1a668aafa5db",
-      "MD5-CAM-1.0.1" : "aa5b5ccc18def807e3f5b9c6e33a7670",
+      "MD5-CAM-1.0.1" : "d373f73118188522fc9de74655d90f7e",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -580,7 +580,24 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_DURATION",
+                                  "rmTypeName" : "DURATION",
+                                  "occurrences" : "0..1",
+                                  "patternedConstraint" : "PY",
+                                  "constraint" : [ {
+                                    "lower" : "P1Y",
+                                    "upper" : "P70Y",
+                                    "lowerIncluded" : true,
+                                    "upperIncluded" : true,
+                                    "lowerUnbounded" : false,
+                                    "upperUnbounded" : false
+                                  } ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -595,7 +612,24 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_DURATION",
+                                  "rmTypeName" : "DURATION",
+                                  "occurrences" : "0..1",
+                                  "patternedConstraint" : "PY",
+                                  "constraint" : [ {
+                                    "lower" : "PT1S",
+                                    "upper" : "P70Y",
+                                    "lowerIncluded" : true,
+                                    "upperIncluded" : true,
+                                    "lowerUnbounded" : false,
+                                    "upperUnbounded" : false
+                                  } ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             }, {
                               "@type" : "C_COMPLEX_OBJECT",
