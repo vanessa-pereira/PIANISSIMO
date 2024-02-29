@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.5",
+      "sem_ver" : "0.1.6",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "633b06bbef7a7a30167b4d70bb183104",
+      "MD5-CAM-1.0.1" : "11d840e31adefe31b6584d6a1c395169",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -331,6 +331,16 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0022.1]/items[at0040.1]" : {
+            "doc_variable_id" : "Q2"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.problem_screening.v1",
     "differential" : true,
     "archetypeId" : {
@@ -421,7 +431,8 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0022",
+                      "occurrences" : "1..1",
+                      "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -777,6 +788,16 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0027.1]" : {
+            "doc_variable_id" : "Q3"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.medication_screening.v1",
     "differential" : true,
     "archetypeId" : {
@@ -838,7 +859,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.2" ],
+                              "constraint" : [ "ac0.3" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -885,34 +906,34 @@
             "description" : "Is there a history of use of any medication related to the screening purpose?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
           },
-          "ac0.2" : {
+          "ac0.3" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.2",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "nb" : {
-          "ac0.2" : {
+          "ac0.3" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.2" : {
+          "ac0.3" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "nl" : {
-          "ac0.2" : {
+          "ac0.3" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.3",
             "description" : ""
           }
         }
@@ -929,6 +950,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.2",
           "members" : [ "at0028", "at0029", "at0030" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0028", "at0029" ]
         }
       }
     },
@@ -1123,6 +1149,19 @@
           "misuse" : "Niet gebruiken om meerdere unilaterale/bilaterale structuren vast te leggen.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0001.1]" : {
+            "doc_variable_id" : "Q1"
+          },
+          "/items[at0002]" : {
+            "doc_variable_id" : "Q1"
+          }
         }
       }
     },
@@ -1714,6 +1753,22 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.1]" : {
+            "doc_variable_id" : "Q4"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.2]" : {
+            "doc_variable_id" : "Q5"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.3]" : {
+            "doc_variable_id" : "Q6"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.procedure_screening.v1",
     "differential" : true,
     "archetypeId" : {
@@ -1775,7 +1830,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.2" ],
+                              "constraint" : [ "ac0.9" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -1803,7 +1858,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.4" ],
+                              "constraint" : [ "ac0.8" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -1831,7 +1886,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.6" ],
+                              "constraint" : [ "ac0.7" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -1881,7 +1936,7 @@
           "at0028.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0028.2",
-            "text" : "Any previous spa treatments for osteoarthritis?",
+            "text" : "Any previous thermal treatments for osteoarthritis?",
             "description" : "Is there a history of any past procedures relevant for the screening purpose?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
           },
@@ -1892,22 +1947,22 @@
             "description" : "Is there a history of any past procedures relevant for the screening purpose?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
           },
-          "ac0.2" : {
+          "ac0.7" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.2",
+            "code" : "ac0.7",
             "description" : ""
           },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
             "description" : ""
           },
-          "ac0.6" : {
+          "ac0.9" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.6",
+            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -1926,22 +1981,22 @@
             "description" : "Finnes det noen tidligere gjennomførte prosedyrer som som er innenfor kartleggingsformålet?",
             "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
           },
-          "ac0.2" : {
+          "ac0.7" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.7",
             "description" : ""
           },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
             "description" : ""
           },
-          "ac0.6" : {
+          "ac0.9" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.6",
+            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -1960,22 +2015,22 @@
             "description" : "Gibt es eine Vorgeschichte von früheren Prozeduren, die für den Screening-Zweck relevant sind?",
             "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
           },
-          "ac0.2" : {
+          "ac0.7" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.7",
             "description" : ""
           },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
             "description" : ""
           },
-          "ac0.6" : {
+          "ac0.9" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.6",
+            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -1994,22 +2049,22 @@
             "description" : "*Is there a history of any past procedures relevant for the screening purpose? (en)",
             "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
           },
-          "ac0.2" : {
+          "ac0.7" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.7",
             "description" : ""
           },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
             "description" : ""
           },
-          "ac0.6" : {
+          "ac0.9" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.6",
+            "code" : "ac0.9",
             "description" : ""
           }
         }
@@ -2046,6 +2101,21 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.6",
           "members" : [ "at0031", "at0032", "at0038" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at0031", "at0032" ]
         }
       }
     },
@@ -2113,7 +2183,36 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "963916515c9d8f558d2827aca60e6ea4"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ "*Spanish WOMAC short-form, Western Ontario and McMaster Universities Arthritis Index, Arthritis, Knee, hip, Osteoarthritis, PROM, short-form, spanish, Bilbao, Spain (en)" ],
+          "use" : "*The spanish WOMAC short-form can be taken on paper, over the telephone or computer. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-12 for Pain, and 0-32 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-44), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.\n (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assess osteoarthritis-related disability in the hip and/or knee based on patients' and experts' opinions",
+          "keywords" : [ "Spanish WOMAC short-form, Western Ontario and McMaster Universities Arthritis Index, Arthritis, Knee, hip, Osteoarthritis, PROM, short-form, spanish, Bilbao, Spain" ],
+          "use" : "The spanish WOMAC short-form can be taken on paper, over the telephone or computer. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-12 for Pain, and 0-32 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-44), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.womac-spanish_sf.v0",
     "differential" : true,
@@ -2125,15 +2224,188 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "OBSERVATION",
       "nodeId" : "at0000.1.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "INTERVAL_EVENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0002.0.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "1..1",
+                      "nodeId" : "at0004.0.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0007.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0013.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0015.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "1..1",
+                      "nodeId" : "at0006.0.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0019.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0020.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0021.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0024.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0025.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0026.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0027.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0033.0.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "width",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT48H",
+                        "upper" : "PT48H",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : true,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : false
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000.1",
       "termDefinitions" : {
-        "en" : { },
-        "pt-pt" : { }
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Western Ontario and McMaster Universities Arthritis Index (WOMAC)",
+            "description" : "The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:\n- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright\n- Stiffness (2 items): after first waking and later in the day\n- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties\nWOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated."
+          }
+        },
+        "pt-pt" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)",
+            "description" : "*The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:\n- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright\n- Stiffness (2 items): after first waking and later in the day\n- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties\nWOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated. (en)"
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
