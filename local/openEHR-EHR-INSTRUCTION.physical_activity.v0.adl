@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2024-03-05">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2024-03-05">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -29,7 +29,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0487798b0bf96dec27920eff72dd9f66">
+		["MD5-CAM-1.0.1"] = <"10b74058d2526490dcc452fc5c3936f6">
 		["build_uid"] = <"ba3e62b9-18e7-337b-8097-b206f8872445">
 	>
 
@@ -38,88 +38,95 @@ definition
 		activities cardinality matches {0..*; unordered} matches {
 			ACTIVITY[at0001] matches {    -- Current Activity
 				description matches {
-					ITEM_TREE[at0002] matches {*}    -- Tree
+					ITEM_TREE[at0002] matches {    -- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0004] matches {    -- Physical activity
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0005,    -- Aerobics
+											at0006,    -- Basketball
+											at0007,    -- Cycling
+											at0008,    -- Dancing
+											at0009,    -- Soccer
+											at0010,    -- Gardening
+											at0011,    -- Hiking
+											at0012,    -- Horse Riding
+											at0013,    -- Ironing
+											at0014,    -- Jogging
+											at0015,    -- Running
+											at0016,    -- Mopping
+											at0017,    -- Mountain Biking
+											at0018,    -- Painting
+											at0019,    -- Sailing
+											at0020,    -- Skiing
+											at0021,    -- Snowboarding
+											at0022,    -- Football
+											at0023,    -- Strength Training
+											at0024,    -- Surfing
+											at0025,    -- Swimming
+											at0026,    -- Tennis
+											at0027,    -- Vacuuming
+											at0028,    -- Volleyball
+											at0029,    -- Walking
+											at0030,    -- Weightlifting
+											at0031,    -- Windsurfing
+											at0032,    -- Yoga
+											at0033]    -- Other
+										}
+									}
+								}
+							}
+							ELEMENT[at0034] occurrences matches {0..1} matches {    -- Duration
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+							ELEMENT[at0035] occurrences matches {0..1} matches {    -- Steps
+								value matches {
+									C_DV_QUANTITY <
+										
+										list = <
+											["1"] = <
+												units = <"1/d">
+											>
+											["2"] = <
+												units = <"1/wk">
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0036] occurrences matches {0..1} matches {    -- Exercise intensity
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0037,    -- Light
+											at0038,    -- Moderate
+											at0039,    -- Hard
+											at0040]    -- Very hard
+										}
+									}
+								}
+							}
+							ELEMENT[at0041] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 		protocol matches {
 			ITEM_TREE[at0003] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Physical activity
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0005,    -- Aerobics
-									at0006,    -- Basketball
-									at0007,    -- Cycling
-									at0008,    -- Dancing
-									at0009,    -- Soccer
-									at0010,    -- Gardening
-									at0011,    -- Hiking
-									at0012,    -- Horse Riding
-									at0013,    -- Ironing
-									at0014,    -- Jogging
-									at0015,    -- Running
-									at0016,    -- Mopping
-									at0017,    -- Mountain Biking
-									at0018,    -- Painting
-									at0019,    -- Sailing
-									at0020,    -- Skiing
-									at0021,    -- Snowboarding
-									at0022,    -- Football
-									at0023,    -- Strength Training
-									at0024,    -- Surfing
-									at0025,    -- Swimming
-									at0026,    -- Tennis
-									at0027,    -- Vacuuming
-									at0028,    -- Volleyball
-									at0029,    -- Walking
-									at0030,    -- Weightlifting
-									at0031,    -- Windsurfing
-									at0032,    -- Yoga
-									at0033]    -- Other
-								}
-							}
-						}
-					}
-					ELEMENT[at0034] occurrences matches {0..1} matches {    -- Duration
-						value matches {
-							DV_DURATION matches {*}
-						}
-					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Steps
-						value matches {
-							C_DV_QUANTITY <
-								
-								list = <
-									["1"] = <
-										units = <"1/d">
-									>
-									["2"] = <
-										units = <"1/wk">
-									>
-								>
-							>
-						}
-					}
-					ELEMENT[at0036] occurrences matches {0..1} matches {    -- Exercise intensity
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0037,    -- Light
-									at0038,    -- Moderate
-									at0039,    -- Hard
-									at0040]    -- Very hard
-								}
-							}
-						}
-					}
-					ELEMENT[at0041] occurrences matches {0..1} matches {    -- Comment
-						value matches {
-							DV_TEXT matches {*}
-						}
+					allow_archetype CLUSTER[at0043] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -296,6 +303,10 @@ ontology
 				>
 				["at0041"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Extension">
 					description = <"">
 				>
 			>
