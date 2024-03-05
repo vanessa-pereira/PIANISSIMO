@@ -1,0 +1,303 @@
+archetype (adl_version=1.4; uid=c3dc63d4-e856-49dc-aa96-515a2301ec1d)
+	openEHR-EHR-INSTRUCTION.physical_activity.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+		["date"] = <"2024-03-05">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Recording instructions for daily living related to activity, in the form of either physical exercises or general activity.">
+			keywords = <"physical activity, goals, activity, physical", ...>
+			use = <"Recording patient self-goals regarding the execution of physical activities, e.g. exercises (walking, bicycling, etc.) or non-exercise physical activity (e.g. ironning, cooking, etc).">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0487798b0bf96dec27920eff72dd9f66">
+		["build_uid"] = <"ba3e62b9-18e7-337b-8097-b206f8872445">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- Physical activity
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] matches {    -- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {*}    -- Tree
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0003] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Physical activity
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0005,    -- Aerobics
+									at0006,    -- Basketball
+									at0007,    -- Cycling
+									at0008,    -- Dancing
+									at0009,    -- Soccer
+									at0010,    -- Gardening
+									at0011,    -- Hiking
+									at0012,    -- Horse Riding
+									at0013,    -- Ironing
+									at0014,    -- Jogging
+									at0015,    -- Running
+									at0016,    -- Mopping
+									at0017,    -- Mountain Biking
+									at0018,    -- Painting
+									at0019,    -- Sailing
+									at0020,    -- Skiing
+									at0021,    -- Snowboarding
+									at0022,    -- Football
+									at0023,    -- Strength Training
+									at0024,    -- Surfing
+									at0025,    -- Swimming
+									at0026,    -- Tennis
+									at0027,    -- Vacuuming
+									at0028,    -- Volleyball
+									at0029,    -- Walking
+									at0030,    -- Weightlifting
+									at0031,    -- Windsurfing
+									at0032,    -- Yoga
+									at0033]    -- Other
+								}
+							}
+						}
+					}
+					ELEMENT[at0034] occurrences matches {0..1} matches {    -- Duration
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Steps
+						value matches {
+							C_DV_QUANTITY <
+								
+								list = <
+									["1"] = <
+										units = <"1/d">
+									>
+									["2"] = <
+										units = <"1/wk">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0036] occurrences matches {0..1} matches {    -- Exercise intensity
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0037,    -- Light
+									at0038,    -- Moderate
+									at0039,    -- Hard
+									at0040]    -- Very hard
+								}
+							}
+						}
+					}
+					ELEMENT[at0041] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Physical activity">
+					description = <"Setting goals for patients physical activity (either physical exercises or general activity).">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Physical activity">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Aerobics">
+					description = <"Aerobics.">
+				>
+				["at0006"] = <
+					text = <"Basketball">
+					description = <"Basketball.">
+				>
+				["at0007"] = <
+					text = <"Cycling">
+					description = <"Cycling.">
+				>
+				["at0008"] = <
+					text = <"Dancing">
+					description = <"Dancing.">
+				>
+				["at0009"] = <
+					text = <"Soccer">
+					description = <"Soccer.">
+				>
+				["at0010"] = <
+					text = <"Gardening">
+					description = <"Gardening.">
+				>
+				["at0011"] = <
+					text = <"Hiking">
+					description = <"Hiking.">
+				>
+				["at0012"] = <
+					text = <"Horse Riding">
+					description = <"Horse Riding.">
+				>
+				["at0013"] = <
+					text = <"Ironing">
+					description = <"Ironing.">
+				>
+				["at0014"] = <
+					text = <"Jogging">
+					description = <"Jogging.">
+				>
+				["at0015"] = <
+					text = <"Running">
+					description = <"Running.">
+				>
+				["at0016"] = <
+					text = <"Mopping">
+					description = <"Mopping.">
+				>
+				["at0017"] = <
+					text = <"Mountain Biking">
+					description = <"Mountain Biking.">
+				>
+				["at0018"] = <
+					text = <"Painting">
+					description = <"Painting.">
+				>
+				["at0019"] = <
+					text = <"Sailing">
+					description = <"Sailing.">
+				>
+				["at0020"] = <
+					text = <"Skiing">
+					description = <"Skiing.">
+				>
+				["at0021"] = <
+					text = <"Snowboarding">
+					description = <"Snowboarding.">
+				>
+				["at0022"] = <
+					text = <"Football">
+					description = <"Football.">
+				>
+				["at0023"] = <
+					text = <"Strength Training">
+					description = <"Football.">
+				>
+				["at0024"] = <
+					text = <"Surfing">
+					description = <"Surfing.">
+				>
+				["at0025"] = <
+					text = <"Swimming">
+					description = <"Swimming.">
+				>
+				["at0026"] = <
+					text = <"Tennis">
+					description = <"Tennis.">
+				>
+				["at0027"] = <
+					text = <"Vacuuming">
+					description = <"Vacuuming.">
+				>
+				["at0028"] = <
+					text = <"Volleyball">
+					description = <"Volleyball.">
+				>
+				["at0029"] = <
+					text = <"Walking">
+					description = <"Walking.">
+				>
+				["at0030"] = <
+					text = <"Weightlifting">
+					description = <"Weightlifting.">
+				>
+				["at0031"] = <
+					text = <"Windsurfing">
+					description = <"Windsurfing.">
+				>
+				["at0032"] = <
+					text = <"Yoga">
+					description = <"Yoga.">
+				>
+				["at0033"] = <
+					text = <"Other">
+					description = <"Other Activity.">
+				>
+				["at0034"] = <
+					text = <"Duration">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Steps">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Exercise intensity">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Light">
+					description = <"Recreational and household activities. (e.g. bowling, ironing).">
+				>
+				["at0038"] = <
+					text = <"Moderate">
+					description = <"Feeling of walking at a normal pace.">
+				>
+				["at0039"] = <
+					text = <"Hard">
+					description = <"Harder than walking but not as strenuous as running.">
+				>
+				["at0040"] = <
+					text = <"Very hard">
+					description = <"Feeling of running.">
+				>
+				["at0041"] = <
+					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+	>
