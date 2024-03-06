@@ -1,0 +1,248 @@
+archetype (adl_version=1.4; uid=15304d6b-d3ff-4313-8138-300bc0ca9204)
+	openEHR-EHR-ADMIN_ENTRY.pianissimo_app_evaluation.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-03-06">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"4e666637-9674-3a8c-847f-fdf52b2a63a7">
+		["MD5-CAM-1.0.1"] = <"82ff4916284cbcd556129a71eb63feab">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Pianissimo app evaluation
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Usage of the app increased physical activity
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003,    -- Yes
+									at0004]    -- No
+								}
+							}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Can maintain same physical activity after app usage
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0006,    -- Yes
+									at0007]    -- No
+								}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Main source of motivation
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0009,    -- Objectives
+									at0010,    -- Notifications
+									at0011,    -- Both
+									at0012]    -- Nothing
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- User liked the app
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0014,    -- Yes
+									at0015]    -- No
+								}
+							}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- App was adapted to patient condition
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0017,    -- Yes
+									at0018]    -- No
+								}
+							}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- User recommends the app
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0020,    -- Yes
+									at0021]    -- No
+								}
+							}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Main source of information about app existence
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0023,    -- Objectives
+									at0024,    -- Notifications
+									at0025,    -- Both
+									at0026]    -- Nothing
+								}
+							}
+						}
+					}
+					ELEMENT[at0027] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo app evaluation">
+					description = <"pianissimo app evaluation">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Usage of the app increased physical activity">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Can maintain same physical activity after app usage">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Main source of motivation">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Objectives">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Notifications">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Both">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Nothing">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"User liked the app">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"App was adapted to patient condition">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"User recommends the app">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Main source of information about app existence">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Objectives">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Notifications">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Both">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Nothing">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+	>
