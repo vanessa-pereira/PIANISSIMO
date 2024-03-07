@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.8",
+      "sem_ver" : "0.1.9",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "8bfff63aa358096151936aff21f9b13e",
+      "MD5-CAM-1.0.1" : "3250719a4b8b1f42e76d219e16659dc2",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -364,7 +364,7 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "occurrences" : "0..1",
+              "occurrences" : "1..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -793,7 +793,7 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/data[at0022]/events[at0023]/data[at0001]/items[at0027.1]" : {
+          "/data[at0022]/events[at0023.1]/data[at0001]/items[at0027.1]" : {
             "doc_variable_id" : "Q3"
           }
         }
@@ -822,7 +822,8 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "nodeId" : "at0023",
+              "occurrences" : "1..1",
+              "nodeId" : "at0023.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
@@ -1764,13 +1765,13 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.1]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0028.1]" : {
             "doc_variable_id" : "Q4"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.2]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0028.2]" : {
             "doc_variable_id" : "Q5"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.3]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0028.3]" : {
             "doc_variable_id" : "Q6"
           }
         }
@@ -1799,7 +1800,8 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "occurrences" : "1..1",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
