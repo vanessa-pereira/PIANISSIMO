@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.4",
+      "sem_ver" : "0.1.5",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "813f78972d17f050cb4c08c95f439036",
+      "MD5-CAM-1.0.1" : "c66a72817008065183e8f1fc8a675e08",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -156,10 +156,10 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.4",
+        "nodeId" : "at0.35",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-age-001.v0",
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-age_assertion-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -329,7 +329,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "BF9B28403CBB9F2FB9C120F3EB89DA8E"
+        "PARENT:MD5-CAM-1.0.1" : "84AF039269DA6FDA2C0CD918B6BC7FA1"
       },
       "details" : {
         "de" : {
@@ -406,6 +406,21 @@
           "use" : "Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems.",
           "misuse" : "Not to be used for recording information relating to the sexual orientation or sexual activity of an individual.\r\n\r\nNot to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.",
           "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer des informations sur le sexe d'une personne.",
+          "keywords" : [ "sexe", "masculin", "féminin", "androgyne", "garçon", "fille", "homme", "femme", "transsexuel", "bigender", "agender", "transgenre", "transman", "transfemme" ],
+          "use" : "Sert à enregistrer des détails sur le genre de la personne, y compris le genre administratif et légal et le sexe assigné à la naissance, en plus de l'identité de genre, de l'expression et du pronom préféré.\r\n\r\nL'objectif de cet archétype est d'enregistrer un large éventail de détails liés au genre d'un individu, en raison de la conception moderne du genre et des nouvelles connaissances sur les manifestations psychologiques, biologiques et sociales du genre.\r\n\r\nCet archétype permet également d'enregistrer et de différencier le sexe légal et le sexe administratif.\r\n\r\nDans les cas d'utilisation les plus courants, le \"sexe administratif\" sera utilisé comme équivalent de la définition traditionnelle du \"sexe\" dans les systèmes actuels ou anciens.",
+          "misuse" : "Ne pas utiliser pour enregistrer des informations relatives à l'orientation sexuelle ou à l'activité sexuelle d'une personne.\r\n\r\nNe pas utiliser pour enregistrer le sexe génétique ou chromosomique. À l'heure actuelle, cette information est généralement enregistrée sous la forme d'un résultat de test de laboratoire. La représentation formelle du \"sexe génétique\" n'est pas encore bien définie et peut impliquer la combinaison d'axes d'information, y compris des données chromosomiques et réceptrices, des variantes mosaïques et des diagnostics.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -547,7 +562,8 @@
         "en" : { },
         "de" : { },
         "sv" : { },
-        "pt-pt" : { }
+        "pt-pt" : { },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -621,334 +637,18 @@
         "email" : "silje.ljosland.bakke@helse-vest-ikt.no"
       },
       "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "9f8f4801-01f4-42ac-8fea-870e594d132d",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "F985C1E4857E7F91A8DBE45281D56224"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung der Altersparameter einer Person zu einem bestimmten Zeitpunkt.",
-          "keywords" : [ "Alter, Chronologisches Alter, Korrigiertes alter, Altersklasse, Alterkategorie, Altersgruppe" ],
-          "use" : "Verwendung zur Erfassung von Parametern über das Alter einer Person zu einem bestimmten Zeitpunkt.\r\n\r\nVerwendung innerhalb eines Templates neben anderen kontextuell relevanten Archetypen. Einschließlich, aber nicht beschränkt auf;\r\n- zur Aufzeichnung des angepassten Alters eines Säuglings als Teil der Überwachung von Wachstumsmustern bei Kindern oder;\r\n- zur Aufzeichnung des tatsächlichen Alters zum Zeitpunkt einer körperlichen Untersuchung oder;\r\n- zur Erfassung einer Kategorie oder eines Bereichs, in dem die Person erstmals Symptome wahrgenommen hat.",
-          "misuse" : "Nicht zur Darstellung des aktuellen Alters einer Person in der Nutzeroberfläche einer elektronischen Patientenakte zu verwenden. Verwenden Sie zu diesem Zweck ein formales Patientenregister oder Archetypen, die auf dem openEHR-Modell für demografische Informationen basieren.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere detaljer om alderen til et individ på et gitt tidspunkt.",
-          "keywords" : [ ],
-          "use" : "Brukes for å registrere parametere om alderen til et individ på et bestemt tidspunkt.\r\n\r\nBruk i et templat sammen med andre relevante arketyper. For eksempel:\r\n- å registrere den justerte alderen til et spedbarn som en del av overvåking av barnets vekstmønster,\r\n- å registrere alderen på tidspunktet for en fysisk undersøkelse,\r\n- å registrere en tidskategori eller periode der personen først ble oppmerksom på symptomer.",
-          "misuse" : "Skal ikke brukes til å vise individets nåværende alder i brukergrensesnittet i et elektronisk journalsystem. Bruk et formelt pasientregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about the age of an individual at a specific point in time.",
-          "keywords" : [ ],
-          "use" : "Use to record parameters about the age of an individual at a specific point in time.\r\n\r\nUse within a template alongside other contextually relevant archetypes. Including, but not limited to;\r\n- to record the adjusted age of an infant as part of monitoring child growth patterns or;\r\n- to record the actual age at the time of a physical examination or;\r\n- to record a category or range in which the individual first became aware of symptoms.",
-          "misuse" : "Not to be used to display the individual's current age in the user interface of an electronic health record. Use a formal patient registry or archetypes based on the openEHR demographic information model for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "annotations" : {
-      "@type" : "RESOURCE_ANNOTATIONS",
-      "documentation" : {
-        "en" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004.1]" : {
-            "doc_variable_id" : "Q2"
-          }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.age.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-age-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "HISTORY",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "events",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "POINT_EVENT",
-              "nodeId" : "at0002",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0004.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_QUANTITY",
-                          "defaultValue" : {
-                            "units" : "a",
-                            "@type" : "DV_QUANTITY"
-                          },
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "property",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "openehr"
-                              },
-                              "constraint" : [ "128" ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ {
-                            "@type" : "C_ATTRIBUTE_TUPLE",
-                            "members" : [ {
-                              "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "units",
-                              "children" : [ ]
-                            }, {
-                              "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "magnitude",
-                              "children" : [ ]
-                            } ],
-                            "tuples" : [ {
-                              "@type" : "C_PRIMITIVE_TUPLE",
-                              "members" : [ {
-                                "@type" : "C_STRING",
-                                "rmTypeName" : "STRING",
-                                "constraint" : [ "a" ]
-                              }, {
-                                "@type" : "C_REAL",
-                                "rmTypeName" : "REAL",
-                                "constraint" : [ {
-                                  "lower" : 18.0,
-                                  "upper" : 100.0,
-                                  "lowerIncluded" : true,
-                                  "upperIncluded" : false,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false
-                                } ]
-                              } ]
-                            } ]
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0005.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DURATION",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_DURATION",
-                              "rmTypeName" : "DURATION",
-                              "occurrences" : "1..1",
-                              "constraint" : [ {
-                                "lower" : "-P1Y",
-                                "upper" : "P10Y",
-                                "lowerIncluded" : false,
-                                "upperIncluded" : false,
-                                "lowerUnbounded" : false,
-                                "upperUnbounded" : false
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_QUANTITY",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ {
-                            "@type" : "C_ATTRIBUTE_TUPLE",
-                            "members" : [ {
-                              "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "units",
-                              "children" : [ ]
-                            }, {
-                              "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "magnitude",
-                              "children" : [ ]
-                            } ],
-                            "tuples" : [ {
-                              "@type" : "C_PRIMITIVE_TUPLE",
-                              "members" : [ {
-                                "@type" : "C_STRING",
-                                "rmTypeName" : "STRING",
-                                "constraint" : [ "a" ]
-                              }, {
-                                "@type" : "C_REAL",
-                                "rmTypeName" : "REAL",
-                                "constraint" : [ {
-                                  "lower" : -1.0,
-                                  "upper" : 10.0,
-                                  "lowerIncluded" : false,
-                                  "upperIncluded" : false,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false
-                                } ]
-                              } ]
-                            }, {
-                              "@type" : "C_PRIMITIVE_TUPLE",
-                              "members" : [ {
-                                "@type" : "C_STRING",
-                                "rmTypeName" : "STRING",
-                                "constraint" : [ "a_j" ]
-                              }, {
-                                "@type" : "C_REAL",
-                                "rmTypeName" : "REAL",
-                                "constraint" : [ {
-                                  "lower" : -1.0,
-                                  "upper" : 10.0,
-                                  "lowerIncluded" : false,
-                                  "upperIncluded" : false,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false
-                                } ]
-                              } ]
-                            } ]
-                          } ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0006.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "de" : { },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "72d69d1f-f9ec-4b21-b203-4a1e16af7442",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Sarah Ballout, Natalia Strauch, Darin Leonhardt",
-        "organisation" : "MHH-Hannover, Medizinische Hochschule Hannover, PLRI, PLRI für medizinische Informatik/ Medizinische Hochschule",
-        "email" : "ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de, leonhardt.darin@mh-hannover.de"
-      },
-      "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
       "language" : {
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "nb"
+        "codeString" : "fr"
       },
       "author" : {
-        "name" : "Silje Ljosland Bakke, Vebjørn Arntzen, John Tore Valand",
-        "organisation" : "Helse Vest IKT AS, Oslo University Hospital",
-        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no"
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -4274,7 +3974,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "37053661135B974855AAA356073EA23A"
+        "PARENT:MD5-CAM-1.0.1" : "B132DE834B763766DE1A583A4E7491F7"
       },
       "details" : {
         "de" : {
@@ -4336,6 +4036,21 @@
           "keywords" : [ "impiego, studio, lavoro, occupazione, badante, ruolo, pensionato, studente, impiegato, datore di lavoro, professione, disoccupazione, occupazione, figlio, disabile" ],
           "use" : "Usato per registrare un sommario o informazioni persistenti sulle attività lavorative e/o ruoli presenti e passati di un individuo.\r\n\r\nQuesto archetipo è stato ideato per essere usato come archetipo a sé stante all'interno di un template per la 'Storia sociale' (o simili). L'archetipo intende fornire un sommario  di tutte le occupazioni, considerate nel senso più ampio del termine. Per ogni professione o ruolo, usare una istanza separata dell'archetipo CLUSTER.occupation_record all'interno dello SLOT 'Episodio lavorativo'.",
           "misuse" : "Non utilizzare per memorizzare dettagli strutturati riguardanti una specifica professione o ruolo. Per questo scopo, usare invece l'archetipo CLUSTER.occupation_record all'interno dello SLOT 'Episodio lavorativo'.\r\n\r\nNon utilizzare per descrizioni dettagliate dei rischi per la salute o dell'esposizione a sostanze pericolose nel luogo di lavoro. Utilizzare invece gli archetipi EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNon utilizzare per memorizzare informazioni sulle fonti o dettagli del reddito dell'individuo. Per questo scopo, utilizzare l'archetipo EVALUATION.income_summary.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer un résumé ou des informations persistantes sur les emplois et/ou rôles actuels et passés d'une personne.",
+          "keywords" : [ "emploi", "étude", "emploi", "travail", "soignant", "rôle", "retraité", "étudiant", "employé", "employeur", "profession", "chômage", "profession", "enfant", "retraité", "handicapé" ],
+          "use" : "À utiliser pour enregistrer un résumé ou des informations persistantes sur les emplois et/ou les rôles actuels et passés d'une personne.\r\n\r\nCet archétype a été conçu pour être utilisé de manière autonome dans le contexte d'un modèle d'histoire sociale (ou d'un modèle similaire). Il est destiné à fournir un résumé de toutes les professions, considérées dans leur sens le plus large. Pour chaque emploi ou rôle, utilisez une instance distincte de l'enregistrement CLUSTER.occupation_record dans le SLOT pour \"Occupation episode\".",
+          "misuse" : "Ne doit pas être utilisé pour enregistrer des détails structurés sur un emploi ou un rôle spécifique. Utiliser l'archétype CLUSTER.occupation_record dans le SLOT 'Occupation record' à cette fin.\r\n\r\nNe pas utiliser pour des descriptions détaillées des risques pour la santé ou de l'exposition à des substances dangereuses sur le lieu de travail. Utiliser l'archétype EVALUATION.health_risk ou EVALUATION.exposure à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des informations sur les sources de revenus ou des détails sur les revenus de l'individu. Utilisez l'archétype CLUSTER.income_summary à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -4448,7 +4163,8 @@
         "en" : { },
         "nb" : { },
         "it" : { },
-        "de" : { }
+        "de" : { },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -4505,6 +4221,20 @@
         "name" : "Cecilia Mascia",
         "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
         "email" : "cecilia.mascia@crs4.it"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -6335,7 +6065,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "5B0F3DD7C67AD080CB799BBBD819A16E"
+        "PARENT:MD5-CAM-1.0.1" : "DB41D9980334469130C4D20D2C984B64"
       },
       "details" : {
         "de" : {
@@ -6380,6 +6110,21 @@
           "keywords" : [ "address", "postal", "mailing", "home", "business", "physical", "landmark" ],
           "use" : "Use to record details about the location of a person, physical building or landmark as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use an address lookup service. Examples include:\r\n- the business address of an organisation providing home care to an individual; or\r\n- the postal address of the copyholder of an advanced care record, within the EVALUATION.advance_care_directive archetype; or\r\n- the physical location of a fall or accident.\r\n\r\nThe scope of this archetype has been constrained to carry the commonest structured components for identifying a specific physical building or landmark. In this context, a complete address may be described using:\r\n- One or more free text 'Address line' data elements to represent the huge variety of ways that ‘street-level' details may need to be recorded; and\r\n- 'Town' to represent a suburb, town, city, village, or community;\r\n- 'District/County' to represent a local government district;\r\n- 'State/Territory/Province’ to represent a major government district;\r\n- ‘Postcode’, and \r\n- ‘Country'.\r\nHowever, this archetype can be extended to include additional fine-grained details about the address by nesting the CLUSTER.structured_address within the 'Structured address' SLOT.\r\n\r\nThis CLUSTER.address archetype can also be used as a proxy for an address in formal demographic address data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see the individual's full contact details at the top of the assessment form.",
           "misuse" : "Not to be used to record a fully structured address, such as described in ISO standards or as part of maintaining an official demographic register or index. Use an address lookup service, a formal Master Patient Index or a Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent digital addresses for use in electronic communication. Use CLUSTER.electronic_communication for this purpose.\r\n\r\nNot to be used to record details about housing or homelessness. Use the EVALUATION.housing_summary for this purpose.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer des détails sur la localisation d'une personne, d'un bâtiment physique ou d'un point de repère, tels qu'ils sont connus ou compris dans le cadre de la documentation clinique.",
+          "keywords" : [ "adresse", "postale", "courrier", "domicile", "professionnel", "physique", "repère" ],
+          "use" : "Sert à enregistrer des détails sur la localisation d'une personne, d'un bâtiment physique ou d'un point de repère, tels qu'ils sont connus ou compris dans le cadre de la documentation clinique, souvent de manière ad hoc ou lorsqu'il n'est pas approprié ou possible d'utiliser un service de recherche d'adresses. Il s'agit par exemple\r\n- l'adresse professionnelle d'une organisation fournissant des soins à domicile à une personne ; ou\r\n- l'adresse postale du détenteur de la copie d'un dossier de soins avancés, dans l'archétype EVALUATION.advance_care_directive ; ou\r\n- le lieu physique d'une chute ou d'un accident.\r\n\r\nLe champ d'application de cet archétype a été limité aux composants structurés les plus courants permettant d'identifier un bâtiment physique ou un point de repère spécifique. Dans ce contexte, une adresse complète peut être décrite à l'aide des éléments suivants\r\n- un ou plusieurs éléments de données \"ligne d'adresse\" en texte libre pour représenter l'énorme variété de façons dont les détails \"au niveau de la rue\" peuvent être enregistrés ; et\r\n- Ville\" pour représenter une banlieue, une ville, un village ou une communauté ;\r\n- District/County\" pour représenter un district d'administration locale ;\r\n- \"État/Territoire/Province\" pour représenter un grand district gouvernemental ;\r\n- Code postal\", et \r\n- Pays\".\r\nToutefois, cet archétype peut être étendu pour inclure des détails plus fins sur l'adresse en imbriquant le CLUSTER.structured_address dans le SLOT \"Adresse structurée\".\r\n\r\nCet archétype CLUSTER.address peut également être utilisé comme substitut d'une adresse dans les données démographiques formelles lors de la révision d'un modèle avec des experts du domaine - par exemple, une évaluation où les examinateurs s'attendent à voir les coordonnées complètes de la personne en haut du formulaire d'évaluation.",
+          "misuse" : "Ne pas utiliser pour enregistrer une adresse entièrement structurée, telle que décrite dans les normes ISO ou dans le cadre de la tenue d'un registre ou d'un index démographique officiel. Utiliser à cette fin un service de recherche d'adresses, un index principal officiel des patients ou un index des prestataires de soins de santé, ou des archétypes fondés sur le modèle d'information démographique de l'openEHR.\r\n\r\nNe pas utiliser pour représenter des adresses numériques destinées à la communication électronique. Utiliser CLUSTER.electronic_communication à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer des détails sur le logement ou l'absence de domicile. Utilisez EVALUATION.housing_summary à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -6841,6 +6586,20 @@
             "code" : "ac0.2",
             "description" : ""
           }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -6896,6 +6655,20 @@
         "name" : "Liv Laugen, John Tore Valand, Vebjørn Arntzen, Kanika Kuwelker",
         "organisation" : "​Oslo University Hospital, Norway, Helse Bergen, Helse Vest IKT",
         "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no, varntzen@ous-hf.no, kanika.kuwelker@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -7036,6 +6809,299 @@
         "codeString" : "fr"
       },
       "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "d9977371-014f-47dc-b2c7-d3d0aa2f4130",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "3FE92885656FED38F30ADBB5F77BD114"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.age_assertion.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-age_assertion-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_QUANTITY",
+                          "defaultValue" : {
+                            "units" : "a",
+                            "@type" : "DV_QUANTITY"
+                          },
+                          "attributes" : [ ],
+                          "attributeTuples" : [ {
+                            "@type" : "C_ATTRIBUTE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "units",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "magnitude",
+                              "children" : [ ]
+                            } ],
+                            "tuples" : [ {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "a" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 18.0,
+                                  "upper" : 100.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : false,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "a_j" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 200.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : false,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_DURATION",
+                              "rmTypeName" : "DURATION",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : "-P1Y",
+                                "lowerIncluded" : false,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_QUANTITY",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ {
+                            "@type" : "C_ATTRIBUTE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "units",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "magnitude",
+                              "children" : [ ]
+                            } ],
+                            "tuples" : [ {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "a" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : -1.0,
+                                  "upper" : 10.0,
+                                  "lowerIncluded" : false,
+                                  "upperIncluded" : false,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "a_j" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : -1.0,
+                                  "upper" : 10.0,
+                                  "lowerIncluded" : false,
+                                  "upperIncluded" : false,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0006.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "de" : { },
+        "nb" : { },
+        "fr" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "9e9dff4e-f351-4f0a-a97b-9a8b98cad4f7",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Natalia Strauch, Darin Leonhardt",
+        "organisation" : "MHH-Hannover, Medizinische Hochschule Hannover, PLRI, PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Vebjørn Arntzen, John Tore Valand, Hanne Marte Bårholm",
+        "organisation" : "Helse Vest IKT AS, Oslo University Hospital",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no, hanne.marte.sandal.barholm@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
       "otherDetails" : { }
     } ]
   } ],
