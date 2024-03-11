@@ -39,6 +39,14 @@ language
 				["email"] = <"silje.ljosland.bakke@helse-vest-ikt.no">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@protonmail.com">
+			>
+		>
 	>
 
 description
@@ -48,7 +56,7 @@ description
 		["organisation"] = <"Oslo University Hospital">
 		["email"] = <"varntzen@ous-hf.no">
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Amund Aakerholt, Helse Stavanger, KORFOR, Norway","Morten Aas, Oslo Universitetssykehus, Norway","Tomas Alme, Norway","Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)","SB Bhattacharyya, Sudisa Consultancy Services, India","Simon Chapman, King's College Hospital, United Kingdom","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Are Edvardsen, SKDE, Helse Nord RHF, Norway","Rupert Fawdry, WISDAM Enterprises & Electronic Encyclopaedia of Perinatal Data, United Kingdom","Shahla Foozonkhah, Iran ministry of health and education, Iran","Heather Grain, Llewelyn Grain Informatics, Australia","Ira Haraldsen, Oslo universitetssykehus HF, Norway","Ingrid Heitmann, Oslo universitetssykehus HF, Norway","Hilde Hollås, DIPS AS, Norway","Evelyn Hovenga, EJSH Consulting, Australia","henrik haaland jahren, Tankeboksen AS, Norway","Mikkel Johan Gaup Grønmo, Helse Nord RHF, Norway","Pétur Júlíusson, Barneklinikken, HUS og K2, UIB, Norway","Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway","Christian Jasmine Karud-Lund, Forbundet for Transpersoner i Norge, Norway","Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Hallvard Lærum, Direktoratet for e-helse, Norway","Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","Andrej Orel, Marand d.o.o., Slovenia","Phuong Pedersen, DIPS, Norway","Vladimir Pizzo, Hospital Sírio Libanês, Brazil","Norwegian Review Summary, Nasjonal IKT HF, Norway","Ragnhild Sandvold, Vestre Viken HF, Norway","Danielle Santos Alves, Federal University of Pernambuco, Brazil","Anoop Shah, University College London, United Kingdom","Line Silsand, Universitetssykehuset i Nord-Norge, Norway","Trine Strand, Oslo Universitetssykehus (OUS), Norway","Nyree Taylor, Ocean Informatics, Australia","Tesfay Teame, Folkehelseinstituttet, Norway","Jon Tysdahl, Furst medlab AS, Norway","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	details = <
 		["de"] = <
@@ -127,6 +135,21 @@ In most common use cases 'Administrative gender' will be used, as equivalent of 
 
 Not to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Enregistrer des informations sur le sexe d'une personne.">
+			keywords = <"sexe","masculin","féminin","androgyne","garçon","fille","homme","femme","transsexuel","bigender","agender","transgenre","transman","transfemme">
+			use = <"Sert à enregistrer des détails sur le genre de la personne, y compris le genre administratif et légal et le sexe assigné à la naissance, en plus de l'identité de genre, de l'expression et du pronom préféré.
+
+L'objectif de cet archétype est d'enregistrer un large éventail de détails liés au genre d'un individu, en raison de la conception moderne du genre et des nouvelles connaissances sur les manifestations psychologiques, biologiques et sociales du genre.
+
+Cet archétype permet également d'enregistrer et de différencier le sexe légal et le sexe administratif.
+
+Dans les cas d'utilisation les plus courants, le \"sexe administratif\" sera utilisé comme équivalent de la définition traditionnelle du \"sexe\" dans les systèmes actuels ou anciens.">
+			misuse = <"Ne pas utiliser pour enregistrer des informations relatives à l'orientation sexuelle ou à l'activité sexuelle d'une personne.
+
+Ne pas utiliser pour enregistrer le sexe génétique ou chromosomique. À l'heure actuelle, cette information est généralement enregistrée sous la forme d'un résultat de test de laboratoire. La représentation formelle du \"sexe génétique\" n'est pas encore bien définie et peut impliquer la combinaison d'axes d'information, y compris des données chromosomiques et réceptrices, des variantes mosaïques et des diagnostics.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -141,9 +164,9 @@ It's Pronounced Metrosexual, (2015), The Genderbread Person v3, http://itspronou
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"BF9B28403CBB9F2FB9C120F3EB89DA8E">
-		["build_uid"] = <"cf531727-75f6-44b3-84bf-0b0bb485c9a2">
-		["revision"] = <"1.1.1">
+		["MD5-CAM-1.0.1"] = <"84AF039269DA6FDA2C0CD918B6BC7FA1">
+		["build_uid"] = <"81dcfd84-5685-4dec-8b36-ceb17a75f248">
+		["revision"] = <"1.1.2-alpha">
 	>
 
 definition
@@ -552,6 +575,75 @@ ontology
 				["at0027"] = <
 					text = <"*Gender category(en)">
 					description = <"*Category describing the alignment of an individual's gender identity with their sex assigned at birth.(en)">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Genre">
+					description = <"Détails sur le sexe d'une personne.">
+				>
+				["at0001"] = <
+					text = <"Identité de genre">
+					description = <"La perception qu'a l'individu de son propre sexe.">
+					comment = <"Par exemple : \"homme\", \"femme\" ou \"non-binaire\". Il est recommandé de coder avec une terminologie, dans la mesure du possible.">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Dernière mise à jour">
+					description = <"Date de la dernière mise à jour des données relatives au genre.">
+				>
+				["at0005"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour tenir compte du contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur les équivalents FHIR.">
+				>
+				["at0014"] = <
+					text = <"Commentaire">
+					description = <"Description supplémentaire du sexe de l'individu qui n'a pas été saisie dans d'autres éléments de données.">
+				>
+				["at0019"] = <
+					text = <"Sexe assigné à la naissance">
+					description = <"Le sexe d'un individu déterminé par les caractéristiques anatomiques observées et enregistrées à la naissance.">
+					comment = <"Par exemple : \"Homme\", \"Femme\", \"Intersexe\". Il est recommandé de coder avec une terminologie, dans la mesure du possible. Utilisez l'élément \"Commentaire\" ou le SLOT \"Détails\" si nécessaire pour enregistrer des détails plus spécifiques sur le genre de l'individu.">
+				>
+				["at0020"] = <
+					text = <"Pronom préféré">
+					description = <"Le pronom qu'une personne choisit d'utiliser pour s'identifier et qu'elle préférerait que les autres utilisent lorsqu'ils s'adressent à elle ou parlent d'elle.">
+					comment = <"Par exemple : \"elle/il\" ; \"il/lui\" ; \"ils/leur\" ; ou \"ze/zir\".">
+				>
+				["at0022"] = <
+					text = <"Genre administratif">
+					description = <"Le sexe d'une personne est utilisé à des fins administratives.">
+					comment = <"Cet élément correspond à ce que la plupart des systèmes actuels décrivent comme le \"sexe\" ou le \"genre\". Par exemple, \"Male\", \"Female\", \"Other\". Cet élément s'aligne sur HL7 FHIR \"Person.gender\". Il est recommandé de coder avec une terminologie, dans la mesure du possible.">
+				>
+				["at0023"] = <
+					text = <"Détails supplémentaires">
+					description = <"Détails structurés supplémentaires concernant le sexe des personnes.">
+					comment = <"Détails structurés supplémentaires sur le sexe d'un individu.">
+				>
+				["at0025"] = <
+					text = <"Expression de genre">
+					description = <"L'expression du genre par l'individu tel que démontré par le comportement, la parole, les vêtements ou d'autres caractéristiques externes.">
+					comment = <"Par exemple, \"Masculin\", \"Féminin\", \"Androgyne\" ou \"Alternant\". Il est également possible d'utiliser une description narrative.">
+				>
+				["at0026"] = <
+					text = <"Genre légal">
+					description = <"Le genre d'une personne utilisé à des fins officielles ou légales.">
+					comment = <"Par exemple : les documents d'identification tels que l'acte de naissance ou le passeport.">
+				>
+				["at0027"] = <
+					text = <"Catégorie de sexe">
+					description = <"Catégorie décrivant l'alignement de l'identité de genre d'un individu sur le sexe qui lui a été assigné à la naissance.">
+					comment = <"Par exemple : cisgenre ; transgenre.">
 				>
 			>
 		>
