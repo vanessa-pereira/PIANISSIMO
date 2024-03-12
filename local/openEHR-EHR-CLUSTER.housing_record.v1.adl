@@ -15,6 +15,14 @@ language
 				["email"] = <"silje.ljosland.bakke@nasjonalikt.no / john.tore.valand@helse-bergen.no / varntzen@ous-hf.no">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@protonmail.com">
+			>
+		>
 	>
 
 description
@@ -24,7 +32,7 @@ description
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Amund Aakerholt, Helse Stavanger, KORFOR, Norway","Morten Aas, Diakonhjemmet Sykehus, Norway","Marit Alice Venheim, Helse Vest IKT, Norway","Tomas Alme, DIPS ASA, Norway","Erling Are Hole, Helse Bergen, Norway","Stein Arne Rimehaug, Sunnaas sykehus, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Koray Atalag, University of Auckland, New Zealand","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)","Marcus Baw, openGPSoC / BawMedical Ltd, United Kingdom","Ivar Berge, Oslo Universitetssykehus, Norway","Bjørn Christensen, Helse Bergen HF, Norway","Angela Crovetti, CDC/NIOSH, United States","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Jayne Donaldson, University of Stirling, United Kingdom","Bjørg Eli Hollund, helse-bergen, Norway","Stig Erik Hegrestad, Helse Førde, Norway","Samuel Frade, Marand, Portugal","Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom","Sergio Freire, State University of Rio de Janeiro, Brazil","Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)","Carrick Gillespie, Omniq AB, Sweden","Heather Grain, Llewelyn Grain Informatics, Australia","Anne Gunn Haugland, Helse Bergen HF, Norway","Sam Heard, Ocean Informatics, Australia","Kristian Heldal, Telemark Hospital Trust, Norway","Jørn Henrik Vold, Helse Bergen, Avdeling for rusmedisin, Norway","Anca Heyd, DIPS ASA, Norway","Teresa Highway, Alberta Health Services, Canada","Annette Hole Sjøborg, DIPS ASA, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Susanna Jönsson, Landstinget i Värmland, Sweden","Lars Morgan Karlsen, DIPS ASA, Norway","Tone Klund, DIPS AS, Norway","Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway","Harmony Kosola, Alberta Health Services, Canada","Ron Krawec, Alberta Health Services, Canada","Ronald Krawec, Alberta Health Services, Canada","Anita Lagos, Haraldsplass Diakonale Sykehus, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Pedro Leuschner, Centro Hospitalar do Porto, Portugal","Hallvard Lærum, Direktoratet for e-helse, Norway","Anne M Gromsrud, DIPS AS, Norway","Siv Marie Lien, DIPS ASA, Norway","Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","John Meredith, NHS Wales Informatics Service, United Kingdom","Erik Nissen, Cambio Healthcare Systems AB, Sweden","Bjørn Næss, DIPS ASA, Norway","Andrej Orel, Marand d.o.o., Slovenia","Anne Pauline Anderssen, Helse Nord RHF, Norway","Martin Paulson, Sykehuset i Vestfold, Norway","Georg Reinhardt, Helse Fonna, Norway","Tanja Riise, Nasjonal IKT HF, Norway","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Ragnhild Sandvold, Vestre Viken HF, Norway","Line Silsand, Universitetssykehuset i Nord-Norge, Norway","Ingrid Skard, Edproof, Norway","Niclas Skyttberg, Karolinska Institutet, Sweden","Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden","Nyree Taylor, Ocean Informatics, Australia","Tesfay Teame, Folkehelseinstittutet, Norway","Susanne Trønnes, Norway","Jon Tysdahl, Furst medlab AS, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Ingrid Vange, Helse Bergen, Norway">
 	details = <
 		["nb"] = <
@@ -91,6 +99,37 @@ Not to be used for detailed descriptions of health risks or exposure to hazardou
 
 Not to be used to record information about the housing situation of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Enregistrer des détails sur un domicile unique ou un autre lieu de résidence d'une personne au cours d'une période donnée.">
+			keywords = <"logement","soins résidentiels","maison","appartement","sans-abri","louer","propriétaire","partagé","temporaire","institution","appartement","condo","condominium","hospice">
+			use = <"Sert à enregistrer les détails d'une seule maison ou d'un autre lieu de résidence d'un individu au cours d'une période donnée.
+
+Le champ d'application de cet archétype englobe tous les lieux de résidence occupés par un individu. Par exemple : toutes les maisons louées au fil du temps ; l'alternance entre deux maisons au cours d'une période donnée ; l'itinérance, comme les éleveurs nomades qui se déplacent entre les pâturages saisonniers ; les voyageurs itinérants ; ou les sans-abri.
+
+Une personne peut avoir besoin de plus d'un dossier de logement actif à la fois. Chaque nouveau cadre résidentiel ou adresse doit être enregistré dans une instance distincte de cet archétype. Par exemple, si un individu déménage d'une maison à une autre maison ou à un autre appartement, ou s'il déménage le même mobil-home d'une adresse à une autre.
+
+Plusieurs instances de cet archétype saisies au fil du temps permettront d'agréger un historique des situations de logement passées et présentes.
+
+Une situation de logement active ou actuelle peut être déduite d'une \"date de début\" mais pas d'une \"date de fin\". 
+
+Si la situation de logement change de manière significative, par exemple en cas de changement d'adresse ou de mode d'occupation, il convient de l'enregistrer dans une instance distincte de cet archétype.
+
+Cet archétype a été spécifiquement conçu pour être utilisé dans le SLOT \"dossier de logement\" de l'archétype EVALUATION.housing_summary, mais il peut également être utilisé dans tout autre archétype ENTRY ou CLUSTER, lorsque cela s'avère cliniquement approprié.
+
+Il peut y avoir un chevauchement apparent ou réel entre les éléments de données de cet archétype et les détails du logement/de l'adresse qui peuvent être stockés en tant que détails démographiques dans les systèmes cliniques ou administratifs. Ces éléments de données ont été conçus spécifiquement à des fins cliniques.">
+			misuse = <"Ne doit pas être utilisé pour enregistrer des informations sur le bâtiment physique où vit une personne. Utiliser CLUSTER.dwelling à cette fin.
+
+Ne pas utiliser pour enregistrer des informations sur les conditions de vie d'une personne. Utiliser CLUSTER.household à cette fin.
+
+Ne doit pas être utilisé pour enregistrer les personnes avec lesquelles un individu vit. Utiliser EVALUATION.social_network à cette fin.
+
+Ne pas utiliser pour enregistrer des changements temporaires ou des épisodes dans un seul dossier de logement, tels que des vacances.
+
+Ne pas utiliser pour des descriptions détaillées des risques pour la santé ou de l'exposition à des substances dangereuses dans le logement ou le cadre résidentiel. Utilisez les archétypes EVALUATION.health_risk ou EVALUATION.exposure à cette fin.
+
+Ne pas utiliser pour enregistrer des informations sur la situation de logement d'un individu à un moment précis (par exemple, le 16 juin 2014) ou pendant un intervalle de temps relatif (par exemple, \"au cours des 30 derniers jours\"). Utilisez un archétype d'OBSERVATION approprié à cette fin.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -103,9 +142,9 @@ HWI 119. Available from: https://www.aihw.gov.au/getmedia/a90ff140-8abf-4e30-886
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5EFA9C20C6D17AEE7BB0716A09BBEDEF">
-		["build_uid"] = <"2b4fab23-5af9-4fb3-a4e6-f2a6ddaea471">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"C1AB21B0FDFF6B0EA15DDA8BEF88D0F9">
+		["build_uid"] = <"de7cb35d-1fa4-4796-a083-d9c16eed4dc4">
+		["revision"] = <"1.0.1-alpha">
 	>
 
 definition
@@ -252,6 +291,54 @@ ontology
 					text = <"Ytterligere detaljer">
 					description = <"Ytterligere detaljer om boligen eller boformen.">
 					comment = <"For eksempel: Detaljer om boligkonstruksjon (trapper, heis, elektrisitet eller fuktig kjeller), eller folkene som bor på samme sted (som familie og antall barn i boligen).">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fiche de logement">
+					description = <"Détails concernant un domicile unique ou un autre lieu de résidence d'une personne pendant une période donnée.">
+				>
+				["at0001"] = <
+					text = <"Cadre résidentiel">
+					description = <"Catégorie décrivant le lieu de vie d'un individu.">
+					comment = <"Dans la mesure du possible, il est préférable de coder le cadre résidentiel à l'aide d'une terminologie. Les ensembles de valeurs pour cet élément de données sont susceptibles de varier d'une juridiction à l'autre - on s'attend à ce qu'ils soient généralement définis dans un modèle spécifique au cas d'utilisation. Par exemple : \"résidence privée\", \"établissement d'hébergement assisté\", \"établissement de soins pour personnes âgées\", \"établissement d'hébergement de crise à court terme\" ou \"lieu public/refuge temporaire\".">
+				>
+				["at0004"] = <
+					text = <"Détails de l'adresse">
+					description = <"L'adresse de la résidence.">
+				>
+				["at0005"] = <
+					text = <"Nom/label">
+					description = <"Un nom ou une étiquette associé(e) à ce logement ou à ce cadre résidentiel, qui permet de le distinguer d'autres dossiers de logement.">
+					comment = <"Par exemple : \"Maison de vacances\" ; ; \"Premier domicile\" ; ou \"Sans domicile fixe\".">
+				>
+				["at0007"] = <
+					text = <"Date de début">
+					description = <"Date à laquelle une personne a commencé à vivre dans le foyer ou l'établissement résidentiel.">
+				>
+				["at0008"] = <
+					text = <"Date de cessation">
+					description = <"Date à laquelle une personne a cessé de vivre dans le foyer ou l'établissement résidentiel.">
+				>
+				["at0013"] = <
+					text = <"Durée du contrat">
+					description = <"Le droit légal de l'individu d'occuper le domicile ou le cadre résidentiel.">
+					comment = <"Dans la mesure du possible, il est préférable de coder l'occupation à l'aide d'une terminologie. Les ensembles de valeurs pour cet élément de données sont susceptibles de varier d'une juridiction à l'autre - il est prévu qu'ils soient généralement définis dans le cadre d'un modèle spécifique à un cas d'utilisation. Par exemple : \"propriétaire ayant contracté une hypothèque\" ; \"locataire\" ; ou \"pas de mode d'occupation\".">
+				>
+				["at0014"] = <
+					text = <"Commentaire">
+					description = <"Informations supplémentaires sur le foyer ou l'établissement résidentiel qui n'ont pas été saisies dans d'autres champs.">
+				>
+				["at0016"] = <
+					text = <"Description">
+					description = <"Description narrative du domicile ou du cadre résidentiel.">
+				>
+				["at0018"] = <
+					text = <"Détails supplémentaires">
+					description = <"Plus de détails sur le foyer ou l'établissement résidentiel.">
+					comment = <"Par exemple : des détails sur la structure d'un logement, y compris les escaliers, l'ascenseur, l'électricité ou la cave ; ou les personnes qui résident au même endroit, telles que les membres de la famille et le nombre d'enfants vivant dans l'appartement.">
 				>
 			>
 		>
