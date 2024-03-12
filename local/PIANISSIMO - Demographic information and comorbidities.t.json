@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.6",
+      "sem_ver" : "0.1.7",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "5f24056105c9663b4248668ef6ef41ca",
+      "MD5-CAM-1.0.1" : "c89005b5ff8079c220693c4280273860",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -254,7 +254,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "PIANISSIMO - Demographic information and comorbidties",
+          "text" : "PIANISSIMO - Demographic information and comorbidities",
           "description" : "Generic container for information provided by an individual."
         }
       },
