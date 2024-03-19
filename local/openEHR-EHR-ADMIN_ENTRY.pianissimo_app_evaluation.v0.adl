@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"402d61411d453568678d1af8fbb97fbe">
 		["build_uid"] = <"4e666637-9674-3a8c-847f-fdf52b2a63a7">
-		["MD5-CAM-1.0.1"] = <"82ff4916284cbcd556129a71eb63feab">
 	>
 
 definition
@@ -80,6 +80,11 @@ definition
 									at0015]    -- No
 								}
 							}
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Reason for not liking app
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0016] occurrences matches {0..1} matches {    -- App was adapted to patient condition
@@ -241,6 +246,10 @@ ontology
 				>
 				["at0027"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Reason for not liking app">
 					description = <"">
 				>
 			>
