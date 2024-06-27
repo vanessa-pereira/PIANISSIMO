@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "c8bf2dfb-8c76-4fe7-8bd7-300eff04f8e3",
-      "MD5-CAM-1.0.1" : "3ada8121907584fff23a2d7352d93a63",
+      "MD5-CAM-1.0.1" : "6305ca7e33afca690ec5fe371d9508bd",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -161,6 +161,15 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-pain_scale-001.v1",
         "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.6",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-medication_screening-001.v1",
+        "referenceType" : "archetypeOverlay"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -250,7 +259,98 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "CFAA5A21F30725BDA8D018E31997EA7A"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Schaffung von Rahmenbedingungen für die Darstellung von Antworten auf vordefinierte Screening-Fragen zu Symptomen oder Anzeichen.",
+          "keywords" : [ "Screening, Fragebogen, Beschwerde, Symptom, Störung, Problem, Unwohlsein, Anzeichen" ],
+          "use" : "Verwendung als Rahmenbedingung für die Darstellung von Antworten auf vordefinierte Screening-Fragen zu Symptomen oder Anzeichen.\r\n\r\nHäufige Anwendungsfälle umfassen, sind aber nicht beschränkt auf:\r\n- Systematische Befragung in jeder Beratung, zum Beispiel:\r\n--- Haben Sie Kopfschmerzen? Ja, Nein, Unbekannt.\r\n--- Hatten Sie in den letzten vier Wochen Schwindel? Ja, Nein, Unbekannt.\r\n- Spezifische Befragung im Zusammenhang mit der Krankheitsüberwachung.\r\n\r\nDie Semantik dieses Archetyps ist absichtlich locker, und die Abfrage dieses Archetyps wäre normalerweise nur im Kontext jedes spezifischen Templates nützlich oder sicher. In einem Template würde normalerweise jedes Datenelement in die spezifisch gestellte Frage umbenannt. Wo Wertesätze für allgemeine Anwendungsfälle vorgeschlagen wurden, können diese für die lokale Verwendung angepasst werden, indem die „Text“-Auswahl verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.\r\n\r\nÜber die EVENT-Struktur aus dem Referenzmodell kann festgelegt werden, ob sich die Fragen auf einen Zeitpunkt oder einen Zeitraum beziehen. Verwenden Sie eine separate Instanz dieses Archetyps, um zwischen einer Befragung zu unterscheiden, die Informationen über ein Symptom enthält, das zu einem beliebigen Zeitpunkt in der Vergangenheit eingetreten war, und Informationen über ein Symptom, das innerhalb eines bestimmten Zeitintervalls vorhanden war - zum Beispiel den Unterschied zwischen \"Ist Ihnen jetzt schwindelig?\" im Vergleich zu \"Hatten Sie in den letzten 4 Wochen Schwindel?\".\r\n\r\nDie Quelle der Informationen in einer Fragebogenantwort kann in verschiedenen Kontexten variieren, kann jedoch mithilfe des Elements „Information provider“ im Referenzmodell spezifisch identifiziert werden.\r\n\r\nDieser Archetyp wurde entwickelt, um als Screening-Tool oder zur Darstellung einfacher Daten im Fragebogenformat zur Verwendung in Situationen wie einem Krankheitsregister verwendet zu werden. Wenn der Screening-Fragebogen das Vorhandensein eines Symptoms oder Anzeichens identifiziert, wird empfohlen, dass das klinische System die spezifischen Details über das Symptom unter Verwendung des Archetyps CLUSTER.symptom_sign, der im SLOT für die Zusätzliche Angaben eingefügt wird, darstellt und beibehält.",
+          "misuse" : "Darf nicht verwendet werden, um Details über das Vorhandensein oder Fehlen eines Symptoms außerhalb eines Screening-Kontexts darzustellen. Verwenden Sie zu diesem Zweck CLUSTER.symptom_sign oder CLUSTER.exclusion_symptom_sign.\r\n\r\nDarf nicht verwendet werden, um Details zu einer einfachen Auswahlliste darzustellen, in der eine Frage entweder als \"vorhanden\" oder \"unbestimmt\" aufgezeichnet werden kann. Verwenden Sie dazu OBSERVATION.selection_list.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To create a framework for recording answers about symptoms or signs, to the questions of a pre-defined screening questionnaire. (en)",
+          "keywords" : [ "*screening, questionnaire, emotions, pain numbness vertigo (en)" ],
+          "use" : "*Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic inquiry in any consultation, for example:\r\n--- Do you have headaches? Yes, No, Unknown.\r\n--- Have you had dizziness in the past four weeks? Yes, No, Unknown.\r\n- Specific questioning related to disease surveillance.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you dizzy now?\" compared to \"Have you had any dizziness in the past 4 weeks?\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype. (en)",
+          "misuse" : "*Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Ett ramverk för att registrera svar på fördefinierade screeningfrågor om symtom eller tecken.",
+          "keywords" : [ "screening, formulär, frågeformulär, självrapporteringsskala, symptom, besvär, problem, tecken" ],
+          "use" : "Använd som ett ramverk för att registrera svar på fördefinierade screeningfrågor om symtom eller tecken.\r\n\r\nVanliga användningsfall inkluderar, men är inte begränsade till:\r\n- Systematisk utredning vid konsultationer, exempelvis:\r\n--- Har du huvudvärk? Ja, nej, okänt.\r\n--- Har du haft yrsel under de senaste fyra veckorna? Ja, nej, okänt.\r\n- Specifika frågor relaterade till övervakning/uppföljning av sjukdom.\r\n\r\nSemantiken för denna arketyp är avsiktligt generell, sökfrågor baserade på denna arketyp är normalt bara säker och meningsfull inom ramen för varje specifik mall (template). I en mall döps vanligtvis varje dataelement om till den specifika fråga som ställdes. Svarsalternativ har föreslagits för vanliga användningsfall, men kan anpassas för lokal användning genom att använda \"text\"-valet för att matcha varje specifikt användningsfall.\r\n\r\nEVENT-strukturen från openEHRs referensmodell kan användas för att specificera om frågorna avser en tidpunkt eller en tidsperiod. Använd separata instanser av denna arketyp för att skilja mellan ett frågeformulär som gäller information om ett symptom som har funnits någon gång tidigare och information om ett symptom inom ett specifikt angivet tidsintervall - till exempel skillnaden mellan \"Är du yr nu?\" jämfört med \"Har du haft yrsel någon gång under de senaste 4 veckorna?\r\n\r\nKällan till informationen i ett enkätsvar kan variera i olika sammanhang men kan specifikt identifieras med hjälp av elementet 'provider' i referensmodellens ENTRY-klass.\r\n\r\nDenna arketyp har utformats för att användas som ett screeningverktyg eller för att registrera enkla data i frågeformulärformat för användning i register etc. Om screeningsfrågeformuläret identifierar närvaron av ett symptom eller tecken, rekommenderas att det kliniska systemet även registrerar och behåller de specifika detaljerna om symtomet eller tecknet med hjälp av arketypen CLUSTER.symptom_sign inkapslad i avsedd SLOT för \"ytterligare detaljer\" i denna arketyp.",
+          "misuse" : "Får inte användas för att registrera detaljer om närvaron eller frånvaron av ett symptom, utanför ett screeningsammanhang. Använd CLUSTER.symptom_sign eller CLUSTER.exclusion_symptom_sign inkapslade i andra lämpligare arketyper för dessa ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om symptomer eller sykdomstegn.",
+          "keywords" : [ "intervjuskjema, kartleggingskjema, spørreskjema, lidelse, plage, problem, ubehag, symptom, sykdomstegn, lyte, skavank" ],
+          "use" : "Brukes for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om symptomer eller sykdomstegn.\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematiske spørsmål ved konsultasjoner, for eksempel:\r\n--- Har du hodepine? Ja, Nei, Usikker.\r\n--- Har du vært plaget med svimmelhet de siste fire ukene? Ja, Nei, Usikker.\r\n- Spesifikke spørsmål relatert til overvåkning av sykdommer.\r\n\r\nSemantikken til denne arketypen er med vilje løst definert, og spørringer etter data i denne arketypen vil normalt bare være hensiktsmessig eller sikkert i konteksten av det spesifikke templatet. I et templat vil hvert dataelement vanligvis døpes om til det (spesifikke) spørsmålet man ønsker svar på. Flere steder er det foreslått verdisett som passer til de vanligste bruksområder, men det er allikevel mulig å tilpasse/endre verdisett for lokal bruk ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN for å harmonere verdisettet til hvert enkelt brukstilfelle.\r\n\r\nEVENT-strukturen fra arketypens referansemodell kan brukes for å spesifisere om spørsmålene relateres til et tidspunkt eller til et tidsintervall.\r\nBruk egne instanser av denne arketypen for å skille mellom spørsmål om prosedyrer som er gjennomførte på et hvilket som helst tidspunkt og spørsmål om prosedyrer som er gjennomført i et tidsintervall. For eksempel; \"Har du hodepine?\" sammenlignet med \"Har du vært plaget med svimmelhet de siste fire ukene?\".\r\n\r\nKilden til informasjonen i et spørreskjema kan variere i ulike kontekster, men kan identifiseres spesifikt ved å benytte \"Information provider\" elementet i openEHR referansemodellen.\r\n\r\nDenne arketypen er laget for å bli brukt i et spørreskjema eller for å registrere enkle strukturerte data til for eksempel et sykdomsregister. Dersom det i spørreskjemaet identifiseres at et symptom eller sykdomstegn er tilstede, anbefales det at spesifikke detaljer om symptomet registreres og lagres i pasientjournalen i arketypen CLUSTER.symptom_sign (Symptom/Sykdomstegn) i SLOTet \"Ytterligere detaljer\" i denne arketypen.",
+          "misuse" : "Brukes ikke for å registrere detaljer om tilstedeværelse eller fravær av et symptom utenfor konteksten av kartleggingen. Bruk arketypen CLUSTER.symptom_sign (Symptom/sykdomstegn) eller CLUSTER.exclusion_symptom_sign (Eksklusjon av et symptom) for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om en enkel utvalgsliste der et spørsmål kan registreres som enten \"Tilstede\" eller \"Ubestemt\". Bruk arketypen OBSERVATION.selection_list for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To create a framework for recording answers to pre-defined screening questions about symptoms or signs.",
+          "keywords" : [ "screening, questionnaire, complaint, symptom, disturbance, problem, discomfort, sign" ],
+          "use" : "Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic inquiry in any consultation, for example:\r\n--- Do you have headaches? Yes, No, Unknown.\r\n--- Have you had dizziness in the past four weeks? Yes, No, Unknown.\r\n- Specific questioning related to disease surveillance.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you dizzy now?\" compared to \"Have you had any dizziness in the past 4 weeks?\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype.",
+          "misuse" : "Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "*To create a framework for recording answers about symptoms or signs, to the questions of a pre-defined screening questionnaire. (en)",
+          "keywords" : [ "*screening, questionnaire, emotions, pain numbness vertigo (en)" ],
+          "use" : "*Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic inquiry in any consultation, for example:\r\n--- Do you have headaches? Yes, No, Unknown.\r\n--- Have you had dizziness in the past four weeks? Yes, No, Unknown.\r\n- Specific questioning related to disease surveillance.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you dizzy now?\" compared to \"Have you had any dizziness in the past 4 weeks?\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype. (en)",
+          "misuse" : "*Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.symptom_sign_screening.v1",
     "differential" : true,
@@ -725,7 +825,140 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "62823A86BC1C2B02574125E21F5DECCB"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Identifikation und Dokumentation von strukturierten Daten bezüglich einer bestimmten Körperstelle oder innerhalb des menschlichen Körpers, unter Verwendung makroskopischer anatomischer Fachbegriffe.",
+          "keywords" : [ "Lokalisation", "Stelle", "anatomisch", "anatomischer Bereich", "topographische Anatomie", "makroskopisch", "Anatomie" ],
+          "use" : "Zur Dokumentation von strukturierten und konsistenten Details eines einzelnen bestimmten physischen Bereich innerhalb des menschlichen Körpers verwenden.\r\n\r\nDieser Archetyp wurde speziell für die Verwendung im Rahmen von allen geeigneten ENTRY- oder CLUSTER-Archetypen entwickelt, die den Kontext des anatomischen Fundortes liefern.\r\n\r\nAls grundlegender Bestandteil der klinischen Praxis, können Mediziner anatomische Lokalisationen auf einer Vielzahl von komplexen und variablen Wegen definieren. In der Praxis tragen einige Archetypen ein einziges Datenelement für eine einfache Beschreibung der Körperstelle - zum Beispiel OBSERVATION.blood_pressure und CLUSTER.symptom bei der Beschreibung von Ohrenschmerzen. In dieser Situation, in der die Wertemenge berechenbar und simpel zu definieren ist, ist dieses einzelne Datenelement eine sehr genaue und pragmatische Möglichkeit, die Stelle im Körper zu protokollieren und zu einem späteren Zeitpunkt abzufragen. In der Situation, in der die anatomische Lage nicht genau definiert ist oder zur Laufzeit bestimmt werden muss, kann es flexibler sein, diesen strukturierten Archetyp zu verwenden. Wenn zum Beispiel jedes Symptom ohne einen vordefinierten Umfang der Symptomatik aufgezeichnet werden kann, dann ist es sinnvoll, diesen Archetyp zu verwenden, um eine spezifische anatomische Lokalisation im Körper zu definieren. In diesem Fall trägt der CLUSTER.symptom Archetyp auch einen SLOT für 'Detaillierte anatomische Lokalisation', der diesen Archetyp enthalten kann, um maximale Flexibilität bei der Erfassung der Daten zur anatomischen Lage zu gewährleisten.\r\n\r\nDieser Archetyp unterstützt die Aufnahme von komplex strukturierten anatomischen Stellen. Beispielsweise findet sich der Scheitelpunkt des Herzens typischerweise am fünften linken Interkostalraum in der Mittelklavikularlinie, Schmerzempfindlichkeit am McBurney-Punkt an der Bauchdecke oder eine Risswunde an der Handflächeninnenseite des proximalen rechten Daumens.\r\n\r\nEine Kombination der Datenelemente in diesem Archetyp kann verwendet werden, um jede Komponente eines postkoordinierten Terminologieausdrucks, der den anatomischen Bereich repräsentiert, individuell zu dokumentieren.\r\n\r\nDer SLOT \"Alternative Struktur\" erlaubt die Aufnahme zusätzlicher Archetypen, die eine alternative Struktur zur Beschreibung derselben Körperstelle bieten, wie z.B. CLUSTER.anatomical_location_relative oder CLUSTER.anatomical_location_clock, falls dies benötigt wird. Wenn dieser Archetyp nur zur Benennung eines großen und/oder unspezifischen Körperteils verwendet werden kann, unterstützt die zusätzliche Verwendung des Archetyps CLUSTER.anatomical_location_relative die Aufnahme einer genaueren Position - zum Beispiel 2 cm vor der kubitalen Fossa des linken Unterarms oder 4 cm unter dem Rippenrand an der Brustwand in der Mittelklavikularlinie.\r\n\r\nWenn dieser Archetyp in anderen Archetypen verwendet wird, in denen das angegebene Thema nicht die Person ist, für die der Datensatz erstellt wird, z.B. ein Fötus in-utero, dann wird der anatomische Ort eine Körperstelle auf oder innerhalb des Fötus identifizieren.\"\r\n",
+          "misuse" : "*Not to be used for specifiying unilateral/bilateral occurrences of an anatomical feature.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att identifiera och strukturerat registrera detaljer om en enskild del på eller i människokroppen genom att använda termer inom makroskopisk anatomi.",
+          "keywords" : [ "lokalisation", "ställe", "anatomisk", "anatomiskt område", "topografisk anatomi", "makroskopisk", "anatomi" ],
+          "use" : "Används för att på ett strukturerat och konsekvent vis registrera detaljer om ett enskilt fysiskt ställe på eller i människokroppen.\r\n\r\nArketypen är specifikt utformad för att användas i lämpliga ENTRY- och CLUSTER-arketyper som sätter den anatomiska lokalisationen i ett sammanhang.\r\n\r\nSom en grundläggande del av klinisk praxis kan kliniker beskriva anatomiska platser på en mängd olika sätt. Vissa arketyper innehåller ett enkelt dataelement för enkel beskrivning av en kroppslig plats - till exempel OBSERVATION.blood_pressure och CLUSTER.symptoms när man beskriver smärta i örat. I denna situation, där uppsättningen värden är förutsägbar och lätt att definiera, är detta enkla dataelement ett mycket exakt och praktiskt sätt att registrera en anatomisk plats på eller i kroppen och söka efter den vid ett senare tillfälle. Men när den anatomiska platsen inte är väldefinierad eller behöver definieras kontinuerligt kan det vara mer flexibelt att använda denna strukturerade arketyp. Till exempel, i en situation där symptom ska registreras utan förkunskap om vilka typer av symptom det kan vara, kan denna arketyp vara användbar för att definiera en anatomisk plats i kroppen. I det här fallet har CLUSTER.symptom-arketypen en \"Lokalisation\"-SLOT som kan innehålla denna arketyp för att stödja maximal flexibilitet vid registrering av anatomiska platsdata.\r\n\r\nArketypen stöder registrering av komplexa strukturerade anatomiska platser. Till exempel finns hjärtspetsstöten typiskt i mitralområdet, ömhet vid McBurneys punkt på bukenväggen eller sårskada på handflatan av den proximala högra tummen.\r\n\r\nEn kombination av dataelement i den här arketypen kan användas för att registrera varje komponent i ett postkoordinerat terminologiskt uttryck som representerar den anatomiska platsen.\r\n\r\nSLOT för ''Alternativ struktur '' möjliggör användning av ytterligare arketyper som ger en alternativ struktur för beskrivning av samma kroppsplats, såsom CLUSTER.anatomical_location_relative eller CLUSTER.anatomical_location_circle, om detta skulle krävas. I den situation där den här arketypen endast kan användas för att namnge en stor och/eller ospecifik kroppsdel, kan ”CLUSTER. Anatomical_location_relative”-arketypen användas för att registrera en mer exakt plats – till exempel 2 cm främre än fossa cubitalis på vänster arm eller 4 cm under revbensbågen i medioklavikularlinjen på bröstväggen.\r\n\r\nOm denna arketyp används i andra arketyper där patienten inte är den som dokumentationen syftar till, till exempel foster-in-utero, kommer den anatomiska lokalisationen att identifieras som en lokalisation på eller i fostrets kropp.",
+          "misuse" : "Används inte för att ange unilaterala eller bilaterala förekomster av ett anatomiskt särdrag.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For registering av strukturerte detaljer om én enkelt makroskopisk fysisk lokalisering på eller i menneskekroppen.",
+          "keywords" : [ "sted", "lokalisering", "lokalisasjon", "anatomisk", "kroppssted", "anatomisk region", "topografisk anatomi", "makroskopisk", "anatomi", "kroppsdel", "dermatom", "legemsdel" ],
+          "use" : "Brukes for å dokumentere strukturerte og ensartede detaljer om et enkelt identifisert fysisk sted på eller i menneskekroppen.\r\n\r\nDenne arketypen er spesifikt designet for bruk i ENTRY og CLUSTER-arketyper som gir konteksten for den anatomiske lokaliseringen.\r\n\r\nSom en grunnleggende del av klinisk praksis kan klinikere beskrive anatomiske lokaliseringer på et utall forskjellige måter. Noen arketyper inneholder et enkelt dataelement for enkel beskrivelse av en kroppslig lokalisering - for eksempel OBSERVATION.blood_pressure, og CLUSTER.symptom når man beskriver øresmerter. I denne situasjonen, hvor verdisettet er forutsigbart og enkelt å definere, er dette enkle dataelementet en meget nøyaktig og praktisk måte for å registrere et anatomisk sted på eller i kroppen og søke på det på et senere tidspunkt. Når den anatomiske lokaliseringen derimot ikke er veldefinert eller må defineres fortløpende, kan det være mer fleksibelt å bruke denne strukturerte arketypen. For eksempel i en situasjon hvor et hvilket som helst symptom kan bli registrert uten noen forkunnskaper om hvilke typer symptomer det kan være, så vil muligheten for å bruke denne arketypen være nyttig. I dette tilfellet har CLUSTER.symptom-arketypen et SLOT for \"Strukturert anatomisk lokalisering\" som kan inneholde denne arketypen for å støtte maksimal fleksibilitet i registrering av data om den anatomiske lokaliseringen.\r\n\r\nArketypen støtter registrering av komplekse strukturerte anatomiske steder. For eksempel finnes hjertespisstøt typisk i femte venstre intercostalrom i midtclaviculære linjen, ømhet ved McBurney's punkt på abdomen eller laserasjon på den palmare siden av den proksimale høyre tommelen.\r\n\r\nEn kombinasjon av dataelementer i denne arketypen kan brukes for individuell registrering av hver komponent av et postkoordinert terminologiuttrykk for anatomisk sted.\r\n\r\nArketypen inneholder et \"Alternativ struktur\" SLOT som tillater inklusjon av ytterligere arketyper som gir en alternativ struktur for beskrivelse av det samme kroppssted, som CLUSTER.anatomical_location_relative eller CLUSTER.anatomical_location_clock om dette er nødvendig. I en situasjon hvor denne arketypen bare brukes til å navngi en større og/eller ikke-spesifikk kroppsdel, kan ytterligere bruk av CLUSTER.anatomical_location_relative-arketypen understøtte registrering av en mer presis lokasjon - for eksempel 2 cm anteriort for venstre arms cubitalfossa eller 4 cm under høyre costamargin på brystveggen i midtclaviculærlinjen.\r\n\r\nHvis denne arketypen brukes i andre arketyper hvor pasienten/klienten ikke er den som dokumentasjonen omhandler, for eksempel foetus-in-utero, så vil den anatomiske lokaliseringen bli identifisert som en lokalisering på eller i kroppen til fosteret.",
+          "misuse" : "Brukes ikke for spesifisering av unilateral/bilateral forekomst av et anatomisk kjennetegn.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para identificar e anotar informações estruturadas sobre um único local físico do corpo humano usando termos anatômicos macroscópicos.",
+          "keywords" : [ "localização", "local", "anatômico", "região anatômica", "topografia anatômica", "macroscópico", "anatomia" ],
+          "use" : "Use para gravar detalhes estruturados e consistentes sobre um único local físico identificado do corpo humano.\r\n\r\nEste arquétipo foi projetado especificamente para ser utilizado dentro do contexto de qualquer entrada ou CLUSTER arquétipo que forneça o contexto da localização anatômica.\r\n\r\nComo uma parte fundamental da prática clínica, os médicos podem descrever localizações anatômicas em uma miríade de formas complexas e variáveis. Na prática, alguns arquétipos carregam um elemento de dados único para o transporte de uma simples descrição do local do corpo - por exemplo, OBSERVATION.blood_pressure e CLUSTER.symptom quando descrevem a dor de ouvido. Nesta situação, onde o valor definido é previsível e simples de definir, este elemento de dados único é uma maneira muito precisa e pragmática para gravar o local no corpo e a consulta em uma data posterior. No entanto na situação onde a localização anatômica não é bem definida ou precisa ser determinada em tempo de execução, pode ser mais flexível para usar este arquétipo estruturado. Por exemplo, na situação onde qualquer sintoma pode ser gravado sem qualquer escopo predefinido do tipo, em seguida, permitindo o uso deste arquétipo especificamente, definir uma localização anatômica do corpo pode ser útil. Neste caso, o arquétipo CLUSTER.symptom carrega também um SLOT para localização anatômica detalhada que inclui este arquétipo para oferecer suporte a máxima flexibilidade na gravação de dados da localização anatômica.\r\n\r\nEste arquétipo suporta gravação de locais anatômicos estruturados complexos. Por exemplo, a batida do ápice do coração é normalmente encontrada no quinto espaço intercostal esquerdo na linha médio-clavicular, ou a sensibilidade em ponto de McBurneys na parede abdominal ou laceração na face palmar do polegar direito proximal.\r\n\r\nUma combinação de elementos de dados neste arquétipo pode ser usado para gravar individualmente cada componente de uma expressão de terminologia coordenada que representa o site anatômico.\r\n\r\nA estrutura alternativa SLOT permite a inclusão de arquétipos adicionais que fornecem uma estrutura alternativa para descrever o mesmo local do corpo, como CLUSTER.anatomical_location_relative ou CLUSTER.anatomical_location_clock, esta deve ser exigida. Na situação onde este arquétipo só pode ser usado para nomear uma parte do corpo e/ou não-específica, o uso adicional do arquétipo CLUSTER.anatomical_location_relative oferecerá suporte a gravação de uma localização mais precisa - por exemplo, 2 cm anterior da fossa cubital do antebraço esquerdo ou 4 cm abaixo da margem costal de R na parede torácica na linha médio-clavicular.\r\n\r\nSe este arquétipo é usado dentro de outros arquétipos onde o assunto especificado de cuidados não é o indivíduo para quem o registro está sendo criado, por exemplo um feto em útero, então a localização anatômica vai estar realizada identificando um local do corpo ou com o feto.",
+          "misuse" : "Não deve ser usado para especificar as ocorrências unilateral/bilateral de uma característica anatômica.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To identify and record structured details about a single physical site on, or within, the human body using macroscopic anatomical terms.",
+          "keywords" : [ "location", "site", "anatomical", "anatomic region", "topographic anatomy", "macroscopic", "anatomic", "anatomy" ],
+          "use" : "Use to record structured and consistent details about a single identified physical site on, or within, the human body. \r\n\r\nThis archetype is specifically designed to be used within the context of any appropriate ENTRY or CLUSTER archetypes which supply the context of the anatomical location. \r\n\r\nAs a fundamental part of clinical practice, clinicians can describe anatomical locations in a myriad of complex and variable ways. In practice, some archetypes carry a single data element for carrying a simple description of body site - for example, OBSERVATION.blood_pressure and CLUSTER.symptom when describing ear pain. In this situation, where the value set is predictable and simple to define, this single data element is a very accurate and pragmatic way to record the site in the body and to query at a later date. However in the situation where the anatomical location is not well defined or needs to be determined at run-time, it may be more flexible to use this structured archetype. For example, in the situation where any symptom can be recorded without any predefined scope of the type of symptom, then allowing the use of this archetype to specifically define an anatomical location in the body may be useful. In this case the CLUSTER.symptom archetype also carries a SLOT for 'Detailed anatomical location' which can include this archetype to support maximal flexibility in recording anatomical location data.\r\n\r\nThis archetype supports recording complex structured anatomical sites. For example, the apex beat of the heart is typically found at the fifth left intercostal space in the mid-clavicular line, tenderness at McBurney's point on the abdominal wall or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nA combination of the data elements in this archetype can be used to individually record each component of a postcoordinated terminology expression that represents the anatomical site.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In the situation where this archetype can only be used to name a large and/or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location - for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below R costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in-utero, then the anatomical location will be identifying a body site on or within the fetus.",
+          "misuse" : "Not to be used for specifiying unilateral/bilateral occurrences of an anatomical feature.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To record details about anatomical location.(en)",
+          "keywords" : [ "*location(en)", "*site(en)", "*anatomical(en)" ],
+          "misuse" : "*Not for specifiying unilateral/bilateral occurence - this is related to an evaluation which perhaps includes multiple locations.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "تسجيل المكان التشريحي بالتفصيل",
+          "keywords" : [ "الموقع", "المكان", "تشريحي" ],
+          "misuse" : "لا يستخدم لتحديد حالات الحدوث في جانب واحد أو في الجانبين - حيث إن ذلك متعلق بتقييم قد يتضمن العديد من الأماكن",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Om gestructureerde details over een structuur op of in het menselijk lichaam te identificeren en vast te leggen, in macroscopische anatomische termen.",
+          "keywords" : [ "locatie", "structuur", "anatomisch", "anatomische regio", "topografische anatomie", "macroscopisch" ],
+          "use" : "Gebruik om gestructureerde details over een structuur op of in het menselijk lichaam te identificeren en vast te leggen.",
+          "misuse" : "Niet gebruiken om meerdere unilaterale/bilaterale structuren vast te leggen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0001.1]" : {
+            "doc_variable_id" : "Q1"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
     "differential" : true,
@@ -1260,7 +1493,49 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "66A281BF4B9267F94ADB6EBB312605E2"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der subjektiven Beurteilung von Schmerzstärke mittels einer Analogskala (VAS).",
+          "keywords" : [ "Schmerzskala", "Schmerz", "Skala", "VAS", "Schmerzstärke", "Schmerzintensität" ],
+          "use" : "Dieser Archetyp soll verwendet werden um die subjektive Schmerzempfindung eines Patienten darzustellen. \r\nDie Visuelle Analogskala wird häufig in der Schmerzforschung und Schmerztherapie eingesetzt. Meistens handelt es sich um eine Linie, deren Endpunkte extreme Zustände darstellen, wie z. B. „kein Schmerz“ und „unerträglicher Schmerz“. Der Befragte markiert seine subjektive Empfindung durch einen vertikalen Strich auf der Linie.\r\nDer angegebene Wert wird dann durch den Befragenden als Prozentzahl oder mittels einer definierten Skala, meist von 0 bis 10 quantifiziert. Der Befragte sieht die diskreten Skalen jedoch nicht.",
+          "misuse" : "Der Archetyp darf nicht bei Kindern unter 12 Jahren genutzt werden.",
+          "copyright" : "© HiGHmed",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To represent the subjective assessment of pain intensity using an analog scale (VAS).",
+          "keywords" : [ "Pain scale", "Pain", "scale", "VAS", "Pain severity", "Pain intensity" ],
+          "use" : "This archetype is to be used to represent the subjective pain perception of a patient. \r\nThe Visual Analog Scale is often used in pain research and pain therapy. It is usually a line whose endpoints represent extreme states, such as \"no pain\" and \"unbearable pain.\" The respondent marks his or her subjective sensation by drawing a vertical line on the scale.\r\nThe indicated value is then quantified by the respondent as a percentage or by means of a defined scale, usually from 0 to 10. However, the respondent does not see the discrete scales.",
+          "misuse" : "The archetype must not be used on children under 12 years of age.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]" : {
+            "doc_variable_id" : "Q2"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pain_scale.v1",
     "differential" : true,
@@ -1388,7 +1663,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "AFF2B50F9803DB3A81DE95E991760200"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Måling av bevegelsesutslag for en spesifisert enkel eller sammensatt bevegelse i et ledd eller segment av ryggraden.",
+          "keywords" : [ "ROM, AAROM, PROM, AROM, ledd, bevegelse, vinkel" ],
+          "use" : "Brukes for måling av bevegelsesutslag for en enkel eller sammensatt bevegelse i et ledd eller segment av ryggraden.\r\n\r\nDenne arketypen har vært designet spesifikt for å kunne brukes i SLOT'et \"Undersøkelsesdetaljer\" i arketypen OBSERVATION.exam (Funn ved fysisk undersøkelse) eller i en spesialisering av arketypen CLUSTER.exam for et spesifikt ledd, men kan også bli brukt i andre ENTRY- eller CLUSTER-arketyper der det er klinisk passende.\r\n\r\nHvilket spesifikt ledd undersøkelsen omfatter registeres i dataelementet \"Undersøkt organsystem eller struktur\" i den CLUSTER.exam arketypen hvor denne arketypen er nøstet inn. For å registrere flere ulike bevegelser må man bruke flere instanser av denne arketypen.\r\n\r\nVanlige leddbevegelser er lagt til DV_CODED_TEXT datatypen i elementet \"Bevegelse\". Om det er behov for å registrere ytterligere bevegelser kan disse legges til listen over tid.",
+          "misuse" : "Benyttes ikke for å registrere spesifikke, navngitte undersøkelser som utføres på et ledd. For eksempel Thomas test eller Ortolani test for hofteleddet. Bruk exam-hip_joint arketypen for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record measurement of the extent of motion for a specified simple or complex movement around an indentified joint or section of the spine.",
+          "keywords" : [ "ROM, AAROM, PROM, AROM, joint, movement, angle, motion, range" ],
+          "use" : "Use to record the measurement of the extent of motion for a specified simple or complex movement around an indentified joint or section of the spine.\r\n\t\t\t\r\nThis archetype has been specifically designed to be used in the 'Examination findings' SLOT within the CLUSTER.exam or a specialisation of CLUSTER.exam for a specific joint, but can also be used within other ENTRY or CLUSTER archetypes where clinically appropriate.\r\n\r\nThe examined joint is identified in the 'System or structure examined' element of the CLUSTER.exam archetype in which this archetype is nested.  In order to be able to record multiple movements several instances of this archetype will need to be used.\r\n\r\nCommon motions around a joint have been added to the DV_CODED_TEXT data type in the 'Movement' data element. As further joint movements are identified, these can be added to this list over time.",
+          "misuse" : "Not to be used to record the results of specific named tests performed on a joint. For example in the hip the Thomas test or Ortolani test. Use the exam-hip_joint archetype for these purposes.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.range_of_motion.v1",
     "differential" : true,
@@ -1617,7 +1924,68 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "BBF04254F8BEA1421AF2CC97A0B64624"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Repräsentation strukturierter Informationen über den geplanten Zeitablauf einer therapeutischen oder diagnostischen Aktivität innerhalb von 24 Stunden.",
+          "keywords" : [ "Zeitablauf", "Zeitpunkt", "Applikation", "Verabreichung", "Dosierung", "Frequenz", "Intervall", "Rezept", "Empfehlung", "Zeitplan", "pro Tag" ],
+          "use" : "Zur Repräsentation strukturierter Informationen über über den geplanten Zeitablauf einer therapeutischen oder diagnostischen Aktivität innerhalb eines Zeitraums von 24 Stunden.\r\n\r\nDieser Archetyp ist so konzipiert, dass er innerhalb des SLOTs \"Tägliche Verabreichungszeiten\" des Archetyps CLUSTER.dosage verwendet werden kann. Er kann aber auch in anderen CLUSTER- und ENTRY-Klassen-Archetypen verwendet werden, wenn dies klinisch sinnvoll ist.",
+          "misuse" : "Nicht zur Repräsentation von Informationen zum Zeitablauf, der innerhalb längeren Zeitraums als 24-Stunden liegt, verwenden. Verwenden Sie zu diesem Zweck den Archetyp CLUSTER.timing_nondaily.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere strukturert informasjon om planlagt timing av en terapeutisk eller diagnostisk aktivitet innenfor ett døgn.",
+          "keywords" : [ "timing", "administrering", "dosering", "frekvens", "intervall", "ordinering", "anbefaling", "plan", "per dag", "dssn", "tidspunkt", "tidsskjema", "tidsplan", "tidfesting", "tidsberegning", "tidsplanlegging", "planlegging" ],
+          "use" : "Strukturert informasjon om planlagt timing av en terapeutisk eller diagnostisk aktivitet innenfor ett døgn.\r\n\r\nArketypen er laget for å brukes i SLOTet \"Administreringstidspunkt\" i arketypen CLUSTER.dosage (Dosering), men kan også brukes i andre CLUSTER- og ENTRY-arketyper der det er klinisk passende.",
+          "misuse" : "Skal ikke brukes til å registrere detaljer om timing over lengre tidsperioder enn et døgn. Bruk arketypen CLUSTER.timing_repetition for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To provide structured information on time schedules within a single day that is suitable for computation and display for human interpretation.(en)",
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record structured information about the intended timing of a therapeutic or diagnostic activity within any 24 hour period.",
+          "keywords" : [ "timing", "administration", "dosing", "frequency", "interval", "order", "recommendation", "schedule", "per day" ],
+          "use" : "Use to record structured information about the intended timing of a therapeutic or diagnostic activity within any 24 hour period.\r\n\r\nThis archetype is designed to be used within the 'Timing' SLOT within the CLUSTER.dosage archetype, but can also be used in other CLUSTER and ENTRY class archetypes where clinically appropriate.",
+          "misuse" : "Not to be used for recording timing details over periods longer than a single 24 hour period. Use the CLUSTER.timing_repetition archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.timing_daily.v1",
     "differential" : true,
@@ -1643,7 +2011,17 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "property",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "openehr"
+                  },
+                  "constraint" : [ "382" ]
+                } ]
+              } ],
               "attributeTuples" : [ {
                 "@type" : "C_ATTRIBUTE_TUPLE",
                 "members" : [ {
@@ -1778,11 +2156,21 @@
               "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "lower",
+                "rmAttributeName" : "upper",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_QUANTITY",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "property",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "382" ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ {
                     "@type" : "C_ATTRIBUTE_TUPLE",
                     "members" : [ {
@@ -1915,11 +2303,21 @@
                 } ]
               }, {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "upper",
+                "rmAttributeName" : "lower",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_QUANTITY",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "property",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "382" ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ {
                     "@type" : "C_ATTRIBUTE_TUPLE",
                     "members" : [ {
@@ -2121,16 +2519,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0023.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_BOOLEAN",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -2331,6 +2720,668 @@
       "author" : {
         "name" : "?"
       },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "ccce5e05-13b7-4530-901c-a9cf9328b178",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "876BA56A1E975E7F68DC58E6EB81EB33"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.medication_screening.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-medication_screening-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0022",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0023",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0001",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0040.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0027.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_BOOLEAN",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0043.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "nodeId" : "at0026",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0021.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "ATC_82021"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "ATC_82021" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "A07EC01",
+                                    "value" : "sulfasalazine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "J01AA08",
+                                    "value" : "minocycline"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L01AA01",
+                                    "value" : "cyclophosphamide"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L01BA01",
+                                    "value" : "methotrexate"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA01",
+                                    "value" : "cyclosporine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA13",
+                                    "value" : "leflunomide"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AX01",
+                                    "value" : "azathioprine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AX03",
+                                    "value" : "methotrexate"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CB01",
+                                    "value" : "sodium aurothiomalate"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CB03",
+                                    "value" : "auranofin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CB04",
+                                    "value" : "aurothioglucose"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CC01",
+                                    "value" : "penicillamine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "P01BA02",
+                                    "value" : "hydroxychloroquine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA11",
+                                    "value" : "etanercept"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA12",
+                                    "value" : "infliximab"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA14",
+                                    "value" : "anakinra"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA17",
+                                    "value" : "adalimumab"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02AA05",
+                                    "value" : "oxycodone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02AD01",
+                                    "value" : "pentazocine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA51",
+                                    "value" : "codeine in combination"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BE01",
+                                    "value" : "acetaminophen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BE51",
+                                    "value" : "paracetamol, combinations excluding psycholeptics"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "R05DA03",
+                                    "value" : "hydrocodone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "R05DA04",
+                                    "value" : "codeine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "R05DA05",
+                                    "value" : "opium alkaloids with morphine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB04",
+                                    "value" : "methylprednisolone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB06",
+                                    "value" : "prednisolone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB07",
+                                    "value" : "prednisone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB08",
+                                    "value" : "triamcinolone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB10",
+                                    "value" : "cortisone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AH03",
+                                    "value" : "valdecoxib"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AA01",
+                                    "value" : "phenylbutazone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB01",
+                                    "value" : "indometacin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB02",
+                                    "value" : "sulindac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB03",
+                                    "value" : "tolmetin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB05",
+                                    "value" : "diclofenac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB08",
+                                    "value" : "etodolac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB15",
+                                    "value" : "ketorolac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB55",
+                                    "value" : "diclofenac in combination"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AC01",
+                                    "value" : "piroxicam"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AC02",
+                                    "value" : "tenoxicam"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AC06",
+                                    "value" : "meloxicam"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE01",
+                                    "value" : "ibuprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE02",
+                                    "value" : "naproxen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE03",
+                                    "value" : "ketoprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE04",
+                                    "value" : "fenoprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE09",
+                                    "value" : "flurbiprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE11",
+                                    "value" : "tiaprofenic acid"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE12",
+                                    "value" : "oxaprozin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AG01",
+                                    "value" : "mefenamic acid"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AH01",
+                                    "value" : "celecoxib"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AH02",
+                                    "value" : "rofecoxib"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AX01",
+                                    "value" : "nabumetone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AA",
+                                    "value" : "anti-inflammatory preparations, non-steroids for topical use"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AB01",
+                                    "value" : "capsicum"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AC",
+                                    "value" : "preparation with salicylic acid derivations"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AX03",
+                                    "value" : "dimethyl sulfoxide"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M04AA",
+                                    "value" : "preparation inhibiting uric acid production"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA11",
+                                    "value" : "diflunisal"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA01",
+                                    "value" : "acetylsalicylic acid"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA03",
+                                    "value" : "choline salicylate"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0024.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.2" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0003.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0002.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0025.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Alternative medicine", "Cold", "None", "/.+/" ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027.1",
+            "text" : "Any medications used besides usual treatment?",
+            "description" : "Is there a history of use of any medication related to the screening purpose?",
+            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025.1",
+            "text" : "Any other pain relief?",
+            "description" : "Additional narrative about the specific medication question, not captured in other fields."
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0028", "at0029" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "dcd86caa-80f4-4dbf-9162-cc61880219ad",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Kim Sommer, Natalia Strauch, Alina Rehberg",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "sommer.kimkatrin@mh-hannover.de, Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, John Tore Valand",
+        "organisation" : "Helse Vest IKT AS, Helse Bergen",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Martijn van Eenennaam",
+        "organisation" : "Nedap Healthcare",
+        "email" : "martijn.vaneenennaam@nedap.com"
+      },
+      "accreditation" : "PhD",
       "otherDetails" : { }
     } ]
   } ],
