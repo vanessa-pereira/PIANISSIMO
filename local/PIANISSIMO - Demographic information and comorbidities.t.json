@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.7",
+      "sem_ver" : "0.1.8",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "c89005b5ff8079c220693c4280273860",
+      "MD5-CAM-1.0.1" : "51931489d90f40054bf0573240811035",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -6310,20 +6310,1000 @@
                   "selectedTerminologies" : [ "ISO3166" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "ISO3166",
-                    "code" : "LU",
-                    "value" : "Luxembourg"
+                    "code" : "AF",
+                    "value" : "Afghanistan"
                   }, {
                     "terminologyId" : "ISO3166",
-                    "code" : "DE",
-                    "value" : "Germany"
+                    "code" : "AL",
+                    "value" : "Albania"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "DZ",
+                    "value" : "Algeria"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AS",
+                    "value" : "American Samoa"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AD",
+                    "value" : "Andorra"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AO",
+                    "value" : "Angola"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AI",
+                    "value" : "Anguilla"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AQ",
+                    "value" : "Antarctica"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AG",
+                    "value" : "Antigua and Barbuda"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AR",
+                    "value" : "Argentina"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AM",
+                    "value" : "Armenia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AW",
+                    "value" : "Aruba"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AU",
+                    "value" : "Australia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AT",
+                    "value" : "Austria"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AZ",
+                    "value" : "Azerbaijan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BS",
+                    "value" : "Bahamas (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BH",
+                    "value" : "Bahrain"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BD",
+                    "value" : "Bangladesh"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BB",
+                    "value" : "Barbados"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BY",
+                    "value" : "Belarus"
                   }, {
                     "terminologyId" : "ISO3166",
                     "code" : "BE",
                     "value" : "Belgium"
                   }, {
                     "terminologyId" : "ISO3166",
+                    "code" : "BZ",
+                    "value" : "Belize"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BJ",
+                    "value" : "Benin"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BM",
+                    "value" : "Bermuda"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BT",
+                    "value" : "Bhutan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BO",
+                    "value" : "Bolivia (Plurinational State of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BQ",
+                    "value" : "Bonaire, Sint Eustatius and Saba"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BA",
+                    "value" : "Bosnia and Herzegovina"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BW",
+                    "value" : "Botswana"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BV",
+                    "value" : "Bouvet Island"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BR",
+                    "value" : "Brazil"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IO",
+                    "value" : "British Indian Ocean Territory (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BN",
+                    "value" : "Brunei Darussalam"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BG",
+                    "value" : "Bulgaria"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BF",
+                    "value" : "Burkina Faso"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BI",
+                    "value" : "Burundi"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CV",
+                    "value" : "Cabo Verde"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KH",
+                    "value" : "Cambodia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CM",
+                    "value" : "Cameroon"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CA",
+                    "value" : "Canada"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KY",
+                    "value" : "Cayman Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CF",
+                    "value" : "Central African Republic (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TD",
+                    "value" : "Chad"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CL",
+                    "value" : "Chile"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CN",
+                    "value" : "China"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CX",
+                    "value" : "Christmas Island"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CC",
+                    "value" : "Cocos (Keeling) Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CO",
+                    "value" : "Colombia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KM",
+                    "value" : "Comoros (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CD",
+                    "value" : "Congo (the Democratic Republic of the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CG",
+                    "value" : "Congo (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CK",
+                    "value" : "Cook Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CR",
+                    "value" : "Costa Rica"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "HR",
+                    "value" : "Croatia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CU",
+                    "value" : "Cuba"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CW",
+                    "value" : "Curaçao"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CY",
+                    "value" : "Cyprus"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CZ",
+                    "value" : "Czechia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CI",
+                    "value" : "Côte d'Ivoire"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "DK",
+                    "value" : "Denmark"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "DJ",
+                    "value" : "Djibouti"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "DM",
+                    "value" : "Dominica"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "DO",
+                    "value" : "Dominican Republic (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "EC",
+                    "value" : "Ecuador"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "EG",
+                    "value" : "Egypt"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SV",
+                    "value" : "El Salvador"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GQ",
+                    "value" : "Equatorial Guinea"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ER",
+                    "value" : "Eritrea"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "EE",
+                    "value" : "Estonia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SZ",
+                    "value" : "Eswatini"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ET",
+                    "value" : "Ethiopia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "FK",
+                    "value" : "Falkland Islands (the) [Malvinas]"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "FO",
+                    "value" : "Faroe Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "FJ",
+                    "value" : "Fiji"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "FI",
+                    "value" : "Finland"
+                  }, {
+                    "terminologyId" : "ISO3166",
                     "code" : "FR",
                     "value" : "France"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GF",
+                    "value" : "French Guiana"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PF",
+                    "value" : "French Polynesia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TF",
+                    "value" : "French Southern Territories (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GA",
+                    "value" : "Gabon"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GM",
+                    "value" : "Gambia (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GE",
+                    "value" : "Georgia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "DE",
+                    "value" : "Germany"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GH",
+                    "value" : "Ghana"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GI",
+                    "value" : "Gibraltar"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GR",
+                    "value" : "Greece"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GL",
+                    "value" : "Greenland"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GD",
+                    "value" : "Grenada"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GP",
+                    "value" : "Guadeloupe"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GU",
+                    "value" : "Guam"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GT",
+                    "value" : "Guatemala"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GG",
+                    "value" : "Guernsey"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GN",
+                    "value" : "Guinea"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GW",
+                    "value" : "Guinea-Bissau"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GY",
+                    "value" : "Guyana"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "HT",
+                    "value" : "Haiti"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "HM",
+                    "value" : "Heard Island and McDonald Islands"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VA",
+                    "value" : "Holy See (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "HN",
+                    "value" : "Honduras"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "HK",
+                    "value" : "Hong Kong"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "HU",
+                    "value" : "Hungary"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IS",
+                    "value" : "Iceland"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IN",
+                    "value" : "India"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ID",
+                    "value" : "Indonesia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IR",
+                    "value" : "Iran (Islamic Republic of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IQ",
+                    "value" : "Iraq"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IE",
+                    "value" : "Ireland"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IM",
+                    "value" : "Isle of Man"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IL",
+                    "value" : "Israel"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "IT",
+                    "value" : "Italy"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "JM",
+                    "value" : "Jamaica"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "JP",
+                    "value" : "Japan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "JE",
+                    "value" : "Jersey"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "JO",
+                    "value" : "Jordan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KZ",
+                    "value" : "Kazakhstan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KE",
+                    "value" : "Kenya"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KI",
+                    "value" : "Kiribati"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KP",
+                    "value" : "Korea (the Democratic People's Republic of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KR",
+                    "value" : "Korea (the Republic of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KW",
+                    "value" : "Kuwait"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KG",
+                    "value" : "Kyrgyzstan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LA",
+                    "value" : "Lao People's Democratic Republic (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LV",
+                    "value" : "Latvia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LB",
+                    "value" : "Lebanon"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LS",
+                    "value" : "Lesotho"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LR",
+                    "value" : "Liberia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LY",
+                    "value" : "Libya"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LI",
+                    "value" : "Liechtenstein"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LT",
+                    "value" : "Lithuania"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LU",
+                    "value" : "Luxembourg"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MO",
+                    "value" : "Macao"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MG",
+                    "value" : "Madagascar"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MW",
+                    "value" : "Malawi"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MY",
+                    "value" : "Malaysia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MV",
+                    "value" : "Maldives"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ML",
+                    "value" : "Mali"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MT",
+                    "value" : "Malta"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MH",
+                    "value" : "Marshall Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MQ",
+                    "value" : "Martinique"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MR",
+                    "value" : "Mauritania"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MU",
+                    "value" : "Mauritius"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "YT",
+                    "value" : "Mayotte"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MX",
+                    "value" : "Mexico"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "FM",
+                    "value" : "Micronesia (Federated States of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MD",
+                    "value" : "Moldova (the Republic of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MC",
+                    "value" : "Monaco"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MN",
+                    "value" : "Mongolia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ME",
+                    "value" : "Montenegro"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MS",
+                    "value" : "Montserrat"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MA",
+                    "value" : "Morocco"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MZ",
+                    "value" : "Mozambique"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MM",
+                    "value" : "Myanmar"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NA",
+                    "value" : "Namibia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NR",
+                    "value" : "Nauru"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NP",
+                    "value" : "Nepal"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NL",
+                    "value" : "Netherlands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NC",
+                    "value" : "New Caledonia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NZ",
+                    "value" : "New Zealand"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NI",
+                    "value" : "Nicaragua"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NE",
+                    "value" : "Niger (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NG",
+                    "value" : "Nigeria"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NU",
+                    "value" : "Niue"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NF",
+                    "value" : "Norfolk Island"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MP",
+                    "value" : "Northern Mariana Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "NO",
+                    "value" : "Norway"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "OM",
+                    "value" : "Oman"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PK",
+                    "value" : "Pakistan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PW",
+                    "value" : "Palau"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PS",
+                    "value" : "Palestine, State of"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PA",
+                    "value" : "Panama"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PG",
+                    "value" : "Papua New Guinea"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PY",
+                    "value" : "Paraguay"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PE",
+                    "value" : "Peru"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PH",
+                    "value" : "Philippines (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PN",
+                    "value" : "Pitcairn"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PL",
+                    "value" : "Poland"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PT",
+                    "value" : "Portugal"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PR",
+                    "value" : "Puerto Rico"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "QA",
+                    "value" : "Qatar"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MK",
+                    "value" : "Republic of North Macedonia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "RO",
+                    "value" : "Romania"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "RU",
+                    "value" : "Russian Federation (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "RW",
+                    "value" : "Rwanda"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "RE",
+                    "value" : "Réunion"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "BL",
+                    "value" : "Saint Barthélemy"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SH",
+                    "value" : "Saint Helena, Ascension and Tristan da Cunha"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "KN",
+                    "value" : "Saint Kitts and Nevis"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LC",
+                    "value" : "Saint Lucia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "MF",
+                    "value" : "Saint Martin (French part)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "PM",
+                    "value" : "Saint Pierre and Miquelon"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VC",
+                    "value" : "Saint Vincent and the Grenadines"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "WS",
+                    "value" : "Samoa"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SM",
+                    "value" : "San Marino"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ST",
+                    "value" : "Sao Tome and Principe"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SA",
+                    "value" : "Saudi Arabia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SN",
+                    "value" : "Senegal"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "RS",
+                    "value" : "Serbia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SC",
+                    "value" : "Seychelles"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SL",
+                    "value" : "Sierra Leone"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SG",
+                    "value" : "Singapore"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SX",
+                    "value" : "Sint Maarten (Dutch part)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SK",
+                    "value" : "Slovakia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SI",
+                    "value" : "Slovenia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SB",
+                    "value" : "Solomon Islands"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SO",
+                    "value" : "Somalia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ZA",
+                    "value" : "South Africa"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GS",
+                    "value" : "South Georgia and the South Sandwich Islands"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SS",
+                    "value" : "South Sudan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ES",
+                    "value" : "Spain"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "LK",
+                    "value" : "Sri Lanka"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SD",
+                    "value" : "Sudan (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SR",
+                    "value" : "Suriname"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SJ",
+                    "value" : "Svalbard and Jan Mayen"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SE",
+                    "value" : "Sweden"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "CH",
+                    "value" : "Switzerland"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "SY",
+                    "value" : "Syrian Arab Republic"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TW",
+                    "value" : "Taiwan (Province of China)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TJ",
+                    "value" : "Tajikistan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TZ",
+                    "value" : "Tanzania, United Republic of"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TH",
+                    "value" : "Thailand"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TL",
+                    "value" : "Timor-Leste"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TG",
+                    "value" : "Togo"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TK",
+                    "value" : "Tokelau"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TO",
+                    "value" : "Tonga"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TT",
+                    "value" : "Trinidad and Tobago"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TN",
+                    "value" : "Tunisia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TR",
+                    "value" : "Turkey"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TM",
+                    "value" : "Turkmenistan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TC",
+                    "value" : "Turks and Caicos Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "TV",
+                    "value" : "Tuvalu"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "UG",
+                    "value" : "Uganda"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "UA",
+                    "value" : "Ukraine"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AE",
+                    "value" : "United Arab Emirates (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "GB",
+                    "value" : "United Kingdom of Great Britain and Northern Ireland (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "UM",
+                    "value" : "United States Minor Outlying Islands (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "US",
+                    "value" : "United States of America (the)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "UY",
+                    "value" : "Uruguay"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "UZ",
+                    "value" : "Uzbekistan"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VU",
+                    "value" : "Vanuatu"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VE",
+                    "value" : "Venezuela (Bolivarian Republic of)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VN",
+                    "value" : "Viet Nam"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VG",
+                    "value" : "Virgin Islands (British)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "VI",
+                    "value" : "Virgin Islands (U.S.)"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "WF",
+                    "value" : "Wallis and Futuna"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "EH",
+                    "value" : "Western Sahara"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "YE",
+                    "value" : "Yemen"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ZM",
+                    "value" : "Zambia"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "ZW",
+                    "value" : "Zimbabwe"
+                  }, {
+                    "terminologyId" : "ISO3166",
+                    "code" : "AX",
+                    "value" : "Åland Islands"
                   } ]
                 } ]
               } ],
