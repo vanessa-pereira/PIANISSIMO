@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.9",
+      "sem_ver" : "0.1.10",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "3250719a4b8b1f42e76d219e16659dc2",
+      "MD5-CAM-1.0.1" : "90073e6e54b4dc8fd2c2843fdece6e06",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -151,6 +151,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-problem_screening-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.19",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-source-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -880,9 +889,382 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0026.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0021.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "ATC_82021"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "ATC_82021" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "A07EC01",
+                                    "value" : "sulfasalazine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "J01AA08",
+                                    "value" : "minocycline"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L01AA01",
+                                    "value" : "cyclophosphamide"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L01BA01",
+                                    "value" : "methotrexate"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA01",
+                                    "value" : "cyclosporine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA13",
+                                    "value" : "leflunomide"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AX01",
+                                    "value" : "azathioprine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AX03",
+                                    "value" : "methotrexate"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CB01",
+                                    "value" : "sodium aurothiomalate"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CB03",
+                                    "value" : "auranofin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CB04",
+                                    "value" : "aurothioglucose"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01CC01",
+                                    "value" : "penicillamine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "P01BA02",
+                                    "value" : "hydroxychloroquine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA11",
+                                    "value" : "etanercept"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA12",
+                                    "value" : "infliximab"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA14",
+                                    "value" : "anakinra"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "L04AA17",
+                                    "value" : "adalimumab"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02AA05",
+                                    "value" : "oxycodone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02AD01",
+                                    "value" : "pentazocine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA51",
+                                    "value" : "codeine in combination"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BE01",
+                                    "value" : "acetaminophen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BE51",
+                                    "value" : "paracetamol, combinations excluding psycholeptics"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "R05DA03",
+                                    "value" : "hydrocodone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "R05DA04",
+                                    "value" : "codeine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "R05DA05",
+                                    "value" : "opium alkaloids with morphine"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB04",
+                                    "value" : "methylprednisolone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB06",
+                                    "value" : "prednisolone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB07",
+                                    "value" : "prednisone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB08",
+                                    "value" : "triamcinolone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "H02AB10",
+                                    "value" : "cortisone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AH03",
+                                    "value" : "valdecoxib"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AA01",
+                                    "value" : "phenylbutazone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB01",
+                                    "value" : "indometacin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB02",
+                                    "value" : "sulindac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB03",
+                                    "value" : "tolmetin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB05",
+                                    "value" : "diclofenac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB08",
+                                    "value" : "etodolac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB15",
+                                    "value" : "ketorolac"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AB55",
+                                    "value" : "diclofenac in combination"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AC01",
+                                    "value" : "piroxicam"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AC02",
+                                    "value" : "tenoxicam"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AC06",
+                                    "value" : "meloxicam"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE01",
+                                    "value" : "ibuprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE02",
+                                    "value" : "naproxen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE03",
+                                    "value" : "ketoprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE04",
+                                    "value" : "fenoprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE09",
+                                    "value" : "flurbiprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE11",
+                                    "value" : "tiaprofenic acid"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AE12",
+                                    "value" : "oxaprozin"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AG01",
+                                    "value" : "mefenamic acid"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AH01",
+                                    "value" : "celecoxib"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AH02",
+                                    "value" : "rofecoxib"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M01AX01",
+                                    "value" : "nabumetone"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AA",
+                                    "value" : "anti-inflammatory preparations, non-steroids for topical use"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AB01",
+                                    "value" : "capsicum"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AC",
+                                    "value" : "preparation with salicylic acid derivations"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M02AX03",
+                                    "value" : "dimethyl sulfoxide"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "M04AA",
+                                    "value" : "preparation inhibiting uric acid production"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA11",
+                                    "value" : "diflunisal"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA01",
+                                    "value" : "acetylsalicylic acid"
+                                  }, {
+                                    "terminologyId" : "ATC_82021",
+                                    "code" : "N02BA03",
+                                    "value" : "choline salicylate"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0024.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.5" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0003.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0002.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     } ]
                   } ],
@@ -914,6 +1296,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.4",
             "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.5",
+            "description" : ""
           }
         },
         "nb" : {
@@ -921,6 +1309,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
             "description" : ""
           }
         },
@@ -930,6 +1324,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
             "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
           }
         },
         "nl" : {
@@ -937,6 +1337,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
             "description" : ""
           }
         }
@@ -963,6 +1369,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
           "members" : [ "at0028", "at0029" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0036", "at0037", "at0039" ]
         }
       }
     },
@@ -2459,6 +2870,188 @@
         "codeString" : "pt-pt"
       },
       "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "9a91284c-a159-44be-ab04-49f32fecc29d",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "15D196B71A8744426F366AC96887623E"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.source.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-source-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "Medical consultation", "Medical imaging exam", "Medical consultation and medical imaging exam" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_URI",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0004.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.1" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Problem/Diagnosis source information",
+            "description" : "Information sourced from a third party that is utilised as part of a remote assessment or report."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0005", "at0006" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "5fa5b120-ad41-47aa-be23-af8b4482cdbb",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Clóvis Puttini, Débora Farage, Fernanda Maia, Ana Paula Andrade, Adriana Kitajima",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
       "otherDetails" : { }
     } ]
   } ],
