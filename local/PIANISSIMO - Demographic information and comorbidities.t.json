@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.9",
+      "sem_ver" : "0.1.10",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "615c8a59db4339ec28037c026496ae45",
+      "MD5-CAM-1.0.1" : "ea83317656d8a4fc2aad15bbc5920b83",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -4854,44 +4854,524 @@
                   "selectedTerminologies" : [ "ISCO-8" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "ISCO-8",
-                    "code" : "1",
-                    "value" : "Managers"
+                    "code" : "111",
+                    "value" : "Legislators and Senior Officials"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "2",
-                    "value" : "Professionals"
+                    "code" : "112",
+                    "value" : "Managing Directors and Chief Executives"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "3",
-                    "value" : "Technicians and Associate Professionals"
+                    "code" : "121",
+                    "value" : "Business Services and Administration Managers"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "4",
-                    "value" : "Clerical Support Workers"
+                    "code" : "122",
+                    "value" : "Sales, Marketing and Development Managers"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "5",
-                    "value" : "Services And Sales Workers"
+                    "code" : "131",
+                    "value" : "Production Managers in Agriculture, Forestry and Fisheries"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "6",
-                    "value" : "Skilled Agricultural, Forestry and Fishery Workers"
+                    "code" : "132",
+                    "value" : "Manufacturing, Mining, Construction and Distribution Managers"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "7",
-                    "value" : "Craft and Related Trades Workers"
+                    "code" : "133",
+                    "value" : "Information and Communications Technology Services Managers"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "8",
-                    "value" : "Plant and Machine Operators and Assemblers"
+                    "code" : "134",
+                    "value" : "Professional Services Managers"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "9",
-                    "value" : "Elementary Occupations"
+                    "code" : "141",
+                    "value" : "Hotel and Restaurant Managers"
                   }, {
                     "terminologyId" : "ISCO-8",
-                    "code" : "0",
-                    "value" : "Armed Forces Occupations"
+                    "code" : "142",
+                    "value" : "Retail and Wholesale Trade Managers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "143",
+                    "value" : "Other Services Managers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "211",
+                    "value" : "Physical and Earth Science Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "212",
+                    "value" : "Mathematicians, Actuaries and Statisticians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "213",
+                    "value" : "Life Science Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "214",
+                    "value" : "Engineering Professionals (excluding Electrotechnology)"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "215",
+                    "value" : "Electrotechnology Engineers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "216",
+                    "value" : "Architects, Planners, Surveyors and Designers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "221",
+                    "value" : "Medical Doctors"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "222",
+                    "value" : "Nursing and Midwifery Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "223",
+                    "value" : "Traditional and Complementary Medicine Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "224",
+                    "value" : "Paramedical Practitioners"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "225",
+                    "value" : "Veterinarians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "226",
+                    "value" : "Other Health Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "231",
+                    "value" : "University and Higher Education Teachers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "232",
+                    "value" : "Vocational Education Teachers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "233",
+                    "value" : "Secondary Education Teachers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "234",
+                    "value" : "Primary School and Early Childhood Teachers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "235",
+                    "value" : "Other Teaching Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "241",
+                    "value" : "Finance Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "242",
+                    "value" : "Administration Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "243",
+                    "value" : "Sales, Marketing and Public Relations Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "251",
+                    "value" : "Software and Applications Developers and Analysts"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "252",
+                    "value" : "Database and Network Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "261",
+                    "value" : "Legal Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "262",
+                    "value" : "Librarians, Archivists and Curators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "263",
+                    "value" : "Social and Religious Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "264",
+                    "value" : "Authors, Journalists and Linguists"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "265",
+                    "value" : "Creative and Performing Artists"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "311",
+                    "value" : "Physical and Engineering Science Technicians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "312",
+                    "value" : "Mining, Manufacturing and Construction Supervisors"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "313",
+                    "value" : "Process Control Technicians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "314",
+                    "value" : "Life Science Technicians and Related Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "315",
+                    "value" : "Ship and Aircraft Controllers and Technicians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "321",
+                    "value" : "Medical and Pharmaceutical Technicians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "322",
+                    "value" : "Nursing and Midwifery Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "323",
+                    "value" : "Traditional and Complementary Medicine Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "324",
+                    "value" : "Veterinary Technicians and Assistants"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "325",
+                    "value" : "Other Health Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "331",
+                    "value" : "Financial and Mathematical Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "332",
+                    "value" : "Sales and Purchasing Agents and Brokers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "333",
+                    "value" : "Business Services Agents"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "334",
+                    "value" : "Administrative and Specialized Secretaries"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "335",
+                    "value" : "Government Regulatory Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "341",
+                    "value" : "Legal, Social and Religious Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "342",
+                    "value" : "Sports and Fitness Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "343",
+                    "value" : "Artistic, Cultural and Culinary Associate Professionals"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "351",
+                    "value" : "Information and Communications Technology Operations and User Support Technicians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "352",
+                    "value" : "Telecommunications and Broadcasting Technicians"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "411",
+                    "value" : "General Office Clerks"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "412",
+                    "value" : "Secretaries (general)"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "413",
+                    "value" : "Keyboard Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "421",
+                    "value" : "Tellers, Money Collectors and Related Clerks"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "422",
+                    "value" : "Client Information Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "431",
+                    "value" : "Numerical Clerks"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "432",
+                    "value" : "Material Recording and Transport Clerks"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "441",
+                    "value" : "Other Clerical Support Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "511",
+                    "value" : "Travel Attendants, Conductors and Guides"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "512",
+                    "value" : "Cooks"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "513",
+                    "value" : "Waiters and Bartenders"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "514",
+                    "value" : "Hairdressers, Beauticians and Related Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "515",
+                    "value" : "Building and Housekeeping Supervisors"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "516",
+                    "value" : "Other Personal Services Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "521",
+                    "value" : "Street and Market Salespersons"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "522",
+                    "value" : "Shop Salespersons"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "523",
+                    "value" : "Cashiers and Ticket Clerks"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "524",
+                    "value" : "Other Sales Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "531",
+                    "value" : "Child Care Workers and Teachers’ Aides"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "532",
+                    "value" : "Personal Care Workers in Health Services"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "541",
+                    "value" : "Protective Services Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "611",
+                    "value" : "Market Gardeners and Crop Growers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "612",
+                    "value" : "Animal Producers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "613",
+                    "value" : "Mixed Crop and Animal Producers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "621",
+                    "value" : "Forestry and Related Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "622",
+                    "value" : "Fishery Workers, Hunters and Trappers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "631",
+                    "value" : "Subsistence Crop Farmers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "632",
+                    "value" : "Subsistence Livestock Farmers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "633",
+                    "value" : "Subsistence Mixed Crop and Livestock Farmers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "634",
+                    "value" : "Subsistence Fishers, Hunters, Trappers and Gatherers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "711",
+                    "value" : "Building Frame and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "712",
+                    "value" : "Building Finishers and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "713",
+                    "value" : "Painters, Building Structure Cleaners and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "721",
+                    "value" : "Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "722",
+                    "value" : "Blacksmiths, Toolmakers and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "723",
+                    "value" : "Machinery Mechanics and Repairers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "731",
+                    "value" : "Handicraft Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "732",
+                    "value" : "Printing Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "741",
+                    "value" : "Electrical Equipment Installers and Repairers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "742",
+                    "value" : "Electronics and Telecommunications Installers and Repairers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "751",
+                    "value" : "Food Processing and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "752",
+                    "value" : "Wood Treaters, Cabinet-makers and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "753",
+                    "value" : "Garment and Related Trades Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "754",
+                    "value" : "Other Craft and Related Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "811",
+                    "value" : "Mining and Mineral Processing Plant Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "812",
+                    "value" : "Metal Processing and Finishing Plant Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "813",
+                    "value" : "Chemical and Photographic Products Plant and Machine Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "814",
+                    "value" : "Rubber, Plastic and Paper Products Machine Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "815",
+                    "value" : "Textile, Fur and Leather Products Machine Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "816",
+                    "value" : "Food and Related Products Machine Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "817",
+                    "value" : "Wood Processing and Papermaking Plant Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "818",
+                    "value" : "Other Stationary Plant and Machine Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "821",
+                    "value" : "Assemblers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "831",
+                    "value" : "Locomotive Engine Drivers and Related Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "832",
+                    "value" : "Car, Van and Motorcycle Drivers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "833",
+                    "value" : "Heavy Truck and Bus Drivers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "834",
+                    "value" : "Mobile Plant Operators"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "835",
+                    "value" : "Ships’ Deck Crews and Related Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "911",
+                    "value" : "Domestic, Hotel and Office Cleaners and Helpers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "912",
+                    "value" : "Vehicle, Window, Laundry and Other Hand Cleaning Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "921",
+                    "value" : "Agricultural, Forestry and Fishery Labourers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "931",
+                    "value" : "Mining and Construction Labourers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "932",
+                    "value" : "Manufacturing Labourers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "933",
+                    "value" : "Transport and Storage Labourers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "941",
+                    "value" : "Food Preparation Assistants"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "951",
+                    "value" : "Street and Related Services Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "952",
+                    "value" : "Street Vendors (excluding Food)"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "961",
+                    "value" : "Refuse Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "962",
+                    "value" : "Other Elementary Workers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "011",
+                    "value" : "Commissioned Armed Forces Officers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "021",
+                    "value" : "Non-commissioned Armed Forces Officers"
+                  }, {
+                    "terminologyId" : "ISCO-8",
+                    "code" : "031",
+                    "value" : "Armed Forces Occupations, Other Ranks"
                   } ]
                 } ]
               } ],
