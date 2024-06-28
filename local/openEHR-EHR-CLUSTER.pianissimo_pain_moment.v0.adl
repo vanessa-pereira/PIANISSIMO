@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"96cb8bc9253ad8ba9584ae1233c60367">
+		["MD5-CAM-1.0.1"] = <"48a6ac5b52d7bf33bf7d499a553ef5ab">
 		["build_uid"] = <"288ec3f6-139e-3e03-b6bf-8ea034813b97">
 	>
 
@@ -54,6 +54,7 @@ definition
 							at0007]    -- Carrying heavy loads
 						}
 					}
+					DV_TEXT matches {*}
 				}
 			}
 		}
