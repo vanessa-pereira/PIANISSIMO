@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.10",
+      "sem_ver" : "0.1.11",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "90073e6e54b4dc8fd2c2843fdece6e06",
+      "MD5-CAM-1.0.1" : "4f47be1763bc98228037f57ec9020c82",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -1622,18 +1622,6 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "53620006",
-                    "value" : "Temporomandibular joint"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "7844006",
-                    "value" : "Sternoclavicular joint"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "85856004",
-                    "value" : "Acromioclavicular joint"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
                     "code" : "85537004",
                     "value" : "Glenohumeral joint"
                   }, {
@@ -1642,64 +1630,8 @@
                     "value" : "Elbow joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "74670003",
-                    "value" : "Wrist joint"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "56310002",
-                    "value" : "Metacarpophalangeal joint structure of thumb"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "289002",
-                    "value" : "Metacarpophalangeal joint structure of index finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "6059006",
-                    "value" : "Metacarpophalangeal joint structure of middle finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "13822002",
-                    "value" : "Metacarpophalangeal joint structure of ring finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "5493005",
-                    "value" : "Metacarpophalangeal joint structure of little finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371218009",
-                    "value" : "Distal interphalangeal joint of middle finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371210002",
-                    "value" : "Distal interphalangeal joint of index finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371204002",
-                    "value" : "Distal interphalangeal joint of ring finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371202003",
-                    "value" : "Distal interphalangeal joint of little finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371263005",
-                    "value" : "Proximal interphalangeal joint of middle finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371270005",
-                    "value" : "Proximal interphalangeal joint of index finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371233001",
-                    "value" : "Proximal interphalangeal joint of little finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371267006",
-                    "value" : "Proximal interphalangeal joint of ring finger"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "115955008",
-                    "value" : "Interphalangeal joint of thumb"
+                    "code" : "40238009",
+                    "value" : "Hand joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "24136001",
@@ -1710,60 +1642,12 @@
                     "value" : "Knee joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "70258002",
-                    "value" : "Ankle joint"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
                     "code" : "26552008",
                     "value" : "Foot joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "788338001",
-                    "value" : "Entire midtarsal joint region"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "27824001",
-                    "value" : "Metatarsophalangeal joint of great toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "71721008",
-                    "value" : "Metatarsophalangeal joint structure of second toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "81247008",
-                    "value" : "Metatarsophalangeal joint structure of third toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "45230000",
-                    "value" : "Metatarsophalangeal joint structure of fourth toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "50133002",
-                    "value" : "Metatarsophalangeal joint structure of fifth toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "1187457005",
-                    "value" : "Proximal interphalangeal joint structure of lesser toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371292009",
-                    "value" : "Proximal interphalangeal joint structure of second toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371255009",
-                    "value" : "Proximal interphalangeal joint structure of third toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371288002",
-                    "value" : "Proximal interphalangeal joint structure of fourth toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "371284000",
-                    "value" : "Proximal interphalangeal joint structure of fifth toe"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
                     "code" : "421060004",
-                    "value" : "Structure of vertebral column"
+                    "value" : "Spine"
                   } ]
                 } ]
               } ],
@@ -2885,7 +2769,38 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "15D196B71A8744426F366AC96887623E"
       },
-      "details" : { }
+      "details" : {
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar detalhes sobre informação originada de terceiros que é utilizada como parte de uma avaliação remota ou relatório.",
+          "keywords" : [ "origem", "imagem", "original" ],
+          "use" : "Para gravar detalhes sobre informação originada deterceiros que é utilizada como parte de uma avaliação remota ou relatório.\r\n\r\nEste arquétipo foi designado para apoiar a identificação e qualidade da informação de saúde proveniente de uma fonte clínica de terceiros.\r\n\r\n\r\nCada parte da evidencia clínica recebida de terceiros precisa ser avaliada como 'apta para uso' antes de ser utilizada para apoiar a tomada de decisão clínica. Por exemplo: a imagem digital capturada durante a consulta clínica, ou a radiografia digital , enviada para um especialista remoto para avaliação das necessidades de aconselhamento do tramamento, precisa ser considerado como sendo região anatômica completa e de qualidade apropriada.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about information sourced from a third party that is utilised as part of a remote assessment or report.",
+          "keywords" : [ "source", "image", "original" ],
+          "use" : "Use to record details about information sourced from a third party that is utilised as part of a remote assessment or report.\r\n\r\nThis archetype has been designed to support the identification and quality of health information sourced from a third party clinical source. \r\n\r\nEach piece of clinical evidence that has been received from a third party source needs to be assessed as 'fit for use' prior to being utilisied to support clinical decision-making. For example: a digital image captured during a clinical consultation, or a digital radiograph, sent to a remote specialist for assessment and treatment advice needs to be deemed to be of the complete anatomical region and of appropriate quality.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.source.v0",
     "differential" : true,
@@ -2935,16 +2850,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_URI",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
