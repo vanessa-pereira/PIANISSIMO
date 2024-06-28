@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.8",
+      "sem_ver" : "0.1.9",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "51931489d90f40054bf0573240811035",
+      "MD5-CAM-1.0.1" : "615c8a59db4339ec28037c026496ae45",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -501,10 +501,6 @@
                         "terminologyId" : "hl7-administrative-gender",
                         "code" : "female",
                         "value" : "Female"
-                      }, {
-                        "terminologyId" : "hl7-administrative-gender",
-                        "code" : "other",
-                        "value" : "Other"
                       } ]
                     } ]
                   } ],
@@ -5583,27 +5579,39 @@
                       }, {
                         "terminologyId" : "avg_income_pianissimo",
                         "code" : "1",
-                        "value" : "< 20,000 eur"
+                        "value" : "< 40,000 eur"
                       }, {
                         "terminologyId" : "avg_income_pianissimo",
                         "code" : "2",
-                        "value" : "20,000-39,000 eur"
-                      }, {
-                        "terminologyId" : "avg_income_pianissimo",
-                        "code" : "3",
                         "value" : "40,000-59,000 eur"
                       }, {
                         "terminologyId" : "avg_income_pianissimo",
-                        "code" : "4",
+                        "code" : "3",
                         "value" : "60,000-79,000 eur"
                       }, {
                         "terminologyId" : "avg_income_pianissimo",
-                        "code" : "5",
+                        "code" : "4",
                         "value" : "80,000-99,000 eur"
                       }, {
                         "terminologyId" : "avg_income_pianissimo",
+                        "code" : "5",
+                        "value" : "100,000-119,000 eur"
+                      }, {
+                        "terminologyId" : "avg_income_pianissimo",
                         "code" : "6",
-                        "value" : "> 100,000 eur"
+                        "value" : "120,000-139,000 eur"
+                      }, {
+                        "terminologyId" : "avg_income_pianissimo",
+                        "code" : "7",
+                        "value" : "140,000-159,000 eur"
+                      }, {
+                        "terminologyId" : "avg_income_pianissimo",
+                        "code" : "8",
+                        "value" : "160,000-179,000 eur"
+                      }, {
+                        "terminologyId" : "avg_income_pianissimo",
+                        "code" : "9",
+                        "value" : "> 180,000 eur"
                       } ]
                     } ]
                   } ],
