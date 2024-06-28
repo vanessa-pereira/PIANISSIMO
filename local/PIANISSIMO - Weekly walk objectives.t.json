@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.2",
+      "sem_ver" : "0.1.3",
       "build_uid" : "aeafdd91-5b9b-48c1-a1e9-d1a1dbf781ba",
-      "MD5-CAM-1.0.1" : "072ec8463958fb619a3b4dc93e0fc162",
+      "MD5-CAM-1.0.1" : "14c41f9861d6adda12364b63c628a08e",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -295,6 +295,13 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_CODED_TEXT",
+                      "defaultValue" : {
+                        "defining_code" : {
+                          "code_string" : "at0029",
+                          "@type" : "CODE_PHRASE"
+                        },
+                        "@type" : "DV_CODED_TEXT"
+                      },
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "defining_code",
@@ -305,7 +312,7 @@
                           "terminologyId" : {
                             "value" : "local"
                           },
-                          "constraint" : [ "ac0.3" ],
+                          "constraint" : [ "ac0.4" ],
                           "selectedTerminologies" : [ ]
                         } ]
                       } ],
@@ -408,6 +415,42 @@
                     } ]
                   } ],
                   "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0036.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "ac0.5" ],
+                          "selectedTerminologies" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0041.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -423,10 +466,16 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.3" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.3",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.5",
             "description" : ""
           }
         }
@@ -448,6 +497,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.3",
           "members" : [ "at0029" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0029" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0037", "at0038", "at0039", "at0040" ]
         }
       }
     },
