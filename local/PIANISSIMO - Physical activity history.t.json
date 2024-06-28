@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.9",
+      "sem_ver" : "0.1.10",
       "build_uid" : "8ff07ecd-3328-456b-8589-1a668aafa5db",
-      "MD5-CAM-1.0.1" : "88474978b06ffff7960108268cc5a5b2",
+      "MD5-CAM-1.0.1" : "73889ba4c1060b9e2eb5323fe767bd76",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -413,20 +413,36 @@
                                     "value" : "Tennis"
                                   }, {
                                     "terminologyId" : "SNOMED-CT and internal",
-                                    "code" : "15530008",
-                                    "value" : "Golfing"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
                                     "code" : "29506000",
                                     "value" : "Boxing"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "15442001",
+                                    "value" : "Judo"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "6351001",
+                                    "value" : "Martial arts"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "15530008",
+                                    "value" : "Golfing"
                                   }, {
                                     "terminologyId" : "SNOMED-CT and internal",
                                     "code" : "20461001",
                                     "value" : "Swimming"
                                   }, {
                                     "terminologyId" : "SNOMED-CT and internal",
-                                    "code" : "6351001",
-                                    "value" : "Martial arts"
+                                    "code" : "102399007",
+                                    "value" : "Canoeing"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "414446006",
+                                    "value" : "Ice hockey"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "47517001",
+                                    "value" : "Horseback riding"
                                   }, {
                                     "terminologyId" : "SNOMED-CT and internal",
                                     "code" : "volley",
@@ -443,6 +459,22 @@
                                     "terminologyId" : "SNOMED-CT and internal",
                                     "code" : "gymn",
                                     "value" : "Gymnastics"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "athlet",
+                                    "value" : "Athletics"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "watpol",
+                                    "value" : "Water polo"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "tabtennis",
+                                    "value" : "Table tennis"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "code" : "watspo",
+                                    "value" : "Water sports"
                                   } ]
                                 } ]
                               } ],
