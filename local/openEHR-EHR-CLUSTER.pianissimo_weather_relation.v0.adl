@@ -1,0 +1,110 @@
+archetype (adl_version=1.4; uid=10ff306b-0f1b-4f61-86db-fbc939460a7b)
+	openEHR-EHR-CLUSTER.pianissimo_weather_relation.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+		["date"] = <"2024-06-28">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"70da296806d169421929a02aade66156">
+		["build_uid"] = <"2a2c877d-9a1f-3024-b6e5-564b17619e3f">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Pianissimo weather relation
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Current weather condition
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Rain
+							at0003,    -- Snow
+							at0004,    -- Cloudy
+							at0005]    -- Sunny
+						}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Patient weather perception
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- Cold
+							at0008,    -- Mild
+							at0009]    -- Hot
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo weather relation">
+					description = <"pianissimo_weather_relation">
+				>
+				["at0001"] = <
+					text = <"Current weather condition">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Rain">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Snow">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Cloudy">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Sunny">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Patient weather perception">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Cold">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Mild">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Hot">
+					description = <"">
+				>
+			>
+		>
+	>
