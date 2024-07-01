@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.12",
+      "sem_ver" : "0.1.13",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "23fc9a1493ff8ce7c44ebbb7166cd120",
+      "MD5-CAM-1.0.1" : "870336152bb7ff0ef6542db83cf3f052",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -2945,14 +2945,33 @@
                 "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
+                    "rmAttributeName" : "defining_code",
                     "children" : [ {
-                      "@type" : "C_STRING",
-                      "rmTypeName" : "STRING",
-                      "constraint" : [ "Medical consultation", "Medical imaging exam", "Medical consultation and medical imaging exam" ]
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "pianissimo_info_source"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "pianissimo_info_source" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "pianissimo_info_source",
+                        "code" : "MC",
+                        "value" : "Medical consultation"
+                      }, {
+                        "terminologyId" : "pianissimo_info_source",
+                        "code" : "MI",
+                        "value" : "Medical imaging exam"
+                      }, {
+                        "terminologyId" : "pianissimo_info_source",
+                        "code" : "MCMI",
+                        "value" : "Medical consultation and medical imaging exam"
+                      } ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
