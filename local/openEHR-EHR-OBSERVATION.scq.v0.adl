@@ -7,6 +7,11 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
@@ -23,31 +28,41 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Patients to self-report their comorbidities.">
-			keywords = <"Self-Admistered Comorbidity Questionnaire, SCQ, Comorbidity, Comorbidities", ...>
+			keywords = <"Self-Administered Comorbidity Questionnaire, SCQ, Comorbidity, Comorbidities", ...>
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			purpose = <"*Patients to self-report their comorbidities. (en)">
-			keywords = <"*Self-Admistered Comorbidity Questionnaire, SCQ, Comorbidity, Comorbidities (en)", ...>
+			purpose = <"Les patients doivent déclarer eux-mêmes leurs comorbidités. ">
+			keywords = <"Questionnaire de comorbidité auto-administré, SCQ, Comorbidité, Comorbidités", ...>
 			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Sangha, O., Stucki, G., Liang, M.H., Fossel, A.H. and Katz, J.N. (2003), The self-administered comorbidity questionnaire: A new method to assess comorbidity for clinical and health services research. Arthritis & Rheumatism, 49: 156-163. https://doi.org/10.1002/art.10993">
+		["references"] = <"Sangha, O., Stucki, G., Liang, M.H., Fossel, A.H. and Katz, J.N. (2003), The self-administered comorbidity questionnaire: A new method to assess comorbidity for clinical and health services research. Arthritis & Rheumatism, 49: 156-163. https://doi.org/10.1002/art.10993
+
+Lissa Pacheco-Brousseau, Stéphane Poitras, Jacinthe Savard, Daniel Varin, Guy Moreau, Wadih Y. Matar, Paul Beaulé, Development of the French-Canadian Version of the Self-Administered Comorbidities Questionnaire (SCQ) in a hospital population undergoing hip or knee arthroplasty,
+Orthopaedics & Traumatology: Surgery & Research,
+Volume 106, Issue 3, 2020, Pages 557-561, ISSN 1877-0568, https://doi.org/10.1016/j.otsr.2019.12.022.
+
+Streibelt M, Schmidt C, Brünger M, Spyra K. Komorbidität im Patientenurteil - geht das? Validität eines Instruments zur Selbsteinschätzung der Komorbidität (SCQ-D) [Comorbidity from the patient perspective - does it work? Validity of a questionnaire on self-estimation of comorbidity (SCQ-D)]. Orthopade. 2012 Apr;41(4):303-10. German. doi: 10.1007/s00132-012-1901-3. PMID: 22476421.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"45957be87c9eed1f3ff147254730017e">
+		["MD5-CAM-1.0.1"] = <"3ede5cce1ebe60b5e060af5abf5c4261">
 		["build_uid"] = <"e6d31467-423f-391a-8880-05f65558d752">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Self-Admistered Comorbidity Questionnaire (SCQ)
+	OBSERVATION[at0000] matches {    -- Self-Administered Comorbidity Questionnaire (SCQ)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -399,7 +414,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Self-Admistered Comorbidity Questionnaire (SCQ)">
+					text = <"Self-Administered Comorbidity Questionnaire (SCQ)">
 					description = <"The Self-Administered Comorbidity Questionnaire (SCQ) is a tool used by hospitalized patients to self-report their comorbidities. It can help to explain the effectiveness of hip or knee arthroplasty, its complications, the length of hospital stay and perioperative resource utilization.">
 				>
 				["at0001"] = <
@@ -684,7 +699,7 @@ ontology
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"Questionnaire autoadministré sur la comorbidité (SCQ)">
+					text = <"Questionnaire de comorbidité auto-administré (SCQ)">
 					description = <"Le questionnaire de comorbidité auto-administré (SCQ) est un outil utilisé par les patients hospitalisés pour déclarer leurs comorbidités. Il peut aider à expliquer l'efficacité de l'arthroplastie de la hanche ou du genou, ses complications, la durée du séjour à l'hôpital et l'utilisation des ressources périopératoires. ">
 				>
 				["at0001"] = <
@@ -963,6 +978,291 @@ ontology
 					text = <"Extension">
 					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
 					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Self-Administered Comorbidity Questionnaire (SCQ) (en)">
+					description = <"*The Self-Administered Comorbidity Questionnaire (SCQ) is a tool used by hospitalized patients to self-report their comorbidities. It can help to explain the effectiveness of hip or knee arthroplasty, its complications, the length of hospital stay and perioperative resource utilization. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Heart disease (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*High blood pressure (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Lung disease (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Diabetes (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Ulcer or stomach disease (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Kidney disease (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Anemia or other blood disease (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Cancer (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Depression (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Osteoarthritis, degenerative arthritis (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*Back pain (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Other medical problems (en)">
+					description = <"*Additionally subjects have the option of adding 3 additional conditions in an open-ended fashion. (en)">
+				>
+				["at0051"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*Problem name (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Total score (en)">
+					description = <"*A maximum of 3 points can be awarded for each medical problem: one point for the presence of the problem, one point if the person is being treated for it and a third point if the problem limits the person's activities. and a third point if the problem limits the person's activities. As the table lists 13 medical problems, with the possibility of adding 3 others to choose from, the total points will be a maximum of 48 if the person answers the open-ended question, and 39 if he or she answers only the closed-ended questions. (en)">
+				>
+				["at0056"] = <
+					text = <"*Liver disease (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*Rheumathoid arthritis (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*Do you have the problem? (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Do you received treatment for it? (en)">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"*Does it limit your activities? (en)">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0077"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
 			>
 		>
