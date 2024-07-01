@@ -57,7 +57,7 @@ Streibelt M, Schmidt C, Brünger M, Spyra K. Komorbidität im Patientenurteil - 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3ede5cce1ebe60b5e060af5abf5c4261">
+		["MD5-CAM-1.0.1"] = <"6233fe27fcfd4ee0f6f386c753028893">
 		["build_uid"] = <"e6d31467-423f-391a-8880-05f65558d752">
 	>
 
@@ -984,7 +984,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Self-Administered Comorbidity Questionnaire (SCQ) (en)">
+					text = <"Selbsteinschätzung der Komorbidität (SCQ)">
 					description = <"*The Self-Administered Comorbidity Questionnaire (SCQ) is a tool used by hospitalized patients to self-report their comorbidities. It can help to explain the effectiveness of hip or knee arthroplasty, its complications, the length of hospital stay and perioperative resource utilization. (en)">
 				>
 				["at0001"] = <
@@ -1000,223 +1000,223 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Heart disease (en)">
+					text = <"Herzprobleme">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*High blood pressure (en)">
+					text = <"Bluthochdruck">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0013"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"*Lung disease (en)">
+					text = <"Lungenprobleme">
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"*Diabetes (en)">
+					text = <"Diabetes / Blutzucker">
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"*Ulcer or stomach disease (en)">
+					text = <"Magen-Darm-Probleme">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Kidney disease (en)">
+					text = <"Nierenprobleme">
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"*Anemia or other blood disease (en)">
+					text = <"Anämie oder andere Blutprobleme">
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*Cancer (en)">
+					text = <"Krebs">
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0037"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0038"] = <
-					text = <"*Depression (en)">
+					text = <"Depression">
 					description = <"">
 				>
 				["at0039"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0041"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0042"] = <
-					text = <"*Osteoarthritis, degenerative arthritis (en)">
+					text = <"Arthrose">
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0044"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0045"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0046"] = <
-					text = <"*Back pain (en)">
+					text = <"Rückenschmerzen">
 					description = <"">
 				>
 				["at0047"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0048"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0049"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0050"] = <
-					text = <"*Other medical problems (en)">
+					text = <"Andere Gesundheitsprobleme">
 					description = <"*Additionally subjects have the option of adding 3 additional conditions in an open-ended fashion. (en)">
 				>
 				["at0051"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0052"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0053"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0054"] = <
-					text = <"*Problem name (en)">
+					text = <"Problemname">
 					description = <"">
 				>
 				["at0055"] = <
-					text = <"*Total score (en)">
+					text = <"Gesamtpunktzahl">
 					description = <"*A maximum of 3 points can be awarded for each medical problem: one point for the presence of the problem, one point if the person is being treated for it and a third point if the problem limits the person's activities. and a third point if the problem limits the person's activities. As the table lists 13 medical problems, with the possibility of adding 3 others to choose from, the total points will be a maximum of 48 if the person answers the open-ended question, and 39 if he or she answers only the closed-ended questions. (en)">
 				>
 				["at0056"] = <
-					text = <"*Liver disease (en)">
+					text = <"Leberprobleme">
 					description = <"">
 				>
 				["at0057"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0060"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0061"] = <
@@ -1228,7 +1228,7 @@ ontology
 					description = <"">
 				>
 				["at0063"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0064"] = <
@@ -1240,19 +1240,19 @@ ontology
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"*Rheumathoid arthritis (en)">
+					text = <"Rheuma">
 					description = <"">
 				>
 				["at0067"] = <
-					text = <"*Do you have the problem? (en)">
+					text = <"Haben Sie das Problem?">
 					description = <"">
 				>
 				["at0070"] = <
-					text = <"*Do you received treatment for it? (en)">
+					text = <"Sind Sie deswegen in Behandlung beziehungsweise nehmen Medikamente?">
 					description = <"">
 				>
 				["at0073"] = <
-					text = <"*Does it limit your activities? (en)">
+					text = <"Beeinträchtigt Sie das Problem bei Ihrentäglichen Aktivitäten?">
 					description = <"">
 				>
 				["at0076"] = <
@@ -1260,9 +1260,9 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0077"] = <
-					text = <"*Extension (en)">
-					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
-					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
+					comment = <"Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen.">
 				>
 			>
 		>
