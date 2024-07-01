@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.11",
+      "sem_ver" : "0.1.12",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "4f47be1763bc98228037f57ec9020c82",
+      "MD5-CAM-1.0.1" : "23fc9a1493ff8ce7c44ebbb7166cd120",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -275,7 +275,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "3101AA5CF62C9C9421943678C9FE1E73"
+        "PARENT:MD5-CAM-1.0.1" : "1F54E38AFF5535036537F52A47F63DBD"
       },
       "details" : {
         "de" : {
@@ -335,6 +335,21 @@
           "keywords" : [ "*Condition, state, illness, syndrome, questionnaire, screening, issue (en)" ],
           "use" : "*Use to create a framework for recording answers to pre-defined screening questions about issues, problems or diagnoses. \r\nThis archeype has deliberately been loosely modelled to be inclusive of the broadest range of issues and problems, as well as diagnoses.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation, for example:\r\n--- Diagnosed with cancer? Yes, No, Unknown.\r\n--- Diagnosed with COVID 19 or Influenza in the past twelve months? Yes, No, Unknown.\r\n--- Do you have any worries or concerns? Yes, No, Unknown.\r\n- Specific questioning related to disease surveillance.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a procedure that has been performed at any time in the past and information about a procedure performed within a specified time interval - for example the difference between \"Do you have influenza?\" compared to \"Have you had influenza in the past 4 weeks?\"\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a problem or diagnosis, it is recommended that clinical system record and persist the specific details about the problem or diagnosis (such as the date of clinical recognition) using the EVALUATION.problem_diagnosis archetype. (en)",
           "misuse" : "*Not to be used to record details about the presence or absence of a problem or diagnosis, outside of a screening context. Use EVALUATION.problem_diagnosis or EVALUATION.exclusion_specific for these purposes.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about procedures that has been carried out in the past. Use the OBSERVATION.procedure_screening for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Créer un cadre pour l'enregistrement des réponses à des questions de dépistage prédéfinies concernant des questions, des problèmes ou des diagnostics.",
+          "keywords" : [ "Condition,", "état,", "maladie,", "syndrome,", "questionnaire,", "dépistage,", "problème" ],
+          "use" : "À utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions prédéfinies sur les enjeux, les problèmes ou les diagnostics. \r\nCet archétype a été délibérément modélisé de manière souple afin d'englober le plus large éventail possible de questions et de problèmes, ainsi que de diagnostics.\r\n\r\nLes cas d'utilisation les plus courants sont, entre autres, les suivants\r\n- L'interrogation systématique lors d'une consultation, par exemple :\r\n--- Diagnostic de cancer ? Oui, Non, Inconnu.\r\n--- Diagnostic de COVID 19 ou de grippe au cours des douze derniers mois ? Oui, Non, Inconnu.\r\n--- Avez-vous des inquiétudes ou des préoccupations ? Oui, Non, Inconnu.\r\n- Questions spécifiques liées à la surveillance des maladies.\r\n\r\nLa sémantique de cet archétype est volontairement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.\r\n\r\nLa structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur une procédure effectuée à tout moment dans le passé et des informations sur une procédure effectuée dans un intervalle de temps spécifié - par exemple la différence entre \"Avez-vous la grippe ?\" et \"Avez-vous eu la grippe au cours des 4 dernières semaines ?\"\r\n\r\nLa source des informations contenues dans une réponse à un questionnaire peut varier selon le contexte, mais elle peut être spécifiquement identifiée à l'aide de l'élément \"Fournisseur d'informations\" du modèle de référence.\r\n\r\nCet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le questionnaire de dépistage identifie la présence d'un problème ou d'un diagnostic, il est recommandé que le système clinique enregistre et conserve les détails spécifiques du problème ou du diagnostic (tels que la date de reconnaissance clinique) en utilisant l'archétype EVALUATION.problem_diagnosis.",
+          "misuse" : "Ne pas utiliser pour enregistrer des détails sur la présence ou l'absence d'un problème ou d'un diagnostic, en dehors d'un contexte de dépistage. Utiliser EVALUATION.problem_diagnosis ou EVALUATION.exclusion_specific à ces fins.\r\n\r\nNe doit pas être utilisé pour créer un cadre permettant d'enregistrer des réponses à des questions de dépistage prédéfinies concernant des procédures qui ont été effectuées dans le passé. Utilisez OBSERVATION.procedure_screening à cette fin.\r\n\r\nNe pas utiliser pour créer un cadre permettant d'enregistrer des réponses à des questions de sélection prédéfinies sur les effets indésirables, utiliser un archétype approprié à cet effet.\r\n\r\nNe pas utiliser pour enregistrer les détails d'une simple liste de sélection où une question peut être enregistrée comme \"présente\" ou \"indéterminée\". Utilisez OBSERVATION.selection_list à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -647,6 +662,20 @@
             "code" : "ac0.2",
             "description" : ""
           }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -716,6 +745,20 @@
         "name" : "Martijn van Eenennaam",
         "organisation" : "Nedap Healthcare",
         "email" : "martijn.vaneenennaam@nedap.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -1444,7 +1487,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "62823A86BC1C2B02574125E21F5DECCB"
+        "PARENT:MD5-CAM-1.0.1" : "E44329D7ED80902D20F8490D1DD97F31"
       },
       "details" : {
         "de" : {
@@ -1566,6 +1609,21 @@
           "keywords" : [ "locatie", "structuur", "anatomisch", "anatomische regio", "topografische anatomie", "macroscopisch" ],
           "use" : "Gebruik om gestructureerde details over een structuur op of in het menselijk lichaam te identificeren en vast te leggen.",
           "misuse" : "Niet gebruiken om meerdere unilaterale/bilaterale structuren vast te leggen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Identifier et enregistrer des détails structurés concernant un site physique unique sur ou dans le corps humain en utilisant des termes anatomiques macroscopiques.",
+          "keywords" : [ "emplacement", "site", "anatomique", "région anatomique", "anatomie topographique", "macroscopique", "anatomique", "anatomie" ],
+          "use" : "À utiliser pour enregistrer des détails structurés et cohérents sur un seul site physique identifié sur ou dans le corps humain. \r\n\r\nCet archétype est spécifiquement conçu pour être utilisé dans le contexte des archétypes ENTRY ou CLUSTER appropriés qui fournissent le contexte de la localisation anatomique. \r\n\r\nEn tant qu'élément fondamental de la pratique clinique, les cliniciens peuvent décrire les localisations anatomiques d'une myriade de façons complexes et variables. Dans la pratique, certains archétypes contiennent un seul élément de données pour une simple description du site corporel - par exemple, OBSERVATION.blood_pressure et CLUSTER.symptom pour la description d'une douleur à l'oreille. Dans cette situation, où l'ensemble des valeurs est prévisible et simple à définir, cet élément de données unique est un moyen très précis et pragmatique d'enregistrer le site dans le corps et de l'interroger à une date ultérieure. Toutefois, lorsque l'emplacement anatomique n'est pas bien défini ou doit être déterminé au moment de l'exécution, il peut être plus souple d'utiliser cet archétype structuré. Par exemple, lorsque n'importe quel symptôme peut être enregistré sans que le type de symptôme soit prédéfini, il peut être utile d'autoriser l'utilisation de cet archétype pour définir spécifiquement une localisation anatomique dans le corps. Dans ce cas, l'archétype CLUSTER.symptom comporte également un SLOT pour \"Localisation anatomique détaillée\", qui peut inclure cet archétype afin d'assurer une flexibilité maximale dans l'enregistrement des données relatives à la localisation anatomique.\r\n\r\nCet archétype permet d'enregistrer des sites anatomiques complexes et structurés. Par exemple, le battement de l'apex du cœur se trouve généralement au cinquième espace intercostal gauche sur la ligne médio-claviculaire, la sensibilité au point de McBurney sur la paroi abdominale ou une lacération sur la face palmaire de la partie proximale du pouce droit.\r\n\r\nUne combinaison des éléments de données de cet archétype peut être utilisée pour enregistrer individuellement chaque composante d'une expression terminologique postcoordonnée représentant le site anatomique.\r\n\r\nLe SLOT \"Structure alternative\" permet d'inclure des archétypes supplémentaires qui fournissent une structure alternative pour décrire le même site corporel, comme CLUSTER.anatomical_location_relative ou CLUSTER.anatomical_location_clock, si cela s'avère nécessaire. Dans le cas où cet archétype ne peut être utilisé que pour nommer une partie du corps importante et/ou non spécifique, l'utilisation supplémentaire de l'archétype CLUSTER.anatomical_location_relative permettra d'enregistrer une localisation plus précise - par exemple, 2 cm en avant de la fosse cubitale de l'avant-bras gauche ou 4 cm en dessous du rebord costal R sur la paroi thoracique, au niveau de la ligne claviculaire médiane.\r\n\r\nSi cet archétype est utilisé dans d'autres archétypes où le sujet de soins spécifié n'est pas la personne pour laquelle le dossier est créé, par exemple un fœtus in-utero, la localisation anatomique identifiera alors un site corporel sur ou dans le fœtus.",
+          "misuse" : "Ne pas utiliser pour spécifier les occurrences unilatérales/bilatérales d'une caractéristique anatomique.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -1856,6 +1914,20 @@
             "code" : "ac0.2",
             "description" : ""
           }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -1976,6 +2048,20 @@
         "name" : "Michiel Klitsie",
         "organisation" : "Nedap Healthcare",
         "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -2767,7 +2853,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "15D196B71A8744426F366AC96887623E"
+        "PARENT:MD5-CAM-1.0.1" : "441F10504D2BA13BC8729A9819B88D86"
       },
       "details" : {
         "pt-br" : {
@@ -2797,6 +2883,34 @@
           "keywords" : [ "source", "image", "original" ],
           "use" : "Use to record details about information sourced from a third party that is utilised as part of a remote assessment or report.\r\n\r\nThis archetype has been designed to support the identification and quality of health information sourced from a third party clinical source. \r\n\r\nEach piece of clinical evidence that has been received from a third party source needs to be assessed as 'fit for use' prior to being utilisied to support clinical decision-making. For example: a digital image captured during a clinical consultation, or a digital radiograph, sent to a remote specialist for assessment and treatment advice needs to be deemed to be of the complete anatomical region and of appropriate quality.",
           "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Aufzeichnung von Details über Informationen, die von Dritten stammen und als Teil einer Fernbewertung oder eines Berichts verwendet werden.",
+          "keywords" : [ "Quelle", "Bild", "Original" ],
+          "use" : "Zur Aufzeichnung von Details über Informationen, die von Dritten stammen und als Teil einer Fernbeurteilung oder eines Berichts verwendet werden.\r\n\r\nDieser Archetyp wurde entwickelt, um die Identifizierung und Qualität von Gesundheitsinformationen zu unterstützen, die von einer klinischen Drittquelle stammen. \r\n\r\nJede klinische Information, die von einer Drittquelle stammt, muss vor ihrer Verwendung zur Unterstützung der klinischen Entscheidungsfindung auf ihre Verwendbarkeit geprüft werden. Ein Beispiel: Ein digitales Bild, das während einer klinischen Konsultation aufgenommen wurde, oder ein digitales Röntgenbild, das an einen entfernten Spezialisten zur Beurteilung und Behandlungsberatung geschickt wird, muss die gesamte anatomische Region abbilden und von angemessener Qualität sein.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer des détails sur les informations provenant d'un tiers et utilisées dans le cadre d'une évaluation ou d'un rapport à distance.",
+          "keywords" : [ "source", "image", "original" ],
+          "use" : "À utiliser pour enregistrer des détails sur des informations provenant d'un tiers et utilisées dans le cadre d'une évaluation ou d'un rapport à distance.\r\n\r\nCet archétype a été conçu pour soutenir l'identification et la qualité des informations de santé provenant d'une source clinique tierce. \r\n\r\nChaque élément de preuve clinique reçu d'une source tierce doit être évalué comme étant \"apte à l'emploi\" avant d'être utilisé pour soutenir la prise de décision clinique. Par exemple : une image numérique capturée lors d'une consultation clinique ou une radiographie numérique envoyée à un spécialiste à distance pour évaluation et conseils de traitement doit être considérée comme représentant la région anatomique complète et d'une qualité appropriée.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -2920,6 +3034,22 @@
             "code" : "ac0.1",
             "description" : ""
           }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -2958,6 +3088,34 @@
         "email" : "contato@coreconsulting.com.br"
       },
       "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
       "otherDetails" : { }
     } ]
   } ],
