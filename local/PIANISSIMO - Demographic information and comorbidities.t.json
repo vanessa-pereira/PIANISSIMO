@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.10",
+      "sem_ver" : "0.1.11",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "ea83317656d8a4fc2aad15bbc5920b83",
+      "MD5-CAM-1.0.1" : "3cb339b1431097c25729bee54103788d",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -5947,7 +5947,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "A7AA53E4D6E0FEC12BA17F269C77C7A9"
+        "PARENT:MD5-CAM-1.0.1" : "159C32514DF03A297F44CC141F9EBD8C"
       },
       "details" : {
         "nb" : {
@@ -5994,6 +5994,21 @@
           "keywords" : [ ],
           "use" : "À utiliser pour enregistrer des informations sommaires sur la situation financière d'une personne, en particulier l'impact sur les déterminants sociaux de la santé.\r\n\r\nPlusieurs instances du CLUSTER.financial_record utilisées dans le SLOT de l'enregistrement financier permettront d'agréger un historique des finances passées et présentes.\r\n\r\nL'élément de données \"Dernière mise à jour\" indique la date de la dernière mise à jour du résumé financier dans son ensemble, y compris les dossiers financiers individuels.\r\n\r\nA utiliser pour incorporer les descriptions narratives de l'historique financier dans les systèmes cliniques existants ou hérités dans un format archétypique, en utilisant l'élément de données \"Description\".",
           "misuse" : "Ne doit pas être utilisé pour enregistrer des informations sur la/les profession(s) de l'individu. Utiliser les archétypes EVALUATION.occupation_summary ou CLUSTER.occupation_record à cette fin.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Erfassung zusammenfassender Informationen über die finanzielle Situation einer Person, insbesondere über die Auswirkungen auf die sozialen Determinanten der Gesundheit.",
+          "keywords" : [ ],
+          "use" : "Zur Erfassung zusammenfassender Informationen über die finanzielle Situation einer Person, insbesondere über die Auswirkungen auf die sozialen Determinanten der Gesundheit.\r\n\r\nMehrere Instanzen des CLUSTER.financial_record, die innerhalb des Finanzdatensatz-SLOTs verwendet werden, ermöglichen die Aggregation einer Historie der vergangenen und aktuellen Finanzen.\r\n\r\nDas Datenelement \"Letzte Aktualisierung\" erfasst das letzte Mal, dass die Finanzübersicht als Ganzes, einschließlich einzelner Finanzdatensätze, aktualisiert wurde.\r\n\r\nVerwenden Sie das Datenelement \"Beschreibung\", um die narrativen Beschreibungen der finanziellen Historie innerhalb bestehender oder älterer klinischer Systeme in ein archetypisches Format einzubinden.",
+          "misuse" : "Nicht für die Aufzeichnung von Informationen über den/die Beruf(e) der Person zu verwenden. Verwenden Sie zu diesem Zweck die Archetypen EVALUATION.occupation_summary oder CLUSTER.occupation_record.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -6053,10 +6068,6 @@
                       "constraint" : [ ],
                       "selectedTerminologies" : [ "avg_income_pianissimo" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "avg_income_pianissimo",
-                        "code" : "NR",
-                        "value" : "Not replied"
-                      }, {
                         "terminologyId" : "avg_income_pianissimo",
                         "code" : "1",
                         "value" : "< 40,000 eur"
@@ -6189,6 +6200,14 @@
             "code" : "ac0.1",
             "description" : ""
           }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -6241,6 +6260,20 @@
         "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -6253,7 +6286,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "739606291E059204EE53460142873E7A"
+        "PARENT:MD5-CAM-1.0.1" : "C022D02286D85B17E5EB317A9656C2CB"
       },
       "details" : {
         "nb" : {
@@ -6299,6 +6332,21 @@
           "keywords" : [ "maison", "logement", "arrangement", "maison commune", "maison de retraite" ],
           "use" : "À utiliser pour enregistrer des informations sommaires ou persistantes sur la situation actuelle et passée d'une personne en matière de logement ou d'hébergement.\r\n\r\nPlusieurs instances du CLUSTER.housing_record utilisées dans le SLOT de l'enregistrement relatif au logement permettront d'agréger un historique du logement passé et présent, y compris la possibilité d'enregistrer des situations dans lesquelles les personnes vivent dans plusieurs endroits au cours de la même période, pour les résidences principales et les maisons de vacances, etc.\r\n\r\nL'élément de données \"Dernière mise à jour\" enregistre la dernière mise à jour de la synthèse du logement dans son ensemble, y compris les fiches de logement individuelles.\r\n\r\nL'élément de données \"Description\" permet d'incorporer les descriptions narratives de l'historique du logement dans les systèmes cliniques existants ou hérités dans un format archétypique.",
           "misuse" : "Ne pas utiliser pour enregistrer des détails spécifiques sur le cadre dans lequel une personne réside habituellement - utiliser CLUSTER.housing_record imbriqué dans le SLOT de l'enregistrement de logement dans cet archétype.\r\n\r\nNe pas utiliser pour enregistrer des détails spécifiques sur les personnes avec lesquelles un individu vit - utiliser CLUSTER.living_arrangement imbriqué dans le SLOT Additional details du CLUSTER.housing_record, ou des archétypes similaires cliniquement appropriés.\r\n\r\nNe pas utiliser pour enregistrer des détails spécifiques sur la structure du logement dans lequel vit un individu - utiliser CLUSTER.dwelling imbriqué dans le SLOT Additional details de CLUSTER.housing_record, ou des archétypes similaires cliniquement appropriés.\r\n\r\nNe pas utiliser pour enregistrer l'adresse physique où vit un individu - utiliser les archétypes démographiques à cette fin, ou CLUSTER.address dans le CLUSTER.housing_record, ou un archétype similaire, si l'adresse de l'individu doit être enregistrée dans le dossier médical.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Aufzeichnung zusammenfassender oder dauerhafter Informationen über die aktuelle und frühere Wohn- oder Unterkunftssituation einer Person.",
+          "keywords" : [ "Gehäuse", "Unterkunft", "Wohnen", "wohnung", "Haus", "Wohnen", "Vereinbarung", "Wohngemeinschaft", "Altersheim", "Pflegeheim" ],
+          "use" : "Zur Erfassung zusammenfassender oder dauerhafter Informationen über die aktuelle und frühere Wohn- oder Unterkunftssituation einer Person.\r\n\r\nMehrere Instanzen des CLUSTER.housing_record, die innerhalb des Datensatzes SLOT \"Wohnen\" verwendet werden, ermöglichen die Aggregation eines Verlaufs sowohl der früheren als auch der gegenwärtigen Wohnsituation, einschließlich der Flexibilität, Situationen zu erfassen, in denen Personen während desselben Zeitraums an mehr als einem Ort leben, z. B. Hauptwohnsitze und Ferienhäuser usw.\r\n\r\nDas Datenelement \"Letzte Aktualisierung\" erfasst das letzte Mal, dass die Wohnungsübersicht als Ganzes, einschließlich der einzelnen Wohnungsdatensätze, aktualisiert wurde.\r\n\r\nVerwenden Sie das Datenelement \"Beschreibung\", um die narrativen Beschreibungen der Wohngeschichte in bestehenden oder älteren klinischen Systemen in ein archetypisches Format einzubinden.",
+          "misuse" : "Nicht zur Aufzeichnung spezifischer Details über die Umgebung, in der eine Person gewöhnlich wohnt - verwenden Sie CLUSTER.housing_record, verschachtelt im SLOT Housing record in diesem Archetyp.\r\n\r\nNicht zur Erfassung spezifischer Details über die Personen, mit denen eine Person zusammenlebt - verwenden Sie CLUSTER.living_arrangement, das im SLOT Additional details im CLUSTER.housing_record verschachtelt ist, oder ähnliche Archetypen, die klinisch geeignet sind.\r\n\r\nNicht zur Aufzeichnung spezifischer Details über die Wohnstruktur, in der eine Person lebt, zu verwenden - verwenden Sie CLUSTER.dwelling verschachtelt innerhalb des Additional details SLOT im CLUSTER.housing_record oder ähnliche Archetypen, die klinisch angemessen sind.\r\n\r\nNicht zur Erfassung der physischen Adresse, an der eine Person wohnt, zu verwenden - verwenden Sie zu diesem Zweck demografische Archetypen oder CLUSTER.address innerhalb des CLUSTER.housing_record o. ä., wenn die Adresse der Person in der Gesundheitsakte erfasst werden muss.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -6360,7 +6408,8 @@
       "termDefinitions" : {
         "en" : { },
         "nb" : { },
-        "fr" : { }
+        "fr" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -6406,6 +6455,20 @@
         "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -6418,7 +6481,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "C1AB21B0FDFF6B0EA15DDA8BEF88D0F9"
+        "PARENT:MD5-CAM-1.0.1" : "7FFDAC1E024C791BF5695F63B39692AE"
       },
       "details" : {
         "nb" : {
@@ -6465,6 +6528,36 @@
           "keywords" : [ "logement", "soins résidentiels", "maison", "appartement", "sans-abri", "louer", "propriétaire", "partagé", "temporaire", "institution", "appartement", "condo", "condominium", "hospice" ],
           "use" : "Sert à enregistrer les détails d'une seule maison ou d'un autre lieu de résidence d'un individu au cours d'une période donnée.\r\n\r\nLe champ d'application de cet archétype englobe tous les lieux de résidence occupés par un individu. Par exemple : toutes les maisons louées au fil du temps ; l'alternance entre deux maisons au cours d'une période donnée ; l'itinérance, comme les éleveurs nomades qui se déplacent entre les pâturages saisonniers ; les voyageurs itinérants ; ou les sans-abri.\r\n\r\nUne personne peut avoir besoin de plus d'un dossier de logement actif à la fois. Chaque nouveau cadre résidentiel ou adresse doit être enregistré dans une instance distincte de cet archétype. Par exemple, si un individu déménage d'une maison à une autre maison ou à un autre appartement, ou s'il déménage le même mobil-home d'une adresse à une autre.\r\n\r\nPlusieurs instances de cet archétype saisies au fil du temps permettront d'agréger un historique des situations de logement passées et présentes.\r\n\r\nUne situation de logement active ou actuelle peut être déduite d'une \"date de début\" mais pas d'une \"date de fin\". \r\n\r\nSi la situation de logement change de manière significative, par exemple en cas de changement d'adresse ou de mode d'occupation, il convient de l'enregistrer dans une instance distincte de cet archétype.\r\n\r\nCet archétype a été spécifiquement conçu pour être utilisé dans le SLOT \"dossier de logement\" de l'archétype EVALUATION.housing_summary, mais il peut également être utilisé dans tout autre archétype ENTRY ou CLUSTER, lorsque cela s'avère cliniquement approprié.\r\n\r\nIl peut y avoir un chevauchement apparent ou réel entre les éléments de données de cet archétype et les détails du logement/de l'adresse qui peuvent être stockés en tant que détails démographiques dans les systèmes cliniques ou administratifs. Ces éléments de données ont été conçus spécifiquement à des fins cliniques.",
           "misuse" : "Ne doit pas être utilisé pour enregistrer des informations sur le bâtiment physique où vit une personne. Utiliser CLUSTER.dwelling à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des informations sur les conditions de vie d'une personne. Utiliser CLUSTER.household à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer les personnes avec lesquelles un individu vit. Utiliser EVALUATION.social_network à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des changements temporaires ou des épisodes dans un seul dossier de logement, tels que des vacances.\r\n\r\nNe pas utiliser pour des descriptions détaillées des risques pour la santé ou de l'exposition à des substances dangereuses dans le logement ou le cadre résidentiel. Utilisez les archétypes EVALUATION.health_risk ou EVALUATION.exposure à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des informations sur la situation de logement d'un individu à un moment précis (par exemple, le 16 juin 2014) ou pendant un intervalle de temps relatif (par exemple, \"au cours des 30 derniers jours\"). Utilisez un archétype d'OBSERVATION approprié à cette fin.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Um Details eines Wohnsitzes oder einer anderen Wohnumgebung einer Person während eines bestimmten Zeitraums aufzuzeichnen.",
+          "keywords" : [ "Behausung", "Unterbringung", "Unterkunft", "Pflegeheim", "Pflegewohnheim", "Wohnheim", "betreutes Wohnen", "betreute Wohneinrichtung", "Altersheim", "Wohnort", "Wohnsitz", "Haus", "Wohnung", "obdachlos", "Miete", "Eigentum", "Eigentümer", "gemeinsam", "Gemeinschaftsunterkunft", "Wohngemeinschaft", "geteilt", "vorübergehend", "Institution", "Apartment", "Eigentumswohnung", "Wohnungseigentum", "Hospiz", "Umzug" ],
+          "use" : "Um Details eines Wohnsitzes oder einer anderen Wohnumgebung einer Person während eines bestimmten Zeitraums aufzuzeichnen.\r\n\r\nDer Geltungsbereich dieses Archetyps umfasst alle von einer Einzelperson bewohnten Wohnorte. Zum Beispiel: alle im Laufe der Zeit gemieteten Wohnorte, Wechsel zwischen Wohnorten während eines bestimmten Zeitraums, vorübergehende Aufenthalte, beispielsweise bei nomadischen Hirten, die zwischen saisonalen Weiden ziehen, Wanderreisenden oder Obdachlosen.\r\n\r\nEine Person benötigt möglicherweise mehr als einen aktiven Wohnorteintrag gleichzeitig. Jeder neue Wohnort oder jede neue Adresse sollte in einer separaten Instanz dieses Archetyps erfasst werden. Zum Beispiel, wenn eine Person von einem Haus in ein anderes Haus oder eine andere Wohnung umzieht oder dasselbe Wohnmobil von einer Adresse an eine andere verlegt.\r\n\r\nMehrere im Laufe der Zeit erfasste Instanzen dieses Archetyps ergeben eine Zusammenfassung der Geschichte vergangener und gegenwärtiger Wohnsituationen.\r\n\r\nEin aktiver oder aktueller Wohnort kann durch ein \"Startdatum\", ohne \"Enddatum\", vermerkt werden.\r\n\r\nÄndert sich die Wohnsituation erheblich, etwa durch eine Änderung der Adresse oder der Besitzverhältnisse, so sollte dies ebenfalls als separate Instanz dieses Archetyps erfasst werden.\r\n\r\nDieser Archetyp wurde speziell für die Verwendung im SLOT „Housing record“ innerhalb des Archetyps EVALUATION.housing_summary entwickelt, kann aber auch in allen anderen ENTRY- oder CLUSTER-Archetypen verwendet werden, sofern klinisch angemessen.\r\n\r\nEs kann zu scheinbaren oder tatsächlichen Überschneidungen zwischen den Datenelementen in diesem Archetyp und Wohn-/Adressdetails kommen, die als demografische Details in klinischen oder administrativen Systemen gespeichert werden können. Diese Datenelemente wurden speziell zur Unterstützung klinischer Zwecke entwickelt.",
+          "misuse" : "Dient nicht zur Aufzeichnung von Informationen über ein physisches Gebäude, in dem eine Person lebt. Nutzen Sie hierfür CLUSTER.dwelling.\r\n\r\nDient nicht dazu, Informationen über die Lebensumstände einer Einzelperson aufzuzeichnen. Nutzen Sie hierfür CLUSTER.household.\r\n\r\nDarf nicht dazu verwendet werden, aufzuzeichnen, mit wem eine Person zusammenlebt. Nutzen Sie hierfür EVALUATION.social_network.\r\n\r\nNicht zur Aufzeichnung vorübergehender Änderungen oder Vorfälle innerhalb eines einzelnen Wohnorteintrags, wie z. B. Urlaub, geeignet.\r\n\r\nNicht für detaillierte Beschreibungen von Gesundheitsrisiken oder der Exposition gegenüber gefährlichen Stoffen im häuslichen Umfeld oder der Wohnumgebung geeignet. Nutzen Sie hierfür die Archetypen EVALUATION.health_risk oder EVALUATION.exposure.\r\n\r\nDient nicht zur Aufzeichnung von Informationen über die Wohnsituation einer Person zu einem bestimmten Zeitpunkt (z. B. am 16. Juni 2014) oder während eines relativen Zeitintervalls (z. B. „in den letzten 30 Tagen“). Verwenden Sie dafür einen geeigneten OBSERVATION-Archetyp.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera detaljer om ett enskilt hem eller annan bostadsmiljö för en individ under en viss tidsperiod.",
+          "keywords" : [ "hus", "boende", "bostadsvård", "Hem", "hus", "lägenhet", "hemlös", "hyra", "ägare", "delad", "tillfälliga", "institution", "lägenhet", "lägenhet", "bostadsrätt", "härbärge" ],
+          "use" : "Används för att registrera detaljer om ett enskilt hem eller annan bostadsmiljö för en individ under en viss tidsperiod.\r\n\r\nOmfattningen av den här arketypen inkluderar alla bostadsinställningar som används av en individ. Till exempel: alla hyrda bostäder över tiden; växla mellan två hem under en viss tidsperiod; förgänglighet, såsom nomadiska herdar som flyttar mellan säsongsbetesmarker; resande resenärer; eller hemlösa.\r\n\r\nEn individ kan kräva mer än en aktiv bostadsregistrering åt gången. Varje ny bostadsinställning eller adress ska registreras i en separat instans av denna arketyp. Till exempel om en person flyttar från ett hus till ett annat hus eller lägenhet, eller flyttar samma husbil från en adress till en annan.\r\n\r\nFlera instanser av den här arketypen som fångats över tiden kommer att resultera i en sammanställning av en historia av tidigare och nuvarande bostadsituationer.\r\n\r\nEn aktiv eller aktuell bostadssituation kan antydas från ett \"Datum inleddes\" men inget \"Datum upphört\".\r\n\r\nOm bostadssituationen förändras avsevärt, till exempel adressändring eller typ av tjänstgöring, bör detta också registreras som en separat instans av denna arketyp.\r\n\r\nDen här arketypen har utformats speciellt för att användas i 'Bostadsregistrering' SLOT inom EVALUATION.housing_summary arketyp, men kan också användas inom alla andra ENTRY- eller CLUSTER-arketyper, där det är kliniskt lämpligt.\r\n\r\nDet kan finnas någon uppenbar eller verklig överlappning mellan dataelementen i denna arketyp och bostads- / adressuppgifter som kan lagras som demografiska detaljer i kliniska eller administrativa system. Dessa dataelement har utformats specifikt för att stödja kliniska ändamål.",
+          "misuse" : "Inte utformad för att registrera information om en fysisk byggnad där en individ bor. Använd CLUSTER.dwelling för detta ändamål.\r\n\r\nInte utformad för att registrera information om en persons levnadsarrangemang. Använd CLUSTER.household för detta ändamål.\r\n\r\nInte utformad för att registrera vem en individ bor med. Använd EVALUATION.social_network för detta ändamål.\r\n\r\nInte utformad för att registrera tillfälliga ändringar eller avsnitt inom en enda bostadsregistrering, som att vara på semester.\r\n\r\nFår inte användas för detaljerade beskrivningar av hälsorisker eller exponering för farliga ämnen i hemmet eller bostaden. Använd arketyperna EVALUATION.health_risk eller EVALUATION.exposure för detta ändamål.\r\n\r\nInte utformad för att registrera information om en persons bostadssituation vid en viss tidpunkt (till exempel den 16 juni 2014) eller under ett relativt tidsintervall (till exempel 'under de senaste 30 dagarna'. Använd en lämplig OBSERVATION-arketyp för detta ändamål.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -6592,7 +6685,9 @@
       "termDefinitions" : {
         "en" : { },
         "nb" : { },
-        "fr" : { }
+        "fr" : { },
+        "sv" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -6636,6 +6731,36 @@
         "name" : "Vanessa Pereira",
         "organisation" : "Luxembourg Institute of Health (LIH)",
         "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Maximilian Meixner",
+        "organisation" : "Berlin Institute of Health - BIH @Charité, BIH @ Charité",
+        "email" : "maximilian.meixner@bih-charite.de"
+      },
+      "otherDetails" : {
+        "other_contributors" : "Severin Kohler, Berlin Institute of Health - BIH @Charité, severin.kohler@bih-charite.de"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg",
+        "organisation" : "Cambio CDS",
+        "email" : "therese.lindberg@cambio.se"
       },
       "otherDetails" : { }
     } ]
@@ -8248,7 +8373,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "45957be87c9eed1f3ff147254730017e"
+        "PARENT:MD5-CAM-1.0.1" : "c6c25c64d70aedcb947de9dd7de634fc"
       },
       "details" : {
         "en" : {
@@ -8274,6 +8399,20 @@
           },
           "purpose" : "*Patients to self-report their comorbidities. (en)",
           "keywords" : [ "*Self-Admistered Comorbidity Questionnaire, SCQ, Comorbidity, Comorbidities (en)" ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Selbstauskunft der Patienten über ihre Komorbiditäten.",
+          "keywords" : [ "Selbstverwalteter Komorbiditätsfragebogen, SCQ, Komorbidität, Komorbiditäten" ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -8347,7 +8486,8 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : { },
-        "fr" : { }
+        "fr" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -8372,6 +8512,16 @@
           "value" : "ISO_639-1"
         },
         "codeString" : "fr"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
       },
       "author" : { },
       "otherDetails" : { }
