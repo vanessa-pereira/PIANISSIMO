@@ -30,6 +30,8 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"Selbstauskunft der Patienten über ihre Komorbiditäten.">
+			keywords = <"Selbstverwalteter Komorbiditätsfragebogen, SCQ, Komorbidität, Komorbiditäten", ...>
 			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
@@ -57,7 +59,7 @@ Streibelt M, Schmidt C, Brünger M, Spyra K. Komorbidität im Patientenurteil - 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6233fe27fcfd4ee0f6f386c753028893">
+		["MD5-CAM-1.0.1"] = <"c6c25c64d70aedcb947de9dd7de634fc">
 		["build_uid"] = <"e6d31467-423f-391a-8880-05f65558d752">
 	>
 
@@ -985,7 +987,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Selbsteinschätzung der Komorbidität (SCQ)">
-					description = <"*The Self-Administered Comorbidity Questionnaire (SCQ) is a tool used by hospitalized patients to self-report their comorbidities. It can help to explain the effectiveness of hip or knee arthroplasty, its complications, the length of hospital stay and perioperative resource utilization. (en)">
+					description = <"Der Self-Administered Comorbidity Questionnaire (SCQ) ist ein Instrument, mit dem hospitalisierte Patienten ihre Komorbiditäten selbst angeben. Er kann dazu beitragen, die Wirksamkeit einer Hüft- oder Knieendoprothese, ihre Komplikationen, die Dauer des Krankenhausaufenthalts und den perioperativen Ressourcenverbrauch zu erklären.">
 				>
 				["at0001"] = <
 					text = <"History">
