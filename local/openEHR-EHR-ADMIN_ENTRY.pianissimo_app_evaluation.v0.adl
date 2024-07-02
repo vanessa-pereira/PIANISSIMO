@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,8 +28,16 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -26,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"402d61411d453568678d1af8fbb97fbe">
+		["MD5-CAM-1.0.1"] = <"ebb5af91d8d536494c88cf194109bdf1">
 		["build_uid"] = <"4e666637-9674-3a8c-847f-fdf52b2a63a7">
 	>
 
@@ -250,6 +270,246 @@ ontology
 				>
 				["at0028"] = <
 					text = <"Reason for not liking app">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo app evaluation">
+					description = <"*pianissimo app evaluation (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"L'utilisation de l'application a augmenté l'activité physique">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Peut maintenir la même activité physique après l'utilisation de l'application">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Principale source de motivation">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Objectifs">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Notifications">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Objectifs et notifications">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Rien">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"L'utilisateur a apprécié l'application">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"L'application a été adaptée à l'état du patient">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"L'utilisateur recommande l'application">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Principale source d'information sur l'existence de l'application">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Objectives (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Notifications (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Both (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Nothing (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Raison pour laquelle l'application n'est pas appréciée">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo app evaluation">
+					description = <"*pianissimo app evaluation (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Die Nutzung der App erhöhte die körperliche Aktivität">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Kann die gleiche körperliche Aktivität nach der Nutzung der App beibehalten">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Hauptquelle der Motivation">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Objectives (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Notifications (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Both (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Nothing (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Nutzer mochte die App">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"App wurde an den Zustand des Patienten angepasst">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Nutzer empfiehlt die App">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Hauptinformationsquelle über die Existenz der Anwendung">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Objectives (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Notifications (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Both (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Nothing (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Kommentar">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Grund für das Nichtgefallen der App">
 					description = <"">
 				>
 			>
