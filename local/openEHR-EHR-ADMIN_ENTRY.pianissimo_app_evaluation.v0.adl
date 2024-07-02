@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ebb5af91d8d536494c88cf194109bdf1">
+		["MD5-CAM-1.0.1"] = <"cfdccfdd1c72999257bdef16f4a328da">
 		["build_uid"] = <"4e666637-9674-3a8c-847f-fdf52b2a63a7">
 	>
 
@@ -134,10 +134,10 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0023,    -- Objectives
-									at0024,    -- Notifications
-									at0025,    -- Both
-									at0026]    -- Nothing
+									at0023,    -- Flyers
+									at0024,    -- Social networks
+									at0025,    -- Friends
+									at0026]    -- Healthcare professionals
 								}
 							}
 						}
@@ -249,19 +249,19 @@ ontology
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"Objectives">
+					text = <"Flyers">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"Notifications">
+					text = <"Social networks">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"Both">
+					text = <"Friends">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"Nothing">
+					text = <"Healthcare professionals">
 					description = <"">
 				>
 				["at0027"] = <
@@ -369,19 +369,19 @@ ontology
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Objectives (en)">
+					text = <"Flyers">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*Notifications (en)">
+					text = <"Réseaux sociaux">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*Both (en)">
+					text = <"Amis">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Nothing (en)">
+					text = <"Professionnels de la santé">
 					description = <"">
 				>
 				["at0027"] = <
@@ -409,11 +409,11 @@ ontology
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0004"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0005"] = <
@@ -421,11 +421,11 @@ ontology
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0008"] = <
@@ -433,19 +433,19 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Objectives (en)">
+					text = <"Zielsetzungen">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Notifications (en)">
+					text = <"Benachrichtigungen">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Both (en)">
+					text = <"Beide">
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"*Nothing (en)">
+					text = <"Nichts">
 					description = <"">
 				>
 				["at0013"] = <
@@ -453,11 +453,11 @@ ontology
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0016"] = <
@@ -465,11 +465,11 @@ ontology
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0019"] = <
@@ -477,11 +477,11 @@ ontology
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0022"] = <
@@ -489,19 +489,19 @@ ontology
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Objectives (en)">
+					text = <"Flugblätter">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*Notifications (en)">
+					text = <"Soziale Netzwerke">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*Both (en)">
+					text = <"Freunde">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Nothing (en)">
+					text = <"Fachleute im Gesundheitswesen">
 					description = <"">
 				>
 				["at0027"] = <
