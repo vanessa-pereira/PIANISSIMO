@@ -23,6 +23,14 @@ language
 				["email"] = <"silje.ljosland.bakke@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@protonmail.com">
+			>
+		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			author = <
@@ -41,7 +49,7 @@ description
 		["organisation"] = <"Nasjonal IKT HF">
 		["email"] = <"silje.ljosland.bakke@nasjonalikt.no">
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Astrid Askeland, Dips AS, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Randi Brendberg, Helse Nord RHF, Norway","Yexuan Cheng, 浙江大学, China","Are Edvardsen, SKDE, Helse Nord RHF, Norway","Alexander Eikrem-Lüthi, Lovisenberg Diakonale Sykehus, Norway","Kåre Flø, DIPS ASA, Norway","Grant Forrest, Lunaria Ltd, United Kingdom","Anca Heyd, DIPS ASA, Norway","Joost Holslag, Nedap, Netherlands","Evelyn Hovenga, EJSH Consulting, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway","Gunnar Jårvik, Helse Vest IKT AS, Norway","Anjali Kulkarni, Karkinos, India","Kanika Kuwelker, Helse Vest IKT, Norway","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway","Øygunn Leite Kallevik, Helse Bergen, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Norwegian Review Summary, Norwegian Public Hospitals, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Ina Wille, Helse-Vest RHF, Norway">
 	details = <
 		["de"] = <
@@ -150,6 +158,42 @@ Not to be used to to create a framework for recording answers to pre-defined scr
 
 Not to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Créer un cadre pour l'enregistrement des réponses à des questions de dépistage prédéfinies sur l'utilisation de tout médicament ou groupe de médicaments spécifié.">
+			keywords = <"médicament,","dépistage,","questionnaire,","drogue,","traitement">
+			use = <"À utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions de dépistage prédéfinies concernant l'utilisation de tout médicament ou groupe (y compris les classes) de médicaments spécifié.
+
+Des exemples de médicaments, de groupes et de classes de médicaments sont respectivement \"acide alendronique\", \"médicaments contre l'ostéoporose\" et \"bisphosphonates\".
+
+Les cas d'utilisation courants incluent, mais ne sont pas limités à :
+- L'interrogation systématique, lors d'une consultation, sur les schémas d'utilisation des médicaments, par exemple :
+--- Prenez-vous du paracétamol ? Oui, Non, Inconnu.
+--- Avez-vous pris des anticoagulants au cours des quatre dernières semaines ? Oui, Non, Inconnu.
+
+La sémantique de cet archétype est intentionnellement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.
+
+La structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur un médicament qui a été utilisé à tout moment dans le passé et des informations sur un médicament utilisé dans un intervalle de temps spécifié - par exemple la différence entre \"Utilisez-vous du paracétamol ?\" et \"Avez-vous utilisé des anticoagulants au cours des quatre dernières semaines ?
+
+La source des informations contenues dans une réponse à un questionnaire peut varier selon le contexte, mais elle peut être spécifiquement identifiée à l'aide de l'élément \"Fournisseur d'informations\" du modèle de référence.
+
+Cet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le questionnaire de dépistage identifie la présence d'un médicament, il est recommandé que le système clinique enregistre et conserve les détails spécifiques concernant le médicament en utilisant un archétype de médicament approprié, par exemple OBSERVATION.medication_statement pour enregistrer une vue instantanée détaillée de l'utilisation réelle d'un seul médicament spécifié.">
+			misuse = <"Ne doit pas être utilisé pour enregistrer l'ordre d'administration ou de consommation d'un médicament - utiliser INSTRUCTION.medication_order à cet effet.
+
+Ne doit pas être utilisé pour enregistrer l'administration, la délivrance ou la consommation d'un médicament - utiliser ACTION.medication à cette fin.
+
+Ne doit pas être utilisé pour enregistrer un résumé de l'utilisation d'un médicament au cours de la vie de l'individu - utiliser EVALUATION.medication_summary à cette fin.
+
+Ne doit pas être utilisé pour enregistrer un instantané détaillé de l'utilisation réelle d'un seul médicament spécifié, en dehors d'un contexte de dépistage. - Utiliser OBSERVATION.medication_statement à cette fin.
+
+Ne doit pas être utilisé pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.
+
+Ne pas utiliser pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.
+
+Ne doit pas être utilisé pour créer un cadre d'enregistrement des réponses à des questions de dépistage prédéfinies sur les effets indésirables ; utiliser un archétype approprié à cette fin.
+
+Ne pas utiliser pour enregistrer les détails d'une simple liste de sélection où une question peut être enregistrée comme \"présente\" ou \"indéterminée\". Utilisez OBSERVATION.selection_list à cette fin.">
+		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			purpose = <"*To create a framework for recording answers to pre-defined screening questions about the use of a any medication. (en)">
@@ -192,10 +236,10 @@ Not to be used to record details about a simple selection list where a question 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"876BA56A1E975E7F68DC58E6EB81EB33">
-		["build_uid"] = <"dcd86caa-80f4-4dbf-9162-cc61880219ad">
+		["MD5-CAM-1.0.1"] = <"A305A90DC502DA8A1F380F8AA4984127">
+		["build_uid"] = <"dc0f50a8-fb49-4edc-903d-c8e59c50ebad">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"1.0.2">
+		["revision"] = <"1.0.3-alpha">
 	>
 
 definition
@@ -748,6 +792,117 @@ For example: screening for previous use of a class of medications, such as bisph
 				["at0043"] = <
 					text = <"*Description (en)">
 					description = <"*Narrative description about the history of use of any medication relevant for the screening purpose. (en)">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Questionnaire de dépistage des médicaments">
+					description = <"Série de questions et de réponses associées utilisées pour dépister l'utilisation de médicaments">
+					comment = <"Les réponses peuvent être autodéclarées.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Timing">
+					description = <"Indication du moment de l'utilisation du médicament ou du groupe de médicaments.">
+					comment = <"L'élément de données \"Timing\" a été délibérément modélisé de manière souple afin de prendre en charge la myriade de façons dont il peut être utilisé dans les questionnaires pour saisir le moment où le médicament ou le groupe de médicaments a été utilisé. La sémantique spécifique et voulue peut être précisée dans un modèle. Par exemple : la date et/ou l'heure réelle ; l'heure de début et de fin de l'utilisation du médicament ou du groupe de médicaments ; l'intervalle de temps pendant lequel le médicament ou le groupe de médicaments a été utilisé ; la durée de l'utilisation du médicament ou du groupe de médicaments ; l'âge de l'individu au moment de l'utilisation du médicament ou du groupe de médicaments ; ou la durée écoulée depuis l'utilisation du médicament ou du groupe de médicaments. Une date partielle est valable, en utilisant le type de données DV_DATE_TIME, pour enregistrer seulement une année.">
+				>
+				["at0003"] = <
+					text = <"Dernière dose">
+					description = <"La date et/ou l'heure de l'administration de la dose la plus récente du médicament ou du groupe de médicaments.">
+					comment = <"Il peut s'agir d'une date partielle, par exemple une année seulement.">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0019"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour étendre le modèle au contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR.">
+				>
+				["at0021"] = <
+					text = <"Nom du médicament">
+					description = <"Nom du médicament ou du groupe de médicaments.">
+					comment = <"Par exemple : \"acide alendronique\", \"médicaments contre l'ostéoporose\" ou \"bisphosphonates\".
+Dans la mesure du possible, il est préférable de coder le \"nom du médicament\" à l'aide d'une terminologie.">
+				>
+				["at0022"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0023"] = <
+					text = <"Tout événement">
+					description = <"Par défaut, point dans le temps non spécifié ou événement d'intervalle qui peut être explicitement défini dans un modèle ou au moment de l'exécution.">
+				>
+				["at0024"] = <
+					text = <"Utilisé">
+					description = <"Y a-t-il des antécédents d'utilisation d'un médicament spécifique ou d'un groupe de médicaments ?">
+					comment = <"Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique. 
+Par exemple, un ensemble de valeurs alternatif utilisant le type de données DV_TEXT peut être : 
+Actuellement en cours d'utilisation [L'individu utilise actuellement le médicament en question de manière régulière ou en cas de besoin].
+Jamais utilisé [La personne n'a jamais utilisé le médicament en question].
+Utilisé dans le passé [La personne a utilisé le médicament spécifique dans le passé, mais ne l'utilise pas actuellement].
+Inconnu [On ne sait pas si la personne utilise ou a utilisé le médicament en question].">
+				>
+				["at0025"] = <
+					text = <"Commentaire">
+					description = <"Description supplémentaire de la question spécifique sur les médicaments, qui n'a pas été saisie dans d'autres champs.">
+				>
+				["at0026"] = <
+					text = <"Médicaments spécifiques">
+					description = <"Détails d'un médicament ou d'un groupe de médicaments spécifiques, pertinents pour l'objectif du dépistage.">
+					comment = <"Utilisez des instances distinctes de ce CLASSEUR pour différencier des médicaments spécifiques ou des groupes de médicaments.">
+				>
+				["at0027"] = <
+					text = <"Des médicaments ont-ils été utilisés ?">
+					description = <"Y a-t-il des antécédents d'utilisation de médicaments en rapport avec l'objectif du dépistage ?">
+					comment = <"Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique.">
+				>
+				["at0028"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Objectif du dépistage">
+					description = <"Le contexte ou la raison du dépistage">
+					comment = <"Cet élément de données est destiné à fournir un contexte de collecte pour les groupes de questions/réponses lors d'une interrogation ultérieure. Il n'est pas prévu que cet élément de données soit exposé à l'individu, mais seulement stocké dans les données. Par exemple : le dépistage avant l'admission, le nom du questionnaire ou le dépistage de l'utilisation antérieure d'une classe de médicaments, tels que les bisphosphonates.">
+				>
+				["at0041"] = <
+					text = <"Détails supplémentaires">
+					description = <"Détails ou questions structurés sur le médicament spécifique ou le groupe de médicaments.">
+				>
+				["at0042"] = <
+					text = <"Détails supplémentaires">
+					description = <"Détails ou questions structurées sur le dépistage des médicaments.">
+				>
+				["at0043"] = <
+					text = <"Description">
+					description = <"Description narrative de l'historique de l'utilisation de tout médicament pertinent pour le dépistage.">
 				>
 			>
 		>
