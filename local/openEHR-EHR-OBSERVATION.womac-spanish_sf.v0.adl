@@ -9,13 +9,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["pt-pt"] = <
-			language = <[ISO_639-1::pt-pt]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
 			author = <
 			>
 		>
@@ -67,7 +67,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1094cae7c7c0e98be19585284df2f9f7">
+		["MD5-CAM-1.0.1"] = <"cbf28d7e083d5870672b57c32e491b38">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
 	>
 
@@ -343,12 +343,6 @@ ontology
 	term_definitions = <
 		["en"] = <
 			items = <
-				["at0005"] = <
-					text = <"Stiffness">
-					description = <"This section concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
-
-Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
-				>
 				["at0000.1"] = <
 					text = <"Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)">
 					description = <"The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
@@ -445,6 +439,12 @@ WOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. 
 					description = <"This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
 
 Original introduction question: \"How much pain do you have?\"">
+				>
+				["at0005"] = <
+					text = <"Stiffness">
+					description = <"This section concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
 				>
 				["at0006"] = <
 					text = <"Physical function">
@@ -833,12 +833,8 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 		>
 		["de"] = <
 			items = <
-				["at0005"] = <
-					text = <"Steifheit">
-					description = <"">
-				>
 				["at0000.1"] = <
-					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
+					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
 					description = <"Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:
 - Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen
 - Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag
@@ -931,6 +927,10 @@ Der WOMAC-Index wurde 1982 an den Universitäten Western Ontario und McMaster en
 					description = <"*This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
 
 Original introduction question: \"How much pain do you have?\" (en)">
+				>
+				["at0005"] = <
+					text = <"Steifheit">
+					description = <"">
 				>
 				["at0006"] = <
 					text = <"Körperliche Funktion">
@@ -1074,12 +1074,6 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 		>
 		["fr"] = <
 			items = <
-				["at0005"] = <
-					text = <"Raideur">
-					description = <"Cette section concerne l'importance de la raideur articulaire (et non de la douleur) que le patient ressent actuellement dans ses hanches et/ou ses genoux.
-
-La raideur est une sensation de restriction ou de lenteur dans la facilité de mouvement des articulations.">
-				>
 				["at0000.1"] = <
 					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
 					description = <"L'indice d'arthrite des universités Western Ontario et McMaster (WOMAC) est largement utilisé dans l'évaluation de l'arthrose de la hanche et du genou. Il s'agit d'un questionnaire auto-administré composé de 24 items divisés en 3 sous-échelles :
@@ -1180,6 +1174,12 @@ L'indice WOMAC a été développé en 1982 par les universités Western Ontario 
 					description = <"Cette section concerne l'intensité de la douleur ressentie par le patient en raison de l'arthrite des hanches et/ou des genoux.
 
 Question initiale d'introduction : \"Quelle est l'intensité de la douleur que vous ressentez ?\"">
+				>
+				["at0005"] = <
+					text = <"Raideur">
+					description = <"Cette section concerne l'importance de la raideur articulaire (et non de la douleur) que le patient ressent actuellement dans ses hanches et/ou ses genoux.
+
+La raideur est une sensation de restriction ou de lenteur dans la facilité de mouvement des articulations.">
 				>
 				["at0006"] = <
 					text = <"Fonction physique">
