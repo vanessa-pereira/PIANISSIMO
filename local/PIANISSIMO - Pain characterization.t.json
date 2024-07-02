@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.14",
+      "sem_ver" : "0.1.15",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "110c8e6e0846eec8c756e74163e6a62e",
+      "MD5-CAM-1.0.1" : "0dbc0e652bc5a757acd246cbbf601184",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -638,6 +638,13 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0040.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040.1",
+            "text" : "Diagnose Jahr",
+            "description" : "Angabe des Zeitpunkts im Zusammenhang mit der Frage, dem Problem oder der Diagnose.",
+            "comment" : "Das Datenelement \"Zeitpunkt\" wurde bewusst locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, mit denen es in Fragebögen verwendet werden kann, um zu erfassen, wann eine Frage, ein Problem oder eine Diagnose aufgetreten ist. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit, zu der das Problem oder die Diagnose auftrat; der Zeitraum, in dem das Problem oder die Diagnose auftrat; die Dauer des Problems oder der Diagnose; das Alter der Person zum Zeitpunkt des Problems oder der Diagnose; oder die Zeitdauer seit dem Auftreten des Problems. Unter Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum zulässig, um nur ein Jahr zu erfassen."
           }
         },
         "nl" : {
@@ -666,6 +673,13 @@
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0040.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040.1",
+            "text" : "Année de diagnostic",
+            "description" : "Indication du moment où la question, le problème ou le diagnostic se pose.",
+            "comment" : "L'élément de données \"Moment\" a été délibérément modélisé de manière lâche afin de prendre en charge la myriade de façons dont il peut être utilisé dans les questionnaires pour saisir le moment où une question, un problème ou un diagnostic s'est produit. La sémantique spécifique et prévue peut être précisée dans un modèle. Par exemple : la date et/ou l'heure réelle ; l'heure de début et de fin de la question, du problème ou du diagnostic ; l'intervalle de temps pendant lequel la question, le problème ou le diagnostic s'est produit ; la durée de la question, du problème ou du diagnostic ; l'âge de la personne au moment de la question, du problème ou du diagnostic ; ou la durée écoulée depuis la survenue de la question, du problème ou du diagnostic. Une date partielle est valable, en utilisant le type de données DV_DATE_TIME, pour enregistrer seulement une année."
           }
         }
       },
@@ -2675,12 +2689,6 @@
       "conceptCode" : "at0000.1",
       "termDefinitions" : {
         "en" : {
-          "at0036.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036.1",
-            "text" : "Total score",
-            "description" : "Total score is the sum of all the other ordinal data points (from cluster Pain, Stiffness and physical function, depending which specialization used). In some specializations as the spanish womac SF, stiffness is not taken in into consideration. "
-          },
           "at0036.1.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0036.1.1",
