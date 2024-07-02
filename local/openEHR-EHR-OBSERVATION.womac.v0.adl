@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["pt-pt"] = <
-			language = <[ISO_639-1::pt-pt]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
 			author = <
 			>
 		>
@@ -61,7 +61,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5ae326ede49017fd040de776ea38f7d4">
+		["MD5-CAM-1.0.1"] = <"452284a5749acf53c7b7cd6b2f4a5266">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
 	>
 
@@ -687,18 +687,18 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 			items = <
 				["at0000"] = <
 					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
-					description = <"*The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:
-- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright
-- Stiffness (2 items): after first waking and later in the day
-- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties
-WOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated. (en)">
+					description = <"Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:
+- Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen
+- Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag
+- Körperliche Funktion (17 Items): Treppensteigen, Aufstehen aus dem Sitzen, Stehen, Bücken, Gehen, Ein- und Aussteigen aus dem Auto, Einkaufen, Socken an- und ausziehen, Aufstehen aus dem Bett, Liegen im Bett, Ein- und Aussteigen aus der Badewanne, Sitzen, Auf- und Absteigen von der Toilette, schwere häusliche Aufgaben, leichte häusliche Aufgaben
+Der WOMAC-Index wurde 1982 an den Universitäten Western Ontario und McMaster entwickelt. Der WOMAC ist in über 65 Sprachen verfügbar und wurde sprachlich validiert. ">
 				>
 				["at0001"] = <
-					text = <"History">
+					text = <"Vorgeschichte">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"During the last 48 hours">
+					text = <"Während der letzten 48 Stunden">
 					description = <"@ internal @">
 				>
 				["at0003"] = <
@@ -706,17 +706,17 @@ WOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. 
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Pain (en)">
+					text = <"Schmerz">
 					description = <"*This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
 
 Original introduction question: \"How much pain do you have?\" (en)">
 				>
 				["at0005"] = <
-					text = <"*Stiffness (en)">
+					text = <"Steifheit">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*Physical function (en)">
+					text = <"Körperliche Funktion">
 					description = <"*This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
 
 For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
@@ -724,124 +724,124 @@ For each of the following activities, the patient should indicate the degree of 
 Original introduction question: \"What degree of difficulty do you have with?\" (en)">
 				>
 				["at0007"] = <
-					text = <"*Walking on a flat surface (en)">
+					text = <"Gehen auf einer ebenen Fläche">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*None (en)">
+					text = <"Keine">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Slight (en)">
+					text = <"Geringfügig">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Moderate (en)">
+					text = <"Mäßig">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Severe (en)">
+					text = <"Schwere">
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"*Extreme (en)">
+					text = <"Extrem">
 					description = <"">
 				>
 				["at0013"] = <
-					text = <"*Going up or down stairs (en)">
+					text = <"beim Treppensteigen oder -gehen">
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"*At night while in bed (en)">
+					text = <"Nachts im Bett">
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"*Sitting or lying (en)">
+					text = <"Sitzen oder Liegen">
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*Standing upright (en)">
+					text = <"Aufrechtes Stehen">
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*Morning stiffness (en)">
+					text = <"Morgensteifigkeit">
 					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
 				>
 				["at0018"] = <
-					text = <"*Stiffness occurring later in the day (en)">
+					text = <"Steifheit, die später am Tag auftritt">
 					description = <"">
 					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
 				>
 				["at0019"] = <
-					text = <"*Descending stairs (en)">
+					text = <"Treppe hinuntergehen">
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*Ascending stairs (en)">
+					text = <"Treppe hinaufsteigen">
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*Rising from sitting (en)">
+					text = <"Aufstehen aus dem Sitzen">
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"*Standing (en)">
+					text = <"Stehen">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Bending to floor (en)">
+					text = <"Bücken zum Boden">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*Walking on flat surface (en)">
+					text = <"Gehen auf ebener Fläche">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*Getting in or out of the car (en)">
+					text = <"Einsteigen oder Aussteigen aus dem Auto">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Going shopping (en)">
+					text = <"Einkaufen gehen">
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"*Putting on socks (en)">
+					text = <"Socken anziehen">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Lying in bed (en)">
+					text = <"Im Bett liegend">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"*Taking off socks (en)">
+					text = <"Socken ausziehen">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"*Rising from bed (en)">
+					text = <"Aufstehen aus dem Bett">
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"*Getting in or out of bath (en)">
+					text = <"Einsteigen in die oder Aussteigen aus der Badewanne">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Sitting (en)">
+					text = <"Sitzen">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Getting in or out of toilet (en)">
+					text = <"Betreten oder Verlassen der Toilette">
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*Heavy domestic duties (en)">
+					text = <"Schwere häusliche Pflichten">
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"*Light domestic duties (en)">
+					text = <"Leichte häusliche Pflichten">
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"*Total score (en)">
+					text = <"Gesamtpunktzahl">
 					description = <"">
 				>
 				["at0037"] = <
@@ -849,7 +849,7 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 					description = <"@ internal @">
 				>
 				["at0038"] = <
-					text = <"*Extension (en)">
+					text = <"Erweiterung">
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
