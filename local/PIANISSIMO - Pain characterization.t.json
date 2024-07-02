@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.13",
+      "sem_ver" : "0.1.14",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "870336152bb7ff0ef6542db83cf3f052",
+      "MD5-CAM-1.0.1" : "110c8e6e0846eec8c756e74163e6a62e",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -151,15 +151,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-problem_screening-001.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "EVALUATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.19",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-source-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -773,7 +764,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "876BA56A1E975E7F68DC58E6EB81EB33"
+        "PARENT:MD5-CAM-1.0.1" : "A305A90DC502DA8A1F380F8AA4984127"
       },
       "details" : {
         "de" : {
@@ -836,6 +827,21 @@
           "keywords" : [ "*medication, screening, questionnaire, drug, treatment (en)" ],
           "use" : "*Use to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage , for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a procedure that has been performed at any time in the past and information about a procedure performed within a specified time interval - for example the difference between \"Do you use paracetamol?\" compared to \"Have you been using any anticoagulants the last four weeks?\".\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a medication it is recommended that clinical system record and persist the specific details about the medication using a relevant medication archetype, for example the OBSERVATION.medication_statement to record a detailed snapshot view about the actual use of a single specified medication. (en)",
           "misuse" : "*Not to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for recording the administration, dispensing or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording a summary of use of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.\r\n\r\nNot to be used to record a detailed snapshot view about the actual use of a single specified medication, outside of a screening context. - use OBSERVATION.medication_statement for this purpose.\r\n\r\nNot to be used to record details about the positive absence of a specific medication or grouping of medication, outside of a screening context. Use EVALUATION.exclusion_specific for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Créer un cadre pour l'enregistrement des réponses à des questions de dépistage prédéfinies sur l'utilisation de tout médicament ou groupe de médicaments spécifié.",
+          "keywords" : [ "médicament,", "dépistage,", "questionnaire,", "drogue,", "traitement" ],
+          "use" : "À utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions de dépistage prédéfinies concernant l'utilisation de tout médicament ou groupe (y compris les classes) de médicaments spécifié.\r\n\r\nDes exemples de médicaments, de groupes et de classes de médicaments sont respectivement \"acide alendronique\", \"médicaments contre l'ostéoporose\" et \"bisphosphonates\".\r\n\r\nLes cas d'utilisation courants incluent, mais ne sont pas limités à :\r\n- L'interrogation systématique, lors d'une consultation, sur les schémas d'utilisation des médicaments, par exemple :\r\n--- Prenez-vous du paracétamol ? Oui, Non, Inconnu.\r\n--- Avez-vous pris des anticoagulants au cours des quatre dernières semaines ? Oui, Non, Inconnu.\r\n\r\nLa sémantique de cet archétype est intentionnellement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.\r\n\r\nLa structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur un médicament qui a été utilisé à tout moment dans le passé et des informations sur un médicament utilisé dans un intervalle de temps spécifié - par exemple la différence entre \"Utilisez-vous du paracétamol ?\" et \"Avez-vous utilisé des anticoagulants au cours des quatre dernières semaines ?\r\n\r\nLa source des informations contenues dans une réponse à un questionnaire peut varier selon le contexte, mais elle peut être spécifiquement identifiée à l'aide de l'élément \"Fournisseur d'informations\" du modèle de référence.\r\n\r\nCet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le questionnaire de dépistage identifie la présence d'un médicament, il est recommandé que le système clinique enregistre et conserve les détails spécifiques concernant le médicament en utilisant un archétype de médicament approprié, par exemple OBSERVATION.medication_statement pour enregistrer une vue instantanée détaillée de l'utilisation réelle d'un seul médicament spécifié.",
+          "misuse" : "Ne doit pas être utilisé pour enregistrer l'ordre d'administration ou de consommation d'un médicament - utiliser INSTRUCTION.medication_order à cet effet.\r\n\r\nNe doit pas être utilisé pour enregistrer l'administration, la délivrance ou la consommation d'un médicament - utiliser ACTION.medication à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer un résumé de l'utilisation d'un médicament au cours de la vie de l'individu - utiliser EVALUATION.medication_summary à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer un instantané détaillé de l'utilisation réelle d'un seul médicament spécifié, en dehors d'un contexte de dépistage. - Utiliser OBSERVATION.medication_statement à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe doit pas être utilisé pour créer un cadre d'enregistrement des réponses à des questions de dépistage prédéfinies sur les effets indésirables ; utiliser un archétype approprié à cette fin.\r\n\r\nNe pas utiliser pour enregistrer les détails d'une simple liste de sélection où une question peut être enregistrée comme \"présente\" ou \"indéterminée\". Utilisez OBSERVATION.selection_list à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -932,382 +938,9 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0026.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0021.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "ATC_82021"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "ATC_82021" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "A07EC01",
-                                    "value" : "sulfasalazine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "J01AA08",
-                                    "value" : "minocycline"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L01AA01",
-                                    "value" : "cyclophosphamide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L01BA01",
-                                    "value" : "methotrexate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA01",
-                                    "value" : "cyclosporine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA13",
-                                    "value" : "leflunomide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AX01",
-                                    "value" : "azathioprine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AX03",
-                                    "value" : "methotrexate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB01",
-                                    "value" : "sodium aurothiomalate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB03",
-                                    "value" : "auranofin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB04",
-                                    "value" : "aurothioglucose"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CC01",
-                                    "value" : "penicillamine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "P01BA02",
-                                    "value" : "hydroxychloroquine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA11",
-                                    "value" : "etanercept"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA12",
-                                    "value" : "infliximab"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA14",
-                                    "value" : "anakinra"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA17",
-                                    "value" : "adalimumab"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02AA05",
-                                    "value" : "oxycodone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02AD01",
-                                    "value" : "pentazocine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA51",
-                                    "value" : "codeine in combination"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BE01",
-                                    "value" : "acetaminophen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BE51",
-                                    "value" : "paracetamol, combinations excluding psycholeptics"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA03",
-                                    "value" : "hydrocodone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA04",
-                                    "value" : "codeine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA05",
-                                    "value" : "opium alkaloids with morphine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB04",
-                                    "value" : "methylprednisolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB06",
-                                    "value" : "prednisolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB07",
-                                    "value" : "prednisone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB08",
-                                    "value" : "triamcinolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB10",
-                                    "value" : "cortisone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH03",
-                                    "value" : "valdecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AA01",
-                                    "value" : "phenylbutazone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB01",
-                                    "value" : "indometacin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB02",
-                                    "value" : "sulindac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB03",
-                                    "value" : "tolmetin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB05",
-                                    "value" : "diclofenac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB08",
-                                    "value" : "etodolac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB15",
-                                    "value" : "ketorolac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB55",
-                                    "value" : "diclofenac in combination"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC01",
-                                    "value" : "piroxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC02",
-                                    "value" : "tenoxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC06",
-                                    "value" : "meloxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE01",
-                                    "value" : "ibuprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE02",
-                                    "value" : "naproxen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE03",
-                                    "value" : "ketoprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE04",
-                                    "value" : "fenoprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE09",
-                                    "value" : "flurbiprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE11",
-                                    "value" : "tiaprofenic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE12",
-                                    "value" : "oxaprozin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AG01",
-                                    "value" : "mefenamic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH01",
-                                    "value" : "celecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH02",
-                                    "value" : "rofecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AX01",
-                                    "value" : "nabumetone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AA",
-                                    "value" : "anti-inflammatory preparations, non-steroids for topical use"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AB01",
-                                    "value" : "capsicum"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AC",
-                                    "value" : "preparation with salicylic acid derivations"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AX03",
-                                    "value" : "dimethyl sulfoxide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M04AA",
-                                    "value" : "preparation inhibiting uric acid production"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA11",
-                                    "value" : "diflunisal"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA01",
-                                    "value" : "acetylsalicylic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA03",
-                                    "value" : "choline salicylate"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0024.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.5" ],
-                                  "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_BOOLEAN",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0003.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0002.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
                   } ],
@@ -1339,12 +972,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.4",
             "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
-            "description" : ""
           }
         },
         "nb" : {
@@ -1352,12 +979,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
             "description" : ""
           }
         },
@@ -1367,12 +988,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
             "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
           }
         },
         "nl" : {
@@ -1381,11 +996,13 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
             "description" : ""
-          },
-          "ac0.5" : {
+          }
+        },
+        "fr" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
             "description" : ""
           }
         }
@@ -1412,11 +1029,6 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
           "members" : [ "at0028", "at0029" ]
-        },
-        "ac0.5" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.5",
-          "members" : [ "at0036", "at0037", "at0039" ]
         }
       }
     },
@@ -1474,6 +1086,20 @@
         "email" : "martijn.vaneenennaam@nedap.com"
       },
       "accreditation" : "PhD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
       "otherDetails" : { }
     } ]
   }, {
@@ -1680,6 +1306,18 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
+                    "code" : "53620006",
+                    "value" : "Temporomandibular joint"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "7844006",
+                    "value" : "Sternoclavicular joint"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "85856004",
+                    "value" : "Acromioclavicular joint"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "85537004",
                     "value" : "Glenohumeral joint"
                   }, {
@@ -1688,8 +1326,64 @@
                     "value" : "Elbow joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "40238009",
-                    "value" : "Hand joint"
+                    "code" : "74670003",
+                    "value" : "Wrist joint"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "56310002",
+                    "value" : "Metacarpophalangeal joint structure of thumb"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "289002",
+                    "value" : "Metacarpophalangeal joint structure of index finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "6059006",
+                    "value" : "Metacarpophalangeal joint structure of middle finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "13822002",
+                    "value" : "Metacarpophalangeal joint structure of ring finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "5493005",
+                    "value" : "Metacarpophalangeal joint structure of little finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371218009",
+                    "value" : "Distal interphalangeal joint of middle finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371210002",
+                    "value" : "Distal interphalangeal joint of index finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371204002",
+                    "value" : "Distal interphalangeal joint of ring finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371202003",
+                    "value" : "Distal interphalangeal joint of little finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371263005",
+                    "value" : "Proximal interphalangeal joint of middle finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371270005",
+                    "value" : "Proximal interphalangeal joint of index finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371233001",
+                    "value" : "Proximal interphalangeal joint of little finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371267006",
+                    "value" : "Proximal interphalangeal joint of ring finger"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "115955008",
+                    "value" : "Interphalangeal joint of thumb"
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "24136001",
@@ -1700,12 +1394,60 @@
                     "value" : "Knee joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
+                    "code" : "70258002",
+                    "value" : "Ankle joint"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "26552008",
                     "value" : "Foot joint"
                   }, {
                     "terminologyId" : "SNOMED-CT",
+                    "code" : "788338001",
+                    "value" : "Entire midtarsal joint region"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "27824001",
+                    "value" : "Metatarsophalangeal joint of great toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "71721008",
+                    "value" : "Metatarsophalangeal joint structure of second toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "81247008",
+                    "value" : "Metatarsophalangeal joint structure of third toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "45230000",
+                    "value" : "Metatarsophalangeal joint structure of fourth toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "50133002",
+                    "value" : "Metatarsophalangeal joint structure of fifth toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "1187457005",
+                    "value" : "Proximal interphalangeal joint structure of lesser toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371292009",
+                    "value" : "Proximal interphalangeal joint structure of second toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371255009",
+                    "value" : "Proximal interphalangeal joint structure of third toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371288002",
+                    "value" : "Proximal interphalangeal joint structure of fourth toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371284000",
+                    "value" : "Proximal interphalangeal joint structure of fifth toe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
                     "code" : "421060004",
-                    "value" : "Spine"
+                    "value" : "Structure of vertebral column"
                   } ]
                 } ]
               } ],
@@ -2076,7 +1818,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "FE52E551D4FDB4B9F5E6E552C7EDC387"
+        "PARENT:MD5-CAM-1.0.1" : "26591B4C2C3EC74AFF89369F408FBA8B"
       },
       "details" : {
         "de" : {
@@ -2137,6 +1879,21 @@
           "keywords" : [ "*Procedure, surgery, operation, assessment, investigation, questionnaire, screening (en)" ],
           "use" : "*Use to create a framework for recording answers to pre-defined screening questions about clinical management related to specific invasive interventions or surgical/operative procedures that have been carried out in the past.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Specific questioning about previous procedures before admission to a hospital.\r\n- Systematic questioning in any consultation, for example:\r\n--- Have you ever had an appendectomy? Yes, No, Unknown.\r\n--- Have you had a hip or knee replacement in the past twelve months? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a procedure that has been performed at any time in the past and information about a procedure performed within a specified time interval - for example the difference between \"Have you ever had any hip or knee surgery?\" compared to \"Have you had any hip or knee surgery in the last 12 months?\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening process identifies a completed procedure, it is recommended that clinical system record and persist the specific details about the procedure (such as the duration of the procedure) using the ACTION.procedure archetype. (en)",
           "misuse" : "*Not to be used to record details about the presence or absence of a procedure, outside of a screening context. Use ACTION.procedure or EVALUATION.exclusion_specific for these purposes.\r\n\r\nNot to be used to record non-surgical or non-invasive clinical management. Use OBSERVATION.management_screening for this purposes.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Créer un cadre pour l'enregistrement des réponses à des questions de sélection prédéfinies sur la gestion clinique liée aux procédures chirurgicales/opératoires qui ont été effectuées dans le passé.",
+          "keywords" : [ "Procédure, chirurgie, opération, évaluation, enquête, questionnaire, dépistage" ],
+          "use" : "A utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions prédéfinies sur la gestion clinique liée à des procédures chirurgicales/opératoires qui ont été effectuées dans le passé.\r\n\r\nLes cas d'utilisation les plus courants sont, entre autres, les suivants\r\n- des questions spécifiques sur les interventions antérieures avant l'admission à l'hôpital\r\n- Interrogation systématique lors d'une consultation, par exemple : --- Avez-vous déjà eu une appendicite ?\r\n--- Avez-vous déjà subi une appendicectomie ? Oui, Non, Inconnu.\r\n--- Avez-vous subi une arthroplastie de la hanche ou du genou au cours des douze derniers mois ? Oui, Non, Inconnu.\r\n\r\nLa sémantique de cet archétype est intentionnellement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.\r\n\r\nLa structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur une procédure effectuée à tout moment dans le passé et des informations sur une procédure effectuée dans un intervalle de temps donné - par exemple la différence entre \"Avez-vous déjà subi une opération de la hanche ou du genou ?\" et \"Avez-vous subi une opération de la hanche ou du genou au cours des 12 derniers mois ?\r\n\r\nLa source des informations contenues dans une réponse à un questionnaire peut varier selon le contexte, mais elle peut être spécifiquement identifiée à l'aide de l'élément \"Fournisseur d'informations\" du modèle de référence.\r\n\r\nCet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le processus de dépistage identifie une procédure terminée, il est recommandé que le système clinique enregistre et conserve les détails spécifiques de la procédure (tels que la durée de la procédure) à l'aide de l'archétype ACTION.procedure.",
+          "misuse" : "Ne pas utiliser pour enregistrer des détails sur la présence ou l'absence d'une procédure, en dehors d'un contexte de dépistage. Utiliser ACTION.procedure ou EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer une prise en charge clinique non chirurgicale ou non invasive. Utilisez OBSERVATION.management_screening à cette fin.\r\n\r\nNe pas utiliser pour enregistrer les détails d'une simple liste de sélection où une question peut être enregistrée comme \"présente\" ou \"indéterminée\". Utiliser OBSERVATION.selection_list à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -2396,15 +2153,15 @@
         "de" : {
           "at0028.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028.1",
-            "text" : "Irgendwelche frühere Prozeduren? (2)",
+            "code" : "at0028.2",
+            "text" : "Gab es früher schon thermische Behandlungen gegen Arthrose?",
             "description" : "Gibt es eine Vorgeschichte von früheren Prozeduren, die für den Screening-Zweck relevant sind?",
             "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
           },
           "at0028.3" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028.1",
-            "text" : "Irgendwelche frühere Prozeduren? (3)",
+            "code" : "at0028.3",
+            "text" : "Hat Ihr Arzt schon einmal körperliche Aktivität bei Arthrose empfohlen?",
             "description" : "Gibt es eine Vorgeschichte von früheren Prozeduren, die für den Screening-Zweck relevant sind?",
             "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
           },
@@ -2425,6 +2182,13 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : ""
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Wurden Sie schon einmal wegen Arthrose operiert?",
+            "description" : "Gibt es eine Vorgeschichte von früheren Prozeduren, die für den Screening-Zweck relevant sind?",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
           }
         },
         "it" : {
@@ -2459,6 +2223,47 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.11" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.11",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.2",
+            "text" : "Y a-t-il eu des traitements thermiques antérieurs pour l'arthrose ?",
+            "description" : "Existe-t-il des antécédents de procédures antérieures en rapport avec l'objectif du dépistage ?",
+            "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Avez-vous déjà subi une intervention chirurgicale pour de l'arthrose ?",
+            "description" : "Existe-t-il des antécédents de procédures antérieures en rapport avec l'objectif du dépistage ?",
+            "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+          },
+          "at0028.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.3",
+            "text" : "Le médecin a-t-il déjà recommandé l'activité physique pour l'arthrose ?",
+            "description" : "Existe-t-il des antécédents de procédures antérieures en rapport avec l'objectif du dépistage ?",
+            "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
           }
         }
       },
@@ -2577,6 +2382,20 @@
       },
       "author" : { },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -2589,7 +2408,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "963916515c9d8f558d2827aca60e6ea4"
+        "PARENT:MD5-CAM-1.0.1" : "1094cae7c7c0e98be19585284df2f9f7"
       },
       "details" : {
         "pt-pt" : {
@@ -2617,6 +2436,32 @@
           "purpose" : "To assess osteoarthritis-related disability in the hip and/or knee based on patients' and experts' opinions",
           "keywords" : [ "Spanish WOMAC short-form, Western Ontario and McMaster Universities Arthritis Index, Arthritis, Knee, hip, Osteoarthritis, PROM, short-form, spanish, Bilbao, Spain" ],
           "use" : "The spanish WOMAC short-form can be taken on paper, over the telephone or computer. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-12 for Pain, and 0-32 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-44), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -2756,6 +2601,37 @@
                         } ]
                       } ],
                       "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0036.1.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_COUNT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "magnitude",
+                            "children" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 0,
+                                "upper" : 44,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -2799,21 +2675,29 @@
       "conceptCode" : "at0000.1",
       "termDefinitions" : {
         "en" : {
-          "at0000" : {
+          "at0036.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Western Ontario and McMaster Universities Arthritis Index (WOMAC)",
-            "description" : "The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:\n- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright\n- Stiffness (2 items): after first waking and later in the day\n- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties\nWOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated."
+            "code" : "at0036.1",
+            "text" : "Total score",
+            "description" : "Total score is the sum of all the other ordinal data points (from cluster Pain, Stiffness and physical function, depending which specialization used). In some specializations as the spanish womac SF, stiffness is not taken in into consideration. "
+          },
+          "at0036.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0036.1.1",
+            "text" : "Total score",
+            "description" : "T"
           }
         },
-        "pt-pt" : {
-          "at0000" : {
+        "pt-pt" : { },
+        "de" : {
+          "at0000.1.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)",
-            "description" : "*The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:\n- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright\n- Stiffness (2 items): after first waking and later in the day\n- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties\nWOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated. (en)"
+            "code" : "at0000.1.1",
+            "text" : "Western Ontario and McMaster Universities Arthritis Index (WOMAC)",
+            "description" : "Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:\n- Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen\n- Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag\n- Körperliche Funktion (17 Items): Treppensteigen, Aufstehen aus dem Sitzen, Stehen, Bücken, Gehen, Ein- und Aussteigen aus dem Auto, Einkaufen, Socken an- und ausziehen, Aufstehen aus dem Bett, Liegen im Bett, Ein- und Aussteigen aus der Badewanne, Sitzen, Auf- und Absteigen von der Toilette, schwere häusliche Aufgaben, leichte häusliche Aufgaben\nDer WOMAC-Index wurde 1982 an den Universitäten Western Ontario und McMaster entwickelt. Der WOMAC ist in über 65 Sprachen verfügbar und wurde sprachlich validiert. "
           }
-        }
+        },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -2841,273 +2725,6 @@
       },
       "author" : { },
       "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "9a91284c-a159-44be-ab04-49f32fecc29d",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "441F10504D2BA13BC8729A9819B88D86"
-      },
-      "details" : {
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar detalhes sobre informação originada de terceiros que é utilizada como parte de uma avaliação remota ou relatório.",
-          "keywords" : [ "origem", "imagem", "original" ],
-          "use" : "Para gravar detalhes sobre informação originada deterceiros que é utilizada como parte de uma avaliação remota ou relatório.\r\n\r\nEste arquétipo foi designado para apoiar a identificação e qualidade da informação de saúde proveniente de uma fonte clínica de terceiros.\r\n\r\n\r\nCada parte da evidencia clínica recebida de terceiros precisa ser avaliada como 'apta para uso' antes de ser utilizada para apoiar a tomada de decisão clínica. Por exemplo: a imagem digital capturada durante a consulta clínica, ou a radiografia digital , enviada para um especialista remoto para avaliação das necessidades de aconselhamento do tramamento, precisa ser considerado como sendo região anatômica completa e de qualidade apropriada.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about information sourced from a third party that is utilised as part of a remote assessment or report.",
-          "keywords" : [ "source", "image", "original" ],
-          "use" : "Use to record details about information sourced from a third party that is utilised as part of a remote assessment or report.\r\n\r\nThis archetype has been designed to support the identification and quality of health information sourced from a third party clinical source. \r\n\r\nEach piece of clinical evidence that has been received from a third party source needs to be assessed as 'fit for use' prior to being utilisied to support clinical decision-making. For example: a digital image captured during a clinical consultation, or a digital radiograph, sent to a remote specialist for assessment and treatment advice needs to be deemed to be of the complete anatomical region and of appropriate quality.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Aufzeichnung von Details über Informationen, die von Dritten stammen und als Teil einer Fernbewertung oder eines Berichts verwendet werden.",
-          "keywords" : [ "Quelle", "Bild", "Original" ],
-          "use" : "Zur Aufzeichnung von Details über Informationen, die von Dritten stammen und als Teil einer Fernbeurteilung oder eines Berichts verwendet werden.\r\n\r\nDieser Archetyp wurde entwickelt, um die Identifizierung und Qualität von Gesundheitsinformationen zu unterstützen, die von einer klinischen Drittquelle stammen. \r\n\r\nJede klinische Information, die von einer Drittquelle stammt, muss vor ihrer Verwendung zur Unterstützung der klinischen Entscheidungsfindung auf ihre Verwendbarkeit geprüft werden. Ein Beispiel: Ein digitales Bild, das während einer klinischen Konsultation aufgenommen wurde, oder ein digitales Röntgenbild, das an einen entfernten Spezialisten zur Beurteilung und Behandlungsberatung geschickt wird, muss die gesamte anatomische Region abbilden und von angemessener Qualität sein.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "fr" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fr"
-          },
-          "purpose" : "Enregistrer des détails sur les informations provenant d'un tiers et utilisées dans le cadre d'une évaluation ou d'un rapport à distance.",
-          "keywords" : [ "source", "image", "original" ],
-          "use" : "À utiliser pour enregistrer des détails sur des informations provenant d'un tiers et utilisées dans le cadre d'une évaluation ou d'un rapport à distance.\r\n\r\nCet archétype a été conçu pour soutenir l'identification et la qualité des informations de santé provenant d'une source clinique tierce. \r\n\r\nChaque élément de preuve clinique reçu d'une source tierce doit être évalué comme étant \"apte à l'emploi\" avant d'être utilisé pour soutenir la prise de décision clinique. Par exemple : une image numérique capturée lors d'une consultation clinique ou une radiographie numérique envoyée à un spécialiste à distance pour évaluation et conseils de traitement doit être considérée comme représentant la région anatomique complète et d'une qualité appropriée.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.source.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-source-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "EVALUATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0002.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "pianissimo_info_source"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "pianissimo_info_source" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "pianissimo_info_source",
-                        "code" : "MC",
-                        "value" : "Medical consultation"
-                      }, {
-                        "terminologyId" : "pianissimo_info_source",
-                        "code" : "MI",
-                        "value" : "Medical imaging exam"
-                      }, {
-                        "terminologyId" : "pianissimo_info_source",
-                        "code" : "MCMI",
-                        "value" : "Medical consultation and medical imaging exam"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0003.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0004.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.1" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0007.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Problem/Diagnosis source information",
-            "description" : "Information sourced from a third party that is utilised as part of a remote assessment or report."
-          },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
-        "pt-br" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
-        "fr" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
-        "de" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0005", "at0006" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "5fa5b120-ad41-47aa-be23-af8b4482cdbb",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Clóvis Puttini, Débora Farage, Fernanda Maia, Ana Paula Andrade, Adriana Kitajima",
-        "organisation" : "Core Consulting",
-        "email" : "contato@coreconsulting.com.br"
-      },
-      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
-      "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
       "language" : {
@@ -3116,11 +2733,7 @@
         },
         "codeString" : "de"
       },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
+      "author" : { },
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -3130,11 +2743,7 @@
         },
         "codeString" : "fr"
       },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   } ],
