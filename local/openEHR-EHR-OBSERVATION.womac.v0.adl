@@ -12,6 +12,16 @@ language
 			author = <
 			>
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -23,6 +33,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
 			copyright = <"© openEHR Foundation">
@@ -34,6 +48,10 @@ description
 			use = <"The WOMAC takes approximately 12 minutes to complete, and can be taken on paper, over the telephone or computer. Both the computerized and the mobile versions of the test have been found to be comparable to the paper form, with no significant difference. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-20 for Pain, 0-8 for Stiffness, and 0-68 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-96), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.
 ">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -43,7 +61,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"66efb96a2bf8e4ac042ed7e5c1661344">
+		["MD5-CAM-1.0.1"] = <"5ae326ede49017fd040de776ea38f7d4">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
 	>
 
@@ -347,7 +365,7 @@ Original introduction question: \"How much pain do you have?\"">
 				>
 				["at0005"] = <
 					text = <"Stiffness">
-					description = <"This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+					description = <"This section concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
 
 Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
 				>
@@ -662,6 +680,356 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 					text = <"*Extension (en)">
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
+					description = <"*The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:
+- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright
+- Stiffness (2 items): after first waking and later in the day
+- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties
+WOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Pain (en)">
+					description = <"*This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"How much pain do you have?\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Stiffness (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Physical function (en)">
+					description = <"*This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
+
+For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"What degree of difficulty do you have with?\" (en)">
+				>
+				["at0007"] = <
+					text = <"*Walking on a flat surface (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Slight (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Moderate (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Severe (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Extreme (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Going up or down stairs (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*At night while in bed (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Sitting or lying (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Standing upright (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Morning stiffness (en)">
+					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
+				>
+				["at0018"] = <
+					text = <"*Stiffness occurring later in the day (en)">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0019"] = <
+					text = <"*Descending stairs (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Ascending stairs (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Rising from sitting (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Standing (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Bending to floor (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Walking on flat surface (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Getting in or out of the car (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Going shopping (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Putting on socks (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Lying in bed (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Taking off socks (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Rising from bed (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Getting in or out of bath (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Sitting (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Getting in or out of toilet (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Heavy domestic duties (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Light domestic duties (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
+					description = <"L'indice d'arthrite des universités Western Ontario et McMaster (WOMAC) est largement utilisé dans l'évaluation de l'arthrose de la hanche et du genou. Il s'agit d'un questionnaire auto-administré composé de 24 items divisés en 3 sous-échelles :
+- Douleur (5 items) : pendant la marche, dans les escaliers, au lit, en position assise ou couchée, et en position debout.
+- Raideur (2 items) : après le réveil et plus tard dans la journée
+- Fonction physique (17 items) : monter les escaliers, se lever d'une position assise, se tenir debout, se pencher, marcher, monter et descendre d'une voiture, faire les courses, mettre et enlever des chaussettes, se lever du lit, se coucher dans le lit, monter et sortir du bain, s'asseoir, monter et descendre des toilettes, tâches ménagères lourdes, tâches ménagères légères.
+L'indice WOMAC a été développé en 1982 par les universités Western Ontario et McMaster. WOMAC est disponible dans plus de 65 langues et a été validé linguistiquement. ">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Douleur">
+					description = <"Cette section concerne l'intensité de la douleur ressentie par le patient en raison de l'arthrite des hanches et/ou des genoux.
+
+Question initiale d'introduction : \"Quelle est l'intensité de la douleur que vous ressentez ?\"">
+				>
+				["at0005"] = <
+					text = <"Raideur">
+					description = <"Cette section concerne l'importance de la raideur articulaire (et non de la douleur) que le patient ressent actuellement dans ses hanches et/ou ses genoux.
+
+La raideur est une sensation de restriction ou de lenteur dans la facilité de mouvement des articulations.">
+				>
+				["at0006"] = <
+					text = <"Fonction physique">
+					description = <"*This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
+
+For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"What degree of difficulty do you have with?\" (en)">
+				>
+				["at0007"] = <
+					text = <"Marcher sur une surface plane">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Aucun">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Minime">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Très sévère">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Monter ou descendre des escaliers">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"La nuit, au lit">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Assis ou couché">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Se tenir debout">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Raideur matinale">
+					description = <"Question initiale : Quelle est l'importance de votre raideur après le réveil du matin ?">
+				>
+				["at0018"] = <
+					text = <"Raideur survenant plus tard dans la journée">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0019"] = <
+					text = <"Descente des escaliers">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Monter les escaliers">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Relever de la position assise">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Debout">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Pencher en avant">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Marcher sur une surface plane">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Entrer ou sortir de la voiture">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Faire du shopping">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Enfiler des chaussettes ou collants">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Couché dans le lit">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Enlever les chaussettes ou collants">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Se lever du lit">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Entrer et sortir de la baignoire">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Assis">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Entrer ou sortir des toilettes">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Tâches domestiques lourdes">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Tâches domestiques légères">
+					description = <"Ce chapitre concerne la fonction physique du patient. Il s'agit de la capacité du patient à se déplacer et à s'occuper de lui-même.
+
+Pour chacune des activités suivantes, le patient doit indiquer le degré de difficulté qu'il éprouve actuellement en raison de l'arthrite des hanches et/ou des genoux.
+
+Question initiale d'introduction : \"Quelle est l'importance de la difficulté que vous éprouvez à:\" ">
+				>
+				["at0036"] = <
+					text = <"Score total">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour étendre le modèle avec un contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR. ">
 				>
 			>
 		>
