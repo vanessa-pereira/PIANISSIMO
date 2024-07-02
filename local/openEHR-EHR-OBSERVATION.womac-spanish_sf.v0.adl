@@ -14,6 +14,16 @@ language
 			author = <
 			>
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -25,6 +35,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
 			keywords = <"*Spanish WOMAC short-form, Western Ontario and McMaster Universities Arthritis Index, Arthritis, Knee, hip, Osteoarthritis, PROM, short-form, spanish, Bilbao, Spain (en)", ...>
@@ -39,6 +53,10 @@ description
 			use = <"The spanish WOMAC short-form can be taken on paper, over the telephone or computer. The test questions are scored on a scale of 0-4, which correspond to: None (0), Mild (1), Moderate (2), Severe (3), and Extreme (4). The scores for each subscale are summed up, with a possible score range of 0-12 for Pain, and 0-32 for Physical Function. Usually a sum of the scores for all three subscales gives a total WOMAC score (0-44), however there are other methods that have been used to combine scores. Higher scores on the WOMAC indicate worse pain, stiffness, and functional limitations.
 ">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -49,7 +67,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"963916515c9d8f558d2827aca60e6ea4">
+		["MD5-CAM-1.0.1"] = <"1094cae7c7c0e98be19585284df2f9f7">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
 	>
 
@@ -325,6 +343,91 @@ ontology
 	term_definitions = <
 		["en"] = <
 			items = <
+				["at0005"] = <
+					text = <"Stiffness">
+					description = <"This section concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
+				>
+				["at0000.1"] = <
+					text = <"Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)">
+					description = <"The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
+It is used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 11 items divided into 2 subscales:
+- Pain (3 items): during walking, using stairs, sitting or lying.
+- Physical Function (8 items): using stairs, rising from sitting, walking, getting in / out of a car, shopping, putting on socks, getting on / off toilet.
+The spanish WOMAC short form Index was developed in 2011.">
+				>
+				["at0014.1"] = <
+					text = <"At night while in bed">
+					description = <"">
+				>
+				["at0016.1"] = <
+					text = <"Standing upright">
+					description = <"">
+				>
+				["at0005.1"] = <
+					text = <"Stiffness">
+					description = <"This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
+				>
+				["at0017.1"] = <
+					text = <"Morning stiffness">
+					description = <"Original question: How severe is your stiffness after first wakening in the morning?">
+				>
+				["at0018.1"] = <
+					text = <"Stiffness occurring later in the day">
+					description = <"">
+					comment = <"Original question: How severe is your stiffness after sitting, lying, or resting later in the day?">
+				>
+				["at0022.1"] = <
+					text = <"Standing">
+					description = <"">
+				>
+				["at0023.1"] = <
+					text = <"Bending to floor">
+					description = <"">
+				>
+				["at0028.1"] = <
+					text = <"Lying in bed">
+					description = <"">
+				>
+				["at0029.1"] = <
+					text = <"Taking off socks">
+					description = <"">
+				>
+				["at0030.1"] = <
+					text = <"Rising from bed">
+					description = <"">
+				>
+				["at0031.1"] = <
+					text = <"Getting in or out of bath">
+					description = <"">
+				>
+				["at0032.1"] = <
+					text = <"Sitting">
+					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"Heavy domestic duties">
+					description = <"">
+				>
+				["at0035.1"] = <
+					text = <"Light domestic duties">
+					description = <"">
+				>
+				["at0036.1"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0000"] = <
+					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
+					description = <"The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:
+- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright
+- Stiffness (2 items): after first waking and later in the day
+- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties
+WOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated.">
+				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
@@ -342,12 +445,6 @@ ontology
 					description = <"This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
 
 Original introduction question: \"How much pain do you have?\"">
-				>
-				["at0005"] = <
-					text = <"Stiffness">
-					description = <"This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
-
-Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
 				>
 				["at0006"] = <
 					text = <"Physical function">
@@ -487,81 +584,89 @@ Original introduction question: \"What degree of difficulty do you have with?\""
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
-				["at0000.1"] = <
-					text = <"Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)">
-					description = <"The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
-It is used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 11 items divided into 2 subscales:
-- Pain (3 items): during walking, using stairs, sitting or lying.
-- Physical Function (8 items): using stairs, rising from sitting, walking, getting in / out of a car, shopping, putting on socks, getting on / off toilet.
-The spanish WOMAC short form Index was developed in 2011.">
-				>
-				["at0014.1"] = <
-					text = <"At night while in bed">
-					description = <"">
-				>
-				["at0016.1"] = <
-					text = <"Standing upright">
-					description = <"">
-				>
-				["at0005.1"] = <
-					text = <"Stiffness">
-					description = <"This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
-
-Stiffness is a sensation of restriction or slowness in the ease with which you move your joints.">
-				>
-				["at0017.1"] = <
-					text = <"Morning stiffness">
-					description = <"Original question: How severe is your stiffness after first wakening in the morning?">
-				>
-				["at0018.1"] = <
-					text = <"Stiffness occurring later in the day">
-					description = <"">
-					comment = <"Original question: How severe is your stiffness after sitting, lying, or resting later in the day?">
-				>
-				["at0022.1"] = <
-					text = <"Standing">
-					description = <"">
-				>
-				["at0023.1"] = <
-					text = <"Bending to floor">
-					description = <"">
-				>
-				["at0028.1"] = <
-					text = <"Lying in bed">
-					description = <"">
-				>
-				["at0029.1"] = <
-					text = <"Taking off socks">
-					description = <"">
-				>
-				["at0030.1"] = <
-					text = <"Rising from bed">
-					description = <"">
-				>
-				["at0031.1"] = <
-					text = <"Getting in or out of bath">
-					description = <"">
-				>
-				["at0032.1"] = <
-					text = <"Sitting">
-					description = <"">
-				>
-				["at0034.1"] = <
-					text = <"Heavy domestic duties">
-					description = <"">
-				>
-				["at0035.1"] = <
-					text = <"Light domestic duties">
-					description = <"">
-				>
-				["at0036.1"] = <
-					text = <"Total score">
-					description = <"">
-				>
 			>
 		>
 		["pt-pt"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) (en)">
+					description = <"*The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
+It is used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 11 items divided into 2 subscales:
+- Pain (3 items): during walking, using stairs, sitting or lying.
+- Physical Function (8 items): using stairs, rising from sitting, walking, getting in / out of a car, shopping, putting on socks, getting on / off toilet.
+The spanish WOMAC short form Index was developed in 2011. (en)">
+				>
+				["at0014.1"] = <
+					text = <"*At night while in bed (en)">
+					description = <"">
+				>
+				["at0016.1"] = <
+					text = <"*Standing upright (en)">
+					description = <"">
+				>
+				["at0005.1"] = <
+					text = <"*Stiffness (en)">
+					description = <"*This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
+
+Stiffness is a sensation of restriction or slowness in the ease with which you move your joints. (en)">
+				>
+				["at0017.1"] = <
+					text = <"*Morning stiffness (en)">
+					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
+				>
+				["at0018.1"] = <
+					text = <"*Stiffness occurring later in the day (en)">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0022.1"] = <
+					text = <"*Standing (en)">
+					description = <"">
+				>
+				["at0023.1"] = <
+					text = <"*Bending to floor (en)">
+					description = <"">
+				>
+				["at0028.1"] = <
+					text = <"*Lying in bed (en)">
+					description = <"">
+				>
+				["at0029.1"] = <
+					text = <"*Taking off socks (en)">
+					description = <"">
+				>
+				["at0030.1"] = <
+					text = <"*Rising from bed (en)">
+					description = <"">
+				>
+				["at0031.1"] = <
+					text = <"*Getting in or out of bath (en)">
+					description = <"">
+				>
+				["at0032.1"] = <
+					text = <"*Sitting (en)">
+					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"*Heavy domestic duties (en)">
+					description = <"">
+				>
+				["at0035.1"] = <
+					text = <"*Light domestic duties (en)">
+					description = <"">
+				>
+				["at0036.1"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0000"] = <
+					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
+					description = <"*The Western Ontario and McMaster Universities Arthritis Index (WOMAC) is widely used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 24 items divided into 3 subscales:
+- Pain (5 items): during walking, using stairs, in bed, sitting or lying, and standing upright
+- Stiffness (2 items): after first waking and later in the day
+- Physical Function (17 items): using stairs, rising from sitting, standing, bending, walking, getting in / out of a car, shopping, putting on / taking off socks, rising from bed, lying in bed, getting in / out of bath, sitting, getting on / off toilet, heavy domestic duties, light domestic duties
+WOMAC Index was developed in 1982 at Western Ontario and McMaster Universities. WOMAC is available in over 65 languages and has been linguistically validated. (en)">
+				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
@@ -724,76 +829,499 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0005"] = <
+					text = <"Steifheit">
+					description = <"">
+				>
 				["at0000.1"] = <
-					text = <"*Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) (en)">
-					description = <"*The Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF) is a reduced version of the Western Ontario and McMaster Universities Arthritis Index (WOMAC). It has 11 items comparing with the original 24 items, where the main outcome is to reduce the redundancy of some dimensions (pain, stiffness and physical function) and the low response rate from the patients, based on study from patients and experts opinions. 
-It is used in the evaluation of Hip and Knee Osteoarthritis. It is a self-administered questionnaire consisting of 11 items divided into 2 subscales:
-- Pain (3 items): during walking, using stairs, sitting or lying.
-- Physical Function (8 items): using stairs, rising from sitting, walking, getting in / out of a car, shopping, putting on socks, getting on / off toilet.
-The spanish WOMAC short form Index was developed in 2011. (en)">
+					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
+					description = <"Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:
+- Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen
+- Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag
+- Körperliche Funktion (17 Items): Treppensteigen, Aufstehen aus dem Sitzen, Stehen, Bücken, Gehen, Ein- und Aussteigen aus dem Auto, Einkaufen, Socken an- und ausziehen, Aufstehen aus dem Bett, Liegen im Bett, Ein- und Aussteigen aus der Badewanne, Sitzen, Auf- und Absteigen von der Toilette, schwere häusliche Aufgaben, leichte häusliche Aufgaben
+Der WOMAC-Index wurde 1982 an den Universitäten Western Ontario und McMaster entwickelt. Der WOMAC ist in über 65 Sprachen verfügbar und wurde sprachlich validiert. ">
 				>
 				["at0014.1"] = <
-					text = <"*At night while in bed (en)">
+					text = <"Nachts im Bett">
 					description = <"">
 				>
 				["at0016.1"] = <
-					text = <"*Standing upright (en)">
+					text = <"Aufrechtes Stehen">
 					description = <"">
 				>
 				["at0005.1"] = <
-					text = <"*Stiffness (en)">
-					description = <"*This sectopm concern the amount of joint stiffness (not pain) the patient are currently experiencing in his hips and/or knees.
-
-Stiffness is a sensation of restriction or slowness in the ease with which you move your joints. (en)">
+					text = <"Steifheit">
+					description = <"">
 				>
 				["at0017.1"] = <
-					text = <"*Morning stiffness (en)">
+					text = <"Morgensteifigkeit">
 					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
 				>
 				["at0018.1"] = <
-					text = <"*Stiffness occurring later in the day (en)">
+					text = <"Steifheit, die später am Tag auftritt">
 					description = <"">
 					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
 				>
 				["at0022.1"] = <
-					text = <"*Standing (en)">
+					text = <"Stehen">
 					description = <"">
 				>
 				["at0023.1"] = <
-					text = <"*Bending to floor (en)">
+					text = <"Bücken zum Boden">
 					description = <"">
 				>
 				["at0028.1"] = <
-					text = <"*Lying in bed (en)">
+					text = <"Im Bett liegend">
 					description = <"">
 				>
 				["at0029.1"] = <
-					text = <"*Taking off socks (en)">
+					text = <"Socken ausziehen">
 					description = <"">
 				>
 				["at0030.1"] = <
-					text = <"*Rising from bed (en)">
+					text = <"Aufstehen aus dem Bett">
 					description = <"">
 				>
 				["at0031.1"] = <
-					text = <"*Getting in or out of bath (en)">
+					text = <"Einsteigen in die oder Aussteigen aus der Badewanne">
 					description = <"">
 				>
 				["at0032.1"] = <
-					text = <"*Sitting (en)">
+					text = <"Sitzen">
 					description = <"">
 				>
 				["at0034.1"] = <
-					text = <"*Heavy domestic duties (en)">
+					text = <"Schwere häusliche Pflichten">
 					description = <"">
 				>
 				["at0035.1"] = <
-					text = <"*Light domestic duties (en)">
+					text = <"Leichte häusliche Pflichten">
 					description = <"">
 				>
 				["at0036.1"] = <
-					text = <"*Total score (en)">
+					text = <"Gesamtpunktzahl">
 					description = <"">
+				>
+				["at0000"] = <
+					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
+					description = <"Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:
+- Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen
+- Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag
+- Körperliche Funktion (17 Items): Treppensteigen, Aufstehen aus dem Sitzen, Stehen, Bücken, Gehen, Ein- und Aussteigen aus dem Auto, Einkaufen, Socken an- und ausziehen, Aufstehen aus dem Bett, Liegen im Bett, Ein- und Aussteigen aus der Badewanne, Sitzen, Auf- und Absteigen von der Toilette, schwere häusliche Aufgaben, leichte häusliche Aufgaben
+Der WOMAC-Index wurde 1982 an den Universitäten Western Ontario und McMaster entwickelt. Der WOMAC ist in über 65 Sprachen verfügbar und wurde sprachlich validiert. ">
+				>
+				["at0001"] = <
+					text = <"Vorgeschichte">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Während der letzten 48 Stunden">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Schmerz">
+					description = <"*This section concern the amount of pain the patient currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"How much pain do you have?\" (en)">
+				>
+				["at0006"] = <
+					text = <"Körperliche Funktion">
+					description = <"*This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
+
+For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"What degree of difficulty do you have with?\" (en)">
+				>
+				["at0007"] = <
+					text = <"Gehen auf einer ebenen Fläche">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Keine">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Geringfügig">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Mäßig">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Schwere">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Extrem">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"beim Treppensteigen oder -gehen">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Nachts im Bett">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Sitzen oder Liegen">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Aufrechtes Stehen">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Morgensteifigkeit">
+					description = <"*Original question: How severe is your stiffness after first wakening in the morning? (en)">
+				>
+				["at0018"] = <
+					text = <"Steifheit, die später am Tag auftritt">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0019"] = <
+					text = <"Treppe hinuntergehen">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Treppe hinaufsteigen">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Aufstehen aus dem Sitzen">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Stehen">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Bücken zum Boden">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Gehen auf ebener Fläche">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Einsteigen oder Aussteigen aus dem Auto">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Einkaufen gehen">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Socken anziehen">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Im Bett liegend">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Socken ausziehen">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Aufstehen aus dem Bett">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Einsteigen in die oder Aussteigen aus der Badewanne">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Sitzen">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Betreten oder Verlassen der Toilette">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Schwere häusliche Pflichten">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Leichte häusliche Pflichten">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Gesamtpunktzahl">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Erweiterung">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0005"] = <
+					text = <"Raideur">
+					description = <"Cette section concerne l'importance de la raideur articulaire (et non de la douleur) que le patient ressent actuellement dans ses hanches et/ou ses genoux.
+
+La raideur est une sensation de restriction ou de lenteur dans la facilité de mouvement des articulations.">
+				>
+				["at0000.1"] = <
+					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
+					description = <"L'indice d'arthrite des universités Western Ontario et McMaster (WOMAC) est largement utilisé dans l'évaluation de l'arthrose de la hanche et du genou. Il s'agit d'un questionnaire auto-administré composé de 24 items divisés en 3 sous-échelles :
+- Douleur (5 items) : pendant la marche, dans les escaliers, au lit, en position assise ou couchée, et en position debout.
+- Raideur (2 items) : après le réveil et plus tard dans la journée
+- Fonction physique (17 items) : monter les escaliers, se lever d'une position assise, se tenir debout, se pencher, marcher, monter et descendre d'une voiture, faire les courses, mettre et enlever des chaussettes, se lever du lit, se coucher dans le lit, monter et sortir du bain, s'asseoir, monter et descendre des toilettes, tâches ménagères lourdes, tâches ménagères légères.
+L'indice WOMAC a été développé en 1982 par les universités Western Ontario et McMaster. WOMAC est disponible dans plus de 65 langues et a été validé linguistiquement. ">
+				>
+				["at0014.1"] = <
+					text = <"La nuit, au lit">
+					description = <"">
+				>
+				["at0016.1"] = <
+					text = <"Se tenir debout">
+					description = <"">
+				>
+				["at0005.1"] = <
+					text = <"Raideur">
+					description = <"Cette section concerne l'importance de la raideur articulaire (et non de la douleur) que le patient ressent actuellement dans ses hanches et/ou ses genoux.
+
+La raideur est une sensation de restriction ou de lenteur dans la facilité de mouvement des articulations.">
+				>
+				["at0017.1"] = <
+					text = <"Raideur matinale">
+					description = <"Question initiale : Quelle est l'importance de votre raideur après le réveil du matin ?">
+				>
+				["at0018.1"] = <
+					text = <"Raideur survenant plus tard dans la journée">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0022.1"] = <
+					text = <"Debout">
+					description = <"">
+				>
+				["at0023.1"] = <
+					text = <"Pencher en avant">
+					description = <"">
+				>
+				["at0028.1"] = <
+					text = <"Couché dans le lit">
+					description = <"">
+				>
+				["at0029.1"] = <
+					text = <"Enlever les chaussettes ou collants">
+					description = <"">
+				>
+				["at0030.1"] = <
+					text = <"Se lever du lit">
+					description = <"">
+				>
+				["at0031.1"] = <
+					text = <"Entrer et sortir de la baignoire">
+					description = <"">
+				>
+				["at0032.1"] = <
+					text = <"Assis">
+					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"Tâches domestiques lourdes">
+					description = <"">
+				>
+				["at0035.1"] = <
+					text = <"Tâches domestiques légères">
+					description = <"Ce chapitre concerne la fonction physique du patient. Il s'agit de la capacité du patient à se déplacer et à s'occuper de lui-même.
+
+Pour chacune des activités suivantes, le patient doit indiquer le degré de difficulté qu'il éprouve actuellement en raison de l'arthrite des hanches et/ou des genoux.
+
+Question initiale d'introduction : \"Quelle est l'importance de la difficulté que vous éprouvez à:\" ">
+				>
+				["at0036.1"] = <
+					text = <"Score total">
+					description = <"">
+				>
+				["at0000"] = <
+					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
+					description = <"L'indice d'arthrite des universités Western Ontario et McMaster (WOMAC) est largement utilisé dans l'évaluation de l'arthrose de la hanche et du genou. Il s'agit d'un questionnaire auto-administré composé de 24 items divisés en 3 sous-échelles :
+- Douleur (5 items) : pendant la marche, dans les escaliers, au lit, en position assise ou couchée, et en position debout.
+- Raideur (2 items) : après le réveil et plus tard dans la journée
+- Fonction physique (17 items) : monter les escaliers, se lever d'une position assise, se tenir debout, se pencher, marcher, monter et descendre d'une voiture, faire les courses, mettre et enlever des chaussettes, se lever du lit, se coucher dans le lit, monter et sortir du bain, s'asseoir, monter et descendre des toilettes, tâches ménagères lourdes, tâches ménagères légères.
+L'indice WOMAC a été développé en 1982 par les universités Western Ontario et McMaster. WOMAC est disponible dans plus de 65 langues et a été validé linguistiquement. ">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Douleur">
+					description = <"Cette section concerne l'intensité de la douleur ressentie par le patient en raison de l'arthrite des hanches et/ou des genoux.
+
+Question initiale d'introduction : \"Quelle est l'intensité de la douleur que vous ressentez ?\"">
+				>
+				["at0006"] = <
+					text = <"Fonction physique">
+					description = <"*This section concern the patient’s physical function. By this it means the patient’s ability to move around and to look after himself.
+
+For each of the following activities, the patient should indicate the degree of difficulty he is currently experiencing due to arthritis in the hips and/or knees.
+
+Original introduction question: \"What degree of difficulty do you have with?\" (en)">
+				>
+				["at0007"] = <
+					text = <"Marcher sur une surface plane">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Aucun">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Minime">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Très sévère">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Monter ou descendre des escaliers">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"La nuit, au lit">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Assis ou couché">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Se tenir debout">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Raideur matinale">
+					description = <"Question initiale : Quelle est l'importance de votre raideur après le réveil du matin ?">
+				>
+				["at0018"] = <
+					text = <"Raideur survenant plus tard dans la journée">
+					description = <"">
+					comment = <"*Original question: How severe is your stiffness after sitting, lying, or resting later in the day? (en)">
+				>
+				["at0019"] = <
+					text = <"Descente des escaliers">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Monter les escaliers">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Relever de la position assise">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Debout">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Pencher en avant">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Marcher sur une surface plane">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Entrer ou sortir de la voiture">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Faire du shopping">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Enfiler des chaussettes ou collants">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Couché dans le lit">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Enlever les chaussettes ou collants">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Se lever du lit">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Entrer et sortir de la baignoire">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Assis">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Entrer ou sortir des toilettes">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Tâches domestiques lourdes">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Tâches domestiques légères">
+					description = <"Ce chapitre concerne la fonction physique du patient. Il s'agit de la capacité du patient à se déplacer et à s'occuper de lui-même.
+
+Pour chacune des activités suivantes, le patient doit indiquer le degré de difficulté qu'il éprouve actuellement en raison de l'arthrite des hanches et/ou des genoux.
+
+Question initiale d'introduction : \"Quelle est l'importance de la difficulté que vous éprouvez à:\" ">
+				>
+				["at0036"] = <
+					text = <"Score total">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour étendre le modèle avec un contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR. ">
 				>
 			>
 		>
