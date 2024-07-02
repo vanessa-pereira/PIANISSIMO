@@ -67,7 +67,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"cbf28d7e083d5870672b57c32e491b38">
+		["MD5-CAM-1.0.1"] = <"718e80e4713d3a37802d670787a82764">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
 	>
 
@@ -76,7 +76,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- During the last 48 hours
+					INTERVAL_EVENT[at0002.1] occurrences matches {0..*} matches {    -- During the last 48 hours
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -584,6 +584,10 @@ Original introduction question: \"What degree of difficulty do you have with?\""
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
+				["at0002.1"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
 			>
 		>
 		["pt-pt"] = <
@@ -829,12 +833,16 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
+				["at0002.1"] = <
+					text = <"During the last 48 hours">
+					description = <"@ internal @">
+				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
+					text = <"Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)">
 					description = <"Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:
 - Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen
 - Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag
@@ -1070,12 +1078,16 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
+				["at0002.1"] = <
+					text = <"Während der letzten 48 Stunden">
+					description = <"@ internal @">
+				>
 			>
 		>
 		["fr"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
+					text = <"Spanish Western Ontario and McMaster Universities Arthritis Index short-form (Spanish WOMAC SF)">
 					description = <"L'indice d'arthrite des universités Western Ontario et McMaster (WOMAC) est largement utilisé dans l'évaluation de l'arthrose de la hanche et du genou. Il s'agit d'un questionnaire auto-administré composé de 24 items divisés en 3 sous-échelles :
 - Douleur (5 items) : pendant la marche, dans les escaliers, au lit, en position assise ou couchée, et en position debout.
 - Raideur (2 items) : après le réveil et plus tard dans la journée
@@ -1322,6 +1334,10 @@ Question initiale d'introduction : \"Quelle est l'importance de la difficulté q
 					text = <"Extension">
 					description = <"Informations supplémentaires nécessaires pour étendre le modèle avec un contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
 					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR. ">
+				>
+				["at0002.1"] = <
+					text = <"Au cours des dernières 48 heures">
+					description = <"@ internal @">
 				>
 			>
 		>
