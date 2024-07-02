@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.11",
+      "sem_ver" : "0.1.12",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "3cb339b1431097c25729bee54103788d",
+      "MD5-CAM-1.0.1" : "f726f7f3508c0b0f9e62d98adaef20b1",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -286,7 +286,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "PIANISSIMO - Demographic information and comorbidties",
+          "text" : "PIANISSIMO - Demographic information and comorbidities",
           "description" : "Generischer Container für Informationen, die von einer Person bereitgestellt werden."
         }
       },
@@ -294,7 +294,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "PIANISSIMO - Demographic information and comorbidties",
+          "text" : "PIANISSIMO - Demographic information and comorbidities",
           "description" : "Conteneur générique pour des informations fournies par un individu."
         }
       },
