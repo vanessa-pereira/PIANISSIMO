@@ -61,7 +61,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"452284a5749acf53c7b7cd6b2f4a5266">
+		["MD5-CAM-1.0.1"] = <"32b65f15abbbab1b91f519bf64d3ab79">
 		["build_uid"] = <"46274511-3f7d-3476-ba01-73db2a27c949">
 	>
 
@@ -686,7 +686,7 @@ Original introduction question: \"What degree of difficulty do you have with?\" 
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Western Ontario and McMaster Universities Arthritis Index (WOMAC) (en)">
+					text = <"Western Ontario and McMaster Universities Arthritis Index (WOMAC)">
 					description = <"Der Western Ontario and McMaster Universities Arthritis Index (WOMAC) wird häufig bei der Bewertung von Hüft- und Kniearthrose eingesetzt. Es handelt sich um einen selbstverwalteten Fragebogen, der aus 24 Items besteht, die in 3 Unterskalen unterteilt sind:
 - Schmerz (5 Items): beim Gehen, Treppensteigen, im Bett, im Sitzen oder Liegen und beim aufrechten Stehen
 - Steifheit (2 Items): nach dem ersten Aufwachen und später am Tag
@@ -870,7 +870,7 @@ L'indice WOMAC a été développé en 1982 par les universités Western Ontario 
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"During the last 48 hours">
+					text = <"Au cours des dernières 48 heures">
 					description = <"@ internal @">
 				>
 				["at0003"] = <
