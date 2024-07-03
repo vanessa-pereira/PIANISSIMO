@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,11 +28,19 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Recording instructions for daily living related to activity, in the form of either physical exercises or general activity.">
 			keywords = <"physical activity, goals, activity, physical", ...>
 			use = <"Recording patient self-goals regarding the execution of physical activities, e.g. exercises (walking, bicycling, etc.) or non-exercise physical activity (e.g. ironning, cooking, etc).">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -29,7 +49,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"10b74058d2526490dcc452fc5c3936f6">
+		["MD5-CAM-1.0.1"] = <"fc9fe3a442540c1892d67f3b57699b95">
 		["build_uid"] = <"ba3e62b9-18e7-337b-8097-b206f8872445">
 	>
 
@@ -49,7 +69,6 @@ definition
 											at0006,    -- Basketball
 											at0007,    -- Cycling
 											at0008,    -- Dancing
-											at0009,    -- Soccer
 											at0010,    -- Gardening
 											at0011,    -- Hiking
 											at0012,    -- Horse Riding
@@ -173,10 +192,6 @@ ontology
 					text = <"Dancing">
 					description = <"Dancing.">
 				>
-				["at0009"] = <
-					text = <"Soccer">
-					description = <"Soccer.">
-				>
 				["at0010"] = <
 					text = <"Gardening">
 					description = <"Gardening.">
@@ -231,7 +246,7 @@ ontology
 				>
 				["at0023"] = <
 					text = <"Strength Training">
-					description = <"Football.">
+					description = <"Strength Training">
 				>
 				["at0024"] = <
 					text = <"Surfing">
@@ -303,6 +318,350 @@ ontology
 				>
 				["at0041"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Körperliche Aktivität">
+					description = <"*Setting goals for patients physical activity (either physical exercises or general activity). (en)">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Körperliche Aktivität">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Aerobic">
+					description = <"Aerobic">
+				>
+				["at0006"] = <
+					text = <"Basketball">
+					description = <"Basketball">
+				>
+				["at0007"] = <
+					text = <"Radfahren">
+					description = <"Radfahren">
+				>
+				["at0008"] = <
+					text = <"Tanzen">
+					description = <"Tanzen">
+				>
+				["at0010"] = <
+					text = <"Gartenarbeit">
+					description = <"Gartenarbeit">
+				>
+				["at0011"] = <
+					text = <"Wandern">
+					description = <"Wandern">
+				>
+				["at0012"] = <
+					text = <"Reiten">
+					description = <"Reiten">
+				>
+				["at0013"] = <
+					text = <"Bügeln">
+					description = <"Bügeln">
+				>
+				["at0014"] = <
+					text = <"Joggen">
+					description = <"Joggen">
+				>
+				["at0015"] = <
+					text = <"Laufen">
+					description = <"Laufen">
+				>
+				["at0016"] = <
+					text = <"Wischen">
+					description = <"Wischen">
+				>
+				["at0017"] = <
+					text = <"Mountainbiken">
+					description = <"Mountainbiken">
+				>
+				["at0018"] = <
+					text = <"Malen">
+					description = <"Malen">
+				>
+				["at0019"] = <
+					text = <"Segeln">
+					description = <"Segeln">
+				>
+				["at0020"] = <
+					text = <"Skifahren">
+					description = <"Skifahren">
+				>
+				["at0021"] = <
+					text = <"Snowboarden">
+					description = <"Snowboarden">
+				>
+				["at0022"] = <
+					text = <"Fußball">
+					description = <"Fußball">
+				>
+				["at0023"] = <
+					text = <"Krafttraining">
+					description = <"Krafttraining">
+				>
+				["at0024"] = <
+					text = <"Surfen">
+					description = <"Surfen">
+				>
+				["at0025"] = <
+					text = <"Schwimmen">
+					description = <"Schwimmen">
+				>
+				["at0026"] = <
+					text = <"Tennis">
+					description = <"Tennis">
+				>
+				["at0027"] = <
+					text = <"Staubsaugen">
+					description = <"Staubsaugen">
+				>
+				["at0028"] = <
+					text = <"Volleyball">
+					description = <"Volleyball">
+				>
+				["at0029"] = <
+					text = <"Gehen">
+					description = <"Gehen">
+				>
+				["at0030"] = <
+					text = <"Gewichtheben">
+					description = <"Gewichtheben">
+				>
+				["at0031"] = <
+					text = <"Windsurfen">
+					description = <"Windsurfen">
+				>
+				["at0032"] = <
+					text = <"Yoga">
+					description = <"Yoga">
+				>
+				["at0033"] = <
+					text = <"Andere">
+					description = <"Andere">
+				>
+				["at0034"] = <
+					text = <"Dauer">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Schritte">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Intensität der körperlichen Betätigung">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Light (en)">
+					description = <"*Recreational and household activities. (e.g. bowling, ironing). (en)">
+				>
+				["at0038"] = <
+					text = <"*Moderate (en)">
+					description = <"*Feeling of walking at a normal pace. (en)">
+				>
+				["at0039"] = <
+					text = <"*Hard (en)">
+					description = <"*Harder than walking but not as strenuous as running. (en)">
+				>
+				["at0040"] = <
+					text = <"*Very hard (en)">
+					description = <"*Feeling of running. (en)">
+				>
+				["at0041"] = <
+					text = <"Kommentar">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Erweiterung">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Activité physique">
+					description = <"*Setting goals for patients physical activity (either physical exercises or general activity). (en)">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Activité physique">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Aérobic">
+					description = <"Aérobic">
+				>
+				["at0006"] = <
+					text = <"Basket-ball">
+					description = <"Basket-ball">
+				>
+				["at0007"] = <
+					text = <"Cyclisme">
+					description = <"Cyclisme">
+				>
+				["at0008"] = <
+					text = <"Danse">
+					description = <"Danse">
+				>
+				["at0010"] = <
+					text = <"Jardinage">
+					description = <"Jardinage">
+				>
+				["at0011"] = <
+					text = <"Randonnée pédestre">
+					description = <"Randonnée pédestre">
+				>
+				["at0012"] = <
+					text = <"Équitation">
+					description = <"Équitation">
+				>
+				["at0013"] = <
+					text = <"Repassage">
+					description = <"Repassage">
+				>
+				["at0014"] = <
+					text = <"Jogging">
+					description = <"Jogging">
+				>
+				["at0015"] = <
+					text = <"Course à pied">
+					description = <"Course à pied">
+				>
+				["at0016"] = <
+					text = <"Lavage">
+					description = <"Lavage">
+				>
+				["at0017"] = <
+					text = <"Vélo de montagne">
+					description = <"Vélo de montagne">
+				>
+				["at0018"] = <
+					text = <"Peinture">
+					description = <"Peinture">
+				>
+				["at0019"] = <
+					text = <"Voile">
+					description = <"Voile">
+				>
+				["at0020"] = <
+					text = <"Ski">
+					description = <"Ski">
+				>
+				["at0021"] = <
+					text = <"Surf des neiges">
+					description = <"Surf des neiges">
+				>
+				["at0022"] = <
+					text = <"Football">
+					description = <"Football">
+				>
+				["at0023"] = <
+					text = <"Entraînement musculaire">
+					description = <"Entraînement musculaire">
+				>
+				["at0024"] = <
+					text = <"Surf">
+					description = <"Surf">
+				>
+				["at0025"] = <
+					text = <"Natation">
+					description = <"Natation">
+				>
+				["at0026"] = <
+					text = <"Tennis">
+					description = <"Tennis">
+				>
+				["at0027"] = <
+					text = <"Aspiration">
+					description = <"Aspiration">
+				>
+				["at0028"] = <
+					text = <"Volley-ball">
+					description = <"Volley-ball">
+				>
+				["at0029"] = <
+					text = <"Marche">
+					description = <"Marche">
+				>
+				["at0030"] = <
+					text = <"Haltérophilie">
+					description = <"Haltérophilie">
+				>
+				["at0031"] = <
+					text = <"Planche à voile">
+					description = <"Planche à voile">
+				>
+				["at0032"] = <
+					text = <"Yoga">
+					description = <"Yoga">
+				>
+				["at0033"] = <
+					text = <"Autres activités">
+					description = <"Autres activités">
+				>
+				["at0034"] = <
+					text = <"Durée de l'activité physique">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Nombre de pas">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Intensité de l'exercice">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Light (en)">
+					description = <"*Recreational and household activities. (e.g. bowling, ironing). (en)">
+				>
+				["at0038"] = <
+					text = <"*Moderate (en)">
+					description = <"*Feeling of walking at a normal pace. (en)">
+				>
+				["at0039"] = <
+					text = <"*Hard (en)">
+					description = <"*Harder than walking but not as strenuous as running. (en)">
+				>
+				["at0040"] = <
+					text = <"*Very hard (en)">
+					description = <"*Feeling of running. (en)">
+				>
+				["at0041"] = <
+					text = <"Commentaire">
 					description = <"">
 				>
 				["at0043"] = <
