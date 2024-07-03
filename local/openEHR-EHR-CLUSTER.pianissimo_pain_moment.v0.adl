@@ -6,18 +6,38 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
+		["date"] = <"2024-06-28">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2024-06-28">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -26,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"582a214d52c76b6f73a672ff7312cef2">
+		["MD5-CAM-1.0.1"] = <"154e91050d850d9db9bb91683522d338">
 		["build_uid"] = <"288ec3f6-139e-3e03-b6bf-8ea034813b97">
 	>
 
@@ -94,6 +114,78 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Carrying heavy loads">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo Schmerzmoment">
+					description = <"*pianissimo pain moment (en)">
+				>
+				["at0001"] = <
+					text = <"Art der Tätigkeit Moment">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"In Ruhe">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"In Bewegung">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Spezifikation der Tätigkeit">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Gehen">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Benutzung des Gelenks">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Tragen von schweren Lasten">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Pianissimo pain moment (en)">
+					description = <"*pianissimo pain moment (en)">
+				>
+				["at0001"] = <
+					text = <"Type de moment d'activité">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Repos">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"En mouvement">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Spécification d'activité">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Marche">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"À l’utilisation de l’articulation">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Transport de charges lourdes">
 					description = <"">
 				>
 			>
