@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.11",
+      "sem_ver" : "0.1.12",
       "build_uid" : "8ff07ecd-3328-456b-8589-1a668aafa5db",
-      "MD5-CAM-1.0.1" : "4f0cc6b578ecfe0f8f4127ef49bb8882",
+      "MD5-CAM-1.0.1" : "9212c61ae1d75140fe576e43ca72dd34",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -266,7 +266,7 @@
             "doc_variable_id" : "Q1"
           },
           "/data[at0001]/events[at0002.1]/data[at0003]/items[at0022]/items[at0005.1]" : {
-            "doc_variable_id" : "Q3"
+            "doc_variable_id" : "Q4"
           },
           "/data[at0001]/events[at0002.1]/data[at0003]/items[at0022]/items[at0040.1]" : {
             "doc_variable_id" : "Q2"
@@ -275,13 +275,16 @@
             "doc_variable_id" : "Q1"
           },
           "/data[at0001]/events[at0002.1]/data[at0003]/items[at0022]/items[at0037.1]" : {
-            "doc_variable_id" : "Q3"
+            "doc_variable_id" : "Q4"
           },
           "/data[at0001]/events[at0002.1]/data[at0003]/items[at0022]/items[at0037.2]" : {
             "doc_variable_id" : "Q5"
           },
           "/data[at0001]/events[at0002.1]/data[at0003]/items[at0022]/items[at0037.3]" : {
             "doc_variable_id" : "Q2"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0028.1]" : {
+            "doc_variable_id" : "Q1"
           }
         }
       }
@@ -390,92 +393,93 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT and internal"
+                                    "value" : "SNOMED-CT_internal"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT and internal" ],
+                                  "selectedTerminologies" : [ "SNOMED-CT_internal" ],
+                                  "limitToList" : false,
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "88289009",
                                     "value" : "Football"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "415356001",
                                     "value" : "Rugby"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "25976000",
                                     "value" : "Handball"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "25731005",
                                     "value" : "Basketball"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "26550000",
                                     "value" : "Tennis"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "29506000",
                                     "value" : "Boxing"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "15442001",
                                     "value" : "Judo"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "6351001",
                                     "value" : "Martial arts"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "15530008",
                                     "value" : "Golfing"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "20461001",
                                     "value" : "Swimming"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "102399007",
                                     "value" : "Canoeing"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "414446006",
                                     "value" : "Ice hockey"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "47517001",
                                     "value" : "Horseback riding"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "volley",
                                     "value" : "Volleyball"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "run",
                                     "value" : "Running"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "cycli",
                                     "value" : "Cycling"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "gymn",
                                     "value" : "Gymnastics"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "athlet",
                                     "value" : "Athletics"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "watpol",
                                     "value" : "Water polo"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "tabtennis",
                                     "value" : "Table tennis"
                                   }, {
-                                    "terminologyId" : "SNOMED-CT and internal",
+                                    "terminologyId" : "SNOMED-CT_internal",
                                     "code" : "watspo",
                                     "value" : "Water sports"
                                   } ]
@@ -508,45 +512,6 @@
                                   },
                                   "constraint" : [ "ac0.8" ],
                                   "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "1..1",
-                          "nodeId" : "at0035.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "hl7VS-yes-no-Indicator"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "hl7VS-yes-no-Indicator" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "hl7VS-yes-no-Indicator",
-                                    "code" : "Y",
-                                    "value" : "Yes"
-                                  }, {
-                                    "terminologyId" : "hl7VS-yes-no-Indicator",
-                                    "code" : "N",
-                                    "value" : "No"
-                                  } ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -689,6 +654,45 @@
                                     "upperIncluded" : true,
                                     "lowerUnbounded" : false,
                                     "upperUnbounded" : false
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0035.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "hl7VS-yes-no-Indicator"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "hl7VS-yes-no-Indicator" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "hl7VS-yes-no-Indicator",
+                                    "code" : "Y",
+                                    "value" : "Yes"
+                                  }, {
+                                    "terminologyId" : "hl7VS-yes-no-Indicator",
+                                    "code" : "N",
+                                    "value" : "No"
                                   } ]
                                 } ]
                               } ],
