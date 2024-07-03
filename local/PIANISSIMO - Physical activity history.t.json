@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.12",
+      "sem_ver" : "0.1.13",
       "build_uid" : "8ff07ecd-3328-456b-8589-1a668aafa5db",
-      "MD5-CAM-1.0.1" : "9212c61ae1d75140fe576e43ca72dd34",
+      "MD5-CAM-1.0.1" : "065aaf30821000351bdc9fb336f5df30",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -239,7 +239,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "7e42f1126accb25405ebfce823d720c6"
+        "PARENT:MD5-CAM-1.0.1" : "8f8674fab922c7da26c593c6cc01763a"
       },
       "details" : {
         "en" : {
@@ -253,6 +253,32 @@
           "purpose" : "To create a framework for recording answers to pre-defined screening questions about physical activity.",
           "keywords" : [ "screening, questionnaire, physical activity" ],
           "use" : "Use to create a framework for recording answers to pre-defined screening questions about physical activity.\n\nCommon use cases include, but are not limited to:\n- Systematic inquiry in any consultation, for example:\n--- Do you have any physical activity? Yes, No, Unknown.\n--- Have you practiced cycling in the past four weeks? Yes, No, Unknown.\n- Specific questioning related to overall physical activity.\n\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\n\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you practicing martial arts now?\" compared to \"Have you practiced martial arts in the past 4 weeks?\n\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\n\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a physical activity it is recommended that clinical system record and persist the specific details about the physical activity using the EVALUATION.physical_activity_summary archetype nested within the Additional details SLOT in this archetype.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -766,6 +792,88 @@
             "description" : "Indication of timing related to the specific physical activity.",
             "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
           }
+        },
+        "de" : {
+          "at0037.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0037.1",
+            "text" : "Anzahl der Jahre in der Haupttätigkeit",
+            "description" : "Angabe des Zeitpunkts in Bezug auf die spezifische körperliche Aktivität.",
+            "comment" : "Das Datenelement \"Zeitpunkt\" wurde absichtlich locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden kann, um zu erfassen, wann die spezifische körperliche Aktivität stattgefunden hat. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit der spezifischen körperlichen Aktivität; das Zeitintervall, in dem die spezifische körperliche Aktivität stattfand; die Dauer der spezifischen körperlichen Aktivität; das Alter der Person zum Zeitpunkt der spezifischen körperlichen Aktivität; oder die Zeitspanne seit dem Auftreten der Aktivität. Ein Teildatum ist unter Verwendung des Datentyps DV_DATE_TIME gültig, um nur ein Jahr zu erfassen."
+          },
+          "at0037.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0037.2",
+            "text" : "Anzahl der Jahre, in denen die Ausübung der Haupttätigkeit eingestellt wurde",
+            "description" : "Angabe des Zeitpunkts in Bezug auf die spezifische körperliche Aktivität.",
+            "comment" : "Das Datenelement \"Zeitpunkt\" wurde absichtlich locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden kann, um zu erfassen, wann die spezifische körperliche Aktivität stattgefunden hat. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit der spezifischen körperlichen Aktivität; das Zeitintervall, in dem die spezifische körperliche Aktivität stattfand; die Dauer der spezifischen körperlichen Aktivität; das Alter der Person zum Zeitpunkt der spezifischen körperlichen Aktivität; oder die Zeitspanne seit dem Auftreten der Aktivität. Ein Teildatum ist unter Verwendung des Datentyps DV_DATE_TIME gültig, um nur ein Jahr zu erfassen."
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.9" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.9",
+            "description" : ""
+          },
+          "at0037.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0037.3",
+            "text" : "Fréquence de l'activité principale",
+            "description" : "Angabe des Zeitpunkts in Bezug auf die spezifische körperliche Aktivität.",
+            "comment" : "Das Datenelement \"Zeitpunkt\" wurde absichtlich locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden kann, um zu erfassen, wann die spezifische körperliche Aktivität stattgefunden hat. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit der spezifischen körperlichen Aktivität; das Zeitintervall, in dem die spezifische körperliche Aktivität stattfand; die Dauer der spezifischen körperlichen Aktivität; das Alter der Person zum Zeitpunkt der spezifischen körperlichen Aktivität; oder die Zeitspanne seit dem Auftreten der Aktivität. Ein Teildatum ist unter Verwendung des Datentyps DV_DATE_TIME gültig, um nur ein Jahr zu erfassen."
+          }
+        },
+        "fr" : {
+          "at0037.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0037.1",
+            "text" : "Nombre d'années d'exercice de l'activité principale",
+            "description" : "*Indication of timing related to the specific physical activity. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          },
+          "at0037.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0037.2",
+            "text" : "Nombre d'années d'arrêt de l'activité principale",
+            "description" : "*Indication of timing related to the specific physical activity. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.9" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.9",
+            "description" : ""
+          },
+          "at0037.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0037.3",
+            "text" : "Fréquence de l'activité principale",
+            "description" : "*Indication of timing related to the specific physical activity. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          }
         }
       },
       "termBindings" : { },
@@ -830,7 +938,27 @@
       },
       "codeString" : "en"
     },
-    "translations" : [ ]
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
