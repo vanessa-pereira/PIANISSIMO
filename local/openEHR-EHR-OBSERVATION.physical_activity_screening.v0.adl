@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -17,6 +29,10 @@ description
 	lifecycle_state = <"unmanaged">
 	other_contributors = <"Cheng Yexuan, ZJU (3160100913@zju.edu.cn)", ...>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To create a framework for recording answers to pre-defined screening questions about physical activity.">
@@ -37,6 +53,10 @@ The source of the information in a questionnaire response may vary in different 
 
 This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a physical activity it is recommended that clinical system record and persist the specific details about the physical activity using the EVALUATION.physical_activity_summary archetype nested within the Additional details SLOT in this archetype.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -44,8 +64,8 @@ This archetype has been designed to be used as a screening tool or to record sim
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"87c2d0da95982c58b0069a7083db2aea">
 		["build_uid"] = <"d1a19c10-97d1-30f2-a8b5-762a02401c52">
-		["MD5-CAM-1.0.1"] = <"7e42f1126accb25405ebfce823d720c6">
 	>
 
 definition
@@ -270,6 +290,238 @@ For example: 'pre-admission screening' or the name of the actual questionnaire."
 				>
 				["at0043"] = <
 					text = <"Competition">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Screening auf körperliche Aktivität">
+					description = <"Eine Reihe von Fragen und zugehörigen Antworten, die für das Screening auf körperliche Aktivität verwendet werden.">
+					comment = <"Die Antworten können Selbstauskünfte sein,">
+				>
+				["at0001"] = <
+					text = <"Geschichte">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Jedes Ereignis">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Name der körperlichen Aktivität">
+					description = <"*Identification of a specific physical activity, by name. (en)">
+					comment = <"*Coding of the 'physical activity' with a terminology is preferred, where possible. (en)">
+				>
+				["at0005"] = <
+					text = <"*Currently practicing? (en)">
+					description = <"*The specific physical activity is still being practiced? (en)">
+					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0021"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+				["at0022"] = <
+					text = <"*Specific physical activity (en)">
+					description = <"*Details about a specific physical activity or grouping of physical activity relevant for the screening purpose. (en)">
+				>
+				["at0023"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Additional details (en)">
+					description = <"*Structured details or questions about the specific physical activity. (en)">
+				>
+				["at0027"] = <
+					text = <"*Unknown (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Any physical activity? (en)">
+					description = <"*Is there a history of any physical activity for the screening purpose? (en)">
+					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
+				>
+				["at0031"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Unknown (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Screening purpose (en)">
+					description = <"*The context or reason for screening. (en)">
+					comment = <"*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.
+For example: 'pre-admission screening' or the name of the actual questionnaire. (en)">
+				>
+				["at0035"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the specific physical activity question, not captured in other fields. (en)">
+				>
+				["at0036"] = <
+					text = <"*Description (en)">
+					description = <"*Narrative description about the history of any symptoms or signs relevant for the screening purpose. (en)">
+				>
+				["at0037"] = <
+					text = <"*Timing (en)">
+					description = <"*Indication of timing related to the specific physical activity. (en)">
+					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
+				>
+				["at0039"] = <
+					text = <"*Additional details (en)">
+					description = <"*Structured details or questions about screening for physical activity (en)">
+				>
+				["at0040"] = <
+					text = <"*Activity level category (en)">
+					description = <"*The level of activity for the specific physical activity name. Not to be confused with the physical activity level (PAL) assessment. (en)">
+				>
+				["at0041"] = <
+					text = <"*Leisure (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Regular (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Competition (en)">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Physical activity screening (en)">
+					description = <"*Series of questions and associated answers used to screen for physical activity. (en)">
+					comment = <"*The answers may be self-reported. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Physical activity name (en)">
+					description = <"*Identification of a specific physical activity, by name. (en)">
+					comment = <"*Coding of the 'physical activity' with a terminology is preferred, where possible. (en)">
+				>
+				["at0005"] = <
+					text = <"*Currently practicing? (en)">
+					description = <"*The specific physical activity is still being practiced? (en)">
+					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0021"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+				["at0022"] = <
+					text = <"*Specific physical activity (en)">
+					description = <"*Details about a specific physical activity or grouping of physical activity relevant for the screening purpose. (en)">
+				>
+				["at0023"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Additional details (en)">
+					description = <"*Structured details or questions about the specific physical activity. (en)">
+				>
+				["at0027"] = <
+					text = <"*Unknown (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Any physical activity? (en)">
+					description = <"*Is there a history of any physical activity for the screening purpose? (en)">
+					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
+				>
+				["at0031"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Unknown (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Screening purpose (en)">
+					description = <"*The context or reason for screening. (en)">
+					comment = <"*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.
+For example: 'pre-admission screening' or the name of the actual questionnaire. (en)">
+				>
+				["at0035"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the specific physical activity question, not captured in other fields. (en)">
+				>
+				["at0036"] = <
+					text = <"*Description (en)">
+					description = <"*Narrative description about the history of any symptoms or signs relevant for the screening purpose. (en)">
+				>
+				["at0037"] = <
+					text = <"*Timing (en)">
+					description = <"*Indication of timing related to the specific physical activity. (en)">
+					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
+				>
+				["at0039"] = <
+					text = <"*Additional details (en)">
+					description = <"*Structured details or questions about screening for physical activity (en)">
+				>
+				["at0040"] = <
+					text = <"*Activity level category (en)">
+					description = <"*The level of activity for the specific physical activity name. Not to be confused with the physical activity level (PAL) assessment. (en)">
+				>
+				["at0041"] = <
+					text = <"*Leisure (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Regular (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Competition (en)">
 					description = <"">
 				>
 			>
