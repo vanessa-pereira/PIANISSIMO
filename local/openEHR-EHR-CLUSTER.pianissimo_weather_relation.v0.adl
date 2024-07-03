@@ -6,18 +6,38 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
+		["date"] = <"2024-06-28">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2024-06-28">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -26,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"70da296806d169421929a02aade66156">
+		["MD5-CAM-1.0.1"] = <"0d57f41b174564b4e4c8c16a709a71fa">
 		["build_uid"] = <"2a2c877d-9a1f-3024-b6e5-564b17619e3f">
 	>
 
@@ -103,6 +123,94 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Hot">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo Wetterbericht">
+					description = <"*pianissimo_weather_relation (en)">
+				>
+				["at0001"] = <
+					text = <"Aktuelle Wetterlage">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Regen">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Schnee">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Bewölkt">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Sonnig">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Wetterwahrnehmung der Patienten">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Kalt">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Gemäßigt">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Scharf">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pianissimo relation météorologique">
+					description = <"*pianissimo_weather_relation (en)">
+				>
+				["at0001"] = <
+					text = <"Conditions météorologiques actuelles">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Pluie">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Neige">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Nuageux">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Ensoleillé">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Perception des conditions météorologiques par les patients">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Froid">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Tempéré">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Chau">
 					description = <"">
 				>
 			>
