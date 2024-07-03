@@ -64,7 +64,7 @@ This archetype has been designed to be used as a screening tool or to record sim
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f061113019d011dfa8fe5e74ef4cd996">
+		["MD5-CAM-1.0.1"] = <"8f8674fab922c7da26c593c6cc01763a">
 		["build_uid"] = <"d1a19c10-97d1-30f2-a8b5-762a02401c52">
 	>
 
@@ -417,7 +417,7 @@ Zum Beispiel: 'Pre-Admission Screening' oder der Name des eigentlichen Frageboge
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Physical activity screening (en)">
+					text = <"Dépistage de l'activité physique">
 					description = <"*Series of questions and associated answers used to screen for physical activity. (en)">
 					comment = <"*The answers may be self-reported. (en)">
 				>
@@ -426,7 +426,7 @@ Zum Beispiel: 'Pre-Admission Screening' oder der Name des eigentlichen Frageboge
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event (en)">
+					text = <"Tout événement">
 					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
 				>
 				["at0003"] = <
@@ -434,12 +434,12 @@ Zum Beispiel: 'Pre-Admission Screening' oder der Name des eigentlichen Frageboge
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Physical activity name (en)">
+					text = <"Nom de l'activité physique">
 					description = <"*Identification of a specific physical activity, by name. (en)">
 					comment = <"*Coding of the 'physical activity' with a terminology is preferred, where possible. (en)">
 				>
 				["at0005"] = <
-					text = <"*Currently practicing? (en)">
+					text = <"Pratiquée actuellement ?">
 					description = <"*The specific physical activity is still being practiced? (en)">
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
 				>
@@ -448,84 +448,84 @@ Zum Beispiel: 'Pre-Admission Screening' oder der Name des eigentlichen Frageboge
 					description = <"@ internal @">
 				>
 				["at0021"] = <
-					text = <"*Extension (en)">
+					text = <"Extension">
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
 				["at0022"] = <
-					text = <"*Specific physical activity (en)">
+					text = <"Activité physique spécifique">
 					description = <"*Details about a specific physical activity or grouping of physical activity relevant for the screening purpose. (en)">
 				>
 				["at0023"] = <
-					text = <"*Yes (en)">
+					text = <"Oui">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*No (en)">
+					text = <"Non">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Additional details (en)">
+					text = <"Détails supplémentaires">
 					description = <"*Structured details or questions about the specific physical activity. (en)">
 				>
 				["at0027"] = <
-					text = <"*Unknown (en)">
+					text = <"Inconnu">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Any physical activity? (en)">
+					text = <"Toute activité physique ?">
 					description = <"*Is there a history of any physical activity for the screening purpose? (en)">
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)">
 				>
 				["at0031"] = <
-					text = <"*Yes (en)">
+					text = <"Oui">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*No (en)">
+					text = <"Non">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Unknown (en)">
+					text = <"Inconnu">
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*Screening purpose (en)">
+					text = <"Objectif du dépistage">
 					description = <"*The context or reason for screening. (en)">
 					comment = <"*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.
 For example: 'pre-admission screening' or the name of the actual questionnaire. (en)">
 				>
 				["at0035"] = <
-					text = <"*Comment (en)">
+					text = <"Commentaire">
 					description = <"*Additional narrative about the specific physical activity question, not captured in other fields. (en)">
 				>
 				["at0036"] = <
-					text = <"*Description (en)">
+					text = <"Description">
 					description = <"*Narrative description about the history of any symptoms or signs relevant for the screening purpose. (en)">
 				>
 				["at0037"] = <
-					text = <"*Timing (en)">
+					text = <"Timing">
 					description = <"*Indication of timing related to the specific physical activity. (en)">
 					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific physical activity occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the specific physical activity; the interval of time during which the specific physical activity occurred; the duration of the specific physical activity; the age of the individual at the time of the specific physical activity occurred; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
 				>
 				["at0039"] = <
-					text = <"*Additional details (en)">
+					text = <"Détails supplémentaires">
 					description = <"*Structured details or questions about screening for physical activity (en)">
 				>
 				["at0040"] = <
-					text = <"*Activity level category (en)">
+					text = <"Catégorie de niveau d'activité">
 					description = <"*The level of activity for the specific physical activity name. Not to be confused with the physical activity level (PAL) assessment. (en)">
 				>
 				["at0041"] = <
-					text = <"*Leisure (en)">
+					text = <"Loisirs">
 					description = <"">
 				>
 				["at0042"] = <
-					text = <"*Regular (en)">
+					text = <"Régulier">
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"*Competition (en)">
+					text = <"Compétition">
 					description = <"">
 				>
 			>
