@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.3",
+      "sem_ver" : "0.1.4",
       "build_uid" : "c8bf2dfb-8c76-4fe7-8bd7-300eff04f8e3",
-      "MD5-CAM-1.0.1" : "b487cb7da7a7879cd067fd0fd988f723",
+      "MD5-CAM-1.0.1" : "b863127c2a78eb49bcd0b56d56e18f8e",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -621,19 +621,19 @@
                           "@type" : "C_ARCHETYPE_ROOT",
                           "rmTypeName" : "CLUSTER",
                           "occurrences" : "0..1",
-                          "nodeId" : "at0026.3",
+                          "nodeId" : "at0026.4",
                           "attributes" : [ ],
                           "attributeTuples" : [ ],
-                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-pianissimo_weather_relation-001.v0",
+                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-pianissimo_pain_moment-001.v0",
                           "referenceType" : "archetypeOverlay"
                         }, {
                           "@type" : "C_ARCHETYPE_ROOT",
                           "rmTypeName" : "CLUSTER",
                           "occurrences" : "0..1",
-                          "nodeId" : "at0026.4",
+                          "nodeId" : "at0026.3",
                           "attributes" : [ ],
                           "attributeTuples" : [ ],
-                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-pianissimo_pain_moment-001.v0",
+                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-pianissimo_weather_relation-001.v0",
                           "referenceType" : "archetypeOverlay"
                         } ]
                       } ],
@@ -841,7 +841,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "62823A86BC1C2B02574125E21F5DECCB"
+        "PARENT:MD5-CAM-1.0.1" : "E44329D7ED80902D20F8490D1DD97F31"
       },
       "details" : {
         "de" : {
@@ -963,6 +963,21 @@
           "keywords" : [ "locatie", "structuur", "anatomisch", "anatomische regio", "topografische anatomie", "macroscopisch" ],
           "use" : "Gebruik om gestructureerde details over een structuur op of in het menselijk lichaam te identificeren en vast te leggen.",
           "misuse" : "Niet gebruiken om meerdere unilaterale/bilaterale structuren vast te leggen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Identifier et enregistrer des détails structurés concernant un site physique unique sur ou dans le corps humain en utilisant des termes anatomiques macroscopiques.",
+          "keywords" : [ "emplacement", "site", "anatomique", "région anatomique", "anatomie topographique", "macroscopique", "anatomique", "anatomie" ],
+          "use" : "À utiliser pour enregistrer des détails structurés et cohérents sur un seul site physique identifié sur ou dans le corps humain. \r\n\r\nCet archétype est spécifiquement conçu pour être utilisé dans le contexte des archétypes ENTRY ou CLUSTER appropriés qui fournissent le contexte de la localisation anatomique. \r\n\r\nEn tant qu'élément fondamental de la pratique clinique, les cliniciens peuvent décrire les localisations anatomiques d'une myriade de façons complexes et variables. Dans la pratique, certains archétypes contiennent un seul élément de données pour une simple description du site corporel - par exemple, OBSERVATION.blood_pressure et CLUSTER.symptom pour la description d'une douleur à l'oreille. Dans cette situation, où l'ensemble des valeurs est prévisible et simple à définir, cet élément de données unique est un moyen très précis et pragmatique d'enregistrer le site dans le corps et de l'interroger à une date ultérieure. Toutefois, lorsque l'emplacement anatomique n'est pas bien défini ou doit être déterminé au moment de l'exécution, il peut être plus souple d'utiliser cet archétype structuré. Par exemple, lorsque n'importe quel symptôme peut être enregistré sans que le type de symptôme soit prédéfini, il peut être utile d'autoriser l'utilisation de cet archétype pour définir spécifiquement une localisation anatomique dans le corps. Dans ce cas, l'archétype CLUSTER.symptom comporte également un SLOT pour \"Localisation anatomique détaillée\", qui peut inclure cet archétype afin d'assurer une flexibilité maximale dans l'enregistrement des données relatives à la localisation anatomique.\r\n\r\nCet archétype permet d'enregistrer des sites anatomiques complexes et structurés. Par exemple, le battement de l'apex du cœur se trouve généralement au cinquième espace intercostal gauche sur la ligne médio-claviculaire, la sensibilité au point de McBurney sur la paroi abdominale ou une lacération sur la face palmaire de la partie proximale du pouce droit.\r\n\r\nUne combinaison des éléments de données de cet archétype peut être utilisée pour enregistrer individuellement chaque composante d'une expression terminologique postcoordonnée représentant le site anatomique.\r\n\r\nLe SLOT \"Structure alternative\" permet d'inclure des archétypes supplémentaires qui fournissent une structure alternative pour décrire le même site corporel, comme CLUSTER.anatomical_location_relative ou CLUSTER.anatomical_location_clock, si cela s'avère nécessaire. Dans le cas où cet archétype ne peut être utilisé que pour nommer une partie du corps importante et/ou non spécifique, l'utilisation supplémentaire de l'archétype CLUSTER.anatomical_location_relative permettra d'enregistrer une localisation plus précise - par exemple, 2 cm en avant de la fosse cubitale de l'avant-bras gauche ou 4 cm en dessous du rebord costal R sur la paroi thoracique, au niveau de la ligne claviculaire médiane.\r\n\r\nSi cet archétype est utilisé dans d'autres archétypes où le sujet de soins spécifié n'est pas la personne pour laquelle le dossier est créé, par exemple un fœtus in-utero, la localisation anatomique identifiera alors un site corporel sur ou dans le fœtus.",
+          "misuse" : "Ne pas utiliser pour spécifier les occurrences unilatérales/bilatérales d'une caractéristique anatomique.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -1131,15 +1146,6 @@
           "nodeId" : "at0023.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0053.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-range_of_motion-001.v1",
-          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -1256,6 +1262,20 @@
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
           }
@@ -1379,6 +1399,20 @@
         "name" : "Michiel Klitsie",
         "organisation" : "Nedap Healthcare",
         "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -1554,267 +1588,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "7fa958b4-8ab4-4fd7-aa81-69a3d6562404",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "AFF2B50F9803DB3A81DE95E991760200"
-      },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Måling av bevegelsesutslag for en spesifisert enkel eller sammensatt bevegelse i et ledd eller segment av ryggraden.",
-          "keywords" : [ "ROM, AAROM, PROM, AROM, ledd, bevegelse, vinkel" ],
-          "use" : "Brukes for måling av bevegelsesutslag for en enkel eller sammensatt bevegelse i et ledd eller segment av ryggraden.\r\n\r\nDenne arketypen har vært designet spesifikt for å kunne brukes i SLOT'et \"Undersøkelsesdetaljer\" i arketypen OBSERVATION.exam (Funn ved fysisk undersøkelse) eller i en spesialisering av arketypen CLUSTER.exam for et spesifikt ledd, men kan også bli brukt i andre ENTRY- eller CLUSTER-arketyper der det er klinisk passende.\r\n\r\nHvilket spesifikt ledd undersøkelsen omfatter registeres i dataelementet \"Undersøkt organsystem eller struktur\" i den CLUSTER.exam arketypen hvor denne arketypen er nøstet inn. For å registrere flere ulike bevegelser må man bruke flere instanser av denne arketypen.\r\n\r\nVanlige leddbevegelser er lagt til DV_CODED_TEXT datatypen i elementet \"Bevegelse\". Om det er behov for å registrere ytterligere bevegelser kan disse legges til listen over tid.",
-          "misuse" : "Benyttes ikke for å registrere spesifikke, navngitte undersøkelser som utføres på et ledd. For eksempel Thomas test eller Ortolani test for hofteleddet. Bruk exam-hip_joint arketypen for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record measurement of the extent of motion for a specified simple or complex movement around an indentified joint or section of the spine.",
-          "keywords" : [ "ROM, AAROM, PROM, AROM, joint, movement, angle, motion, range" ],
-          "use" : "Use to record the measurement of the extent of motion for a specified simple or complex movement around an indentified joint or section of the spine.\r\n\t\t\t\r\nThis archetype has been specifically designed to be used in the 'Examination findings' SLOT within the CLUSTER.exam or a specialisation of CLUSTER.exam for a specific joint, but can also be used within other ENTRY or CLUSTER archetypes where clinically appropriate.\r\n\r\nThe examined joint is identified in the 'System or structure examined' element of the CLUSTER.exam archetype in which this archetype is nested.  In order to be able to record multiple movements several instances of this archetype will need to be used.\r\n\r\nCommon motions around a joint have been added to the DV_CODED_TEXT data type in the 'Movement' data element. As further joint movements are identified, these can be added to this list over time.",
-          "misuse" : "Not to be used to record the results of specific named tests performed on a joint. For example in the hip the Thomas test or Ortolani test. Use the exam-hip_joint archetype for these purposes.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.range_of_motion.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-range_of_motion-001.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0023.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0024.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "local"
-                  },
-                  "constraint" : [ "ac0.1" ],
-                  "selectedTerminologies" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0027.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
-                  "children" : [ ]
-                } ],
-                "tuples" : [ {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "deg" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lower" : -360.0,
-                      "upper" : 360.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : true,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : false
-                    } ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "mm" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "cm" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                } ]
-              } ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0035.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0029.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Motion of a joint",
-            "description" : "Measurement of the extent of motion for a specified simple or complex movement around an indentified joint or section of the spine."
-          },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
-        "nb" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0025", "at0034", "at0026" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "9a6768f4-250f-4422-bfa5-20c0835b8c82",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand, Hanne Marte Bårholm",
-        "organisation" : "Helse Vest IKT",
-        "email" : "john.tore.valand@helse-vest-ikt.no, hanne.marte.sandal.barholm@helse-vest-ikt.no"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "514e91dd-099b-4fb0-9f2d-3031d660c540",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -1824,7 +1597,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "BBF04254F8BEA1421AF2CC97A0B64624"
+        "PARENT:MD5-CAM-1.0.1" : "ABC35D9EE65C8802059F7480FB661A26"
       },
       "details" : {
         "de" : {
@@ -1884,6 +1657,21 @@
           "use" : "Use to record structured information about the intended timing of a therapeutic or diagnostic activity within any 24 hour period.\r\n\r\nThis archetype is designed to be used within the 'Timing' SLOT within the CLUSTER.dosage archetype, but can also be used in other CLUSTER and ENTRY class archetypes where clinically appropriate.",
           "misuse" : "Not to be used for recording timing details over periods longer than a single 24 hour period. Use the CLUSTER.timing_repetition archetype for this purpose.",
           "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer des informations structurées sur le moment prévu pour une activité thérapeutique ou diagnostique au cours d'une période de 24 heures.",
+          "keywords" : [ "timming", "l'administration", "dosage", "fréquence", "intervalle", "ordre", "recommandation", "horaire", "par jour" ],
+          "use" : "A utiliser pour enregistrer des informations structurées sur le moment prévu pour une activité thérapeutique ou diagnostique au cours d'une période de 24 heures.\r\n\r\nCet archétype est conçu pour être utilisé dans le SLOT 'Timing' de l'archétype CLUSTER.dosage, mais peut également être utilisé dans d'autres archétypes de classe CLUSTER et ENTRY lorsque cela est cliniquement approprié.",
+          "misuse" : "Ne doit pas être utilisé pour enregistrer les détails du chronométrage sur des périodes plus longues qu'une seule période de 24 heures. Utilisez l'archétype CLUSTER.timing_repetition à cette fin.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -2566,7 +2354,8 @@
         "en" : { },
         "sl" : { },
         "nb" : { },
-        "de" : { }
+        "de" : { },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -2623,6 +2412,20 @@
         "name" : "?"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -2635,7 +2438,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "876BA56A1E975E7F68DC58E6EB81EB33"
+        "PARENT:MD5-CAM-1.0.1" : "A305A90DC502DA8A1F380F8AA4984127"
       },
       "details" : {
         "de" : {
@@ -2700,6 +2503,37 @@
           "misuse" : "*Not to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for recording the administration, dispensing or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording a summary of use of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.\r\n\r\nNot to be used to record a detailed snapshot view about the actual use of a single specified medication, outside of a screening context. - use OBSERVATION.medication_statement for this purpose.\r\n\r\nNot to be used to record details about the positive absence of a specific medication or grouping of medication, outside of a screening context. Use EVALUATION.exclusion_specific for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Créer un cadre pour l'enregistrement des réponses à des questions de dépistage prédéfinies sur l'utilisation de tout médicament ou groupe de médicaments spécifié.",
+          "keywords" : [ "médicament,", "dépistage,", "questionnaire,", "drogue,", "traitement" ],
+          "use" : "À utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions de dépistage prédéfinies concernant l'utilisation de tout médicament ou groupe (y compris les classes) de médicaments spécifié.\r\n\r\nDes exemples de médicaments, de groupes et de classes de médicaments sont respectivement \"acide alendronique\", \"médicaments contre l'ostéoporose\" et \"bisphosphonates\".\r\n\r\nLes cas d'utilisation courants incluent, mais ne sont pas limités à :\r\n- L'interrogation systématique, lors d'une consultation, sur les schémas d'utilisation des médicaments, par exemple :\r\n--- Prenez-vous du paracétamol ? Oui, Non, Inconnu.\r\n--- Avez-vous pris des anticoagulants au cours des quatre dernières semaines ? Oui, Non, Inconnu.\r\n\r\nLa sémantique de cet archétype est intentionnellement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.\r\n\r\nLa structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur un médicament qui a été utilisé à tout moment dans le passé et des informations sur un médicament utilisé dans un intervalle de temps spécifié - par exemple la différence entre \"Utilisez-vous du paracétamol ?\" et \"Avez-vous utilisé des anticoagulants au cours des quatre dernières semaines ?\r\n\r\nLa source des informations contenues dans une réponse à un questionnaire peut varier selon le contexte, mais elle peut être spécifiquement identifiée à l'aide de l'élément \"Fournisseur d'informations\" du modèle de référence.\r\n\r\nCet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le questionnaire de dépistage identifie la présence d'un médicament, il est recommandé que le système clinique enregistre et conserve les détails spécifiques concernant le médicament en utilisant un archétype de médicament approprié, par exemple OBSERVATION.medication_statement pour enregistrer une vue instantanée détaillée de l'utilisation réelle d'un seul médicament spécifié.",
+          "misuse" : "Ne doit pas être utilisé pour enregistrer l'ordre d'administration ou de consommation d'un médicament - utiliser INSTRUCTION.medication_order à cet effet.\r\n\r\nNe doit pas être utilisé pour enregistrer l'administration, la délivrance ou la consommation d'un médicament - utiliser ACTION.medication à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer un résumé de l'utilisation d'un médicament au cours de la vie de l'individu - utiliser EVALUATION.medication_summary à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer un instantané détaillé de l'utilisation réelle d'un seul médicament spécifié, en dehors d'un contexte de dépistage. - Utiliser OBSERVATION.medication_statement à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe doit pas être utilisé pour créer un cadre d'enregistrement des réponses à des questions de dépistage prédéfinies sur les effets indésirables ; utiliser un archétype approprié à cette fin.\r\n\r\nNe pas utiliser pour enregistrer les détails d'une simple liste de sélection où une question peut être enregistrée comme \"présente\" ou \"indéterminée\". Utilisez OBSERVATION.selection_list à cette fin.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0021.1]" : {
+            "doc_variable_id" : "Q3"
+          },
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024.1]" : {
+            "doc_variable_id" : "Q3"
+          },
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0043.1]" : {
+            "doc_variable_id" : "Q4"
+          }
         }
       }
     },
@@ -2784,13 +2618,6 @@
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0043.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
                       "nodeId" : "at0026",
                       "attributes" : [ {
@@ -2815,254 +2642,54 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "ATC_82021"
+                                    "value" : "ATC_2024"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "ATC_82021" ],
+                                  "selectedTerminologies" : [ "ATC_2024" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "A07EC01",
-                                    "value" : "sulfasalazine"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02BE01",
+                                    "value" : "paracetamol"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "J01AA08",
-                                    "value" : "minocycline"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "M01AE01",
+                                    "value" : "Ibuprofen"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L01AA01",
-                                    "value" : "cyclophosphamide"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AX02",
+                                    "value" : "tramadol"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L01BA01",
-                                    "value" : "methotrexate"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA59",
+                                    "value" : "codeine, combinations excl. psycholeptics"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA01",
-                                    "value" : "cyclosporine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA13",
-                                    "value" : "leflunomide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AX01",
-                                    "value" : "azathioprine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AX03",
-                                    "value" : "methotrexate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB01",
-                                    "value" : "sodium aurothiomalate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB03",
-                                    "value" : "auranofin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB04",
-                                    "value" : "aurothioglucose"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CC01",
-                                    "value" : "penicillamine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "P01BA02",
-                                    "value" : "hydroxychloroquine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA11",
-                                    "value" : "etanercept"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA12",
-                                    "value" : "infliximab"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA14",
-                                    "value" : "anakinra"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA17",
-                                    "value" : "adalimumab"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
+                                    "terminologyId" : "ATC_2024",
                                     "code" : "N02AA05",
                                     "value" : "oxycodone"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02AD01",
-                                    "value" : "pentazocine"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA01",
+                                    "value" : "methadone"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA51",
-                                    "value" : "codeine in combination"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N07BC02",
+                                    "value" : "morphine"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BE01",
-                                    "value" : "acetaminophen"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA03",
+                                    "value" : "hydromorphone"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BE51",
-                                    "value" : "paracetamol, combinations excluding psycholeptics"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AB03",
+                                    "value" : "fentanyl"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA03",
-                                    "value" : "hydrocodone"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AX06",
+                                    "value" : "tapentadol"
                                   }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA04",
-                                    "value" : "codeine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA05",
-                                    "value" : "opium alkaloids with morphine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB04",
-                                    "value" : "methylprednisolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB06",
-                                    "value" : "prednisolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB07",
-                                    "value" : "prednisone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB08",
-                                    "value" : "triamcinolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB10",
-                                    "value" : "cortisone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH03",
-                                    "value" : "valdecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AA01",
-                                    "value" : "phenylbutazone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB01",
-                                    "value" : "indometacin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB02",
-                                    "value" : "sulindac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB03",
-                                    "value" : "tolmetin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB05",
-                                    "value" : "diclofenac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB08",
-                                    "value" : "etodolac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB15",
-                                    "value" : "ketorolac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB55",
-                                    "value" : "diclofenac in combination"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC01",
-                                    "value" : "piroxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC02",
-                                    "value" : "tenoxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC06",
-                                    "value" : "meloxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE01",
-                                    "value" : "ibuprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE02",
-                                    "value" : "naproxen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE03",
-                                    "value" : "ketoprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE04",
-                                    "value" : "fenoprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE09",
-                                    "value" : "flurbiprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE11",
-                                    "value" : "tiaprofenic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE12",
-                                    "value" : "oxaprozin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AG01",
-                                    "value" : "mefenamic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH01",
-                                    "value" : "celecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH02",
-                                    "value" : "rofecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AX01",
-                                    "value" : "nabumetone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AA",
-                                    "value" : "anti-inflammatory preparations, non-steroids for topical use"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AB01",
-                                    "value" : "capsicum"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AC",
-                                    "value" : "preparation with salicylic acid derivations"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AX03",
-                                    "value" : "dimethyl sulfoxide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M04AA",
-                                    "value" : "preparation inhibiting uric acid production"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA11",
-                                    "value" : "diflunisal"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA01",
-                                    "value" : "acetylsalicylic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA03",
-                                    "value" : "choline salicylate"
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AE01",
+                                    "value" : "buprenorphine"
                                   } ]
                                 } ]
                               } ],
@@ -3073,7 +2700,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0024.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3091,7 +2717,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.2" ],
+                                  "constraint" : [ "ac0.4" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -3169,6 +2795,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
                           "nodeId" : "at0025.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3186,6 +2813,29 @@
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0043.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_STRING",
+                              "rmTypeName" : "STRING",
+                              "constraint" : [ "Alternative medicines", "Cold", "None", "/.+/" ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -3223,17 +2873,17 @@
             "code" : "ac0.1",
             "description" : ""
           },
-          "ac0.2" : {
+          "at0043.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.1",
+            "text" : "Any other analgesic rmeasures?",
+            "description" : "Narrative description about the history of use of any medication relevant for the screening purpose."
+          },
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.2",
+            "code" : "ac0.4",
             "description" : ""
-          },
-          "at0025.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025.1",
-            "text" : "Any other pain relief?",
-            "description" : "Additional narrative about the specific medication question, not captured in other fields."
           }
         },
         "nb" : {
@@ -3243,10 +2893,10 @@
             "code" : "ac0.1",
             "description" : ""
           },
-          "ac0.2" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.4",
             "description" : ""
           }
         },
@@ -3257,10 +2907,10 @@
             "code" : "ac0.1",
             "description" : ""
           },
-          "ac0.2" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.4",
             "description" : ""
           }
         },
@@ -3271,10 +2921,24 @@
             "code" : "ac0.1",
             "description" : ""
           },
-          "ac0.2" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
             "description" : ""
           }
         }
@@ -3291,6 +2955,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.2",
           "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0036", "at0037" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0036", "at0037" ]
         }
       }
     },
@@ -3349,6 +3023,20 @@
       },
       "accreditation" : "PhD",
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -3361,7 +3049,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "70da296806d169421929a02aade66156"
+        "PARENT:MD5-CAM-1.0.1" : "0d57f41b174564b4e4c8c16a709a71fa"
       },
       "details" : {
         "en" : {
@@ -3375,6 +3063,45 @@
           "keywords" : [ ],
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0001]" : {
+            "doc_variable_id" : "Q8"
+          },
+          "/items[at0006]" : {
+            "doc_variable_id" : "Q9"
+          }
         }
       }
     },
@@ -3402,7 +3129,9 @@
             "text" : "Weather relation",
             "description" : "pianissimo_weather_relation"
           }
-        }
+        },
+        "de" : { },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3420,7 +3149,27 @@
       },
       "codeString" : "en"
     },
-    "translations" : [ ]
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
     "uid" : "bc0f574d-ab06-4c76-9945-58be7bb62991",
@@ -3432,9 +3181,61 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "582a214d52c76b6f73a672ff7312cef2"
+        "PARENT:MD5-CAM-1.0.1" : "154e91050d850d9db9bb91683522d338"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0001]" : {
+            "doc_variable_id" : "Q6"
+          },
+          "/items[at0004]" : {
+            "doc_variable_id" : "Q7"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.pianissimo_pain_moment.v0",
     "differential" : true,
@@ -3453,7 +3254,16 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { }
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Pain moment",
+            "description" : "pianissimo pain moment"
+          }
+        },
+        "de" : { },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3471,7 +3281,27 @@
       },
       "codeString" : "en"
     },
-    "translations" : [ ]
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
