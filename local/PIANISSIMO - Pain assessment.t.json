@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.6",
+      "sem_ver" : "0.1.7",
       "build_uid" : "c8bf2dfb-8c76-4fe7-8bd7-300eff04f8e3",
-      "MD5-CAM-1.0.1" : "41d6e56d79a328288475d0062d6fc25d",
+      "MD5-CAM-1.0.1" : "ee2cb8d0aa5a4dff9a07f172b554bf3b",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -2943,7 +2943,7 @@
           "at0043.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0043.1",
-            "text" : "Any other analgesic rmeasures?",
+            "text" : "Any other analgesic measures?",
             "description" : "Narrative description about the history of use of any medication relevant for the screening purpose."
           },
           "ac0.4" : {
