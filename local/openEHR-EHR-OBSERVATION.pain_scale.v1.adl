@@ -15,6 +15,11 @@ language
 				["email"] = <"scheuermann.kristina@mh-hannover.de">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -44,6 +49,10 @@ The Visual Analog Scale is often used in pain research and pain therapy. It is u
 The indicated value is then quantified by the respondent as a percentage or by means of a defined scale, usually from 0 to 10. However, the respondent does not see the discrete scales.">
 			misuse = <"The archetype must not be used on children under 12 years of age.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -52,7 +61,7 @@ The indicated value is then quantified by the respondent as a percentage or by m
 		["original_namespace"] = <"org.highmed">
 		["original_publisher"] = <"HiGHmed">
 		["custodian_namespace"] = <"org.highmed">
-		["MD5-CAM-1.0.1"] = <"66A281BF4B9267F94ADB6EBB312605E2">
+		["MD5-CAM-1.0.1"] = <"626a54871ca7b3d3b233127c2219550f">
 		["build_uid"] = <"252c6f14-400d-468a-8f60-53eb062e14b0">
 		["revision"] = <"1.0.1">
 	>
@@ -197,6 +206,51 @@ ontology
 					text = <"Extension">
 					description = <"Additional information to capture local content or alignment with other reference models/formalisms.">
 					comment = <"For example: local information needs or additional metadata to align with FHIR resources or CIMI models.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Échelle de la douleur (VAS)">
+					description = <"L'échelle de la douleur VAS est une échelle visuelle analogique pour la mesure subjective de l'intensité de la douleur.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"Un moment défini, qui peut être explicitement défini dans le modèle ou lors de l'exécution de l'application.">
+				>
+				["at0003"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Score total">
+					description = <"Intensité de la douleur de 0 (pas de douleur) à 10 (douleur très forte, insupportable).">
+				>
+				["at0005"] = <
+					text = <"Commentaire">
+					description = <"Informations supplémentaires qui ne sont pas suffisamment prises en compte par l'échelle visuelle, mais qui peuvent être utiles à l'évaluation de la douleur.">
+				>
+				["at0006"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"Facteurs d'influence">
+					description = <"Tous les facteurs aléatoires liés à l'état du patient qui pourraient influencer l'interprétation clinique de la mesure">
+				>
+				["at0008"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"Extension">
+					description = <"Informations complémentaires pour la saisie de contenus locaux ou l'adaptation à d'autres modèles de référence/formalismes.">
+					comment = <"*Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen oder CIMI-Modelle. (de)">
 				>
 			>
 		>
