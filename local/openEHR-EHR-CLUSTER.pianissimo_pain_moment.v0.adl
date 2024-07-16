@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"154e91050d850d9db9bb91683522d338">
+		["MD5-CAM-1.0.1"] = <"97bcad556fb24d9f5fd432641b179315">
 		["build_uid"] = <"288ec3f6-139e-3e03-b6bf-8ea034813b97">
 	>
 
@@ -157,7 +157,7 @@ ontology
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Pianissimo pain moment (en)">
+					text = <"Pianissimo pain moment">
 					description = <"*pianissimo pain moment (en)">
 				>
 				["at0001"] = <
