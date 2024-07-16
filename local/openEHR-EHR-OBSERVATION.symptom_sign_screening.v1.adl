@@ -10,9 +10,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Sarah Ballout, Natalia Strauch">
+				["name"] = <"Sarah Ballout, Natalia Strauch, Alina Rehberg">
 				["organisation"] = <"Medizinische Hochschule Hannover">
-				["email"] = <"ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de">
+				["email"] = <"ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de">
 			>
 		>
 		["fi"] = <
@@ -41,6 +41,14 @@ language
 			author = <
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@protonmail.com">
+			>
+		>
 	>
 
 description
@@ -50,7 +58,7 @@ description
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Astrid Askeland, Dips AS, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Yexuan Cheng, 浙江大学, China","Are Edvardsen, SKDE, Helse Nord RHF, Norway","Alexander Eikrem-Lüthi, Lovisenberg Diakonale Sykehus, Norway","Kåre Flø, DIPS ASA, Norway","Grant Forrest, Lunaria Ltd, United Kingdom","Heather Grain, Llewelyn Grain Informatics, Australia","Anca Heyd, DIPS ASA, Norway","Joost Holslag, Nedap, Netherlands","Evelyn Hovenga, EJSH Consulting, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway","Gunnar Jårvik, Helse Vest IKT AS, Norway","Anjali Kulkarni, Karkinos, India","Kanika Kuwelker, Helse Vest IKT, Norway","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway","Øygunn Leite Kallevik, Helse Bergen, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Ian McNicoll, freshEHR Clinical Informatics, UK","Per Meinich, Helse Sør-Øst RHF, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Vanessa Pereira, Luxembourg Institute of Health (LIH), Portugal","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Norwegian Review Summary, Norwegian Public Hospitals, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Ina Wille, Helse-Vest RHF, Norway">
 	details = <
 		["de"] = <
@@ -190,6 +198,29 @@ This archetype has been designed to be used as a screening tool or to record sim
 
 Not to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Créer un cadre pour l'enregistrement des réponses à des questions de dépistage prédéfinies sur les symptômes ou les signes.">
+			keywords = <"dépistage","questionnaire","plainte","symptôme","perturbation","problème","gêne","signe">
+			use = <"A utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions de dépistage prédéfinies concernant des symptômes ou des signes.
+
+Les cas d'utilisation courants incluent, mais ne sont pas limités à :
+- Enquête systématique dans le cadre d'une consultation, par exemple :
+--- Avez-vous des maux de tête ? Oui, Non, Inconnu.
+--- Avez-vous eu des vertiges au cours des quatre dernières semaines ? Oui, Non, Inconnu.
+- Questionnement spécifique lié à la surveillance des maladies.
+
+La sémantique de cet archétype est volontairement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.
+
+La structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur un symptôme qui a été présent à tout moment dans le passé et des informations sur un symptôme dans un intervalle de temps spécifié - par exemple la différence entre « Avez-vous des vertiges en ce moment ? » et « Avez-vous eu des vertiges au cours des 4 dernières semaines ?
+
+La source des informations contenues dans une réponse à un questionnaire peut varier dans différents contextes, mais peut être spécifiquement identifiée à l'aide de l'élément « Fournisseur d'informations » du modèle de référence.
+
+Cet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le questionnaire de dépistage identifie la présence d'un symptôme ou d'un signe, il est recommandé que le système clinique enregistre et conserve les détails spécifiques du symptôme ou du signe en utilisant l'archétype CLUSTER.symptom_sign imbriqué dans le SLOT Additional details de cet archétype.">
+			misuse = <"Ne pas utiliser pour enregistrer des détails sur la présence ou l'absence d'un symptôme, en dehors d'un contexte de dépistage. Utiliser CLUSTER.symptom_sign ou CLUSTER.exclusion_symptom_sign à cette fin.
+
+Ne pas utiliser pour enregistrer des détails sur une simple liste de sélection où une question peut être enregistrée comme « présente » ou « indéterminée ». Utiliser OBSERVATION.selection_list à cette fin.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -198,10 +229,10 @@ Not to be used to record details about a simple selection list where a question 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CFAA5A21F30725BDA8D018E31997EA7A">
-		["build_uid"] = <"cb339629-23a5-4417-991c-359fe3baea7e">
+		["MD5-CAM-1.0.1"] = <"4E447AEC410E1528639047DD02C4CBB4">
+		["build_uid"] = <"7df9cf6c-354a-44cf-812d-6e51773350d7">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
-		["revision"] = <"1.0.3">
+		["revision"] = <"1.0.5-alpha">
 	>
 
 definition
@@ -664,7 +695,7 @@ For eksempel: \"Pre operativ screening\" eller navnet på det faktiske spørresk
 				>
 				["at0005"] = <
 					text = <"Vorhanden?">
-					description = <"*Is there a history of the specific symptom or sign being present? (en)">
+					description = <"Gibt es eine Vorgeschichte, bei der das spezifische Symptom oder Anzeichen vorhanden war?">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0007"] = <
@@ -736,9 +767,10 @@ Zum Beispiel: \"Screening vor der Aufnahme\" oder der Name des eigentlichen Frag
 					description = <"Beschreibung über die Geschichte der Symptome oder Anzeichen, die für das Screening relevant sind.">
 				>
 				["at0037"] = <
-					text = <"*Timing (en)">
-					description = <"*Indication of timing related to the specific symptom or sign. (en)">
-					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific symptom or sign occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the specific symptom or sign; the interval of time during which the specific symptom or sign occured; the duration of the specific symptom or sign; the age of the individual at the time of the specific symptom or sign occured; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
+					text = <"Zeitpunkt">
+					description = <"Angabe des Zeitpunkts im Zusammenhang mit dem spezifischen Symptom oder Zeichen.
+">
+					comment = <"Das Datenelement „Zeitpunkt“ wurde bewusst locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden kann, um zu erfassen, wann das spezifische Symptom oder Zeichen aufgetreten ist. Die spezifische und beabsichtigte Semantik kann in einem Template weiter verdeutlicht werden. Zum Beispiel: das tatsächliche Datum und/oder die tatsächliche Uhrzeit; die Start- und Stoppzeit für das Auftreten eines bestimmten Symptoms oder Zeichens; der Zeitraum, in dem das spezifische Symptom oder Zeichen auftrat; die Dauer des spezifischen Symptoms oder Anzeichens; das Alter der Person zum Zeitpunkt des Auftretens des spezifischen Symptoms oder Anzeichens; oder die Zeitspanne, seit es aufgetreten ist. Bei Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum gültig, um nur ein Jahr aufzuzeichnen.">
 				>
 				["at0039"] = <
 					text = <"Zusätzliche Angaben">
@@ -965,6 +997,114 @@ Exempel: \"screening inför inskrivning\" eller namnet på själva frågeformul�
 				["at0039"] = <
 					text = <"Screening-detaljer eller frågor">
 					description = <"Strukturerade detaljer eller frågor relaterade till screening av symptom och tecken">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Questionnaire de dépistage des symptômes/signes">
+					description = <"Série de questions et de réponses associées utilisées pour dépister des symptômes ou des signes.">
+					comment = <"Les réponses peuvent être autodéclarées.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"Par défaut, point dans le temps non spécifié ou événement d'intervalle qui peut être explicitement défini dans un modèle ou au moment de l'exécution.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Symptôme/nom du signe">
+					description = <"Identification d'un symptôme ou d'un signe spécifique ou d'un groupe de symptômes ou de signes, par son nom.">
+					comment = <"Dans la mesure du possible, il est préférable de coder le « nom du symptôme/signe » à l'aide d'une terminologie.">
+				>
+				["at0005"] = <
+					text = <"Présence ?">
+					description = <"Y a-t-il des antécédents de présence du symptôme ou du signe en question ?">
+					comment = <"Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique.">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0021"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour étendre le modèle au contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR.">
+				>
+				["at0022"] = <
+					text = <"Symptôme/signe spécifique">
+					description = <"Détails concernant un symptôme ou un signe spécifique ou un groupe de symptômes ou de signes en rapport avec l'objectif du dépistage.">
+				>
+				["at0023"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Détails supplémentaires">
+					description = <"Détails ou questions structurés sur le symptôme ou le signe spécifique.">
+				>
+				["at0027"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Des symptômes ou des signes ?">
+					description = <"Y a-t-il des antécédents de symptômes ou de signes pertinents pour le dépistage ?">
+					comment = <"Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique.">
+				>
+				["at0029"] = <
+					text = <"Début">
+					description = <"Moment de la reconnaissance initiale de tout symptôme ou signe pertinent pour le dépistage.">
+					comment = <"L'élément de données « Onset » a été délibérément modélisé de manière lâche afin de prendre en charge la myriade de façons dont il peut être utilisé dans les questionnaires pour saisir l'apparition de symptômes ou de signes. La sémantique spécifique et voulue peut être précisée dans un modèle. 
+
+Par exemple :
+Date/heure pour la date d'apparition du symptôme. Intervalle de date/heure pour une période de temps, par exemple entre 1940 et 1942. Texte pour des descriptions telles que « Immédiatement après l'opération », ou « Il y a une semaine », « Il y a deux semaines », « Il y a trois semaines ». Durée pour l'âge de l'individu au moment de l'apparition de la maladie. Intervalle de durée pour l'âge approximatif de l'individu au moment de l'apparition.">
+				>
+				["at0031"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Objectif du dépistage">
+					description = <"Le contexte ou la raison du dépistage.">
+					comment = <"Cet élément de données est destiné à fournir un contexte de collecte pour les groupes de questions/réponses lors d'une interrogation ultérieure. Il n'est pas prévu que cet élément de données soit exposé à l'individu, mais seulement stocké dans les données.
+Par exemple : « dépistage avant l'admission » ou le nom du questionnaire proprement dit.">
+				>
+				["at0035"] = <
+					text = <"Commentaire">
+					description = <"Commentaire supplémentaire sur la question du symptôme/signe spécifique, non saisi dans d'autres champs.">
+				>
+				["at0036"] = <
+					text = <"Description">
+					description = <"Description narrative des antécédents de tout symptôme ou signe pertinent pour le dépistage.">
+				>
+				["at0037"] = <
+					text = <"Timing">
+					description = <"Indication de la chronologie liée au symptôme ou au signe spécifique.">
+					comment = <"L'élément d'information « Timing » a été délibérément modélisé de manière souple afin de prendre en charge la myriade de façons dont il peut être utilisé dans les questionnaires pour saisir le moment où le symptôme ou le signe spécifique s'est manifesté. La sémantique spécifique et prévue peut être précisée dans un modèle. Par exemple : la date et/ou l'heure réelle ; l'heure de début et de fin du symptôme ou du signe spécifique ; l'intervalle de temps pendant lequel le symptôme ou le signe spécifique est apparu ; la durée du symptôme ou du signe spécifique ; l'âge de la personne au moment de l'apparition du symptôme ou du signe spécifique ; ou la durée écoulée depuis l'apparition du symptôme ou du signe. Une date partielle est valable, en utilisant le type de données DV_DATE_TIME, pour enregistrer seulement une année.">
+				>
+				["at0039"] = <
+					text = <"Détails supplémentaires">
+					description = <"Détails ou questions structurées sur le dépistage des symptômes ou des signes.">
 				>
 			>
 		>
