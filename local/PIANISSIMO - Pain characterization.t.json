@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.23",
+      "sem_ver" : "0.1.24",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "a13a3bc3e2be1a1eb91eedd435e838a6",
+      "MD5-CAM-1.0.1" : "b5f133aa7a3d36e0c692641fc3065472",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -2651,29 +2651,6 @@
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.1" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_BOOLEAN",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
@@ -2908,29 +2885,10 @@
             "text" : "Any medications used besides usual treatment?",
             "description" : "Is there a history of use of any medication related to the screening purpose?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
           }
         },
-        "nb" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
+        "nb" : { },
         "de" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0027.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027.1",
@@ -2945,21 +2903,8 @@
             "description" : "Beschreibung über die Geschichte der Anwendung von Medikamenten, die für das Screening relevant sind."
           }
         },
-        "nl" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
+        "nl" : { },
         "fr" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0027.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027.1",
