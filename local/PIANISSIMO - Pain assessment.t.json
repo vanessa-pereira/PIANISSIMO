@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.7",
+      "sem_ver" : "0.1.8",
       "build_uid" : "c8bf2dfb-8c76-4fe7-8bd7-300eff04f8e3",
-      "MD5-CAM-1.0.1" : "ee2cb8d0aa5a4dff9a07f172b554bf3b",
+      "MD5-CAM-1.0.1" : "f0ba0e11a8ff73d22bba70809e45f5df",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -2796,29 +2796,6 @@
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.4" ],
-                                  "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_BOOLEAN",
                               "attributes" : [ ],
                               "attributeTuples" : [ ]
@@ -2945,12 +2922,6 @@
             "code" : "at0043.1",
             "text" : "Any other analgesic measures?",
             "description" : "Narrative description about the history of use of any medication relevant for the screening purpose."
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.4",
-            "description" : ""
           }
         },
         "nb" : {
@@ -2959,12 +2930,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
           }
         },
         "de" : {
@@ -2972,12 +2937,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
             "description" : ""
           },
           "at0027.1" : {
@@ -3000,12 +2959,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
           }
         },
         "fr" : {
@@ -3013,12 +2966,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
             "description" : ""
           },
           "at0027.1" : {
