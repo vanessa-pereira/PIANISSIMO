@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.24",
+      "sem_ver" : "0.1.25",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "b5f133aa7a3d36e0c692641fc3065472",
+      "MD5-CAM-1.0.1" : "619e30ed69852a34ec78c1a09f1f066f",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -188,15 +188,6 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-womac-spanish_sf-001.v0",
         "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.23",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "Medication screening questionnaire",
-        "referenceType" : "templateId"
       } ]
     } ],
     "attributeTuples" : [ ]
