@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.14",
+      "sem_ver" : "0.1.15",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "15d1b9def4501e05c2ccd3f5a9930ab1",
+      "MD5-CAM-1.0.1" : "1c9653eec4ef8f1d64298b8209ee0df1",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -8990,21 +8990,8 @@
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.4" ],
-                                  "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -9078,12 +9065,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.1",
             "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.4",
-            "description" : ""
           }
         },
         "nb" : {
@@ -9091,12 +9072,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
             "description" : ""
           }
         },
@@ -9106,12 +9081,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
           }
         },
         "nl" : {
@@ -9120,12 +9089,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
           }
         },
         "fr" : {
@@ -9133,12 +9096,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
             "description" : ""
           }
         }
@@ -9164,6 +9121,21 @@
         "ac0.4" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
+          "members" : [ "at0023", "at0024" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0023", "at0024" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0023", "at0024" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
           "members" : [ "at0023", "at0024" ]
         }
       }
