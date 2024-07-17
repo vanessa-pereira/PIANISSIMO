@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.20",
+      "sem_ver" : "0.1.21",
       "build_uid" : "74e29a3e-01fe-4cc7-9eb3-03bb0f4fca1e",
-      "MD5-CAM-1.0.1" : "f1c9f3e54778e6bb144be16c11e7fa0b",
+      "MD5-CAM-1.0.1" : "b8e98a2e7e01eddcc9d5dd15262c3d8c",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -165,7 +165,7 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.6",
+        "nodeId" : "at0.21",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-medication_screening-001.v1",
@@ -188,6 +188,15 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-womac-spanish_sf-001.v0",
         "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.23",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "Medication screening questionnaire",
+        "referenceType" : "templateId"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -760,773 +769,6 @@
         "organisation" : "Nedap Healthcare",
         "email" : "martijn.vaneenennaam@nedap.com"
       },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "dc0ae7d5-6162-4f6e-81ec-c6d21e4ff4c7",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "A305A90DC502DA8A1F380F8AA4984127"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Schaffung von Rahmenbedingungen für die Darstellung von Antworten auf vordefinierte Screening-Fragen zur Anwendung eines bestimmten Medikaments oder einer Medikamentengruppe.",
-          "keywords" : [ "Medikation, Screening, Fragebogen, Medikament, Arzneimittel, Behandlung" ],
-          "use" : "Verwendung als Rahmenbedingung für die Darstellung von Antworten auf vordefinierte Screening-Fragen zur Anwendung eines bestimmten Medikaments oder einer Medikamentengruppe (einschließliche Medikamentenkasse).\r\n\r\nBeispiele für Medikamente, Gruppierungen und Klassen von Medikamenten sind „Alendronsäure“, „Osteoporose-Medikamente“ bzw. „Bisphosphonate“.\r\n\r\nHäufige Anwendungsfälle umfassen, sind aber nicht beschränkt auf:\r\n- Systematische Befragung in jedem Beratungsgespräch zu dem Medikamenteneinnahme-Verhalten, zum Beispiel:\r\n--- Verwenden Sie Paracetamol? Ja, Nein, Unbekannt.\r\n--- Haben Sie in den letzten vier Wochen Antikoagulanzien verwendet? Ja, Nein, Unbekannt.\r\n\r\nDie Semantik dieses Archetyps ist absichtlich locker, und die Abfrage dieses Archetyps wäre normalerweise nur im Kontext jedes spezifischen Templates nützlich oder sicher. In einem Template würde normalerweise jedes Datenelement in die spezifische gestellte Frage umbenannt. Wo Wertesätze für allgemeine Anwendungsfälle vorgeschlagen wurden, können diese für die lokale Verwendung angepasst werden, indem die „Text“-Auswahl verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.\r\n\r\nÜber die EVENT-Struktur aus dem Referenzmodell kann festgelegt werden, ob sich die Fragen auf einen Zeitpunkt oder einen Zeitraum beziehen. Verwenden Sie eine separate Instanz dieses Archetyps, um zwischen einer Befragung zu unterscheiden, der Informationen über ein Medikament enthält, das zu einem beliebigen Zeitpunkt in der Vergangenheit angewendet wurde, und Informationen über ein Medikament, das innerhalb eines bestimmten Zeitintervalls durchgeführt wurde - zum Beispiel den Unterschied zwischen \"Verwenden Sie Paracetamol? \" im Vergleich zu \"Haben Sie in den letzten vier Wochen Antikoagulanzien verwendet?\".\r\n\r\nDie Quelle der Informationen in einer Fragebogenantwort kann in verschiedenen Kontexten variieren, kann jedoch mithilfe des Elements „Information provider“ im Referenzmodell spezifisch identifiziert werden.\r\n\r\nDieser Archetyp wurde entwickelt, um als Screening-Tool oder zur Darstellung einfacher Daten im Fragebogenformat zur Verwendung in Situationen wie einem Krankheitsregister verwendet zu werden. Wenn der Screening-Fragebogen das Vorhandensein eines Medikaments identifiziert, wird empfohlen, dass das klinische System die spezifischen Details über das Medikament unter Verwendung eines relevanten Medikations-Archetyps darstellt und beibehält, zum Beispiel das OBSERVATION.medication_statement, um eine detaillierte Momentaufnahme über die tatsächliche Verwendung des spezifischen Medikaments darzustellen.",
-          "misuse" : "Nicht zur Darstellung einer Anforderung für ein zu verabreichendes oder zu konsumierendes Medikament zu verwenden - verwenden Sie zu diesem Zweck INSTRUCTION.medication_order.\r\n\r\nNicht zur Darstellung der Verabreichung, Abgabe oder Einnahme eines Medikaments verwenden - verwenden Sie ACTION.medication für diesen Zweck.\r\n\r\nNicht zur Darstellung einer Zusammenfassung der Verwendung eines Medikaments über die Lebenszeit der Person zu verwenden – verwenden Sie zu diesem Zweck EVALUATION.medication_summary.\r\n\r\nDarf nicht verwendet werden, um eine detaillierte Momentaufnahme über die tatsächliche Verwendung eines einzelnen angegebenen Medikaments außerhalb eines Screening-Kontexts darzustellen. - Verwenden Sie zu diesem Zweck OBSERVATION.medication_statement.\r\n\r\nDarf nicht verwendet werden, um Details über das Fehlen eines bestimmten Medikaments oder einer Medikamentengruppe außerhalb eines Screening-Kontexts darzustellen. Verwenden Sie zu diesem Zweck EVALUATION.exclusion_specific.\r\n\r\nNicht zu verwenden, um einen Rahmen für die Darstellung von Antworten auf vordefinierte Screening-Fragen zu Nebenwirkungen zu schaffen, verwenden Sie zu diesem Zweck einen geeigneten Archetyp.\r\n\r\nDarf nicht verwendet werden, um Details zu einer einfachen Auswahlliste darzustellen, in der eine Frage entweder als \"vorhanden\" oder \"unbestimmt\" aufgezeichnet werden kann. Verwenden Sie dazu OBSERVATION.selection_list.",
-          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om bruken av et hvilket som helst legemiddel eller gruppe av legemidler.",
-          "keywords" : [ "legemiddel, kartlegging, spørreskjema, legemiddelgruppe, medikament" ],
-          "use" : "Brukes for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om bruken av et hvilket som helst legemiddel eller gruppe av legemidler.\r\n\r\nEksempler på legemidler, grupper og klasser av legemidler er \"alendronsyre\", \"osteoporosemedisiner\" og \"bisfosfonater\".\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematiske spørsmål ved konsultasjoner, for eksempel:\r\n--- Bruker du paracetamol? Ja, Nei, Ukjent.\r\n--- Har du brukt noen blodfortynnende medisiner de siste 4 ukene? Ja, Nei, Ukjent.\r\n\r\nSemantikken til denne arketypen er med vilje løst definert, og spørringer etter data i denne arketypen vil normalt bare være hensiktsmessig eller sikkert i konteksten av det spesifikke templatet. I et templat vil hvert dataelement vanligvis døpes om til det (spesifikke) spørsmålet man ønsker svar på. Flere steder er det foreslått verdisett som passer til de vanligste bruksområder, men det er allikevel mulig å tilpasse/endre verdisett for lokal bruk ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN for å harmonere verdisettet til hvert enkelt brukstilfelle.\r\n\r\nEVENT-strukturen fra arketypens referansemodell kan brukes for å spesifisere om spørsmålene relateres til et tidspunkt eller til et tidsintervall.\r\nBruk egne instanser av denne arketypen for å skille mellom spørsmål om bruk av et legemiddel på et hvilket som helst tidspunkt og spørsmål om legemidler som er brukt i et tidsintervall. For eksempel; \"Bruker du paracetamol nå?\" sammenlignet med \"Har du brukt noen smertestillende medisin de siste 4 ukene?\".\r\n\r\nKilden til informasjonen i et spørreskjema kan variere i ulike kontekster, men kan identifiseres spesifikt ved å benytte \"Information provider\" elementet i openEHR referansemodellen.\r\n\r\nDenne arketypen er laget for å bli brukt i et spørreskjema eller for å registrere enkle strukturerte data til for eksempel et sykdomsregister. Dersom det i spørreskjemaet identifiseres at et legemiddel er tilstede, anbefales det at spesifikke detaljer om legemiddelet registreres og lagres i pasientjournalen i en egnet legemiddelarketype, for eksempel arketypen OBSERVATION.medication_statement for å registrere et detaljert øyeblikksbilde om bruken av et enkelt spesifisert legemiddel.",
-          "misuse" : "Brukes ikke for å dokumentere forordningen av et legemiddel - bruk arketypen INSTRUCTION.medication_order (Legemiddelordinering) til dette formålet.\r\n\r\nBrukes ikke for å dokumentere administreringen av et legemiddel - bruk arketypen ACTION.medication (Legemiddelhåndtering) til dette formålet.\r\n\r\nBrukes ikke for å registrere et sammendrag om all bruk av et spesifisert legemiddel over et individs livstid, bruk arketypen EVALUATION.medication_summary (Legemiddelsammendrag) til dette formålet.\r\n\r\nBrukes ikke for å registrere et detaljert øyeblikksbilde om bruken av et enkelt spesifisert legemiddel, utenfor konteksten av kartleggingen. Bruk arketypen OBSERVATION.medication_statement for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om etablert fravær av et spesifikt legemiddel eller gruppe av legemidler i pasientjournalen, utenfor konteksten av kartleggingen. Bruk arketypen EVALUATION.exclusion_specific for dette formålet.\r\n\r\nBrukes ikke for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om overfølsomhetsreaksjoner, bruk en egnet arketype for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om en enkel utvalgsliste der et spørsmål kan registreres som enten \"Tilstede\" eller \"Ubestemt\". Bruk arketypen OBSERVATION.selection_list for dette formålet.",
-          "copyright" : "© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping of medications.",
-          "keywords" : [ "medication, screening, questionnaire, drug, treatment" ],
-          "use" : "Use to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage, for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a medication that has been used at any time in the past and information about a medication used within a specified time interval - for example the difference between \"Do you use paracetamol?\" compared to \"Have you been using any anticoagulants during the last four weeks?\".\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a medication it is recommended that clinical system record and persist the specific details about the medication using a relevant medication archetype, for example the OBSERVATION.medication_statement to record a detailed snapshot view about the actual use of a single specified medication.",
-          "misuse" : "Not to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for recording the administration, dispensing or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording a summary of use of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.\r\n\r\nNot to be used to record a detailed snapshot view about the actual use of a single specified medication, outside of a screening context. - use OBSERVATION.medication_statement for this purpose.\r\n\r\nNot to be used to record details about the positive absence of a specific medication or grouping of medication, outside of a screening context. Use EVALUATION.exclusion_specific for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose.",
-          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nl" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nl"
-          },
-          "purpose" : "*To create a framework for recording answers to pre-defined screening questions about the use of a any medication. (en)",
-          "keywords" : [ "*medication, screening, questionnaire, drug, treatment (en)" ],
-          "use" : "*Use to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage , for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a procedure that has been performed at any time in the past and information about a procedure performed within a specified time interval - for example the difference between \"Do you use paracetamol?\" compared to \"Have you been using any anticoagulants the last four weeks?\".\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a medication it is recommended that clinical system record and persist the specific details about the medication using a relevant medication archetype, for example the OBSERVATION.medication_statement to record a detailed snapshot view about the actual use of a single specified medication. (en)",
-          "misuse" : "*Not to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for recording the administration, dispensing or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording a summary of use of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.\r\n\r\nNot to be used to record a detailed snapshot view about the actual use of a single specified medication, outside of a screening context. - use OBSERVATION.medication_statement for this purpose.\r\n\r\nNot to be used to record details about the positive absence of a specific medication or grouping of medication, outside of a screening context. Use EVALUATION.exclusion_specific for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "fr" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fr"
-          },
-          "purpose" : "Créer un cadre pour l'enregistrement des réponses à des questions de dépistage prédéfinies sur l'utilisation de tout médicament ou groupe de médicaments spécifié.",
-          "keywords" : [ "médicament,", "dépistage,", "questionnaire,", "drogue,", "traitement" ],
-          "use" : "À utiliser pour créer un cadre permettant d'enregistrer les réponses à des questions de dépistage prédéfinies concernant l'utilisation de tout médicament ou groupe (y compris les classes) de médicaments spécifié.\r\n\r\nDes exemples de médicaments, de groupes et de classes de médicaments sont respectivement \"acide alendronique\", \"médicaments contre l'ostéoporose\" et \"bisphosphonates\".\r\n\r\nLes cas d'utilisation courants incluent, mais ne sont pas limités à :\r\n- L'interrogation systématique, lors d'une consultation, sur les schémas d'utilisation des médicaments, par exemple :\r\n--- Prenez-vous du paracétamol ? Oui, Non, Inconnu.\r\n--- Avez-vous pris des anticoagulants au cours des quatre dernières semaines ? Oui, Non, Inconnu.\r\n\r\nLa sémantique de cet archétype est intentionnellement floue, et l'interrogation de cet archétype ne serait normalement utile ou sûre que dans le contexte de chaque modèle spécifique. Dans un modèle, chaque élément de données est généralement renommé en fonction de la question spécifique posée. Lorsque des ensembles de valeurs ont été proposés pour des cas d'utilisation courants, ils peuvent être adaptés à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour correspondre à chaque cas d'utilisation spécifique.\r\n\r\nLa structure EVENT du modèle de référence peut être utilisée pour spécifier si les questions se rapportent à un moment donné ou à une période de temps. Utilisez une instance distincte de cet archétype pour faire la distinction entre un questionnaire enregistrant des informations sur un médicament qui a été utilisé à tout moment dans le passé et des informations sur un médicament utilisé dans un intervalle de temps spécifié - par exemple la différence entre \"Utilisez-vous du paracétamol ?\" et \"Avez-vous utilisé des anticoagulants au cours des quatre dernières semaines ?\r\n\r\nLa source des informations contenues dans une réponse à un questionnaire peut varier selon le contexte, mais elle peut être spécifiquement identifiée à l'aide de l'élément \"Fournisseur d'informations\" du modèle de référence.\r\n\r\nCet archétype a été conçu pour être utilisé comme outil de dépistage ou pour enregistrer des données simples sous forme de questionnaire en vue d'une utilisation dans des situations telles qu'un registre des maladies. Si le questionnaire de dépistage identifie la présence d'un médicament, il est recommandé que le système clinique enregistre et conserve les détails spécifiques concernant le médicament en utilisant un archétype de médicament approprié, par exemple OBSERVATION.medication_statement pour enregistrer une vue instantanée détaillée de l'utilisation réelle d'un seul médicament spécifié.",
-          "misuse" : "Ne doit pas être utilisé pour enregistrer l'ordre d'administration ou de consommation d'un médicament - utiliser INSTRUCTION.medication_order à cet effet.\r\n\r\nNe doit pas être utilisé pour enregistrer l'administration, la délivrance ou la consommation d'un médicament - utiliser ACTION.medication à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer un résumé de l'utilisation d'un médicament au cours de la vie de l'individu - utiliser EVALUATION.medication_summary à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer un instantané détaillé de l'utilisation réelle d'un seul médicament spécifié, en dehors d'un contexte de dépistage. - Utiliser OBSERVATION.medication_statement à cette fin.\r\n\r\nNe doit pas être utilisé pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe pas utiliser pour enregistrer des détails sur l'absence positive d'un médicament spécifique ou d'un groupe de médicaments, en dehors d'un contexte de dépistage. Utiliser EVALUATION.exclusion_specific à cette fin.\r\n\r\nNe doit pas être utilisé pour créer un cadre d'enregistrement des réponses à des questions de dépistage prédéfinies sur les effets indésirables ; utiliser un archétype approprié à cette fin.\r\n\r\nNe pas utiliser pour enregistrer les détails d'une simple liste de sélection où une question peut être enregistrée comme \"présente\" ou \"indéterminée\". Utilisez OBSERVATION.selection_list à cette fin.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "annotations" : {
-      "@type" : "RESOURCE_ANNOTATIONS",
-      "documentation" : {
-        "en" : {
-          "/data[at0022]/events[at0023.1]/data[at0001]/items[at0027.1]" : {
-            "doc_variable_id" : "Q2"
-          },
-          "/data[at0022]/events[at0023.1]/data[at0001]/items[at0026.1]/items[at0021.1]" : {
-            "doc_variable_id" : "Q2"
-          }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.medication_screening.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-medication_screening-001.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "HISTORY",
-          "nodeId" : "at0022",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "events",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "occurrences" : "1..1",
-              "nodeId" : "at0023.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0001",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0040.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0027.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.4" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0043.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0026.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0021.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "ATC_82021"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "ATC_82021" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "A07EC01",
-                                    "value" : "sulfasalazine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "J01AA08",
-                                    "value" : "minocycline"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L01AA01",
-                                    "value" : "cyclophosphamide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L01BA01",
-                                    "value" : "methotrexate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA01",
-                                    "value" : "cyclosporine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA13",
-                                    "value" : "leflunomide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AX01",
-                                    "value" : "azathioprine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AX03",
-                                    "value" : "methotrexate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB01",
-                                    "value" : "sodium aurothiomalate"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB03",
-                                    "value" : "auranofin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CB04",
-                                    "value" : "aurothioglucose"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01CC01",
-                                    "value" : "penicillamine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "P01BA02",
-                                    "value" : "hydroxychloroquine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA11",
-                                    "value" : "etanercept"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA12",
-                                    "value" : "infliximab"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA14",
-                                    "value" : "anakinra"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "L04AA17",
-                                    "value" : "adalimumab"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02AA05",
-                                    "value" : "oxycodone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02AD01",
-                                    "value" : "pentazocine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA51",
-                                    "value" : "codeine in combination"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BE01",
-                                    "value" : "acetaminophen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BE51",
-                                    "value" : "paracetamol, combinations excluding psycholeptics"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA03",
-                                    "value" : "hydrocodone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA04",
-                                    "value" : "codeine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "R05DA05",
-                                    "value" : "opium alkaloids with morphine"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB04",
-                                    "value" : "methylprednisolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB06",
-                                    "value" : "prednisolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB07",
-                                    "value" : "prednisone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB08",
-                                    "value" : "triamcinolone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "H02AB10",
-                                    "value" : "cortisone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH03",
-                                    "value" : "valdecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AA01",
-                                    "value" : "phenylbutazone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB01",
-                                    "value" : "indometacin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB02",
-                                    "value" : "sulindac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB03",
-                                    "value" : "tolmetin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB05",
-                                    "value" : "diclofenac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB08",
-                                    "value" : "etodolac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB15",
-                                    "value" : "ketorolac"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AB55",
-                                    "value" : "diclofenac in combination"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC01",
-                                    "value" : "piroxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC02",
-                                    "value" : "tenoxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AC06",
-                                    "value" : "meloxicam"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE01",
-                                    "value" : "ibuprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE02",
-                                    "value" : "naproxen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE03",
-                                    "value" : "ketoprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE04",
-                                    "value" : "fenoprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE09",
-                                    "value" : "flurbiprofen"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE11",
-                                    "value" : "tiaprofenic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AE12",
-                                    "value" : "oxaprozin"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AG01",
-                                    "value" : "mefenamic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH01",
-                                    "value" : "celecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AH02",
-                                    "value" : "rofecoxib"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M01AX01",
-                                    "value" : "nabumetone"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AA",
-                                    "value" : "anti-inflammatory preparations, non-steroids for topical use"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AB01",
-                                    "value" : "capsicum"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AC",
-                                    "value" : "preparation with salicylic acid derivations"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M02AX03",
-                                    "value" : "dimethyl sulfoxide"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "M04AA",
-                                    "value" : "preparation inhibiting uric acid production"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA11",
-                                    "value" : "diflunisal"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA01",
-                                    "value" : "acetylsalicylic acid"
-                                  }, {
-                                    "terminologyId" : "ATC_82021",
-                                    "code" : "N02BA03",
-                                    "value" : "choline salicylate"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0024.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.5" ],
-                                  "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_BOOLEAN",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0003.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0002.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0025.1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027.1",
-            "text" : "Any medications used for pain?",
-            "description" : "Is there a history of use of any medication related to the screening purpose?",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
-            "description" : ""
-          }
-        },
-        "nb" : {
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          }
-        },
-        "de" : {
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          }
-        },
-        "nl" : {
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          }
-        },
-        "fr" : {
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0028", "at0029", "at0030" ]
-        },
-        "ac0.2" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.2",
-          "members" : [ "at0028", "at0029", "at0030" ]
-        },
-        "ac0.3" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.3",
-          "members" : [ "at0028", "at0029" ]
-        },
-        "ac0.4" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.4",
-          "members" : [ "at0028", "at0029" ]
-        },
-        "ac0.5" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.5",
-          "members" : [ "at0036", "at0037", "at0039" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "dcd86caa-80f4-4dbf-9162-cc61880219ad",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Kim Sommer, Natalia Strauch, Alina Rehberg",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "sommer.kimkatrin@mh-hannover.de, Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Silje Ljosland Bakke, John Tore Valand",
-        "organisation" : "Helse Vest IKT AS, Helse Bergen",
-        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nl"
-      },
-      "author" : {
-        "name" : "Martijn van Eenennaam",
-        "organisation" : "Nedap Healthcare",
-        "email" : "martijn.vaneenennaam@nedap.com"
-      },
-      "accreditation" : "PhD",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -2888,7 +2130,66 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "441F10504D2BA13BC8729A9819B88D86"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Aufzeichnung von Details über Informationen, die von Dritten stammen und als Teil einer Fernbewertung oder eines Berichts verwendet werden.",
+          "keywords" : [ "Quelle", "Bild", "Original" ],
+          "use" : "Zur Aufzeichnung von Details über Informationen, die von Dritten stammen und als Teil einer Fernbeurteilung oder eines Berichts verwendet werden.\r\n\r\nDieser Archetyp wurde entwickelt, um die Identifizierung und Qualität von Gesundheitsinformationen zu unterstützen, die von einer klinischen Drittquelle stammen. \r\n\r\nJede klinische Information, die von einer Drittquelle stammt, muss vor ihrer Verwendung zur Unterstützung der klinischen Entscheidungsfindung auf ihre Verwendbarkeit geprüft werden. Ein Beispiel: Ein digitales Bild, das während einer klinischen Konsultation aufgenommen wurde, oder ein digitales Röntgenbild, das an einen entfernten Spezialisten zur Beurteilung und Behandlungsberatung geschickt wird, muss die gesamte anatomische Region abbilden und von angemessener Qualität sein.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar detalhes sobre informação originada de terceiros que é utilizada como parte de uma avaliação remota ou relatório.",
+          "keywords" : [ "origem", "imagem", "original" ],
+          "use" : "Para gravar detalhes sobre informação originada deterceiros que é utilizada como parte de uma avaliação remota ou relatório.\r\n\r\nEste arquétipo foi designado para apoiar a identificação e qualidade da informação de saúde proveniente de uma fonte clínica de terceiros.\r\n\r\n\r\nCada parte da evidencia clínica recebida de terceiros precisa ser avaliada como 'apta para uso' antes de ser utilizada para apoiar a tomada de decisão clínica. Por exemplo: a imagem digital capturada durante a consulta clínica, ou a radiografia digital , enviada para um especialista remoto para avaliação das necessidades de aconselhamento do tramamento, precisa ser considerado como sendo região anatômica completa e de qualidade apropriada.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about information sourced from a third party that is utilised as part of a remote assessment or report.",
+          "keywords" : [ "source", "image", "original" ],
+          "use" : "Use to record details about information sourced from a third party that is utilised as part of a remote assessment or report.\r\n\r\nThis archetype has been designed to support the identification and quality of health information sourced from a third party clinical source. \r\n\r\nEach piece of clinical evidence that has been received from a third party source needs to be assessed as 'fit for use' prior to being utilisied to support clinical decision-making. For example: a digital image captured during a clinical consultation, or a digital radiograph, sent to a remote specialist for assessment and treatment advice needs to be deemed to be of the complete anatomical region and of appropriate quality.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer des détails sur les informations provenant d'un tiers et utilisées dans le cadre d'une évaluation ou d'un rapport à distance.",
+          "keywords" : [ "source", "image", "original" ],
+          "use" : "À utiliser pour enregistrer des détails sur des informations provenant d'un tiers et utilisées dans le cadre d'une évaluation ou d'un rapport à distance.\r\n\r\nCet archétype a été conçu pour soutenir l'identification et la qualité des informations de santé provenant d'une source clinique tierce. \r\n\r\nChaque élément de preuve clinique reçu d'une source tierce doit être évalué comme étant \"apte à l'emploi\" avant d'être utilisé pour soutenir la prise de décision clinique. Par exemple : une image numérique capturée lors d'une consultation clinique ou une radiographie numérique envoyée à un spécialiste à distance pour évaluation et conseils de traitement doit être considérée comme représentant la région anatomique complète et d'une qualité appropriée.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -2970,16 +2271,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_URI",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3131,6 +2423,615 @@
         "organisation" : "Luxembourg Institute of Health (LIH)",
         "email" : "vanessapereira@protonmail.com"
       },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "ccce5e05-13b7-4530-901c-a9cf9328b178",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : {
+        "date" : "2024-07-17"
+      },
+      "otherContributors" : [ ],
+      "lifecycleState" : {
+        "codeString" : "unmanaged"
+      },
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+        "custodian_organisation" : "openEHR Foundation",
+        "original_namespace" : "org.openehr",
+        "original_publisher" : "openEHR Foundation",
+        "custodian_namespace" : "org.openehr",
+        "MD5-CAM-1.0.1" : "1db8a38fd67ebe85678dcc0fa1f5f4e0",
+        "PARENT:MD5-CAM-1.0.1" : "A305A90DC502DA8A1F380F8AA4984127",
+        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0021.1]" : {
+            "doc_variable_id" : "Q2"
+          },
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024.1]" : {
+            "doc_variable_id" : "Q3"
+          },
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0043.1]" : {
+            "doc_variable_id" : "Q2"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.medication_screening.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-medication_screening-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0022",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0023",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0001",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0040.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0027.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_BOOLEAN",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0043.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_STRING",
+                              "rmTypeName" : "STRING",
+                              "constraint" : [ "Alternative medicines", "Cold", "None", "/.+/" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "nodeId" : "at0026",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0021.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "ATC_2024"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "ATC_2024" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02BE01",
+                                    "value" : "paracetamol"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "M01AE01",
+                                    "value" : "Ibuprofen"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AX02",
+                                    "value" : "tramadol"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA59",
+                                    "value" : "codeine, combinations excl. psycholeptics"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA05",
+                                    "value" : "oxycodone"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA01",
+                                    "value" : "methadone"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N07BC02",
+                                    "value" : "morphine"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AA03",
+                                    "value" : "hydromorphone"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AB03",
+                                    "value" : "fentanyl"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AX06",
+                                    "value" : "tapentadol"
+                                  }, {
+                                    "terminologyId" : "ATC_2024",
+                                    "code" : "N02AE01",
+                                    "value" : "buprenorphine"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0024.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.4" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0003.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0002.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Alternative medicine", "Cold", "None", "/.+/" ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027.1",
+            "text" : "Any medications used besides usual treatment?",
+            "description" : "Is there a history of use of any medication related to the screening purpose?",
+            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027.1",
+            "text" : "Wurden neben der üblichen Behandlung weitere Medikamente eingenommen?",
+            "description" : "Gibt es eine Vorgeschichte der Anwendung von Medikamenten im Zusammenhang mit dem Screening-Zweck?",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0043.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.1",
+            "text" : "Gibt es weitere schmerzlindernde Maßnahmen?",
+            "description" : "Beschreibung über die Geschichte der Anwendung von Medikamenten, die für das Screening relevant sind."
+          }
+        },
+        "nl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027.1",
+            "text" : "Des médicaments ont-ils été utilisés en plus du traitement habituel ?",
+            "description" : "Y a-t-il des antécédents d'utilisation de médicaments en rapport avec l'objectif du dépistage ?",
+            "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+          },
+          "at0043.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.1",
+            "text" : "Y a-t-il d'autres mesures analgésiques ?",
+            "description" : "Description narrative de l'historique de l'utilisation de tout médicament pertinent pour le dépistage."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0028", "at0029" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0036", "at0037" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0036", "at0037" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "2e7cfc74-7273-36eb-9752-504f9f24bd16",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   } ],
