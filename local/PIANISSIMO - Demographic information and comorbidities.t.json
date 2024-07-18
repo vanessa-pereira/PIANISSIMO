@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.19",
+      "sem_ver" : "0.1.20",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "8bc6525b7922c28287fd93ffeea91a75",
+      "MD5-CAM-1.0.1" : "a6e8231d47057fb1205822ffc41f8adb",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -8831,19 +8831,6 @@
             "code" : "at0000",
             "text" : "Alcohol consumption summary",
             "description" : "Summary or persistent information about the typical alcohol consumption of an individual."
-          },
-          "at0104" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0104",
-            "text" : "Alcohol unit definition (mass)",
-            "description" : "Mass of alcohol defining a standard drink or alcohol unit as used in the 'Typical drinking (alcohol units)' element in this archetype.",
-            "comment" : "Using information from https://iard.org/science-resources/detail/drinking-guidelines-general-population/"
-          },
-          "at0023.1.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023.1",
-            "text" : "Typical consumption (alcohol units)",
-            "description" : "Estimate of number of alcohol units consumed in the specified time period."
           },
           "at0000.1.1" : {
             "@type" : "ARCHETYPE_TERM",
