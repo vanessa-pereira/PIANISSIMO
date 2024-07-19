@@ -237,7 +237,7 @@ Niet te gebruiken voor het vastleggen van toediening van alcohol op andere wijze
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4a26f71d429a3b0a538e209158a0cdc8">
+		["MD5-CAM-1.0.1"] = <"04143e03dd39ac3c5005cf62c6cd5cdc">
 		["build_uid"] = <"fbe8337b-d5f5-4c8e-8986-beaba8eb82e8">
 		["revision"] = <"1.0.6">
 	>
@@ -327,14 +327,14 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0097] occurrences matches {0..1} matches {    -- Binge drinking frequency
+							ELEMENT[at0097.1] occurrences matches {0..1} matches {    -- Binge drinking frequency
 								value matches {
 									C_DV_QUANTITY <
 										
 										list = <
 											["1"] = <
 												units = <"1/wk">
-												magnitude = <|0.0..7.0|>
+												magnitude = <|0.0..21.0|>
 												precision = <|0|>
 											>
 											["2"] = <
@@ -356,7 +356,7 @@ definition
 												list = <
 													["1"] = <
 														units = <"1/wk">
-														magnitude = <|0.0..7.0|>
+														magnitude = <|0.0..21.0|>
 														precision = <|0|>
 													>
 													["2"] = <
@@ -378,7 +378,7 @@ definition
 												list = <
 													["1"] = <
 														units = <"1/wk">
-														magnitude = <|0.0..7.0|>
+														magnitude = <|0.0..21.0|>
 														precision = <|0|>
 													>
 													["2"] = <
@@ -423,7 +423,8 @@ definition
 							}
 							ELEMENT[at0023.1] occurrences matches {0..1} matches {    -- Typical consumption (alcohol units)
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+										property = <[openehr::382]>									>
 								}
 							}
 							CLUSTER[at0029] occurrences matches {0..*} matches {    -- Per type
@@ -593,6 +594,18 @@ ontology
 	term_definitions = <
 		["en"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"Alcohol consumption summary - lih">
+					description = <"Summary or persistent information about the typical alcohol consumption of an individual.">
+				>
+				["at0023.1"] = <
+					text = <"Typical consumption (alcohol units)">
+					description = <"Estimate of number of alcohol units consumed in the specified time period.">
+				>
+				["at0000"] = <
+					text = <"Alcohol consumption summary">
+					description = <"Summary or persistent information about the typical alcohol consumption of an individual.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -821,18 +834,26 @@ ontology
 					text = <"Fortified wine">
 					description = <"Wine with added spirits.">
 				>
-				["at0000.1"] = <
-					text = <"Alcohol consumption summary - lih">
-					description = <"Summary or persistent information about the typical alcohol consumption of an individual.">
-				>
-				["at0023.1"] = <
-					text = <"Typical consumption (alcohol units)">
-					description = <"Estimate of number of alcohol units consumed in the specified time period.">
+				["at0097.1"] = <
+					text = <"Binge drinking frequency">
+					description = <"The individual's typical frequency of heavy drinking over a short period of time with the intent of becoming intoxicated.">
 				>
 			>
 		>
 		["nb"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Alcohol consumption summary - lih (en)">
+					description = <"Sammendrag eller detaljer om et individs tidligere og nåværende bruk av alkohol.">
+				>
+				["at0023.1"] = <
+					text = <"Typisk bruk (alkoholenheter)">
+					description = <"Estimat på antall alkoholenheter som ble drukket i den spesifiserte perioden.">
+				>
+				["at0000"] = <
+					text = <"Alkoholanamnese">
+					description = <"Sammendrag eller detaljer om et individs tidligere og nåværende bruk av alkohol.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1061,18 +1082,26 @@ ontology
 					text = <"Sterkvin">
 					description = <"Vin som er tilsatt brennevin. Tidligere kalt hetvin.">
 				>
-				["at0000.1"] = <
-					text = <"*Alcohol consumption summary - lih (en)">
-					description = <"Sammendrag eller detaljer om et individs tidligere og nåværende bruk av alkohol.">
-				>
-				["at0023.1"] = <
-					text = <"Typisk bruk (alkoholenheter)">
-					description = <"Estimat på antall alkoholenheter som ble drukket i den spesifiserte perioden.">
+				["at0097.1"] = <
+					text = <"Frekvens for episodisk høyt forbruk">
+					description = <"Individets frekvens for episodisk høyt forbruk over korte tidsperioder, der formålet er å bli full, mao hvor ofte har individet \"fyllekuler\".">
 				>
 			>
 		>
 		["sv"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Alcohol consumption summary - lih (en)">
+					description = <"Sammanfattning eller beständig information om den enskilda personens typiska alkoholkonsumtion.">
+				>
+				["at0023.1"] = <
+					text = <"Typisk konsumtion (alkoholenheter)">
+					description = <"Uppskattning av antal alkoholenheter som konsumerats under den angivna episoden.">
+				>
+				["at0000"] = <
+					text = <"Sammanfattning av konsumtion av alkohol">
+					description = <"Sammanfattning eller beständig information om den enskilda personens typiska alkoholkonsumtion.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1301,18 +1330,26 @@ ontology
 					text = <"Starkvin">
 					description = <"Vin med tillsatt sprit, till exempel portvin, sherry, madeira och marsala.">
 				>
-				["at0000.1"] = <
-					text = <"*Alcohol consumption summary - lih (en)">
-					description = <"Sammanfattning eller beständig information om den enskilda personens typiska alkoholkonsumtion.">
-				>
-				["at0023.1"] = <
-					text = <"Typisk konsumtion (alkoholenheter)">
-					description = <"Uppskattning av antal alkoholenheter som konsumerats under den angivna episoden.">
+				["at0097.1"] = <
+					text = <"Berusningsdrickande frekvens">
+					description = <"Individens typiska frekvens av stort alkoholintag, med avsikt att bli berusad, under en kort tidsperiod.">
 				>
 			>
 		>
 		["de"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Alcohol consumption summary - lih (en)">
+					description = <"Zusammenfassende oder fortdauernde Informationen über den typischen Alkoholkonsum einer Person.">
+				>
+				["at0023.1"] = <
+					text = <"Typische Verwendung (Alkoholeinheiten)">
+					description = <"Schätzung der Anzahl von Alkoholeinheiten, die im angegebenen Zeitraum konsumiert wurden.">
+				>
+				["at0000"] = <
+					text = <"Zusammenfassung des Alkoholkonsums">
+					description = <"Zusammenfassende oder fortdauernde Informationen über den typischen Alkoholkonsum einer Person.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1546,18 +1583,26 @@ ontology
 					text = <"Likörwein">
 					description = <"Wein mit hinzugefügten Spirituosen.">
 				>
-				["at0000.1"] = <
-					text = <"*Alcohol consumption summary - lih (en)">
-					description = <"Zusammenfassende oder fortdauernde Informationen über den typischen Alkoholkonsum einer Person.">
-				>
-				["at0023.1"] = <
-					text = <"Typische Verwendung (Alkoholeinheiten)">
-					description = <"Schätzung der Anzahl von Alkoholeinheiten, die im angegebenen Zeitraum konsumiert wurden.">
+				["at0097.1"] = <
+					text = <"Frequenz des Alkoholkonsums">
+					description = <"Die typische Häufigkeit von starkem Trinken über einen kurzen Zeitraum mit der Absicht, betrunken zu werden.">
 				>
 			>
 		>
 		["fr"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Alcohol consumption summary - lih (en)">
+					description = <"Informations sommaires ou persistantes sur la consommation d'alcool typique d'un individu.">
+				>
+				["at0023.1"] = <
+					text = <"Consommation type (unités d'alcool)">
+					description = <"Estimation du nombre d'unités d'alcool consommées au cours de la période spécifiée.">
+				>
+				["at0000"] = <
+					text = <"Résumé de la consommation d'alcool">
+					description = <"Informations sommaires ou persistantes sur la consommation d'alcool typique d'un individu.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1786,18 +1831,26 @@ ontology
 					text = <"Vin fortifié">
 					description = <"Vin additionné de spiritueux.">
 				>
-				["at0000.1"] = <
-					text = <"*Alcohol consumption summary - lih (en)">
-					description = <"Informations sommaires ou persistantes sur la consommation d'alcool typique d'un individu.">
-				>
-				["at0023.1"] = <
-					text = <"Consommation type (unités d'alcool)">
-					description = <"Estimation du nombre d'unités d'alcool consommées au cours de la période spécifiée.">
+				["at0097.1"] = <
+					text = <"Fréquence de consommation excessive">
+					description = <"Fréquence typique de la consommation excessive d'alcool sur une courte période avec l'intention de s'intoxiquer.">
 				>
 			>
 		>
 		["nl"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Alcohol consumption summary - lih (en)">
+					description = <"Overzicht van aanhoudende informatie over het typische alcoholgebruik van een individu.">
+				>
+				["at0023.1"] = <
+					text = <"Typische consumptie (alcohol eenheden)">
+					description = <"Geschatte aantal alcohol eenheden geconsumeerd in de bepaalde periode.">
+				>
+				["at0000"] = <
+					text = <"Alcohol consumptie overzicht">
+					description = <"Overzicht van aanhoudende informatie over het typische alcoholgebruik van een individu.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -2026,13 +2079,9 @@ ontology
 					text = <"Versterkte wijn">
 					description = <"Wijn met toegevoegde gedestileerde drank.">
 				>
-				["at0000.1"] = <
-					text = <"*Alcohol consumption summary - lih (en)">
-					description = <"Overzicht van aanhoudende informatie over het typische alcoholgebruik van een individu.">
-				>
-				["at0023.1"] = <
-					text = <"Typische consumptie (alcohol eenheden)">
-					description = <"Geschatte aantal alcohol eenheden geconsumeerd in de bepaalde periode.">
+				["at0097.1"] = <
+					text = <"Overmatig drinken frequentie">
+					description = <"De typische frequentie waarop het individu zwaar drinkt in een korte periode met de intentie om dronken te worden.">
 				>
 			>
 		>
