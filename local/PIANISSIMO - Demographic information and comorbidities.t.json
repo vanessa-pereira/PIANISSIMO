@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.20",
+      "sem_ver" : "0.1.21",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "a6e8231d47057fb1205822ffc41f8adb",
+      "MD5-CAM-1.0.1" : "65e8bb34f0f2e14b61fcd7929e1037a2",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -8001,7 +8001,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4a26f71d429a3b0a538e209158a0cdc8"
+        "PARENT:MD5-CAM-1.0.1" : "04143e03dd39ac3c5005cf62c6cd5cdc"
       },
       "details" : {
         "de" : {
@@ -8303,7 +8303,7 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0097.0.1",
+                  "nodeId" : "at0097.1.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -8337,7 +8337,7 @@
                             "rmTypeName" : "REAL",
                             "constraint" : [ {
                               "lower" : 0.0,
-                              "upper" : 7.0,
+                              "upper" : 21.0,
                               "lowerIncluded" : true,
                               "upperIncluded" : true,
                               "lowerUnbounded" : false,
@@ -8415,6 +8415,235 @@
                           } ]
                         } ]
                       } ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "lower",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_QUANTITY",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ {
+                            "@type" : "C_ATTRIBUTE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "units",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "magnitude",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "precision",
+                              "children" : [ ]
+                            } ],
+                            "tuples" : [ {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/wk" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 21.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 0,
+                                  "upper" : 0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/mo" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 31.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 0,
+                                  "upper" : 0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/a" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 365.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 0,
+                                  "upper" : 0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "upper",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_QUANTITY",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ {
+                            "@type" : "C_ATTRIBUTE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "units",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "magnitude",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "precision",
+                              "children" : [ ]
+                            } ],
+                            "tuples" : [ {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/wk" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 21.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 0,
+                                  "upper" : 0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/mo" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 31.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 0,
+                                  "upper" : 0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "1/a" ]
+                              }, {
+                                "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 365.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 0,
+                                  "upper" : 0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -8820,18 +9049,6 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "at0097.0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0097.0.1",
-            "text" : "Drinking frequency",
-            "description" : "The individual's typical frequency of heavy drinking over a short period of time with the intent of becoming intoxicated."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Alcohol consumption summary",
-            "description" : "Summary or persistent information about the typical alcohol consumption of an individual."
-          },
           "at0000.1.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1.1",
@@ -8850,6 +9067,19 @@
             "text" : "(Synthesized)",
             "code" : "ac0.0.4",
             "description" : ""
+          },
+          "at0097.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0097.1",
+            "text" : "Binge drinking frequency",
+            "description" : "The individual's typical frequency of drinking over a short period of time.",
+            "comment" : "Drinking occasions defined as as periods of drinking with no 2-hour gaps between drinks. From https://onlinelibrary.wiley.com/doi/full/10.1111/acer.14560\n"
+          },
+          "at0097.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0097.1.1",
+            "text" : "Drinking occasion frequency",
+            "description" : "The individual's typical frequency of heavy drinking over a short period of time with the intent of becoming intoxicated."
           }
         },
         "nb" : {
@@ -8864,12 +9094,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.0.3",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Alkoholanamnese",
-            "description" : "Sammendrag eller detaljer om et individs tidligere og nåværende bruk av alkohol."
           },
           "ac0.0.4" : {
             "@type" : "ARCHETYPE_TERM",
@@ -8891,12 +9115,6 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Sammanfattning av konsumtion av alkohol",
-            "description" : "Sammanfattning eller beständig information om den enskilda personens typiska alkoholkonsumtion."
-          },
           "ac0.0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -8917,17 +9135,46 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Zusammenfassung des Alkoholkonsums",
-            "description" : "Zusammenfassende oder fortdauernde Informationen über den typischen Alkoholkonsum einer Person."
-          },
           "ac0.0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.0.4",
             "description" : ""
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Beginn des regelmäßigen Alkoholkonsums",
+            "description" : "Das Datum oder Teildatum, an dem die Person zum ersten Mal mit einem häufigen oder regelmäßigen, aber in der Regel nicht täglichen Alkoholkonsum begann.",
+            "comment" : "Dieses Datenelement zeichnet auf, wenn ein regelmäßiges Trinkverhalten einsetzte, und nicht der erste Alkoholkonsum überhaupt. Der erste Konsum könnte in einem sehr jungen Alter sein und dann kein Konsum bis zum mittleren Teenageralter. In diesem Fall ist das Muster in den mittleren Teenagerjahren klinisch signifikant. Um zwischen Trinkmustern zu unterscheiden, die in anderen Elementen dieses Archetyps aufgezeichnet werden müssen, z.B. im Abschnitt \"Pro Episode\".\r\n\r\n"
+          },
+          "at0030" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030",
+            "text" : "Muster des Alkoholkonsums",
+            "description" : "Das typische Muster des Alkoholkonsums.\r\n",
+            "comment" : "Das typische Muster des Alkoholkonsums kann durch die Codierung mit einer Terminologie oder einem lokalen Valueset in einem Template präzisiert werden."
+          },
+          "at0108" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0108",
+            "text" : "Typ",
+            "description" : "Der Name des spezifischen Typs oder Gruppe von Alkohol",
+            "comment" : "Die Verwendung der Option \"CodedText\" ist nach Möglichkeit vorzuziehen. Alternativ ist es möglich, mit einem lokalen Valueset oder einer Terminologie bestimmte Arten von alkoholischen Getränken zu erfassen. Zum Beispiel: Rot- oder Weißwein; Brandy oder Whisky; normales oder alkoholreduziertes Bier; oder denaturierter Alkohol (methylierter Alkohol) als eine bestimmte Form von rektifiziertem Alkohol.\r\n\r\n"
+          },
+          "at0015.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Beginn des regelmäßigen Alkoholkonsums",
+            "description" : "Das Datum oder Teildatum, an dem die Person zum ersten Mal mit einem häufigen oder regelmäßigen, aber in der Regel nicht täglichen Alkoholkonsum begann.",
+            "comment" : "Dieses Datenelement zeichnet auf, wenn ein regelmäßiges Trinkverhalten einsetzte, und nicht der erste Alkoholkonsum überhaupt. Der erste Konsum könnte in einem sehr jungen Alter sein und dann kein Konsum bis zum mittleren Teenageralter. In diesem Fall ist das Muster in den mittleren Teenagerjahren klinisch signifikant. Um zwischen Trinkmustern zu unterscheiden, die in anderen Elementen dieses Archetyps aufgezeichnet werden müssen, z.B. im Abschnitt \"Pro Episode\".\r\n\r\n"
+          },
+          "at0030.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030",
+            "text" : "Muster des Alkoholkonsums",
+            "description" : "Das typische Muster des Alkoholkonsums.\r\n",
+            "comment" : "Das typische Muster des Alkoholkonsums kann durch die Codierung mit einer Terminologie oder einem lokalen Valueset in einem Template präzisiert werden."
           }
         },
         "fr" : {
@@ -8942,12 +9189,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.0.3",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Résumé de la consommation d'alcool",
-            "description" : "Informations sommaires ou persistantes sur la consommation d'alcool typique d'un individu."
           },
           "ac0.0.4" : {
             "@type" : "ARCHETYPE_TERM",
@@ -8968,12 +9209,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.0.3",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Alcohol consumptie overzicht",
-            "description" : "Overzicht van aanhoudende informatie over het typische alcoholgebruik van een individu."
           },
           "ac0.0.4" : {
             "@type" : "ARCHETYPE_TERM",
