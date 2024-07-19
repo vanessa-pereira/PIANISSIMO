@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.23",
+      "sem_ver" : "0.1.24",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "f3c40a402798846150415da10b0f806f",
+      "MD5-CAM-1.0.1" : "6ba86c00aa6eae0497eb519c37c8de2c",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -8097,6 +8097,19 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/items[at0064]/items[at0097.1.1]" : {
+            "doc_variable_id" : "Q6"
+          },
+          "/data[at0001]/items[at0064]/items[at0023.1.1]" : {
+            "doc_variable_id" : "Q7"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.alcohol_consumption_summary-lih.v1",
     "differential" : true,
     "archetypeId" : {
@@ -8120,6 +8133,7 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0089.0.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -8137,7 +8151,7 @@
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "ac0.0.4" ],
+                      "constraint" : [ "ac0.0.5" ],
                       "selectedTerminologies" : [ ]
                     } ]
                   } ],
@@ -8810,12 +8824,6 @@
             "description" : "Mass of alcohol defining a standard drink or alcohol unit as used in the 'Typical drinking (alcohol units)' element in this archetype.",
             "comment" : "Using information from https://iard.org/science-resources/detail/drinking-guidelines-general-population/"
           },
-          "ac0.0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.4",
-            "description" : ""
-          },
           "at0097.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0097.1",
@@ -8828,6 +8836,12 @@
             "code" : "at0097.1.1",
             "text" : "Drinking occasion frequency",
             "description" : "The individual's typical frequency of heavy drinking over a short period of time with the intent of becoming intoxicated."
+          },
+          "ac0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.5",
+            "description" : ""
           }
         },
         "nb" : {
@@ -8843,10 +8857,10 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "ac0.0.4" : {
+          "ac0.0.5" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.4",
+            "code" : "ac0.0.5",
             "description" : ""
           }
         },
@@ -8863,10 +8877,10 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "ac0.0.4" : {
+          "ac0.0.5" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.4",
+            "code" : "ac0.0.5",
             "description" : ""
           }
         },
@@ -8881,12 +8895,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.0.3",
-            "description" : ""
-          },
-          "ac0.0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.4",
             "description" : ""
           },
           "at0015" : {
@@ -8923,6 +8931,12 @@
             "text" : "Muster des Alkoholkonsums",
             "description" : "Das typische Muster des Alkoholkonsums.\r\n",
             "comment" : "Das typische Muster des Alkoholkonsums kann durch die Codierung mit einer Terminologie oder einem lokalen Valueset in einem Template präzisiert werden."
+          },
+          "ac0.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.5",
+            "description" : ""
           }
         },
         "fr" : {
@@ -8938,10 +8952,10 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "ac0.0.4" : {
+          "ac0.0.5" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.4",
+            "code" : "ac0.0.5",
             "description" : ""
           }
         },
@@ -8958,10 +8972,10 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "ac0.0.4" : {
+          "ac0.0.5" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.4",
+            "code" : "ac0.0.5",
             "description" : ""
           }
         }
@@ -8987,6 +9001,11 @@
         "ac0.0.4" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.0.4",
+          "members" : [ "at0003", "at0005", "at0006" ]
+        },
+        "ac0.0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.5",
           "members" : [ "at0003", "at0005", "at0006" ]
         }
       }
