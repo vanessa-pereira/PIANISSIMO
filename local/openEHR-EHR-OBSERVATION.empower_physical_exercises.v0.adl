@@ -64,7 +64,7 @@ Basé sur le modèle de données développé dans le cadre du projet EMPOWER, ww
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9e38772346ba16d022d278be197ae6d1">
+		["MD5-CAM-1.0.1"] = <"c607310c6ff1eb1ab44fd4062213611b">
 		["build_uid"] = <"a272e787-84c9-4e31-997c-dcdab8776bf8">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -77,7 +77,7 @@ definition
 					EVENT[at0002] occurrences matches {0..1} matches {    -- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
-								items cardinality matches {3..*; unordered} matches {
+								items cardinality matches {2..*; unordered} matches {
 									ELEMENT[at0046] matches {    -- Physical Activity
 										value matches {
 											DV_CODED_TEXT matches {
