@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.10",
+      "sem_ver" : "0.1.11",
       "build_uid" : "c8bf2dfb-8c76-4fe7-8bd7-300eff04f8e3",
-      "MD5-CAM-1.0.1" : "f5adee37ab85fb0c1a827047beea830d",
+      "MD5-CAM-1.0.1" : "54ae33816ecd1623a09e63d692e279c2",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -521,6 +521,7 @@
                                   },
                                   "constraint" : [ ],
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "limitToList" : false,
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "57676002",
