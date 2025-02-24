@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.24",
+      "sem_ver" : "0.1.25",
       "build_uid" : "dbab776c-f344-4450-90bf-f55f9bb3ac58",
-      "MD5-CAM-1.0.1" : "6ba86c00aa6eae0497eb519c37c8de2c",
+      "MD5-CAM-1.0.1" : "02a2afe0f14612e3c58099b357695b0e",
       "PARENT:MD5-CAM-1.0.1" : "93D7156AD670461B54017CE2CB55ECAF"
     },
     "details" : {
@@ -4170,9 +4170,40 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0014.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "hl7VS-yes-no-Indicator"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "hl7VS-yes-no-Indicator" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "hl7VS-yes-no-Indicator",
+                    "code" : "Y",
+                    "value" : "Yes"
+                  }, {
+                    "terminologyId" : "hl7VS-yes-no-Indicator",
+                    "code" : "N",
+                    "value" : "No"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -4188,6 +4219,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0014.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Work occupation located in Luxembourg",
+            "description" : "Additional narrative about the occupation record not captured in other fields."
           }
         },
         "nb" : {
@@ -4220,6 +4257,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0014.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Berufstätigkeit in Luxemburg",
+            "description" : "Zusätzliche Beschreibung zur Beschäftigung, die nicht in anderen Feldern erfasst wurde."
           }
         },
         "fr" : {
@@ -4228,6 +4271,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0014.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Activité professionnelle située au Luxembourg",
+            "description" : "Une description supplémentaire de l'enregistrement de la profession qui n'a pas été saisie dans d'autres champs."
           }
         },
         "pt-br" : {
@@ -8823,13 +8872,6 @@
             "text" : "Alcohol unit definition (mass)",
             "description" : "Mass of alcohol defining a standard drink or alcohol unit as used in the 'Typical drinking (alcohol units)' element in this archetype.",
             "comment" : "Using information from https://iard.org/science-resources/detail/drinking-guidelines-general-population/"
-          },
-          "at0097.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0097.1",
-            "text" : "Binge drinking frequency",
-            "description" : "The individual's typical frequency of drinking over a short period of time.",
-            "comment" : "Drinking occasions defined as as periods of drinking with no 2-hour gaps between drinks. From https://onlinelibrary.wiley.com/doi/full/10.1111/acer.14560\n"
           },
           "at0097.1.1" : {
             "@type" : "ARCHETYPE_TERM",
